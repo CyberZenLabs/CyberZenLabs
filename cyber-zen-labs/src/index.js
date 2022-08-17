@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NavBarTop from "./components/NavBarTop";
 import About from './pages/About';
+import Contacts from "./pages/Contacts";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,8 +15,9 @@ root.render(
       <NavBarTop />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
 
+        <Route path="about" element={<About />} />
+        <Route path="contacts" element={<Contacts />} />
       </Routes>
 
     </BrowserRouter>
