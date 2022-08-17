@@ -6,6 +6,7 @@ import {
   DivShowReelSC,
   LinkNavBarSC,
   LinkShowReelSC,
+  LinkToHomeSC,
   LogoNavBarSC,
   TextNavBarSC,
 } from "../styled-components-css/styled-navbar";
@@ -15,10 +16,13 @@ const NavBarTop = () => {
     <>
       <DivMaxWidthSC>
         <DivContainerNavBarSC>
-          <DivLogoBoxSC>
-            <LogoNavBarSC />
-            <TextNavBarSC>Cyberzen Labs</TextNavBarSC>
-          </DivLogoBoxSC>
+          <LinkToHomeSC to='/'>
+            <DivLogoBoxSC>
+              <LogoNavBarSC />
+              <TextNavBarSC>Cyberzen Labs</TextNavBarSC>
+            </DivLogoBoxSC>
+          </LinkToHomeSC>
+
           <DivShowReelSC>
             <LinkShowReelSC to="#">ShowReel</LinkShowReelSC>
           </DivShowReelSC>

@@ -63,3 +63,9 @@ text-decoration: none;
   color: #fff;
   
 `;
+
+export const LinkToHomeSC = styled(Link)`
+text-decoration: none;
+  width: max-content;
+  height: max-content;
+`;
