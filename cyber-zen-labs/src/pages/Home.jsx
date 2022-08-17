@@ -1,24 +1,19 @@
-import React from 'react'
+import React from "react";
 import {
-  DivMainHeaderSC,
-  DivMainSC,
-  DivMainBorderSC,
-  DivFlexHeaderSC
-} from '../styled-components-css/styles.navbar';
+  DivContainerSC,
+  DivWrapSC,
+} from "../styled-components-css/styled-DEFAULT";
+
 const Home = () => {
   return (
-    <DivMainSC>
-      <DivMainBorderSC>
+    <>
+      <DivWrapSC>
+        <DivContainerSC>
+          rtgrgtbtrbfgbfgbfgbfgb
+        </DivContainerSC>
+      </DivWrapSC>
+    </>
+  );
+};
 
-      <DivMainHeaderSC>
-        <DivFlexHeaderSC>
-
-        </DivFlexHeaderSC>
-      </DivMainHeaderSC>
-      </DivMainBorderSC>
-      
-      </DivMainSC>
-  )
-}
-
-export default Home
+export default Home;
