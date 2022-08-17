@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 
 export const DivWrapSC = styled.div`
-  width: 100vw;
+ // width: 100vw;
   height: 100vh;
   padding-top: 160px;
   ${({ background }) =>
