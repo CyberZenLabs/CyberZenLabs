@@ -6,6 +6,7 @@ export const DivMaxWidthSC = styled.div`
   position: relative;
   max-width: var(--max-width);
   margin: 0 auto;
+  width: 90vw;
 `;
 
 export const DivContainerNavBarSC = styled.div`
