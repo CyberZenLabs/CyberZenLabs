@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NavBarTop from "./components/NavBarTop";
+import Contacts from "./pages/Contacts";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +14,7 @@ root.render(
       <NavBarTop />
       <Routes>
         <Route index element={<Home />} />
+        <Route path="contacts" element={<Contacts />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
