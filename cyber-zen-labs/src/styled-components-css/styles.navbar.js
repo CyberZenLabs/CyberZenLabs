@@ -6,7 +6,7 @@ width: 100%;
 display: grid;
 `;
 export const DivMainHeaderSC = styled.div`
-    width:1720px;
+   
 `;
 
 export const DivMainLogoSC = styled.div`
