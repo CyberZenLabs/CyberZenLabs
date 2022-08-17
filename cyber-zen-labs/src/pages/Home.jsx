@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <DivWrapSC>
         <DivContainerSC>
-          
+          rtgrgtbtrbfgbfgbfgbfgb
         </DivContainerSC>
       </DivWrapSC>
     </>
