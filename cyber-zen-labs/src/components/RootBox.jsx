@@ -1,35 +1,35 @@
-import React, {useEffect, useState} from 'react';
-import {DivRootSC} from "../styled-components-css/styles-root";
+import React, { useEffect, useState } from "react";
+import { DivRootSC } from "../styled-components-css/styles-root";
 
 const RootBox = (props) => {
-    const {
-       children
-    } = props;
+  const { children } = props;
 
-    const [isBlackBack, setIsBlackBack] = useState('')
+  const [isBlackBack, setIsBlackBack] = useState("");
 
-    // const processChangeBackground = () => {
-    //     const interval = setInterval(() => {
-    //         setIsBlackBack(isBlackBack => isBlackBack === 'black' ? '' : 'black');
-    //     }, 1000);
-    //     return () => clearInterval(interval);
-    // }
+  // const processChangeBackground = () => {
+  //     const interval = setInterval(() => {
+  //         setIsBlackBack(isBlackBack => isBlackBack === 'black' ? '' : 'black');
+  //     }, 1000);
+  //     return () => clearInterval(interval);
+  // }
 
+<<<<<<< HEAD
     useEffect(() => {
         const interval = setInterval(() => {
             setIsBlackBack(isBlackBack => isBlackBack === 'black' ? '' : 'black');
         }, 6000);
         return () => clearInterval(interval);
     }, [])
+=======
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsBlackBack((isBlackBack) => (isBlackBack === "black" ? "" : "black"));
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+>>>>>>> ruslan
 
-
-    return (
-        <DivRootSC
-            isBlackBack={isBlackBack}
-        >
-            {children}
-        </DivRootSC>
-    );
+  return <DivRootSC isBlackBack={isBlackBack}>{children}</DivRootSC>;
 };
 
 export default RootBox;

@@ -18,6 +18,8 @@ import {
   DivColumnsTelegramSC,
   DivColumnsemailSC,
   ImgBuddhaSC,
+  DivDecLineSC,
+  DivBoxBlurSC,
 } from "../styled-components-css/styled-contacts";
 
 const Contacts = () => {
@@ -27,7 +29,10 @@ const Contacts = () => {
         <DivColumnsContentContacts>
           <DivLeftPenalSC>
             <DivBoxTextWriteToUsSC>
-              <DivTextWriteToUsSC to="#">WRITE TO US</DivTextWriteToUsSC>
+              <DivTextWriteToUsSC to="#">
+                WRITE TO US
+                <DivDecLineSC />
+              </DivTextWriteToUsSC>
             </DivBoxTextWriteToUsSC>
             <DivColumnsTelephoneSC>
               <DivTextTelephoneSC>telephone:</DivTextTelephoneSC>
@@ -45,7 +50,8 @@ const Contacts = () => {
             </DivColumnsemailSC>
           </DivLeftPenalSC>
           <DivRightPenalSC>
-            <ImgBuddhaSC></ImgBuddhaSC>
+            <DivBoxBlurSC></DivBoxBlurSC>
+            <ImgBuddhaSC src="/default-images/buddha.png" />
           </DivRightPenalSC>
         </DivColumnsContentContacts>
       </DivContainerSC>
