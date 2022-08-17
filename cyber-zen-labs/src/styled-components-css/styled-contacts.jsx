@@ -1,6 +1,5 @@
 import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
-import buddha from "../images/buddha.png";
 
 export const DivColumnsContentContacts = styled.div`
   width: 100%;
@@ -14,21 +13,33 @@ export const DivLeftPenalSC = styled.div`
   height: 100%;
   max-width: 709px;
   display: grid;
-  grid-template-rows: 171px 183px 84px 84px;
+  grid-template-rows: 245px 183px 84px 84px;
 `;
+
 export const DivRightPenalSC = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
   justify-items: end;
+  z-index: 3;
 `;
 
-export const ImgBuddhaSC = styled.div`
-  background-image: url(${buddha});
-  max-width: 789px;
-  max-height: 704px;
+export const DivBoxBlurSC = styled.div`
   width: 100%;
+  max-width: 789px;
   height: 100%;
+  border-radius: 100%;
+  background: linear-gradient(180deg, #fd03ff 29.3%, #3ab4fa 78.61%);
+  filter: blur(450px);
+  z-index: 2;
+`;
+
+export const ImgBuddhaSC = styled.img`
+  position: absolute;
+  width: 789px;
+  height: 704px;
+  z-index: 3;
+  aspect-ratio: 1/1;
 `;
 
 export const DivBoxTextWriteToUsSC = styled.div`
@@ -39,16 +50,18 @@ export const DivBoxTextWriteToUsSC = styled.div`
 `;
 export const DivTextWriteToUsSC = styled.div`
   width: 100%;
-  height: 76px;
+  height: 80px;
   font-style: normal;
   font-weight: 700;
   font-size: 64px;
-  line-height: 80px;
-  text-decoration: underline;
-  text-decoration-color: linear-gradient(270deg, #d815ff 0%, #09bbf9 102.1%);
+  line-height: 65px;
+  text-decoration: none;
   background: var(--blue-pink);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: grid;
+  align-content: start;
+
   background-clip: text;
   text-fill-color: transparent;
 
@@ -121,4 +134,11 @@ export const DivColumnsemailSC = styled.div`
   display: grid;
   grid-template-columns: 19% 81%;
   gap: 86px;
+`;
+
+export const DivDecLineSC = styled.div`
+  max-width: 487px;
+  width: 100%;
+  height: 4px;
+  background: var(--blue-pink);
 `;
