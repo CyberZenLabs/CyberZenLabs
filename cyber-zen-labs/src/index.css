@@ -7,6 +7,7 @@
 html {
   min-width: 350px;
   color: #fff;
+
 }
 
 
@@ -15,7 +16,7 @@ html {
   
   --background-color: radial-gradient(73.28% 231.6% at 26.72% 52.96%, #0E1A5A 0%, #0E1A5A 5.27%, #21004B 100%);
   --blue-pink: linear-gradient(270deg, #D815FF 0%, #09BBF9 102.1%);
-
+  --font-size-menu: 64px;
   --white-color: #fff;
   --color-black: #000000;
   --font-size-icon-text: 16px;
@@ -107,6 +108,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
