@@ -2,12 +2,8 @@ import styled from "styled-components/macro";
 
 export const DivWrapSC = styled.div`
  // width: 100vw;
-  height: 100vh;
-  padding-top: 160px;
-  ${({ background }) =>
-    background !== undefined
-      ? `background: ${background};`
-      : `background: var(--background-color);`}
+  min-height: calc(100vh - 160px);
+  //padding-top: 160px;
 `;
 
 export const DivContainerSC = styled.div`

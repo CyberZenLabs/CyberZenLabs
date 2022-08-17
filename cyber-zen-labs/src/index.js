@@ -6,16 +6,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NavBarTop from "./components/NavBarTop";
 import Contacts from "./pages/Contacts";
+import RootBox from "./components/RootBox";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <NavBarTop />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="contacts" element={<Contacts />} />
-      </Routes>
+        <RootBox>
+            <NavBarTop />
+            <Routes>
+                <Route index element={<Home />} />
+                <Route path="contacts" element={<Contacts />} />
+            </Routes>
+        </RootBox>
+
     </BrowserRouter>
   </React.StrictMode>
 );
