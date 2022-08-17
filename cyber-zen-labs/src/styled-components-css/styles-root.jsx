@@ -6,6 +6,6 @@ export const DivRootSC = styled.div`
   display: grid;
   grid-template-rows: 160px max-content;
   background: ${(p) => (p.isBlackBack === 'black' ? 'black' : 'var(--background-color)')};
-  transition: .3s background-color;
-  transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
+ // transition: .3s background-color;
+  //transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
 `

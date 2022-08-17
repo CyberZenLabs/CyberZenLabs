@@ -18,7 +18,7 @@ const RootBox = (props) => {
     useEffect(() => {
         const interval = setInterval(() => {
             setIsBlackBack(isBlackBack => isBlackBack === 'black' ? '' : 'black');
-        }, 2000);
+        }, 6000);
         return () => clearInterval(interval);
     }, [])
 
