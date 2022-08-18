@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import {
   DivContainerSC,
   DivWrapSC,
@@ -6,14 +6,21 @@ import {
 import {
   DescHomeBoxSC,
   DivDescBoxtSC,
-  DivHomeContentSC,
+  DivHomeContentSC, DivShadowBoxSC,
   DivTextBoxtSC,
   DivTitleBoxtSC,
   SloganBoxSC,
   TitleHomeBoxSC,
 } from "../styled-components-css/styled.home";
+import GlobalDispatchContext from '../global_dispatch_context'
 
 const Home = () => {
+  const {state, dispatch} = useContext(GlobalDispatchContext);
+
+  const {
+    isBlackBack
+  } = state
+
   return (
     <>
       <DivWrapSC>
@@ -21,11 +28,20 @@ const Home = () => {
           <DivHomeContentSC>
             <DivTextBoxtSC>
               <DivTitleBoxtSC>
-                <TitleHomeBoxSC>CYBERZEN LABS</TitleHomeBoxSC>
+                <TitleHomeBoxSC
+                    isBlackBack={isBlackBack}
+                >
+                  CYBERZEN LABS
+                  <DivShadowBoxSC>
+
+                  </DivShadowBoxSC>
+                </TitleHomeBoxSC>
                 <SloganBoxSC>The future is now</SloganBoxSC>
               </DivTitleBoxtSC>
               <DivDescBoxtSC>
-                <DescHomeBoxSC>
+                <DescHomeBoxSC
+                    isBlackBack={isBlackBack}
+                >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
                   quam eu amet massa viverra.
                 </DescHomeBoxSC>

@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 export const DivWrapSC = styled.div`
  // width: 100vw;
   display: grid;
-  min-height: calc(100vh - 410px);
+  min-height: calc(100vh - 320px);
   //padding-top: 160px;
 `;
 

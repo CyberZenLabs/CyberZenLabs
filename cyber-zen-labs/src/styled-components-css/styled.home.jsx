@@ -26,11 +26,12 @@ export const TitleHomeBoxSC = styled.h1`
   font-size: 80px;
   line-height: 100px;
   letter-spacing: 0.08em;
-  background: var(--blue-pink);
+  background: ${({isBlackBack}) => (isBlackBack === 'black' ? 'var(--color-red-pink)' : 'var(--blue-pink)')};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0px 5px 30px;
+  text-shadow: ${({isBlackBack}) => (isBlackBack === 'black' ? '0px 0px 8px #F61067' : 'none')};
+  position: relative;
 `;
 
 export const SloganBoxSC = styled.h1`
@@ -51,7 +52,18 @@ export const DescHomeBoxSC = styled.span`
   line-height: 50px;
   letter-spacing: 0.05em;
 
-  color: #d516ff;
+  color: ${({isBlackBack}) => (isBlackBack === 'black' ? 'var(--color-red-pink)' : '#d516ff')};
 
-  text-shadow: 0px 5px 30px;
+  text-shadow: ${({isBlackBack}) => (isBlackBack === 'black' ? 'none' : '0px 5px 30px')};
 `;
+
+export const DivShadowBoxSC = styled.div`
+    position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 110%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(90.02deg, rgba(23, 175, 249, 0.6) -7.59%, rgba(213, 22, 255, 0.6) 93.79%);
+  filter: blur(120px);
+`
