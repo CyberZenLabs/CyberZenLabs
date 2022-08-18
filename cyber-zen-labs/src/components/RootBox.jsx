@@ -13,12 +13,12 @@ const RootBox = (props) => {
   //     return () => clearInterval(interval);
   // }
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIsBlackBack(isBlackBack => isBlackBack === 'black' ? '' : 'black');
-        }, 6000);
-        return () => clearInterval(interval);
-    }, [])
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setIsBlackBack(isBlackBack => isBlackBack === 'black' ? '' : 'black');
+    //     }, 6000);
+    //     return () => clearInterval(interval);
+    // }, [])
 
   return <DivRootSC isBlackBack={isBlackBack}>{children}</DivRootSC>;
 };
