@@ -20,3 +20,25 @@ export const SpanTextElementSC = styled(Link)`
 }
 
 `;
+
+export const DivContainerAboutSC = styled.div`
+ // border:1px solid red;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  width: 90vw;
+display: grid;
+  align-content: center;
+  justify-content: center;
+  margin-top:-80px;
+`;
+export const DivWrapMenuSC = styled.div`
+ // width: 100vw;
+  min-height: calc(100vh - 160px);
+  //padding-top: 160px;
+  
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  //border:1px solid red;
+`;

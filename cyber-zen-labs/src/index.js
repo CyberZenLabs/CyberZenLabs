@@ -8,7 +8,7 @@ import NavBarTop from "./components/NavBarTop";
 import About from './pages/About';
 import Contacts from "./pages/Contacts";
 import RootBox from "./components/RootBox";
-
+import BurgerMenu from "./pages/BurgerMenu";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -19,6 +19,7 @@ root.render(
                 <Route index element={<Home />} />
 
                 <Route path="about" element={<About />} />
+                <Route path="menu" element={<BurgerMenu />} />
                 <Route path="contacts" element={<Contacts />} />
             </Routes>
         </RootBox>

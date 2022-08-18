@@ -4,21 +4,23 @@ import {
   DivWrapSC,
 } from "../styled-components-css/styled-DEFAULT";
 import {
+  DivContainerAboutSC,
+  DivWrapMenuSC,
   GridContentSC,
   SpanTextElementSC
 } from "../styled-components-css/styled-About";
 const About = () => {
   return (
     <>
-      <DivWrapSC>
-        <DivContainerSC>
+    <DivWrapMenuSC>
+        <DivContainerAboutSC>
           <GridContentSC>
             <SpanTextElementSC to ="#">Home</SpanTextElementSC>
             <SpanTextElementSC to ="#">Team</SpanTextElementSC>
             <SpanTextElementSC to ="#">Development</SpanTextElementSC>
           </GridContentSC>
-        </DivContainerSC>
-      </DivWrapSC>
+        </DivContainerAboutSC>
+        </DivWrapMenuSC>
     </>
   );
 };
