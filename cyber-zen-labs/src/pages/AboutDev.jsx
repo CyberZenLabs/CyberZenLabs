@@ -10,7 +10,8 @@ import {
     DivCustomTextSC,
     GridRowsIcons,
     ImgIconSC,
-    GridColumnsIcons
+    GridColumnsIcons,
+    GridColumnsSecondIcons
 } from "../styled-components-css/styled-AboutDev";
 const About = () => {
   return (
@@ -42,7 +43,7 @@ const About = () => {
                   <ImgIconSC src=""/>
                   <ImgIconSC src=""/>
                   </GridColumnsIcons>
-                  <GridColumnsIcons>
+                  <GridColumnsSecondIcons>
                   <ImgIconSC src=""/>
                   <ImgIconSC src=""/>
                   <ImgIconSC src=""/>
@@ -54,7 +55,7 @@ const About = () => {
                   <ImgIconSC src=""/>
                   <ImgIconSC src=""/>
                   <ImgIconSC src=""/>
-                  </GridColumnsIcons>
+                  </GridColumnsSecondIcons>
                   
                   
                 </GridRowsIcons>
