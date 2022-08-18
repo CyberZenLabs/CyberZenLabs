@@ -22,6 +22,7 @@ export const DivBoxTextTitleSC = styled.div`
 `;
 
 export const DivTextTitleSC = styled.div`
+pointer-events: none;
   max-width: 990px;
   max-height: 120px;
   width: 100%;
@@ -71,7 +72,8 @@ export const DivBoxColumnsPagesSC = styled.div`
 `;
 
 export const DivPageSC = styled.div`
-  width: 100%;
+cursor: pointer;
+  width: fit-content;
   height: 100%;
   font-style: normal;
   font-weight: 400;
@@ -80,6 +82,9 @@ export const DivPageSC = styled.div`
   /* identical to box height */
   letter-spacing: 0.05em;
   text-shadow: ${(p) => (p.isActive ? "6px 5px 5px #a557e5" : "#FFF")};
+  //border: 1px solid red;
+  height: fit-content;
+
 `;
 
 export const DivBoxColumnsFotosSC = styled.div`
@@ -178,6 +183,7 @@ export const DivBoxColumnsNameSC = styled.div`
 `;
 
 export const DivNameSC = styled.div`
+pointer-events: none;
   width: 169px;
   height: 36px;
   font-style: normal;
@@ -190,6 +196,7 @@ export const DivNameSC = styled.div`
 `;
 
 export const DivName1SC = styled.div`
+pointer-events: none;
   width: 142px;
   height: 36px;
   font-style: normal;
@@ -201,6 +208,7 @@ export const DivName1SC = styled.div`
 `;
 
 export const DivName0SC = styled.div`
+pointer-events: none;
   width: 100%;
   height: 72px;
   font-style: normal;
@@ -222,6 +230,7 @@ export const DivBoxColumnsName1SC = styled.div`
 `;
 
 export const DivName2SC = styled.div`
+pointer-events: none;
   width: 100%;
   height: 72px;
   font-style: normal;

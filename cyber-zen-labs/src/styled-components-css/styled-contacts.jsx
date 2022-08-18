@@ -49,6 +49,7 @@ export const DivBoxTextWriteToUsSC = styled.div`
   align-items: end;
 `;
 export const DivTextWriteToUsSC = styled.div`
+pointer-events: none;
   width: 100%;
   height: 80px;
   font-style: normal;
@@ -77,6 +78,7 @@ export const DivColumnsTelephoneSC = styled.div`
 `;
 
 export const DivTextTelephoneSC = styled.div`
+pointer-events: none;
   width: 100%;
   height: 100%;
   font-style: normal;
@@ -118,6 +120,7 @@ export const DivNumTelegramSC = styled.div`
 `;
 
 export const DivTextTelegramSC = styled.div`
+pointer-events: none;
   width: 100%;
   height: 100%;
   font-style: normal;

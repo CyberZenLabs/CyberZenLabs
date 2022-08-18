@@ -22,6 +22,7 @@ export const DivTitleBoxtSC = styled.div`
 `;
 
 export const TitleHomeBoxSC = styled.h1`
+pointer-events: none;
   font-weight: 900;
   font-size: 80px;
   line-height: 100px;
@@ -39,6 +40,7 @@ export const SloganBoxSC = styled.h1`
   font-size: 36px;
   line-height: 45px;
   letter-spacing: 0.05em;
+  pointer-events: none;
 `;
 
 export const DivDescBoxtSC = styled.div`
@@ -51,7 +53,7 @@ export const DescHomeBoxSC = styled.span`
   font-size: 40px;
   line-height: 50px;
   letter-spacing: 0.05em;
-
+  pointer-events: none;
   color: ${({isBlackBack}) => (isBlackBack === 'black' ? 'var(--color-red-pink)' : '#d516ff')};
 
   text-shadow: ${({isBlackBack}) => (isBlackBack === 'black' ? 'none' : '0px 5px 30px')};
