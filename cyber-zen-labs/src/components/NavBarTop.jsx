@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useContext} from "react";
+import GlobalDispatchContext from "../global_dispatch_context";
 import {
   DivContainerNavBarSC,
   DivLogoBoxSC,
@@ -11,6 +12,10 @@ import {
 } from "../styled-components-css/styled-navbar";
 
 const NavBarTop = () => {
+  const {state, dispatch} = useContext(GlobalDispatchContext);
+  const {
+    isBlackBack
+  } = state
   return (
     <>
       <DivMaxWidthSC>
@@ -23,7 +28,7 @@ const NavBarTop = () => {
           </LinkToHomeSC>
 
           <DivShowReelSC>
-            <LinkShowReelSC to="#">ShowReel</LinkShowReelSC>
+            <LinkShowReelSC to="#"  isBlackBack={isBlackBack}>ShowReel</LinkShowReelSC>
           </DivShowReelSC>
         </DivContainerNavBarSC>
       </DivMaxWidthSC>

@@ -20,6 +20,9 @@ export const DivContainerNavBarSC = styled.div`
   justify-content: space-between;
   align-items: center;
   background: initial;
+  @media (max-width:480px) {
+    grid-template-columns: 1fr;
+}
 `;
 
 export const DivLogoBoxSC = styled.div`
@@ -32,7 +35,9 @@ export const DivShowReelSC = styled.div`
   width: 100%;
   display: grid;
   justify-content: end;
-  
+  @media (max-width:480px) {
+display: none;
+}
 `;
 
 
@@ -61,12 +66,15 @@ text-decoration: none;
   font-weight: 500;
   font-size: 20px;
   line-height: 25px;
-  color: #fff;
-  
+  color: ${({isBlackBack}) => (isBlackBack === 'black' ? 'var(--color-red-pink)' : ' #fff;')};
 `;
 
 export const LinkToHomeSC = styled(Link)`
 text-decoration: none;
   width: max-content;
   height: max-content;
+
+@media (max-width:480px) {
+display: none;
+}
 `;
