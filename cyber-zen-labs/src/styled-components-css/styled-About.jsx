@@ -44,7 +44,6 @@ export const DivContainerAboutSC = styled.div`
 display: grid;
   align-content: center;
   justify-content: center;
- 
 `;
 export const DivWrapMenuSC = styled.div`
  // width: 100vw;

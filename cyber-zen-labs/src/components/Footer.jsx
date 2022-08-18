@@ -26,7 +26,7 @@ const Footer = () => {
           <H1FooterTextSC to="/about">ABOUT</H1FooterTextSC>
           <H1FooterTextSC to="#">SERVICES</H1FooterTextSC>
           <H1FooterTextSC to="#">PROJECTS</H1FooterTextSC>
-          <H1FooterTextSC to="#">CONTACTS</H1FooterTextSC>
+          <H1FooterTextSC to="/contacts">CONTACTS</H1FooterTextSC>
         </DivContainerFooterCenterSC>
         <DivContainerFooterRightSC>
       <DivPhotoRightContainerSC />
