@@ -37,15 +37,27 @@ text-shadow: 4px 4px 12px #D516FF;
 position: relative;
   `;
 
-export const GridMoreIcons = styled.div`
+export const GridRowsIcons = styled.div`
+
+display: grid;
+grid-template-rows: repeat(2, 1fr);
+grid-gap: 30px;
+max-width: max-content;
+max-height: max-content;
+justify-items: center;
+justify-content: center;
+
+  `;
+export const GridColumnsIcons = styled.div`
 
 display: grid;
 grid-template-columns: repeat(12, 1fr);
+grid-gap: 30px;
 border-radius: 100%;
 max-width: max-content;
-max-height: max-content;
+justify-items: center;
+justify-content: center;
   `;
-
 export const ImgIconSC = styled.div`
 border-radius:100%;
 background: #C4C4C4;

@@ -8,8 +8,9 @@ import {
     DivDecriptionTextSC,
     GridContainerItemsSC,
     DivCustomTextSC,
-    GridMoreIcons,
-    ImgIconSC
+    GridRowsIcons,
+    ImgIconSC,
+    GridColumnsIcons
 } from "../styled-components-css/styled-AboutDev";
 const About = () => {
   return (
@@ -26,9 +27,37 @@ const About = () => {
                 Why we used:
                 </DivCustomTextSC>
                 </DivDecriptionTextSC>
-                <GridMoreIcons>
+                <GridRowsIcons>
+                  <GridColumnsIcons>
                   <ImgIconSC src=""/>
-                </GridMoreIcons>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  </GridColumnsIcons>
+                  <GridColumnsIcons>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  <ImgIconSC src=""/>
+                  </GridColumnsIcons>
+                  
+                  
+                </GridRowsIcons>
               </GridContainerItemsSC>
             </DivContainerAboutDevSC>
         </DivContainerSC>
