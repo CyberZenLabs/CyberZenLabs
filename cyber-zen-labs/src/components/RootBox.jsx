@@ -7,28 +7,23 @@ const RootBox = (props) => {
   const { children } = props;
   const initialState = useContext(GlobalDispatchContext);
   const [state, dispatch] = useReducer(reducer, initialState);
-  // const [isBlackBack, setIsBlackBack] = useState("");
   const {
       isBlackBack
   } = state
 
-  // const processChangeBackground = () => {
-  //     const interval = setInterval(() => {
-  //         setIsBlackBack(isBlackBack => isBlackBack === 'black' ? '' : 'black');
-  //     }, 1000);
-  //     return () => clearInterval(interval);
-  // }
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            dispatch({
-                type: 'SET_IS_BLACK',
-                status: isBlackBack
-            })
-            // setIsBlackBack(isBlackBack => isBlackBack === 'black' ? '' : 'black');
-        }, 6000);
-        return () => clearInterval(interval);
-    }, [])
+
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         dispatch({
+    //             type: 'SET_IS_BLACK'
+    //         })
+    //     }, 6000);
+    //     return () => clearInterval(interval);
+    // }, [])
+
+
+
 
   return (
       <GlobalDispatchContext.Provider value={{ state, dispatch }}>

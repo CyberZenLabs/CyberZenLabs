@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 
 import {
   DivContainerFooterCenterSC,
@@ -11,8 +11,11 @@ import {
   H1FooterTextSoundOnSC,
 } from "../styled-components-css/styled-Footer";
 import { DivMaxWidthSC } from "../styled-components-css/styled-navbar";
+import GlobalDispatchContext from "../global_dispatch_context";
 
 const Footer = () => {
+  const {state, dispatch} = useContext(GlobalDispatchContext);
+
   return (
     <DivMaxWidthSC>
       <DivContainerFooterSC>

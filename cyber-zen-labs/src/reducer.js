@@ -1,13 +1,19 @@
 
+
 const setIsBlackBack = (state, action) => {
+
     const {
-        status
-    } = action
+        isBlackBack
+    } = state
+
+    // console.log('>>>>>>>>', isBlackBack)
 
     return {
         ...state,
-        isBlackBack: status === 'black' ? '' : 'black'
+        isBlackBack: isBlackBack === 'black' ? '' : 'black'
     }
+
+
 }
 
 
