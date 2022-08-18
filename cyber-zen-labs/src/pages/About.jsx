@@ -7,20 +7,20 @@ import {
   DivContainerAboutSC,
   DivWrapMenuSC,
   GridContentSC,
-  SpanTextElementSC
+  SpanTextElementSC,
 } from "../styled-components-css/styled-About";
 const About = () => {
   return (
     <>
-    <DivWrapMenuSC>
+      <DivWrapMenuSC>
         <DivContainerAboutSC>
           <GridContentSC>
-            <SpanTextElementSC to ="#">Home</SpanTextElementSC>
-            <SpanTextElementSC to ="#">Team</SpanTextElementSC>
-            <SpanTextElementSC to ="#">Development</SpanTextElementSC>
+            <SpanTextElementSC to="/">Home</SpanTextElementSC>
+            <SpanTextElementSC to="/team">Team</SpanTextElementSC>
+            <SpanTextElementSC to="#">Development</SpanTextElementSC>
           </GridContentSC>
         </DivContainerAboutSC>
-        </DivWrapMenuSC>
+      </DivWrapMenuSC>
     </>
   );
 };

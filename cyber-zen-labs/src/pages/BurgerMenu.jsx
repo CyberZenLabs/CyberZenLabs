@@ -17,7 +17,7 @@ const BurgerMenu = () => {
         <GridContentSC>
           <SpanTextElementMenuSC to="/">HOME</SpanTextElementMenuSC>
           <SpanTextElementMenuSC to="#">SERVICES</SpanTextElementMenuSC>
-          <SpanTextElementMenuSC to="#">ABOUT</SpanTextElementMenuSC>
+          <SpanTextElementMenuSC to="/about">ABOUT</SpanTextElementMenuSC>
           <SpanTextElementMenuSC to="/contacts">CONTACTS</SpanTextElementMenuSC>
           <SpanTextElementMenuSC to="#">PROJECTS</SpanTextElementMenuSC>
         </GridContentSC>
