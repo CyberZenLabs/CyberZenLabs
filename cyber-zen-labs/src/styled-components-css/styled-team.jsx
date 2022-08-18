@@ -80,6 +80,7 @@ export const DivPageSC = styled.div`
   /* identical to box height */
   letter-spacing: 0.05em;
   text-shadow: ${(p) => (p.isActive ? "6px 5px 5px #a557e5" : "#FFF")};
+  cursor: pointer;
 `;
 
 export const DivBoxColumnsFotosSC = styled.div`
