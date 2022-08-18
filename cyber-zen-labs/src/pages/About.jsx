@@ -11,7 +11,7 @@ const About = () => {
       <DivWrapMenuSC>
         <DivContainerAboutSC>
           <GridContentSC>
-            <SpanTextElementSC to="AboutDev">Development</SpanTextElementSC>
+            <SpanTextElementSC to="/AboutDev">Development</SpanTextElementSC>
             <SpanTextElementSC to="/">Home</SpanTextElementSC>
             <SpanTextElementSC to="/team">Team</SpanTextElementSC>
           </GridContentSC>

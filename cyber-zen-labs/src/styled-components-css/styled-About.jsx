@@ -6,7 +6,7 @@ export const GridContentSC = styled.div`
   align-self: center;
 
   grid-template-rows: repeat(3, 1fr);
-  grid-row-gap: 96px;
+  grid-row-gap:  75px;
   justify-content: center;
   align-content:center;
   `;
@@ -30,11 +30,10 @@ export const DivContainerAboutSC = styled.div`
 display: grid;
   align-content: center;
   justify-content: center;
-  margin-top:-80px;
 `;
 export const DivWrapMenuSC = styled.div`
  // width: 100vw;
-  min-height: calc(100vh - 410px);
+  min-height: calc(100vh - 320px);
   //padding-top: 160px;
   
   height: 100%;

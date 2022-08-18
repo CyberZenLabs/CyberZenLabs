@@ -12,16 +12,17 @@ display: grid;
 width: 83%;
 justify-content: center;
 justify-items: center;
-grid-template-rows: max-content 1fr max-content;
+grid-template-rows: 1fr max-content 1fr;
  grid-row-gap: 30px;
   `;
 export const DivDecriptionTextSC = styled.div`
-
+display: grid;
 font-weight: 400;
 font-size: 35px;
 line-height: 44px;
 text-align: center;
 letter-spacing: 0.05em;
+width: 100%:
   `;
 
 export const DivCustomTextSC = styled.div`
@@ -40,39 +41,31 @@ position: relative;
 export const GridRowsIcons = styled.div`
 //border: 1px solid red;
 display: grid;
-grid-template-rows: repeat(2, 1fr);
-grid-gap: 30px;
+grid-template-rows: repeat(2, 70px);
 max-width: max-content;
 max-height: max-content;
 justify-items: center;
 justify-content: center;
-
+grid-row-gap:30px;
+align-self:flex-end;
   `;
 export const GridColumnsSecondIcons = styled.div`
 //border: 1px solid blue;
 display: grid;
 grid-template-columns: repeat(11, 1fr);
-grid-gap: 30px;
-border-radius: 100%;
-//max-width: max-content;
-width: max-content;
-justify-items: center;
-justify-content: center;
+grid-column-gap: 30px;
+
   `;
   export const GridColumnsIcons = styled.div`
   //border: 1px solid blue;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 30px;
-  border-radius: 100%;
-  //max-width: max-content;
-  width: max-content;
-  justify-items: center;
-  justify-content: center;
+  grid-column-gap: 30px;
+
     `;
 export const ImgIconSC = styled.div`
 border-radius:100%;
-background: #C4C4C4;
 width: 70px;
 height: 70px;
+background-image: ${({ Photo }) => Photo && `url(${Photo})`};
   `;
