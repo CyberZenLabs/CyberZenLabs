@@ -8,9 +8,7 @@ const Home = () => {
   return (
     <>
       <DivWrapSC>
-        <DivContainerSC>
-          rtgrgtbtrbfgbfgbfgbfgb
-        </DivContainerSC>
+        <DivContainerSC>rtgrgtbtrbfgbfgbfgbfgb</DivContainerSC>
       </DivWrapSC>
     </>
   );
