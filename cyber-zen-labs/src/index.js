@@ -9,6 +9,8 @@ import About from './pages/About';
 import Contacts from "./pages/Contacts";
 import RootBox from "./components/RootBox";
 import BurgerMenu from "./pages/BurgerMenu";
+import Footer from "./components/Footer";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -22,6 +24,7 @@ root.render(
                 <Route path="menu" element={<BurgerMenu />} />
                 <Route path="contacts" element={<Contacts />} />
             </Routes>
+            <Footer/>
         </RootBox>
 
     </BrowserRouter>
