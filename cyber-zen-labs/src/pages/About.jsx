@@ -17,7 +17,7 @@ const About = () => {
           <GridContentSC>
             <SpanTextElementSC to ="#">Home</SpanTextElementSC>
             <SpanTextElementSC to ="#">Team</SpanTextElementSC>
-            <SpanTextElementSC to ="#">Development</SpanTextElementSC>
+            <SpanTextElementSC to ="AboutDev">Development</SpanTextElementSC>
           </GridContentSC>
         </DivContainerAboutSC>
         </DivWrapMenuSC>

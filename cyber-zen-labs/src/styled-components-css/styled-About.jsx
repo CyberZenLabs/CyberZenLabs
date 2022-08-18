@@ -34,7 +34,7 @@ display: grid;
 `;
 export const DivWrapMenuSC = styled.div`
  // width: 100vw;
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 410px);
   //padding-top: 160px;
   
   height: 100%;

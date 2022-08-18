@@ -3,13 +3,17 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+
 import NavBarTop from "./components/NavBarTop";
+import RootBox from "./components/RootBox";
+import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
 import About from './pages/About';
 import Contacts from "./pages/Contacts";
-import RootBox from "./components/RootBox";
 import BurgerMenu from "./pages/BurgerMenu";
-import Footer from "./components/Footer";
+import AboutDev from "./pages/AboutDev";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,7 +23,7 @@ root.render(
             <NavBarTop />
             <Routes>
                 <Route index element={<Home />} />
-
+                <Route path="aboutdev" element={<AboutDev />} />
                 <Route path="about" element={<About />} />
                 <Route path="menu" element={<BurgerMenu />} />
                 <Route path="contacts" element={<Contacts />} />
