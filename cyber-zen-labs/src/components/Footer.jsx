@@ -14,8 +14,6 @@ import { DivMaxWidthSC } from "../styled-components-css/styled-navbar";
 import GlobalDispatchContext from "../global_dispatch_context";
 
 const Footer = () => {
-  const {state, dispatch} = useContext(GlobalDispatchContext);
-
   return (
     <DivMaxWidthSC>
       <DivContainerFooterSC>
@@ -31,7 +29,7 @@ const Footer = () => {
           <H1FooterTextSC to="#">CONTACTS</H1FooterTextSC>
         </DivContainerFooterCenterSC>
         <DivContainerFooterRightSC>
-      <DivPhotoRightContainerSC/>
+      <DivPhotoRightContainerSC />
         </DivContainerFooterRightSC>
       </DivContainerFooterSC>
     </DivMaxWidthSC>

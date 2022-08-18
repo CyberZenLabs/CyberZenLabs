@@ -38,7 +38,6 @@ export const DivPhotoRightContainerSC = styled.div`
   width: 100px;
   height: 100px;
   justify-self: end;
- 
 `;
 export const DivSoundPhotoLeftContainerSC = styled.div`
  background-image: url(${Sound});
