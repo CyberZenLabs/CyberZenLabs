@@ -60,10 +60,10 @@ export const DescHomeBoxSC = styled.span`
 export const DivShadowBoxSC = styled.div`
     position: absolute;
   top: 0px;
-  left: 0px;
+  left: -6%;
   width: 110%;
   height: 100%;
-  border-radius: 50%;
+  //border-radius: 50%;
   background: linear-gradient(90.02deg, rgba(23, 175, 249, 0.6) -7.59%, rgba(213, 22, 255, 0.6) 93.79%);
   filter: blur(120px);
 `

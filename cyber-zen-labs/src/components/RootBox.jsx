@@ -13,14 +13,14 @@ const RootBox = (props) => {
 
 
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         dispatch({
-    //             type: 'SET_IS_BLACK'
-    //         })
-    //     }, 6000);
-    //     return () => clearInterval(interval);
-    // }, [])
+    useEffect(() => {
+        const interval = setInterval(() => {
+            dispatch({
+                type: 'SET_IS_BLACK'
+            })
+        }, 6000);
+        return () => clearInterval(interval);
+    }, [])
 
 
 
