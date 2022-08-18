@@ -32,9 +32,13 @@ const Home = () => {
                     isBlackBack={isBlackBack}
                 >
                   CYBERZEN LABS
-                  <DivShadowBoxSC>
+                  {
+                    isBlackBack === 'black' ? null :
+                        <DivShadowBoxSC>
 
-                  </DivShadowBoxSC>
+                        </DivShadowBoxSC>
+                  }
+
                 </TitleHomeBoxSC>
                 <SloganBoxSC>The future is now</SloganBoxSC>
               </DivTitleBoxtSC>
