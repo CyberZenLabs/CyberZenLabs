@@ -1,24 +1,22 @@
 import React from "react";
 import {
-  DivContainerSC,
-  DivWrapSC,
-} from "../styled-components-css/styled-DEFAULT";
-import {
+  DivContainerAboutSC,
+  DivWrapMenuSC,
   GridContentSC,
-  SpanTextElementSC
+  SpanTextElementSC,
 } from "../styled-components-css/styled-About";
 const About = () => {
   return (
     <>
-      <DivWrapSC>
-        <DivContainerSC>
+      <DivWrapMenuSC>
+        <DivContainerAboutSC>
           <GridContentSC>
-            <SpanTextElementSC to ="#">Home</SpanTextElementSC>
-            <SpanTextElementSC to ="#">Team</SpanTextElementSC>
-            <SpanTextElementSC to ="#">Development</SpanTextElementSC>
+            <SpanTextElementSC to="AboutDev">Development</SpanTextElementSC>
+            <SpanTextElementSC to="/">Home</SpanTextElementSC>
+            <SpanTextElementSC to="/team">Team</SpanTextElementSC>
           </GridContentSC>
-        </DivContainerSC>
-      </DivWrapSC>
+        </DivContainerAboutSC>
+      </DivWrapMenuSC>
     </>
   );
 };

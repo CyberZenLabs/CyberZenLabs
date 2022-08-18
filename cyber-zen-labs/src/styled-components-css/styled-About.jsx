@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 
 export const GridContentSC = styled.div`
   display: grid;
+  align-self: center;
+
   grid-template-rows: repeat(3, 1fr);
   grid-row-gap: 96px;
   justify-content: center;
   align-content:center;
-  height:100%;
   `;
 
 export const SpanTextElementSC = styled(Link)`
@@ -19,4 +20,26 @@ export const SpanTextElementSC = styled(Link)`
     text-shadow: 7px 7px 12px #C957E5;
 }
 
+`;
+
+export const DivContainerAboutSC = styled.div`
+ // border:1px solid red;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  width: 90vw;
+display: grid;
+  align-content: center;
+  justify-content: center;
+  margin-top:-80px;
+`;
+export const DivWrapMenuSC = styled.div`
+ // width: 100vw;
+  min-height: calc(100vh - 410px);
+  //padding-top: 160px;
+  
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  //border:1px solid red;
 `;

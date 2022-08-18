@@ -3,16 +3,17 @@ import { Link } from "react-router-dom";
 import Logo from "../images/Logo.svg";
 
 export const DivMaxWidthSC = styled.div`
-  //position: relative;
+  position: relative;
   max-width: var(--max-width);
   margin: 0 auto;
   width: 90vw;
+ // border:1px solid red;
 `;
 
 export const DivContainerNavBarSC = styled.div`
-  //position: absolute;
+  position: absolute;
   width: 100%;
-  
+  //border:1px solid green;
   display: grid;
   height: 160px;
   grid-template-columns: 1fr 1fr;
