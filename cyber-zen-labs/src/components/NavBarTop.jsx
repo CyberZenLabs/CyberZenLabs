@@ -4,7 +4,6 @@ import {
   DivLogoBoxSC,
   DivMaxWidthSC,
   DivShowReelSC,
-  LinkNavBarSC,
   LinkShowReelSC,
   LinkToHomeSC,
   LogoNavBarSC,

@@ -4,10 +4,6 @@ import {
   DivWrapMenuSC,
   GridContentSC,
 } from "../styled-components-css/styled-About";
-import {
-  DivContainerSC,
-  DivWrapSC,
-} from "../styled-components-css/styled-DEFAULT";
 import { SpanTextElementMenuSC } from "../styled-components-css/styled-menu";
 
 const BurgerMenu = () => {
