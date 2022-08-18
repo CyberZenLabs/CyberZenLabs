@@ -1,9 +1,5 @@
 import React from "react";
 import {
-  DivContainerSC,
-  DivWrapSC,
-} from "../styled-components-css/styled-DEFAULT";
-import {
   DivContainerAboutSC,
   DivWrapMenuSC,
   GridContentSC,

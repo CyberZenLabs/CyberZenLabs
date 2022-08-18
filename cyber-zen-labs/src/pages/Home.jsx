@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <DivWrapSC>
-        <DivContainerSC>rtgrgtbtrbfgbfgbfgbfgb</DivContainerSC>
+        <DivContainerSC>Home!!!!!!!!!!!!!</DivContainerSC>
       </DivWrapSC>
     </>
   );

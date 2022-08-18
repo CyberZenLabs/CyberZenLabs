@@ -7,12 +7,13 @@ export const DivMaxWidthSC = styled.div`
   max-width: var(--max-width);
   margin: 0 auto;
   width: 90vw;
+ // border:1px solid red;
 `;
 
 export const DivContainerNavBarSC = styled.div`
   position: absolute;
   width: 100%;
-  
+  //border:1px solid green;
   display: grid;
   height: 160px;
   grid-template-columns: 1fr 1fr;
