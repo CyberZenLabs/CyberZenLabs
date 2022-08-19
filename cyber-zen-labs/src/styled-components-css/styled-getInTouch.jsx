@@ -16,7 +16,7 @@ export const DivBoxRowsLeftPenalSC = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 74px 31px 99px 30px 94px 31px 99px 31px 75px;
+  grid-template-rows: 34px 21px 89px 20px 84px 21px 89px 21px 65px;
 `;
 
 export const DivBoxTextSC = styled.div`
@@ -84,7 +84,7 @@ export const DivBoxRowsRightPenalSC = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 100px 258px 99px 31px 233px;
+  grid-template-rows: 41px 228px 79px 31px 203px;
 `;
 
 export const DivTextDescriptionSC = styled.div`
