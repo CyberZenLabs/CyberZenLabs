@@ -1,5 +1,6 @@
 const initialState = {
-    isBlackBack: ''
+    isBlackBack: '',
+    isHome: false
 };
 
 export default initialState;

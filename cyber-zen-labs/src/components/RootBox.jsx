@@ -8,21 +8,31 @@ const RootBox = (props) => {
   const initialState = useContext(GlobalDispatchContext);
   const [state, dispatch] = useReducer(reducer, initialState);
   const {
-      isBlackBack
+      isBlackBack,
+      isHome
   } = state
 
+    let interval
 
 
     useEffect(() => {
-        const interval = setInterval(() => {
+
+        if (!isHome) {
+            clearInterval(interval)
             dispatch({
-                type: 'SET_IS_BLACK'
+                type: 'SET_FALSE_BLACK_BACK'
             })
-        }, 6000);
-        return () => clearInterval(interval);
-    }, [])
+        }
+        else {
+            interval = setInterval(() => {
+                dispatch({
+                    type: 'SET_IS_BLACK'
+                })
+            }, 6000);
+            return () => clearInterval(interval);
+        }
 
-
+    }, [isHome])
 
 
   return (

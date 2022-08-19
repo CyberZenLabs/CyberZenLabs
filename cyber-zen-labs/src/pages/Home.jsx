@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   DivContainerSC,
   DivWrapSC,
@@ -17,6 +17,19 @@ import GlobalDispatchContext from "../global_dispatch_context";
 
 const Home = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
+
+  useEffect(() => {
+    dispatch({
+      type: 'SET_IS_HOME',
+      status: true
+    })
+    return () => {
+      dispatch({
+        type: 'SET_IS_HOME',
+        status: false
+      })
+    }
+  }, [])
 
   const { isBlackBack } = state;
 
