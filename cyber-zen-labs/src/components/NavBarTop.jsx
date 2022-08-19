@@ -9,17 +9,24 @@ import {
   LinkToHomeSC,
   LogoNavBarSC,
   TextNavBarSC,
+  DivShowReelCenterSC,
+  DivContainerNavBarHomeSC,
+  LinkToBurgerSC,
+  IconBurgerSC
 } from "../styled-components-css/styled-navbar";
+
 
 const NavBarTop = () => {
   const {state, dispatch} = useContext(GlobalDispatchContext);
   const {
-    isBlackBack
+    isBlackBack, isHome
   } = state
   return (
     <>
-      <DivMaxWidthSC>
-        <DivContainerNavBarSC>
+    {
+        isHome === true ?
+        <DivMaxWidthSC>
+        <DivContainerNavBarHomeSC>
           <LinkToHomeSC to='/'>
             <DivLogoBoxSC>
               <LogoNavBarSC />
@@ -30,8 +37,28 @@ const NavBarTop = () => {
           <DivShowReelSC>
             <LinkShowReelSC to="#"  isBlackBack={isBlackBack}>SHOWREEL</LinkShowReelSC>
           </DivShowReelSC>
+        </DivContainerNavBarHomeSC>
+      </DivMaxWidthSC>
+
+
+      :<DivMaxWidthSC>
+        <DivContainerNavBarSC>
+          <LinkToHomeSC to='/'>
+            <DivLogoBoxSC>
+              <LogoNavBarSC />
+              <TextNavBarSC>Cyberzen Labs</TextNavBarSC>
+            </DivLogoBoxSC>
+          </LinkToHomeSC>
+          <DivShowReelCenterSC>
+            <LinkShowReelSC to="#"  isBlackBack={isBlackBack}>SHOWREEL</LinkShowReelSC>
+          </DivShowReelCenterSC>
+          <LinkToBurgerSC to ="/menu">
+            <IconBurgerSC></IconBurgerSC>
+          </LinkToBurgerSC>
         </DivContainerNavBarSC>
       </DivMaxWidthSC>
+      }
+      
     </>
   );
 };
