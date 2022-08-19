@@ -1,26 +1,28 @@
 #root {
   height: 100%;
-  font-family: 'Orbitron';
-  
+  font-family: "Orbitron";
 }
 
 html {
   min-width: 350px;
   color: #fff;
-
 }
-
 
 :root {
   --max-width: 1720px;
-  
-  --background-color: radial-gradient(73.28% 231.6% at 26.72% 52.96%, #0E1A5A 0%, #0E1A5A 5.27%, #21004B 100%);
-  --blue-pink: linear-gradient(270deg, #D815FF 0%, #09BBF9 102.1%);
+
+  --background-color: radial-gradient(
+    73.28% 231.6% at 26.72% 52.96%,
+    #0e1a5a 0%,
+    #0e1a5a 5.27%,
+    #21004b 100%
+  );
+  --blue-pink: linear-gradient(270deg, #d815ff 0%, #09bbf9 102.1%);
   --font-size-menu: 64px;
   --white-color: #fff;
   --color-black: #000000;
   --font-size-icon-text: 16px;
-  --color-red-pink: #F61067;
+  --color-red-pink: #f61067;
 }
 html,
 body,
@@ -146,4 +148,67 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.label {
+  width: 100%;
+  max-width: 265px;
+  height: 30px;
+  display: grid;
+  align-self: end;
+  grid-template-columns: 1fr 5fr;
+  cursor: pointer;
+}
+
+.radio {
+  display: none;
+}
+
+.fake {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #d9d9d9;
+  position: relative;
+}
+
+.fake::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  background: #f61067;
+  box-shadow: 0px 0px 3px rgba(246, 16, 103, 0.95);
+  border-radius: 100%;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.radio:checked + .fake::before {
+  opacity: 1;
+}
+
+.text {
+  width: 100%;
+  height: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.text1 {
+  width: 100%;
+  height: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: start;
 }

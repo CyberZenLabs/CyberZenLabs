@@ -16,6 +16,7 @@ grid-template-rows: 1fr max-content 1fr;
  grid-row-gap: 30px;
   `;
 export const DivDecriptionTextSC = styled.div`
+pointer-events: none;
 display: grid;
 font-weight: 400;
 font-size: 35px;
@@ -26,7 +27,7 @@ width: 100%;
 `;
 
 export const DivCustomTextSC = styled.div`
-
+pointer-events: none;
 text-align: left;
 background: linear-gradient(270deg, #D815FF 0%, #09BBF9 102.1%);
 -webkit-background-clip: text;

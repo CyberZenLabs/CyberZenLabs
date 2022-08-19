@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 
 import {
   DivContainerFooterCenterSC,
@@ -18,7 +18,7 @@ const Footer = () => {
     <DivMaxWidthSC>
       <DivContainerFooterSC>
         <DivContainerFooterLeftSC>
-          <DivSoundPhotoLeftContainerSC/>
+          <DivSoundPhotoLeftContainerSC />
           <H1FooterTextSoundOnSC>sound on</H1FooterTextSoundOnSC>
         </DivContainerFooterLeftSC>
         <DivContainerFooterCenterSC>
@@ -29,7 +29,7 @@ const Footer = () => {
           <H1FooterTextSC to="/contacts">CONTACTS</H1FooterTextSC>
         </DivContainerFooterCenterSC>
         <DivContainerFooterRightSC>
-      <DivPhotoRightContainerSC />
+          <DivPhotoRightContainerSC to={"/getintouch"} />
         </DivContainerFooterRightSC>
       </DivContainerFooterSC>
     </DivMaxWidthSC>

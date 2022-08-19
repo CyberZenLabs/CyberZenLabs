@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import {
   DivContainerSC,
   DivWrapSC,
@@ -6,20 +6,19 @@ import {
 import {
   DescHomeBoxSC,
   DivDescBoxtSC,
-  DivHomeContentSC, DivShadowBoxSC,
+  DivHomeContentSC,
+  DivShadowBoxSC,
   DivTextBoxtSC,
   DivTitleBoxtSC,
   SloganBoxSC,
   TitleHomeBoxSC,
 } from "../styled-components-css/styled.home";
-import GlobalDispatchContext from '../global_dispatch_context'
+import GlobalDispatchContext from "../global_dispatch_context";
 
 const Home = () => {
-  const {state, dispatch} = useContext(GlobalDispatchContext);
+  const { state, dispatch } = useContext(GlobalDispatchContext);
 
-  const {
-    isBlackBack
-  } = state
+  const { isBlackBack } = state;
 
   return (
     <>
@@ -28,24 +27,16 @@ const Home = () => {
           <DivHomeContentSC>
             <DivTextBoxtSC>
               <DivTitleBoxtSC>
-                <TitleHomeBoxSC
-                    isBlackBack={isBlackBack}
-                >
+                <TitleHomeBoxSC isBlackBack={isBlackBack}>
                   CYBERZEN LABS
-                  {
-                    isBlackBack === 'black' ? null :
-                        <DivShadowBoxSC>
-
-                        </DivShadowBoxSC>
-                  }
-
+                  {isBlackBack === "black" ? null : (
+                    <DivShadowBoxSC></DivShadowBoxSC>
+                  )}
                 </TitleHomeBoxSC>
                 <SloganBoxSC>The future is now</SloganBoxSC>
               </DivTitleBoxtSC>
               <DivDescBoxtSC>
-                <DescHomeBoxSC
-                    isBlackBack={isBlackBack}
-                >
+                <DescHomeBoxSC isBlackBack={isBlackBack}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
                   quam eu amet massa viverra.
                 </DescHomeBoxSC>
