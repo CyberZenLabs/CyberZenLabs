@@ -36,6 +36,7 @@ import styled_components from '../images/DevIcons/styled_components.svg';
 import TRUFFLE from '../images/DevIcons/TRUFFLE.svg';
 import web3 from '../images/DevIcons/web3.svg';
 import Z from '../images/DevIcons/Z.svg';
+import AI from '../images/DevIcons/AI.svg';
 
 const About = () => {
   return (
@@ -48,12 +49,13 @@ const About = () => {
                 We are ushering in the future of the web using futuristic technologies most companies arent even dreaming of, whether its UI/UX design, Web3 Development or the most complex of software projects, we have the ability to maniofest the best digital expereinces you or your users could dream of. And that's a promise!
                 </DivDecriptionTextSC>
                 
-                <DivDecriptionTextSC JustifySelf="flex-start">
+                
+                <GridRowsIcons>
+                <DivDecriptionTextSC>
                 <DivCustomTextSC >
                 Why we used:
                 </DivCustomTextSC>
                 </DivDecriptionTextSC>
-                <GridRowsIcons>
                   <GridColumnsIcons>
                   <ImgIconSC Photo={web3}/>
                   <ImgIconSC Photo={METAMASK}/>
@@ -66,7 +68,7 @@ const About = () => {
                   <ImgIconSC Photo={Python}/>
                   <ImgIconSC Photo={MySQL}/>
                   <ImgIconSC Photo={PyTeAl}/>
-                  <ImgIconSC Photo={PyTeAl}/>
+                  <ImgIconSC Photo={AI}/>
                   </GridColumnsIcons>
                   <GridColumnsSecondIcons>
                   <ImgIconSC Photo={TRUFFLE}/>
