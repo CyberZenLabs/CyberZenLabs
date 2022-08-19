@@ -74,3 +74,23 @@ color: rgba(255, 255, 255, 0.4);
     text-shadow: 0px 0px 3px #FFFFFF;
 }
 `;
+
+export const FooterTextTeamSC = styled(Link)`
+font-size: var(--font-size-menu);
+  text-align: center;
+  font-size:36px;
+
+  color: var(--blue-pink);
+  &:hover {
+    text-shadow: 4px 4px 4px #A557E5;
+}
+
+`;
+
+export const DivContainerFooterCenterTeamSC = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 95px;
+ // border:1px solid red;
+  justify-self: center;
+`;
