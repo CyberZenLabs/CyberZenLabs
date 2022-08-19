@@ -16,6 +16,20 @@ const setIsBlackBack = (state, action) => {
 
 }
 
+const setIsAboutBack = (state, action) => {
+
+    const {
+        status
+    } = action
+
+    return {
+        ...state,
+        isAboutBack: status
+    }
+
+
+}
+
 const setIsHome = (state, action) => {
 
     const {
@@ -71,6 +85,9 @@ function reducer(state, action) {
 
         case 'SET_IS_PAGE':
         return setIsPage(state, action);
+
+        case 'SET_IS_ABOUT_BACK':
+        return setIsAboutBack(state, action);
         default:
             throw new Error();
     }

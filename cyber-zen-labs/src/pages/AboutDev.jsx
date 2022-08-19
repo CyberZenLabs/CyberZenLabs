@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext, useEffect} from "react";
 import {
   DivContainerSC,
   DivWrapSC,
@@ -13,6 +13,7 @@ import {
     GridColumnsIcons,
     GridColumnsSecondIcons
 } from "../styled-components-css/styled-AboutDev";
+import GlobalDispatchContext from "../global_dispatch_context";
 
 import AfterEffects from '../images/DevIcons/AfterEffects.svg';
 import EtherJS from '../images/DevIcons/EthersJS.svg';
@@ -39,7 +40,34 @@ import Z from '../images/DevIcons/Z.svg';
 import AI from '../images/DevIcons/AI.svg';
 
 const About = () => {
+  const { state, dispatch } = useContext(GlobalDispatchContext);
+  const { isBlackBack, isPage, isAboutBack } = state;
+  useEffect(() => {
+    
+    return () => {
+      dispatch({
+        type: 'SET_IS_PAGE',
+        status: "about"
+      })
+    }
+  }, [isPage])
+
+  useEffect(() => {
+   
+    dispatch({
+      type: 'SET_IS_ABOUT_BACK',
+      status: "purple"
+    })
+    return () => {
+      dispatch({
+        type: 'SET_IS_ABOUT_BACK',
+        status: ""
+      })
+    }
+    
+  }, [isAboutBack])
   return (
+    
     <>
     <DivWrapSC>
         <DivContainerSC>

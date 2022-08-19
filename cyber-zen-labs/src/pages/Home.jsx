@@ -42,6 +42,7 @@ const Home = () => {
     }
   }, [isPage])
 
+  
   return (
     <>
       <DivWrapSC>

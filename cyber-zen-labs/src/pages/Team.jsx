@@ -37,7 +37,7 @@ import GlobalDispatchContext from "../global_dispatch_context";
 
 const Team = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
-  const {isPage } = state;
+  const {isPage, isAboutBack } = state;
 
   useEffect(() => {
     
@@ -48,6 +48,21 @@ const Team = () => {
       })
     }
   }, [isPage])
+
+  useEffect(() => {
+   
+    dispatch({
+      type: 'SET_IS_ABOUT_BACK',
+      status: "purple"
+    })
+    return () => {
+      dispatch({
+        type: 'SET_IS_ABOUT_BACK',
+        status: ""
+      })
+    }
+    
+  }, [isAboutBack])
   const listContent = [
     {
       page: (

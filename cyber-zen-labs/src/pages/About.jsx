@@ -10,26 +10,45 @@ import GlobalDispatchContext from "../global_dispatch_context";
 
 const About = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
-  const { isBlackBack, isPage } = state;
+  const { isBlackBack, isPage, isAboutBack } = state;
 
   useEffect(() => {
-    
+    dispatch({
+      type: 'SET_IS_PAGE',
+      status: "sound"
+    })
     return () => {
       dispatch({
         type: 'SET_IS_PAGE',
-        status: "sound"
+        status: "home"
       })
+
     }
   }, [isPage])
+
+  useEffect(() => {
+   
+    dispatch({
+      type: 'SET_IS_ABOUT_BACK',
+      status: "purple"
+    })
+    return () => {
+      dispatch({
+        type: 'SET_IS_ABOUT_BACK',
+        status: ""
+      })
+    }
+    
+  }, [isAboutBack])
   return (
 
     <>
       <DivWrapMenuSC>
         <DivContainerAboutSC>
           <GridContentSC>
-            <SpanTextElementSC to="/AboutDev">Development</SpanTextElementSC>
             <SpanTextElementSC to="/">Home</SpanTextElementSC>
             <SpanTextElementSC to="/team">Team</SpanTextElementSC>
+            <SpanTextElementSC to="/AboutDev">Development</SpanTextElementSC>
           </GridContentSC>
         </DivContainerAboutSC>
       </DivWrapMenuSC>
