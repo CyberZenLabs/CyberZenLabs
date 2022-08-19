@@ -12,7 +12,7 @@ display: grid;
 width: 83%;
 justify-content: center;
 justify-items: center;
-grid-template-rows: 1fr max-content 1fr;
+grid-template-rows: 275px 1fr;
  grid-row-gap: 30px;
   `;
 export const DivDecriptionTextSC = styled.div`
@@ -37,6 +37,8 @@ text-fill-color: transparent;
 max-width: max-content;
 text-shadow: 4px 4px 12px #D516FF;
 position: relative;
+letter-spacing: 0.05em;
+
   `;
 
 export const GridRowsIcons = styled.div`

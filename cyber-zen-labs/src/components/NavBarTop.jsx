@@ -28,7 +28,7 @@ const NavBarTop = () => {
           </LinkToHomeSC>
 
           <DivShowReelSC>
-            <LinkShowReelSC to="#"  isBlackBack={isBlackBack}>ShowReel</LinkShowReelSC>
+            <LinkShowReelSC to="#"  isBlackBack={isBlackBack}>SHOWREEL</LinkShowReelSC>
           </DivShowReelSC>
         </DivContainerNavBarSC>
       </DivMaxWidthSC>
