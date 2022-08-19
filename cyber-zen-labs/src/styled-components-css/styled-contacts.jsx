@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const DivColumnsContentContacts = styled.div`
   width: 100%;
-  height: 704px;
+  height: fit-content;
   display: grid;
   grid-template-columns: 1fr 1fr;
 `;
@@ -73,8 +73,9 @@ export const DivColumnsTelephoneSC = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 29% 71%;
+  grid-template-columns: 30% 70%;
   gap: 86px;
+  //border: 1px solid red;
 `;
 
 export const DivTextTelephoneSC = styled.div`
@@ -87,9 +88,11 @@ pointer-events: none;
   line-height: 40px;
   display: grid;
   align-content: end;
+  //border: 1px solid red;
 `;
 
 export const DivNumTelephoneSC = styled.div`
+ //border: 1px solid red;
   width: 100%;
   height: 100%;
   font-style: normal;
@@ -101,14 +104,16 @@ export const DivNumTelephoneSC = styled.div`
 `;
 
 export const DivColumnsTelegramSC = styled.div`
+ //border: 1px solid red;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 26% 74%;
+  grid-template-columns: 30% 70%;
   gap: 86px;
 `;
 
 export const DivNumTelegramSC = styled.div`
+ //border: 1px solid red;
   width: 100%;
   height: 100%;
   font-style: normal;
@@ -129,13 +134,15 @@ pointer-events: none;
   line-height: 40px;
   display: grid;
   align-content: end;
+  //border: 1px solid red;
 `;
 
 export const DivColumnsemailSC = styled.div`
+ //border: 1px solid red;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 19% 81%;
+  grid-template-columns: 30% 70%;
   gap: 86px;
 `;
 
