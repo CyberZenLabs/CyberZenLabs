@@ -17,6 +17,7 @@ import GlobalDispatchContext from "../global_dispatch_context";
 
 const Home = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
+  const { isPage, isBlackBack } = state;
 
   useEffect(() => {
     dispatch({
@@ -31,7 +32,15 @@ const Home = () => {
     }
   }, [])
 
-  const { isBlackBack } = state;
+  useEffect(() => {
+    
+    return () => {
+      dispatch({
+        type: 'SET_IS_PAGE',
+        status: "home"
+      })
+    }
+  }, [isPage])
 
   return (
     <>

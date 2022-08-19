@@ -1,6 +1,7 @@
 import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
 import Logo from "../images/Logo.svg";
+import Burger from "../images/BurgerIcon.svg";
 
 export const DivMaxWidthSC = styled.div`
   position: relative;
@@ -10,7 +11,7 @@ export const DivMaxWidthSC = styled.div`
  // border:1px solid red;
 `;
 
-export const DivContainerNavBarSC = styled.div`
+export const DivContainerNavBarHomeSC = styled.div`
   position: absolute;
   width: 100%;
   //border:1px solid green;
@@ -24,7 +25,20 @@ export const DivContainerNavBarSC = styled.div`
     grid-template-columns: 1fr;
 }
 `;
-
+export const DivContainerNavBarSC = styled.div`
+  position: absolute;
+  width: 100%;
+  //border:1px solid green;
+  display: grid;
+  height: 160px;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  background: initial;
+  @media (max-width:480px) {
+    grid-template-columns: 1fr;
+}
+`;
 export const DivLogoBoxSC = styled.div`
   width: 100%;
   display: grid;
@@ -39,7 +53,14 @@ export const DivShowReelSC = styled.div`
 display: none;
 }
 `;
-
+export const DivShowReelCenterSC = styled.div`
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  @media (max-width:480px) {
+display: none;
+}
+`;
 
 
 export const LogoNavBarSC = styled.div`
@@ -77,4 +98,17 @@ text-decoration: none;
 @media (max-width:480px) {
 display: none;
 }
+`;
+
+export const LinkToBurgerSC = styled(Link)`
+width: 100%;
+  display: grid;
+  justify-content: end;
+`;
+
+export const IconBurgerSC = styled.div`
+background-image: url(${Burger});
+
+width: 27px;
+height: 22.41px;
 `;
