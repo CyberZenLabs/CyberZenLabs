@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
 import Mail from "../images/Mail.svg";
-import Sound from "../images/Music-Switch.svg";
+import Sound from "../images/Music-Switch2.svg";
 export const DivContainerFooterSC = styled.div`
   width: 100%;
   // border:1px solid green;
@@ -12,10 +12,11 @@ export const DivContainerFooterSC = styled.div`
 `;
 export const DivContainerFooterLeftSC = styled.div`
   display: grid;
-  grid-template-columns: 15px max-content;
+  grid-template-columns: max-content max-content;
   //border:1px solid green;
   justify-self: start;
   gap: 1px;
+  height:60px;
   // max-height: 20px;
 `;
 export const DivContainerFooterCenterSC = styled.div`
@@ -39,13 +40,31 @@ export const DivPhotoRightContainerSC = styled(Link)`
   height: 100px;
   justify-self: end;
 `;
+//soundbar
 export const DivSoundPhotoLeftContainerSC = styled.div`
-  background-image: url(${Sound});
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 15px;
-  height: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 5px;
   align-self: end;
+
+  @keyframes DivSoundPhotoLeftContainerSC {
+    0%{
+      height: 20px;
+    }
+    
+    100%{
+      height: 25px;
+    }
+  }
+`;
+
+export const DivBarsSC = styled.div`
+  background: #fff;
+  width: 3px;
+  height: 20px;
+  animation: DivSoundPhotoLeftContainerSC 0.8s infinite;
+
+
 `;
 export const H1FooterTextSoundOnSC = styled.button`
   //width: max-content;
@@ -56,7 +75,7 @@ export const H1FooterTextSoundOnSC = styled.button`
   font-weight: 400;
   font-size: 20px;
   line-height: 14px;
-  align-self: end;
+  align-self: center;
   /* identical to box height */
   color: #ffffff;
   cursor: pointer;

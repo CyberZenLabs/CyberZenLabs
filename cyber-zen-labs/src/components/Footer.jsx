@@ -11,6 +11,7 @@ import {
   H1FooterTextSoundOnSC,
   FooterTextTeamSC,
   DivContainerFooterCenterTeamSC,
+  DivBarsSC
 } from "../styled-components-css/styled-Footer";
 import { DivMaxWidthSC } from "../styled-components-css/styled-navbar";
 import GlobalDispatchContext from "../global_dispatch_context";
@@ -28,8 +29,13 @@ const Footer = () => {
         isPage === "about" ?
         <DivMaxWidthSC>
         <DivContainerFooterSC>
-          <DivContainerFooterLeftSC>
-            <DivSoundPhotoLeftContainerSC/>
+        <DivContainerFooterLeftSC>
+            <div className="MusicContainer">
+              <div className="Bars"/>
+              <div className="Bars"/>
+              <div className="Bars"/>
+              <div className="Bars"/>
+            </div>
             <H1FooterTextSoundOnSC>sound on</H1FooterTextSoundOnSC>
           </DivContainerFooterLeftSC>
           <DivContainerFooterCenterTeamSC>
@@ -47,7 +53,12 @@ const Footer = () => {
         <DivMaxWidthSC>
         <DivContainerFooterSC>
           <DivContainerFooterLeftSC>
-            <DivSoundPhotoLeftContainerSC/>
+            <div className="MusicContainer">
+              <div className="Bars"/>
+              <div className="Bars"/>
+              <div className="Bars"/>
+              <div className="Bars"/>
+            </div>
             <H1FooterTextSoundOnSC>sound on</H1FooterTextSoundOnSC>
           </DivContainerFooterLeftSC>
           <DivContainerFooterCenterSC>
@@ -67,8 +78,13 @@ const Footer = () => {
         isPage === "sound" ?
         <DivMaxWidthSC>
         <DivContainerFooterSC>
-          <DivContainerFooterLeftSC>
-            <DivSoundPhotoLeftContainerSC/>
+        <DivContainerFooterLeftSC>
+            <div className="MusicContainer">
+              <div className="Bars"/>
+              <div className="Bars"/>
+              <div className="Bars"/>
+              <div className="Bars"/>
+            </div>
             <H1FooterTextSoundOnSC>sound on</H1FooterTextSoundOnSC>
           </DivContainerFooterLeftSC>
         </DivContainerFooterSC>
