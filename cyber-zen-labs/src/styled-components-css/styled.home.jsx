@@ -6,6 +6,7 @@ export const DivHomeContentSC = styled.div`
   grid-template-columns: 60% 40%;
   justify-content: center;
   align-items: center;
+  height: 100%;
 `;
 
 export const DivTextBoxtSC = styled.div`
@@ -13,6 +14,7 @@ export const DivTextBoxtSC = styled.div`
   display: grid;
   grid-template-rows: max-content max-content;
   row-gap: 80px;
+  margin-bottom:100px;
 `;
 
 export const DivTitleBoxtSC = styled.div`
@@ -33,6 +35,7 @@ pointer-events: none;
   background-clip: text;
   text-shadow: ${({isBlackBack}) => (isBlackBack === 'black' ? '0px 0px 8px #F61067' : 'none')};
   position: relative;
+  width: max-content;
 `;
 
 export const SloganBoxSC = styled.h1`
@@ -44,7 +47,7 @@ export const SloganBoxSC = styled.h1`
 `;
 
 export const DivDescBoxtSC = styled.div`
-  width: 100%;
+  width: 65%;
   display: grid;
 `;
 
@@ -67,5 +70,5 @@ export const DivShadowBoxSC = styled.div`
   height: 100%;
   //border-radius: 50%;
   background: linear-gradient(90.02deg, rgba(23, 175, 249, 0.6) -7.59%, rgba(213, 22, 255, 0.6) 93.79%);
-  filter: blur(120px);
+filter: blur(100px);
 `

@@ -59,6 +59,7 @@ export const H1FooterTextSoundOnSC = styled.button`
   align-self: end;
   /* identical to box height */
   color: #ffffff;
+  cursor: pointer;
 `;
 export const H1FooterTextSC = styled(Link)`
   width: max-content;
