@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import GlobalDispatchContext from "../global_dispatch_context";
+import BurgerMenu from "../pages/BurgerMenu";
 import {
   DivContainerNavBarSC,
   DivLogoBoxSC,
@@ -13,6 +14,7 @@ import {
   DivContainerNavBarHomeSC,
   LinkToBurgerSC,
   IconBurgerSC,
+  BurgerMenuDisplaySC,
 } from "../styled-components-css/styled-navbar";
 
 const NavBarTop = () => {
@@ -29,12 +31,16 @@ const NavBarTop = () => {
                 <TextNavBarSC>Cyberzen Labs</TextNavBarSC>
               </DivLogoBoxSC>
             </LinkToHomeSC>
-
             <DivShowReelSC>
               <LinkShowReelSC to="#" isBlackBack={isBlackBack}>
                 SHOWREEL
               </LinkShowReelSC>
             </DivShowReelSC>
+            <BurgerMenuDisplaySC>
+              <LinkToBurgerSC to="/menu">
+                <IconBurgerSC></IconBurgerSC>
+              </LinkToBurgerSC>
+            </BurgerMenuDisplaySC>
           </DivContainerNavBarHomeSC>
         </DivMaxWidthSC>
       ) : (

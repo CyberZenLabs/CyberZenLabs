@@ -7,6 +7,9 @@ export const DivHomeContentSC = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const DivTextBoxtSC = styled.div`
@@ -15,6 +18,11 @@ export const DivTextBoxtSC = styled.div`
   grid-template-rows: max-content max-content;
   row-gap: 80px;
   margin-bottom: 100px;
+  @media (max-width: 768px) {
+    row-gap: 0px;
+    margin-bottom: 0px;
+    grid-template-rows: fit-content;
+  }
 `;
 
 export const DivTitleBoxtSC = styled.div`
@@ -38,6 +46,22 @@ export const TitleHomeBoxSC = styled.h1`
     isBlackBack === "black" ? "0px 0px 8px #F61067" : "none"};
   position: relative;
   width: max-content;
+  @media (max-width: 1400px) {
+    font-size: 70px;
+  }
+  @media (max-width: 1250px) {
+    font-size: 60px;
+  }
+  @media (max-width: 1130px) {
+    font-size: 52px;
+  }
+  @media (max-width: 1000px) {
+    font-size: 44px;
+  }
+  @media (max-width: 600px) {
+    justify-self: center;
+    font-size: 28px;
+  }
 `;
 
 export const SloganBoxSC = styled.h1`
@@ -46,11 +70,23 @@ export const SloganBoxSC = styled.h1`
   line-height: 45px;
   letter-spacing: 0.05em;
   pointer-events: none;
+  @media (max-width: 1000px) {
+    font-size: 22px;
+  }
+  @media (max-width: 600px) {
+    display: grid;
+    justify-self: center;
+    font-size: 24px;
+  }
 `;
 
 export const DivDescBoxtSC = styled.div`
-  width: 65%;
+  width: 85%;
   display: grid;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const DescHomeBoxSC = styled.span`
@@ -64,6 +100,17 @@ export const DescHomeBoxSC = styled.span`
 
   text-shadow: ${({ isBlackBack }) =>
     isBlackBack === "black" ? "none" : "0px 5px 30px"};
+  @media (max-width: 1000px) {
+    font-size: 26px;
+  }
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @media (max-width: 600px) {
+    text-align: center;
+    font-size: 24px;
+  }
 `;
 
 export const DivShadowBoxSC = styled.div`
@@ -79,4 +126,26 @@ export const DivShadowBoxSC = styled.div`
     rgba(213, 22, 255, 0.6) 93.79%
   );
   filter: blur(100px);
+`;
+
+export const DivHomeContentRowsSC = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 55px auto;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+`;
+
+export const DescHomeBoxColumnsSC = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 385px;
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 `;

@@ -21,8 +21,11 @@ export const DivContainerNavBarHomeSC = styled.div`
   justify-content: space-between;
   align-items: center;
   background: initial;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr 1.4fr 1fr;
+  }
   @media (max-width: 480px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 export const DivContainerNavBarSC = styled.div`
@@ -50,7 +53,7 @@ export const DivShowReelSC = styled.div`
   display: grid;
   justify-content: end;
   @media (max-width: 480px) {
-    display: none;
+    justify-content: start;
   }
 `;
 export const DivShowReelCenterSC = styled.div`
@@ -70,6 +73,11 @@ export const LogoNavBarSC = styled.div`
   height: 100px;
   display: grid;
   background-position: center;
+  @media (max-width: 768px) {
+    background-size: 150%;
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 export const TextNavBarSC = styled.h1`
@@ -78,6 +86,12 @@ export const TextNavBarSC = styled.h1`
   font-size: 24px;
   line-height: 30px;
   color: #fff;
+  @media (max-width: 1000px) {
+    font-size: 18px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const LinkShowReelSC = styled(Link)`
@@ -88,6 +102,12 @@ export const LinkShowReelSC = styled(Link)`
   line-height: 25px;
   color: ${({ isBlackBack }) =>
     isBlackBack === "black" ? "var(--color-red-pink)" : " #fff;"};
+  @media (max-width: 1000px) {
+    font-size: 18px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const LinkToHomeSC = styled(Link)`
@@ -111,4 +131,11 @@ export const IconBurgerSC = styled.div`
 
   width: 27px;
   height: 22.41px;
+`;
+
+export const BurgerMenuDisplaySC = styled.div`
+  display: none;
+  @media (max-width: 1000px) {
+    display: grid;
+  }
 `;

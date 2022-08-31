@@ -12,6 +12,8 @@ import {
   DivTitleBoxtSC,
   SloganBoxSC,
   TitleHomeBoxSC,
+  DivHomeContentRowsSC,
+  DescHomeBoxColumnsSC,
 } from "../styled-components-css/styled.home";
 import GlobalDispatchContext from "../global_dispatch_context";
 
@@ -21,32 +23,50 @@ const Home = () => {
 
   useEffect(() => {
     dispatch({
-      type: 'SET_IS_HOME',
-      status: true
-    })
+      type: "SET_IS_HOME",
+      status: true,
+    });
     return () => {
       dispatch({
-        type: 'SET_IS_HOME',
-        status: false
-      })
-    }
-  }, [])
+        type: "SET_IS_HOME",
+        status: false,
+      });
+    };
+  }, []);
 
   useEffect(() => {
-    
     return () => {
       dispatch({
-        type: 'SET_IS_PAGE',
-        status: "home"
-      })
-    }
-  }, [isPage])
+        type: "SET_IS_PAGE",
+        status: "home",
+      });
+    };
+  }, [isPage]);
 
-  
   return (
     <>
       <DivWrapSC>
         <DivContainerSC>
+          <DivHomeContentRowsSC>
+            <DivTextBoxtSC>
+              <TitleHomeBoxSC isBlackBack={isBlackBack}>
+                CYBERZEN LABS
+                {isBlackBack === "black" ? null : (
+                  <DivShadowBoxSC></DivShadowBoxSC>
+                )}
+              </TitleHomeBoxSC>
+            </DivTextBoxtSC>
+            <DescHomeBoxColumnsSC>
+              <DivDescBoxtSC>
+                <SloganBoxSC>The future is now</SloganBoxSC>
+                <DescHomeBoxSC isBlackBack={isBlackBack}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
+                  quam eu amet massa viverra.
+                </DescHomeBoxSC>
+              </DivDescBoxtSC>
+            </DescHomeBoxColumnsSC>
+          </DivHomeContentRowsSC>
+
           <DivHomeContentSC>
             <DivTextBoxtSC>
               <DivTitleBoxtSC>
