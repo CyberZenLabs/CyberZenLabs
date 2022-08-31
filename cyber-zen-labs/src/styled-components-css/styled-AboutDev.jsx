@@ -44,6 +44,16 @@ letter-spacing: 0.05em;
 export const GridRowsIcons = styled.div`
 //border: 1px solid red;
 display: grid;
+grid-row-gap:30px;
+align-self:flex-end;
+  `;
+export const CarouselHidden = styled.div`
+
+width:100%;
+  `;
+export const GridIconsSC = styled.div`
+//border: 1px solid red;
+display: grid;
 grid-template-rows: repeat(2, 70px);
 max-width: max-content;
 max-height: max-content;
@@ -51,6 +61,10 @@ justify-items: center;
 justify-content: center;
 grid-row-gap:30px;
 align-self:flex-end;
+width: 100%;
+@media (max-width: 1420px) {
+  display:none;
+  }
   `;
 export const GridColumnsSecondIcons = styled.div`
 //border: 1px solid blue;
@@ -64,7 +78,12 @@ grid-column-gap: 30px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 30px;
-
+  grid-row-gap: 30px;
+  justify-items: center;
+  justify-content: center;
+  @media (max-width: 1420px) {
+    grid-template-columns: repeat(8, 1fr);
+  }
     `;
 export const ImgIconSC = styled.div`
 border-radius:100%;
@@ -72,3 +91,10 @@ width: 70px;
 height: 70px;
 background-image: ${({ Photo }) => Photo && `url(${Photo})`};
   `;
+
+export const DivCustomArrow = styled.button`
+border-radius:100%;
+width: 70px;
+height: 70px;
+background: #000;
+`;
