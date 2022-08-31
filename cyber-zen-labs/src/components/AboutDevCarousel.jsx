@@ -1,10 +1,7 @@
-import React, {useContext, useEffect} from "react";
-import {
-  DivContainerSC,
-  DivWrapSC,
-} from "../styled-components-css/styled-DEFAULT";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
 import {
     DivContainerAboutDevSC,
     DivDecriptionTextSC,
@@ -15,10 +12,10 @@ import {
     GridColumnsIcons,
     GridColumnsSecondIcons,
     GridIconsSC,
-    CarouselHidden
+    CarouselHidden,
+    DivCustomArrow
 } from "../styled-components-css/styled-AboutDev";
-import GlobalDispatchContext from "../global_dispatch_context";
-import AboutDevCarousel from '../components/AboutDevCarousel';
+
 
 import AfterEffects from '../images/DevIcons/AfterEffects.svg';
 import EtherJS from '../images/DevIcons/EthersJS.svg';
@@ -43,53 +40,62 @@ import TRUFFLE from '../images/DevIcons/TRUFFLE.svg';
 import web3 from '../images/DevIcons/web3.svg';
 import Z from '../images/DevIcons/Z.svg';
 import AI from '../images/DevIcons/AI.svg';
-const About = () => {
-  const { state, dispatch } = useContext(GlobalDispatchContext);
-  const { isBlackBack, isPage, isAboutBack } = state;
-  useEffect(() => {
-    
-    return () => {
-      dispatch({
-        type: 'SET_IS_PAGE',
-        status: "about"
-      })
-    }
-  }, [isPage])
+const AboutDevCarousel = ({props}) => {
 
-  useEffect(() => {
-   
-    dispatch({
-      type: 'SET_IS_ABOUT_BACK',
-      status: "purple"
-    })
-    return () => {
-      dispatch({
-        type: 'SET_IS_ABOUT_BACK',
-        status: ""
-      })
-    }
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 1420 },
+      items: 0,
+      slidesToSlide: 0
+
+    },
+    desktop: {
+      breakpoint: { max: 1420, min: 1000 },
+      items:8,
+      slidesToSlide: 8
+    },
+    tablet: {
+      breakpoint: { max: 1000, min: 768 },
+      items: 6,
+      slidesToSlide: 6
+    },
+    mobile: {
+        breakpoint: { max: 768, min: 480 },
+        items: 4,
+        slidesToSlide: 4
+      },
+    smallmobile: {
+        breakpoint: { max: 480, min: 360 },
+        items: 3,
+        slidesToSlide: 3
+      }
+  };
+  var settings = {
     
-  }, [isAboutBack])
+  }
+  const CustomRightArrow = ({ onClick, ...rest }) => {
+    const {
+      onMove,
+      carouselState: { currentSlide, deviceType }
+    } = rest;
+    // onMove means if dragging or swiping in progress.
+    return <DivCustomArrow onClick={() => onClick()} />;
+  };
   return (
-    
     <>
-    <DivWrapSC>
-        <DivContainerSC>
-            <DivContainerAboutDevSC>
-              <GridContainerItemsSC>
-                <DivDecriptionTextSC>
-                We are ushering in the future of the web using futuristic technologies most companies arent even dreaming of, whether its UI/UX design, Web3 Development or the most complex of software projects, we have the ability to maniofest the best digital expereinces you or your users could dream of. And that's a promise!
-                </DivDecriptionTextSC>
-                
-                
-                <GridRowsIcons>
-                <DivDecriptionTextSC>
-                <DivCustomTextSC >
-                Why we used:
-                </DivCustomTextSC>
-                </DivDecriptionTextSC>
-                <GridIconsSC>
-                <GridColumnsIcons>
+
+
+
+
+      <Carousel 
+      containerClass="carousel-container"
+        responsive={responsive}
+  
+      
+      
+      >
+
                   <ImgIconSC Photo={web3}/>
                   <ImgIconSC Photo={METAMASK}/>
                   <ImgIconSC Photo={styled_components}/>
@@ -102,8 +108,6 @@ const About = () => {
                   <ImgIconSC Photo={MySQL}/>
                   <ImgIconSC Photo={PyTeAl}/>
                   <ImgIconSC Photo={AI}/>
-                  </GridColumnsIcons>
-                  <GridColumnsSecondIcons>
                   <ImgIconSC Photo={TRUFFLE}/>
                   <ImgIconSC Photo={Etherum}/>
                   <ImgIconSC Photo={Express}/>
@@ -115,19 +119,10 @@ const About = () => {
                   <ImgIconSC Photo={Selenium}/>
                   <ImgIconSC Photo={Figma}/>
                   <ImgIconSC Photo={AfterEffects}/>
-                  </GridColumnsSecondIcons>
-                </GridIconsSC>
 
-                <AboutDevCarousel></AboutDevCarousel>
-                
-                {/* sd */}
-                  </GridRowsIcons>
-              </GridContainerItemsSC>
-            </DivContainerAboutDevSC>
-        </DivContainerSC>
-        </DivWrapSC>
+</Carousel>
     </>
   );
 };
 
-export default About;
+export default AboutDevCarousel;

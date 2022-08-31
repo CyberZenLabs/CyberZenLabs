@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext, useEffect} from "react";
 import {
   DivContainerSC,
   DivWrapSC,
@@ -20,8 +20,27 @@ import {
   DivBoxBorder2SC,
   DivContainerPenals2SC,
 } from "../styled-components-css/styled-getInTouch";
+import GlobalDispatchContext from "../global_dispatch_context";
+
+
 
 const GetInTouch = () => {
+  const { state, dispatch } = useContext(GlobalDispatchContext);
+  const { isBlackBack, isPage, isAboutBack } = state;
+
+  useEffect(() => {
+    dispatch({
+      type: 'SET_IS_PAGE',
+      status: "sound"
+    })
+    return () => {
+      dispatch({
+        type: 'SET_IS_PAGE',
+        status: "home"
+      })
+  
+    }
+  }, [isPage])
   return (
     <DivWrapSC>
       <DivContainerSC>
