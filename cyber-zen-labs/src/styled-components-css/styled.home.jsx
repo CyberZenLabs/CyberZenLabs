@@ -14,7 +14,7 @@ export const DivTextBoxtSC = styled.div`
   display: grid;
   grid-template-rows: max-content max-content;
   row-gap: 80px;
-  margin-bottom:100px;
+  margin-bottom: 100px;
 `;
 
 export const DivTitleBoxtSC = styled.div`
@@ -24,16 +24,18 @@ export const DivTitleBoxtSC = styled.div`
 `;
 
 export const TitleHomeBoxSC = styled.h1`
-pointer-events: none;
+  pointer-events: none;
   font-weight: 900;
   font-size: 80px;
   line-height: 100px;
   letter-spacing: 0.08em;
-  background: ${({isBlackBack}) => (isBlackBack === 'black' ? 'var(--color-red-pink)' : 'var(--blue-pink)')};
+  background: ${({ isBlackBack }) =>
+    isBlackBack === "black" ? "var(--color-red-pink)" : "var(--blue-pink)"};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: ${({isBlackBack}) => (isBlackBack === 'black' ? '0px 0px 8px #F61067' : 'none')};
+  text-shadow: ${({ isBlackBack }) =>
+    isBlackBack === "black" ? "0px 0px 8px #F61067" : "none"};
   position: relative;
   width: max-content;
 `;
@@ -57,18 +59,24 @@ export const DescHomeBoxSC = styled.span`
   line-height: 50px;
   letter-spacing: 0.05em;
   pointer-events: none;
-  color: ${({isBlackBack}) => (isBlackBack === 'black' ? 'var(--color-red-pink)' : '#d516ff')};
+  color: ${({ isBlackBack }) =>
+    isBlackBack === "black" ? "var(--color-red-pink)" : "#d516ff"};
 
-  text-shadow: ${({isBlackBack}) => (isBlackBack === 'black' ? 'none' : '0px 5px 30px')};
+  text-shadow: ${({ isBlackBack }) =>
+    isBlackBack === "black" ? "none" : "0px 5px 30px"};
 `;
 
 export const DivShadowBoxSC = styled.div`
-    position: absolute;
+  position: absolute;
   top: 0px;
   left: -6%;
   width: 110%;
   height: 100%;
   //border-radius: 50%;
-  background: linear-gradient(90.02deg, rgba(23, 175, 249, 0.6) -7.59%, rgba(213, 22, 255, 0.6) 93.79%);
-filter: blur(100px);
-`
+  background: linear-gradient(
+    90.02deg,
+    rgba(23, 175, 249, 0.6) -7.59%,
+    rgba(213, 22, 255, 0.6) 93.79%
+  );
+  filter: blur(100px);
+`;

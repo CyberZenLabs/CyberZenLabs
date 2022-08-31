@@ -20,12 +20,43 @@ import {
   ImgBuddhaSC,
   DivDecLineSC,
   DivBoxBlurSC,
+  DivRowsContentContacts,
 } from "../styled-components-css/styled-contacts";
 
 const Contacts = () => {
   return (
     <DivWrapSC>
       <DivContainerSC>
+        <DivRowsContentContacts>
+          <DivLeftPenalSC>
+            <DivBoxTextWriteToUsSC>
+              <DivTextWriteToUsSC to="#">
+                WRITE TO US
+                <DivDecLineSC />
+              </DivTextWriteToUsSC>
+            </DivBoxTextWriteToUsSC>
+
+            {/* <DivBoxBlurSC></DivBoxBlurSC>
+            <ImgBuddhaSC src="/default-images/buddha.png" /> */}
+          </DivLeftPenalSC>
+          <DivRightPenalSC>
+            <DivColumnsTelephoneSC>
+              <DivTextTelephoneSC>telephone:</DivTextTelephoneSC>
+              <DivNumTelephoneSC>+1(775) 5020434</DivNumTelephoneSC>
+            </DivColumnsTelephoneSC>
+
+            <DivColumnsTelegramSC>
+              <DivTextTelegramSC>telegram:</DivTextTelegramSC>
+              <DivNumTelegramSC>@obscuradox</DivNumTelegramSC>
+            </DivColumnsTelegramSC>
+
+            <DivColumnsemailSC>
+              <DivTextTelegramSC>e-mail:</DivTextTelegramSC>
+              <DivNumTelegramSC>cyberzenlabs@gmail.com</DivNumTelegramSC>
+            </DivColumnsemailSC>
+          </DivRightPenalSC>
+        </DivRowsContentContacts>
+
         <DivColumnsContentContacts>
           <DivLeftPenalSC>
             <DivBoxTextWriteToUsSC>
@@ -50,8 +81,8 @@ const Contacts = () => {
             </DivColumnsemailSC>
           </DivLeftPenalSC>
           <DivRightPenalSC>
-            <DivBoxBlurSC></DivBoxBlurSC>
-            <ImgBuddhaSC src="/default-images/buddha.png" />
+            {/* <DivBoxBlurSC></DivBoxBlurSC>
+            <ImgBuddhaSC src="/default-images/buddha.png" /> */}
           </DivRightPenalSC>
         </DivColumnsContentContacts>
       </DivContainerSC>
