@@ -59,7 +59,7 @@ const Footer = () => {
             <DivContainerFooterCenterSC>
               <H1FooterTextSC to="/">HOME</H1FooterTextSC>
               <H1FooterTextSC to="/about">ABOUT</H1FooterTextSC>
-              <H1FooterTextSC to="#">SERVICES</H1FooterTextSC>
+              <H1FooterTextSC to="/services">SERVICES</H1FooterTextSC>
               <H1FooterTextSC to="#">PROJECTS</H1FooterTextSC>
               <H1FooterTextSC to="/contacts">CONTACTS</H1FooterTextSC>
             </DivContainerFooterCenterSC>

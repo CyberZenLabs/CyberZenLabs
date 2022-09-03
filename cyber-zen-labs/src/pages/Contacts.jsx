@@ -21,6 +21,7 @@ import {
   DivDecLineSC,
   DivBoxBlurSC,
   DivRowsContentContacts,
+  DivTopPenalSC,
 } from "../styled-components-css/styled-contacts";
 
 const Contacts = () => {
@@ -35,9 +36,10 @@ const Contacts = () => {
                 <DivDecLineSC />
               </DivTextWriteToUsSC>
             </DivBoxTextWriteToUsSC>
-
-            {/* <DivBoxBlurSC></DivBoxBlurSC>
-            <ImgBuddhaSC src="/default-images/buddha.png" /> */}
+            <DivTopPenalSC>
+              <DivBoxBlurSC></DivBoxBlurSC>
+              <ImgBuddhaSC src="/default-images/buddha.png" />
+            </DivTopPenalSC>
           </DivLeftPenalSC>
           <DivRightPenalSC>
             <DivColumnsTelephoneSC>
@@ -81,8 +83,8 @@ const Contacts = () => {
             </DivColumnsemailSC>
           </DivLeftPenalSC>
           <DivRightPenalSC>
-            {/* <DivBoxBlurSC></DivBoxBlurSC>
-            <ImgBuddhaSC src="/default-images/buddha.png" /> */}
+            <DivBoxBlurSC></DivBoxBlurSC>
+            <ImgBuddhaSC src="/default-images/buddha.png"></ImgBuddhaSC>
           </DivRightPenalSC>
         </DivColumnsContentContacts>
       </DivContainerSC>

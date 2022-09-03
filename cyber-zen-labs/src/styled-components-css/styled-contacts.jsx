@@ -29,21 +29,25 @@ export const DivRowsContentContacts = styled.div`
 `;
 
 export const DivLeftPenalSC = styled.div`
-  width: 100%;
+  width: 90%;
   height: 100%;
   max-width: 709px;
   display: grid;
   grid-template-rows: 245px 183px 84px 84px;
   @media (max-width: 1000px) {
+    width: 100%;
     grid-template-rows: 245px 83px 44px 44px;
   }
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 376px;
   }
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 376px;
+
+  @media (max-width: 675px) {
+    grid-template-columns: 1fr 1.3fr;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr 1.1fr;
   }
   @media (max-width: 480px) {
     grid-template-columns: 100%;
@@ -73,6 +77,32 @@ export const DivBoxBlurSC = styled.div`
   background: linear-gradient(180deg, #fd03ff 29.3%, #3ab4fa 78.61%);
   filter: blur(450px);
   z-index: 2;
+  @media (max-width: 1700px) {
+    width: 75%;
+    height: 75%;
+  }
+  @media (max-width: 1250px) {
+    width: 100%;
+    height: 75%;
+  }
+  @media (max-width: 1150px) {
+    height: 65%;
+  }
+  @media (max-width: 1000px) {
+    height: 85%;
+  }
+  @media (max-width: 895px) {
+    width: 75%;
+    height: 75%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 75%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 60%;
+  }
   @media (max-width: 480px) {
     display: none;
   }
@@ -83,18 +113,51 @@ export const ImgBuddhaSC = styled.img`
   width: 789px;
   height: 704px;
   z-index: 3;
-  aspect-ratio: 1/1;
+  @media (max-width: 1700px) {
+    width: 494px;
+    height: 429px;
+  }
+  @media (max-width: 1150px) {
+    width: 424px;
+    height: 359px;
+  }
+  @media (max-width: 895px) {
+    width: 330px;
+    height: 295px;
+  }
+  @media (max-width: 600px) {
+    width: 280px;
+    height: 245px;
+    top: 270px;
+  }
   @media (max-width: 480px) {
     display: none;
   }
 `;
 
-export const DivBoxTextWriteToUsSC = styled.div`
+export const DivTopPenalSC = styled.div`
   width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: end;
+  z-index: 3;
+  @media (max-width: 768px) {
+    align-items: end;
+  }
+  @media (max-width: 600px) {
+    align-items: end;
+  }
+`;
+
+export const DivBoxTextWriteToUsSC = styled.div`
+  width: 90%;
   height: 100%;
   display: grid;
   align-items: start;
   padding-top: 100px;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
   @media (max-width: 480px) {
     justify-content: center;
   }
