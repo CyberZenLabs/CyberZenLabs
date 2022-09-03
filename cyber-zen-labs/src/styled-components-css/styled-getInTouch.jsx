@@ -9,9 +9,9 @@ export const DivContainerPenalsSC = styled.div`
   display: grid;
   justify-self: center;
   grid-template-columns: 50% 50%;
-  grid-column-gap: 98px;
+  grid-column-gap: 70px;
   @media (max-width: 1175px) {
-    grid-column-gap: 38px;
+    grid-column-gap: 25px;
   }
   @media (max-width: 810px) {
     display: none;
@@ -34,7 +34,7 @@ export const DivBoxRowsLeftPenalSC = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 34px 21px 89px 20px 84px 21px 89px 21px 65px;
+  grid-template-rows: 29px 33px 86px 33px 81px 33px 86px 33px 60px;
   @media (max-width: 810px) {
     max-width: 100%;
   }
@@ -133,7 +133,7 @@ export const DivBoxColumnsMoneySC = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 38px;
   height: 156px;
-  width: 100%;
+  width: 110%;
   max-width: max-content;
   @media (max-width: 410px) {
     grid-column-gap: 32px;
@@ -145,7 +145,7 @@ export const DivBoxRowsRightPenalSC = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 64px 205px 79px 31px 203px;
+  grid-template-rows: 64px 231px 79px 40px 203px;
   @media (max-width: 810px) {
     max-width: 100%;
   }
