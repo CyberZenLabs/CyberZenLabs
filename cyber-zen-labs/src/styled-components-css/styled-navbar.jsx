@@ -8,7 +8,7 @@ export const DivMaxWidthSC = styled.div`
   max-width: var(--max-width);
   margin: 0 auto;
   width: 90vw;
- // border:1px solid red;
+  // border:1px solid red;
 `;
 
 export const DivContainerNavBarHomeSC = styled.div`
@@ -21,9 +21,12 @@ export const DivContainerNavBarHomeSC = styled.div`
   justify-content: space-between;
   align-items: center;
   background: initial;
-  @media (max-width:480px) {
-    grid-template-columns: 1fr;
-}
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr 1.4fr 1fr;
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 export const DivContainerNavBarSC = styled.div`
   position: absolute;
@@ -35,9 +38,9 @@ export const DivContainerNavBarSC = styled.div`
   justify-content: space-between;
   align-items: center;
   background: initial;
-  @media (max-width:480px) {
+  @media (max-width: 480px) {
     grid-template-columns: 1fr;
-}
+  }
 `;
 export const DivLogoBoxSC = styled.div`
   width: 100%;
@@ -49,19 +52,18 @@ export const DivShowReelSC = styled.div`
   width: 100%;
   display: grid;
   justify-content: end;
-  @media (max-width:480px) {
-display: none;
-}
+  @media (max-width: 480px) {
+    justify-content: start;
+  }
 `;
 export const DivShowReelCenterSC = styled.div`
   width: 100%;
   display: grid;
   justify-content: center;
-  @media (max-width:480px) {
-display: none;
-}
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
-
 
 export const LogoNavBarSC = styled.div`
   background-image: url(${Logo});
@@ -71,6 +73,11 @@ export const LogoNavBarSC = styled.div`
   height: 100px;
   display: grid;
   background-position: center;
+  @media (max-width: 768px) {
+    background-size: 150%;
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 export const TextNavBarSC = styled.h1`
@@ -79,36 +86,56 @@ export const TextNavBarSC = styled.h1`
   font-size: 24px;
   line-height: 30px;
   color: #fff;
+  @media (max-width: 1000px) {
+    font-size: 18px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const LinkShowReelSC = styled(Link)`
-text-decoration: none;
+  text-decoration: none;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 25px;
-  color: ${({isBlackBack}) => (isBlackBack === 'black' ? 'var(--color-red-pink)' : ' #fff;')};
+  color: ${({ isBlackBack }) =>
+    isBlackBack === "black" ? "var(--color-red-pink)" : " #fff;"};
+  @media (max-width: 1000px) {
+    font-size: 18px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const LinkToHomeSC = styled(Link)`
-text-decoration: none;
+  text-decoration: none;
   width: max-content;
   height: max-content;
 
-@media (max-width:480px) {
-display: none;
-}
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const LinkToBurgerSC = styled(Link)`
-width: 100%;
+  width: 100%;
   display: grid;
   justify-content: end;
 `;
 
 export const IconBurgerSC = styled.div`
-background-image: url(${Burger});
+  background-image: url(${Burger});
 
-width: 27px;
-height: 22.41px;
+  width: 27px;
+  height: 22.41px;
+`;
+
+export const BurgerMenuDisplaySC = styled.div`
+  display: none;
+  @media (max-width: 1000px) {
+    display: grid;
+  }
 `;
