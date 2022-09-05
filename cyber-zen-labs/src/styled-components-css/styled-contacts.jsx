@@ -112,7 +112,7 @@ export const ImgBuddhaSC = styled.img`
   position: absolute;
   width: 789px;
   height: 704px;
-  z-index: 3;
+  z-index: 30;
   @media (max-width: 1700px) {
     width: 494px;
     height: 429px;
