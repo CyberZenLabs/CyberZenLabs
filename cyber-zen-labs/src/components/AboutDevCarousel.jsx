@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import {CgChevronRight, CgChevronLeft} from "react-icons/cg";
 
 import {
     DivContainerAboutDevSC,
@@ -13,7 +14,8 @@ import {
     GridColumnsSecondIcons,
     GridIconsSC,
     CarouselHidden,
-    DivCustomArrow
+    DivCustomArrowRight,
+    DivCustomArrowLeft
 } from "../styled-components-css/styled-AboutDev";
 
 
@@ -51,13 +53,23 @@ const AboutDevCarousel = ({props}) => {
 
     },
     desktop: {
-      breakpoint: { max: 1420, min: 1000 },
+      breakpoint: { max: 1420, min: 1200 },
       items:8,
       slidesToSlide: 8
     },
+    smalldesktop: {
+      breakpoint: { max: 1200, min: 1000 },
+      items:7,
+      slidesToSlide: 8
+    },
     tablet: {
-      breakpoint: { max: 1000, min: 768 },
+      breakpoint: { max: 1000, min: 900 },
       items: 6,
+      slidesToSlide: 6
+    },
+    smalltablet: {
+      breakpoint: { max: 900, min: 768 },
+      items: 5,
       slidesToSlide: 6
     },
     mobile: {
@@ -71,16 +83,23 @@ const AboutDevCarousel = ({props}) => {
         slidesToSlide: 3
       }
   };
-  var settings = {
-    
-  }
+
   const CustomRightArrow = ({ onClick, ...rest }) => {
     const {
       onMove,
       carouselState: { currentSlide, deviceType }
     } = rest;
     // onMove means if dragging or swiping in progress.
-    return <DivCustomArrow onClick={() => onClick()} />;
+    return <DivCustomArrowRight onClick={() => onClick()} />;
+  };
+
+  const CustomLeftArrow = ({ onClick, ...rest }) => {
+    const {
+      onMove,
+      carouselState: { currentSlide, deviceType }
+    } = rest;
+    // onMove means if dragging or swiping in progress.
+    return <DivCustomArrowLeft onClick={() => onClick()} />;
   };
   return (
     <>
@@ -88,14 +107,18 @@ const AboutDevCarousel = ({props}) => {
 
 
 
-      <Carousel 
+
+      <Carousel
+      customRightArrow={<CustomRightArrow/>} customLeftArrow={<CustomLeftArrow/>}
+      sliderClass="carousel-slider"
+      itemClass="carousel-item"
       containerClass="carousel-container"
         responsive={responsive}
   
       
       
       >
-
+          
                   <ImgIconSC Photo={web3}/>
                   <ImgIconSC Photo={METAMASK}/>
                   <ImgIconSC Photo={styled_components}/>
@@ -119,8 +142,8 @@ const AboutDevCarousel = ({props}) => {
                   <ImgIconSC Photo={Selenium}/>
                   <ImgIconSC Photo={Figma}/>
                   <ImgIconSC Photo={AfterEffects}/>
-
 </Carousel>
+
     </>
   );
 };

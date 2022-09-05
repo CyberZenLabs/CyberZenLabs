@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
-
+import {CgChevronRight, CgChevronLeft} from "react-icons/cg";
 export const DivContainerAboutDevSC = styled.div`
 display: grid;
 width: 100%;
@@ -16,7 +16,6 @@ grid-template-rows: 275px 1fr;
  grid-row-gap: 30px;
   `;
 export const DivDecriptionTextSC = styled.div`
-pointer-events: none;
 display: grid;
 font-weight: 400;
 font-size: 35px;
@@ -24,6 +23,15 @@ line-height: 44px;
 text-align: center;
 letter-spacing: 0.05em;
 width: 100%;
+@media (max-width: 1420px) {
+  font-size: 30px;
+  }
+  @media (max-width: 1260px) {
+  font-size: 24px;
+  }
+  @media (max-width: 1260px) {
+  font-size: 24px;
+  }
 `;
 
 export const DivCustomTextSC = styled.div`
@@ -92,9 +100,34 @@ height: 70px;
 background-image: ${({ Photo }) => Photo && `url(${Photo})`};
   `;
 
-export const DivCustomArrow = styled.button`
-border-radius:100%;
-width: 70px;
-height: 70px;
-background: #000;
+export const DivCustomArrowRight = styled(CgChevronRight)`
+width:3vw;
+height: 3vw;
+position: absolute;
+right: 0px;
+
+@media (max-width: 768px) {
+  height: 4vw;
+  width: 4vw;
+  }
+  @media (max-width: 480px) {
+  height: 5vw;
+  width: 5vw;
+  }
+`;
+
+export const DivCustomArrowLeft = styled(CgChevronLeft)`
+width:3vw;
+height: 3vw;
+position: absolute;
+left: 0;
+
+@media (max-width: 768px) {
+  height: 4vw;
+  width: 4vw;
+  }
+  @media (max-width: 480px) {
+  height: 5vw;
+  width: 5vw;
+  }
 `;
