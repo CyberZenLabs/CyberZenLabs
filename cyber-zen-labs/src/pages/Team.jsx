@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
   DivContainerSC,
   DivWrapSC,
@@ -33,9 +33,34 @@ import {
   DivFoto10SC,
   DivFoto11SC,
 } from "../styled-components-css/styled-team";
+import GlobalDispatchContext from "../global_dispatch_context";
 
 const Team = () => {
 
+  const { state, dispatch } = useContext(GlobalDispatchContext);
+  const { isPage, isAboutBack } = state;
+
+  useEffect(() => {
+    return () => {
+      dispatch({
+        type: "SET_IS_PAGE",
+        status: "about",
+      });
+    };
+  }, [isPage]);
+
+  useEffect(() => {
+    dispatch({
+      type: "SET_IS_ABOUT_BACK",
+      status: "purple",
+    });
+    return () => {
+      dispatch({
+        type: "SET_IS_ABOUT_BACK",
+        status: "",
+      });
+    };
+  }, [isAboutBack]);
   const listContent = [
     {
       page: (

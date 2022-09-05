@@ -12,19 +12,21 @@ export const DivMainRowsSC = styled.div`
   height: 100%;
   display: grid;
   grid-template-rows: 170px 83px 93px 194px 38px;
+  @media (max-width: 480px) {
+    grid-template-rows: 170px 83px 93px 144px 38px;
+  }
 `;
 
 export const DivBoxTextTitleSC = styled.div`
   width: 100%;
-  height: 100%;
+  height: 110%;
   display: grid;
   justify-items: center;
 `;
 
 export const DivTextTitleSC = styled.div`
-pointer-events: none;
+  pointer-events: none;
   max-width: 990px;
-  max-height: 120px;
   width: 100%;
   height: 100%;
   font-family: "Orbitron";
@@ -35,12 +37,26 @@ pointer-events: none;
   text-align: center;
   letter-spacing: 0.05em;
   background: linear-gradient(270deg, #d815ff 0%, #09bbf9 102.1%);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text;
   text-fill-color: transparent;
 
   text-shadow: 0px 4px 20px #d516ff;
+  @media (max-width: 1000px) {
+    font-size: 40px;
+  }
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+  @media (max-width: 560px) {
+    font-size: 24px;
+  }
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
+  @media (max-width: 360px) {
+    font-size: 14px;
+  }
 `;
 
 export const DivTextTeamSC = styled.div`
@@ -61,6 +77,22 @@ export const DivTextTeamSC = styled.div`
   text-fill-color: transparent;
 
   text-shadow: 0px 4px 20px #d516ff;
+  pointer-events: none;
+  @media (max-width: 1000px) {
+    font-size: 40px;
+  }
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+  @media (max-width: 560px) {
+    font-size: 24px;
+  }
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
+  @media (max-width: 360px) {
+    font-size: 16px;
+  }
 `;
 
 export const DivBoxColumnsPagesSC = styled.div`
@@ -72,7 +104,7 @@ export const DivBoxColumnsPagesSC = styled.div`
 `;
 
 export const DivPageSC = styled.div`
-cursor: pointer;
+  cursor: pointer;
   width: fit-content;
   height: 100%;
   font-style: normal;
@@ -84,7 +116,18 @@ cursor: pointer;
   text-shadow: ${(p) => (p.isActive ? "6px 5px 5px #a557e5" : "#FFF")};
   //border: 1px solid red;
   height: fit-content;
-
+  @media (max-width: 1000px) {
+    font-size: 24px;
+  }
+  @media (max-width: 560px) {
+    font-size: 18px;
+  }
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+  @media (max-width: 360px) {
+    font-size: 12px;
+  }
 `;
 
 export const DivBoxColumnsFotosSC = styled.div`
@@ -94,6 +137,9 @@ export const DivBoxColumnsFotosSC = styled.div`
   grid-template-columns: 50% 50%;
   grid-column-gap: 40px;
   justify-self: center;
+  @media (max-width: 480px) {
+    grid-column-gap: 20px;
+  }
 `;
 
 export const DivFotoSC = styled.div`
@@ -102,6 +148,10 @@ export const DivFotoSC = styled.div`
   height: 180px;
   background-size: 100%;
   background-repeat: no-repeat;
+  @media (max-width: 480px) {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 export const DivFoto1SC = styled.div`
@@ -110,6 +160,10 @@ export const DivFoto1SC = styled.div`
   height: 180px;
   background-size: 100%;
   background-repeat: no-repeat;
+  @media (max-width: 480px) {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 export const DivFoto2SC = styled.div`
@@ -180,10 +234,18 @@ export const DivBoxColumnsNameSC = styled.div`
   grid-template-columns: 50% 50%;
   grid-column-gap: 60px;
   justify-self: center;
+  @media (max-width: 480px) {
+    grid-template-columns: 40% 40%;
+    justify-self: end;
+    justify-content: center;
+    justify-items: center;
+    max-width: 424px;
+    grid-column-gap: 30px;
+  }
 `;
 
 export const DivNameSC = styled.div`
-pointer-events: none;
+  pointer-events: none;
   width: 169px;
   height: 36px;
   font-style: normal;
@@ -193,10 +255,17 @@ pointer-events: none;
   text-align: center;
   letter-spacing: 0.05em;
   padding-left: 10px;
+  @media (max-width: 480px) {
+    font-size: 10px;
+    padding-left: 45px;
+    margin-right: 15px;
+    display: grid;
+    width: 119px;
+  }
 `;
 
 export const DivName1SC = styled.div`
-pointer-events: none;
+  pointer-events: none;
   width: 142px;
   height: 36px;
   font-style: normal;
@@ -205,10 +274,20 @@ pointer-events: none;
   line-height: 18px;
   text-align: center;
   letter-spacing: 0.05em;
+  @media (max-width: 480px) {
+    font-size: 10px;
+    padding-right: 45px;
+    width: 80%;
+  }
+  @media (max-width: 450px) {
+    font-size: 10px;
+    padding-right: 15px;
+    width: 80%;
+  }
 `;
 
 export const DivName0SC = styled.div`
-pointer-events: none;
+  pointer-events: none;
   width: 100%;
   height: 72px;
   font-style: normal;
@@ -230,7 +309,7 @@ export const DivBoxColumnsName1SC = styled.div`
 `;
 
 export const DivName2SC = styled.div`
-pointer-events: none;
+  pointer-events: none;
   width: 100%;
   height: 72px;
   font-style: normal;

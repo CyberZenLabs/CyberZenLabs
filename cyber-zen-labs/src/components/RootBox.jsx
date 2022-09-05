@@ -9,7 +9,8 @@ const RootBox = (props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const {
       isBlackBack,
-      isHome
+      isHome,
+      isAboutBack
   } = state
 
     let interval
@@ -37,7 +38,7 @@ const RootBox = (props) => {
 
   return (
       <GlobalDispatchContext.Provider value={{ state, dispatch }}>
-        <DivRootSC isBlackBack={isBlackBack}>
+        <DivRootSC isBlackBack={isBlackBack} isAboutBack ={isAboutBack}>
             {children}
         </DivRootSC>
       </GlobalDispatchContext.Provider>

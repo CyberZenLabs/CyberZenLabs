@@ -13,6 +13,8 @@ import Contacts from "./pages/Contacts";
 import BurgerMenu from "./pages/BurgerMenu";
 import AboutDev from "./pages/AboutDev";
 import Team from "./pages/Team";
+import GetInTouch from "./pages/GetInTouch";
+import Services from "./pages/Services";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -27,6 +29,8 @@ root.render(
           <Route path="menu" element={<BurgerMenu />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="team" element={<Team />} />
+          <Route path="getintouch" element={<GetInTouch />} />
+          <Route path="services" element={<Services />} />
         </Routes>
         <Footer />
       </RootBox>

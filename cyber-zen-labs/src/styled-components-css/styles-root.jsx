@@ -5,7 +5,8 @@ export const DivRootSC = styled.div`
   height: 100%;
   display: grid;
   grid-template-rows: 160px max-content 160px;
-  background: ${(p) => (p.isBlackBack === 'black' ? 'black' : 'var(--background-color)')};
+  background: ${(p) => (p.isBlackBack === 'black' ? 'black'  : p.isAboutBack === 'purple' ? '#1B074F': 'var(--background-color)')};
+
  // transition: .3s background-color;
   //transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
 
