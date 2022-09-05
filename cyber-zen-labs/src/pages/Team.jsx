@@ -35,6 +35,7 @@ import {
 } from "../styled-components-css/styled-team";
 
 const Team = () => {
+
   const listContent = [
     {
       page: (
