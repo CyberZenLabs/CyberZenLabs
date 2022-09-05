@@ -291,3 +291,18 @@ table {
   animation-delay: 0.3s;
 }
 
+.carousel-item{
+  display: grid;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  padding: auto;
+  transform-style: initial !important;
+}
+.carousel-slider{
+}
+.carousel-container{
+
+  width: 106%;
+  justify-content: space-between;
+}

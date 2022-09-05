@@ -13,4 +13,5 @@ export const DivContainerSC = styled.div`
   width: 90vw;
   display: grid;
   justify-items: center;
+  
 `;

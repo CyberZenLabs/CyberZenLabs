@@ -22,6 +22,10 @@ export const DivContainerFooterLeftSC = styled.div`
   gap: 1px;
   height: 60px;
   // max-height: 20px;
+  @media (max-width: 480px) {
+    align-self: end;
+
+  }
 `;
 export const DivContainerFooterCenterSC = styled.div`
   display: grid;
