@@ -6,6 +6,7 @@ import Ruslan from "../images/Ruslan.png";
 import Ilya from "../images/Ilya.png";
 import Andrey from "../images/Andrey.png";
 import Irene from "../images/Irene.png";
+import Dmitry from "../images/Dmitry.png";
 
 export const DivMainRowsSC = styled.div`
   width: 100%;
@@ -209,6 +210,7 @@ export const DivFoto6SC = styled.div`
 `;
 
 export const DivFoto7SC = styled.div`
+background-image: url(${Dmitry});
   width: 180px;
   height: 180px;
   border-radius: 100%;
