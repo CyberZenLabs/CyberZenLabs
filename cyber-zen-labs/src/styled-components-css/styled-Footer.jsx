@@ -12,6 +12,7 @@ export const DivContainerFooterSC = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 0.5fr auto 0px;
   }
+
 `;
 export const DivContainerFooterLeftSC = styled.div`
   display: grid;
@@ -22,6 +23,10 @@ export const DivContainerFooterLeftSC = styled.div`
   gap: 1px;
   height: 60px;
   // max-height: 20px;
+  @media (max-width: 480px) {
+    align-self: end;
+
+  }
 `;
 export const DivContainerFooterCenterSC = styled.div`
   display: grid;
@@ -39,12 +44,19 @@ export const DivContainerFooterCenterSC = styled.div`
     display: none;
   }
   padding-left: 20px;
+  @media (max-width: 480px) {
+    align-self: end;
+
+  }
 `;
 export const DivContainerFooterRightSC = styled.div`
   display: grid;
   grid-template-columns: max-content;
   //border:1px solid white;
   justify-self: end;
+  @media (max-width: 480px) {
+    align-self: end;
+  }
 `;
 export const DivPhotoRightContainerSC = styled(Link)`
   background-image: url(${Mail});
@@ -60,6 +72,7 @@ export const DivPhotoRightContainerSC = styled(Link)`
   @media (max-width: 480px) {
     width: 36px;
     height: 36px;
+
   }
 `;
 //soundbar

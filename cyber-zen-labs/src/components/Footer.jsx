@@ -18,6 +18,7 @@ import GlobalDispatchContext from "../global_dispatch_context";
 
 const Footer = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
+
   const { isPage } = state;
 
   return (

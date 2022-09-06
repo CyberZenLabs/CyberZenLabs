@@ -9,6 +9,9 @@ export const DivMaxWidthSC = styled.div`
   margin: 0 auto;
   width: 90vw;
   // border:1px solid red;
+  @media (max-width: 480px) {
+    height: 40px;
+  }
 `;
 
 export const DivContainerNavBarHomeSC = styled.div`
@@ -26,6 +29,7 @@ export const DivContainerNavBarHomeSC = styled.div`
   }
   @media (max-width: 480px) {
     grid-template-columns: 1fr 1fr;
+    height: 60px;
   }
 `;
 export const DivContainerNavBarSC = styled.div`
@@ -40,6 +44,8 @@ export const DivContainerNavBarSC = styled.div`
   background: initial;
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
+    height: 60px;
+
   }
 `;
 export const DivLogoBoxSC = styled.div`

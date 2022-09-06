@@ -37,6 +37,7 @@ import GlobalDispatchContext from "../global_dispatch_context";
 import AboutTeamDesingCarousel from "../components/AboutTeamDesingCarousel"
 
 const Team = () => {
+
   const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isPage, isAboutBack } = state;
 

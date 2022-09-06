@@ -1,14 +1,15 @@
 import React, {useContext, useEffect} from "react";
 import {
-  DivContainerAboutSC,
-  DivWrapMenuSC,
-  GridContentSC,
-  SpanTextElementSC,
+    DivContainerAboutSC,
+    DivWrapMenuSC,
+    GridContentSC,
+    SpanTextElementSC,
 } from "../styled-components-css/styled-About";
 import GlobalDispatchContext from "../global_dispatch_context";
 
 
 const About = () => {
+
   const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isBlackBack, isPage, isAboutBack } = state;
 
@@ -54,6 +55,7 @@ const About = () => {
       </DivWrapMenuSC>
     </>
   );
+
 };
 
 export default About;
