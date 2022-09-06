@@ -7,6 +7,9 @@ import Ilya from "../images/Ilya.png";
 import Andrey from "../images/Andrey.png";
 import Irene from "../images/Irene.png";
 import Dmitry from "../images/Dmitry.png";
+import Stas from "../images/Stas.png";
+import Sveta from "../images/Sveta.png";
+import Lisa from "../images/Lisa.png";
 
 export const DivMainRowsSC = styled.div`
   width: 100%;
@@ -192,19 +195,21 @@ export const DivFoto4SC = styled.div`
 `;
 
 export const DivFoto5SC = styled.div`
+background-image: url(${Sveta});
   width: 180px;
   height: 180px;
   border-radius: 100%;
-  background: #c4c4c4;
+
   /*   background-size: 100%;
   background-repeat: no-repeat; */
 `;
 
 export const DivFoto6SC = styled.div`
+background-image: url(${Stas});
   width: 180px;
   height: 180px;
   border-radius: 100%;
-  background: #c4c4c4;
+  
   /*   background-size: 100%;
   background-repeat: no-repeat; */
 `;
@@ -214,7 +219,7 @@ background-image: url(${Dmitry});
   width: 180px;
   height: 180px;
   border-radius: 100%;
-  background: #c4c4c4;
+ 
   /*   background-size: 100%;
   background-repeat: no-repeat; */
 `;
@@ -298,6 +303,13 @@ export const DivName0SC = styled.div`
   line-height: 18px;
   text-align: center;
   letter-spacing: 0.05em;
+  @media (max-width: 480px) {
+    font-size: 10px;
+    padding-left: 45px;
+    margin-right: 15px;
+    display: grid;
+    width: 119px;
+  }
 `;
 
 export const DivBoxColumnsName1SC = styled.div`
@@ -320,6 +332,7 @@ export const DivName2SC = styled.div`
   line-height: 18px;
   text-align: center;
   letter-spacing: 0.05em;
+ 
 `;
 
 export const DivBoxColumnsName2SC = styled.div`
@@ -330,6 +343,9 @@ export const DivBoxColumnsName2SC = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 78px;
   justify-self: center;
+  @media (max-width: 765px) {
+    display: none;
+  }
 `;
 
 export const DivBoxColumnsFotos3SC = styled.div`
@@ -339,6 +355,9 @@ export const DivBoxColumnsFotos3SC = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 38px;
   justify-self: center;
+  @media (max-width: 765px) {
+    display: none;
+  }
 `;
 export const DivFoto8SC = styled.div`
   background-image: url(${Andrey});
@@ -346,6 +365,9 @@ export const DivFoto8SC = styled.div`
   height: 180px;
   background-size: 100%;
   background-repeat: no-repeat;
+  @media (max-width: 765px) {
+    display: none;
+  }
 `;
 
 export const DivFoto9SC = styled.div`
@@ -354,6 +376,9 @@ export const DivFoto9SC = styled.div`
   height: 180px;
   background-size: 100%;
   background-repeat: no-repeat;
+  @media (max-width: 765px) {
+    display: none;
+  }
 `;
 export const DivFoto10SC = styled.div`
   width: 180px;
@@ -362,13 +387,20 @@ export const DivFoto10SC = styled.div`
   background: #c4c4c4;
   /*   background-size: 100%;
   background-repeat: no-repeat; */
+  @media (max-width: 765px) {
+    display: none;
+  }
 `;
 
 export const DivFoto11SC = styled.div`
+  background-image: url(${Lisa});
   width: 180px;
   height: 180px;
   border-radius: 100%;
-  background: #c4c4c4;
+  @media (max-width: 765px) {
+    display: none;
+  }
+ 
   /*   background-size: 100%;
   background-repeat: no-repeat; */
 `;

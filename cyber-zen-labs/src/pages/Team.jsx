@@ -34,6 +34,7 @@ import {
   DivFoto11SC,
 } from "../styled-components-css/styled-team";
 import GlobalDispatchContext from "../global_dispatch_context";
+import AboutTeamDesingCarousel from "../components/AboutTeamDesingCarousel"
 
 const Team = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
@@ -107,13 +108,16 @@ const Team = () => {
             <DivFoto9SC />
             <DivFoto10SC />
             <DivFoto11SC />
+            
           </DivBoxColumnsFotos3SC>
           <DivBoxColumnsName2SC>
             <DivName2SC>Andrey Baykov UI/UX Designer</DivName2SC>
             <DivName2SC>Irene Gordina UI/UX Designer</DivName2SC>
             <DivName2SC>Alina Sagaidak Motion Designer</DivName2SC>
             <DivName2SC>Lisa Raklova UI/UX Designer</DivName2SC>
+            
           </DivBoxColumnsName2SC>
+          <AboutTeamDesingCarousel></AboutTeamDesingCarousel>
         </>
       ),
     },
