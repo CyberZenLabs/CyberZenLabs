@@ -35,6 +35,7 @@ import {
 } from "../styled-components-css/styled-team";
 import GlobalDispatchContext from "../global_dispatch_context";
 import AboutTeamDesingCarousel from "../components/AboutTeamDesingCarousel"
+import AboutTeamDeveloperCarousel from "../components/AboutTeamDeveloperCarousel"
 
 const Team = () => {
 
@@ -88,7 +89,9 @@ const Team = () => {
             <DivFoto5SC />
             <DivFoto6SC />
             <DivFoto7SC />
+           
           </DivBoxColumnsFotos1SC>
+          
           <DivBoxColumnsName1SC>
             <DivName0SC>Sam Singer Founder and Owner</DivName0SC>
             <DivName0SC>Kirill Drozdov Full-stack Developer</DivName0SC>
@@ -97,7 +100,9 @@ const Team = () => {
             <DivName0SC>Svetlana Soboleva Frontend Developer</DivName0SC>
             <DivName0SC>Stanislav Maximov Backend Developer</DivName0SC>
             <DivName0SC>Dmitry Galtsov Frontend Developer</DivName0SC>
+            
           </DivBoxColumnsName1SC>
+          <AboutTeamDeveloperCarousel></AboutTeamDeveloperCarousel>
         </>
       ),
     },

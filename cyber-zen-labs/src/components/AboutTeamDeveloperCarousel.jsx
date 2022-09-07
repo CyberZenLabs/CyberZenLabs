@@ -18,13 +18,17 @@ import {
     DivCustomArrowRight,
     MarginLeft,
     MarginArrow,
-    NamesSC,
+    NameSC
 } from "../styled-components-css/styled-AboutTeam";
 
 
-import Andrey from '../images/Andrey.png';
-import Irene from '../images/Irene.png';
-import Lisa from '../images/Lisa.png';
+import Sam from '../images/Sam.png';
+import Kirill from '../images/Kirill.png';
+import Ruslan from '../images/Ruslan.png';
+import Ilya from '../images/Ilya.png';
+import Sveta from '../images/Sveta.png';
+import Stas from '../images/Stas.png';
+import Dmitry from '../images/Dmitry.png';
 
 
 const AboutTeamDesingCarousel = ({props}) => {
@@ -32,19 +36,29 @@ const AboutTeamDesingCarousel = ({props}) => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 800 },
+      breakpoint: { max: 4000, min: 1030 },
       items: 0,
       slidesToSlide: 0,
     },
+    Desctop: {
+        breakpoint: { max:1030 , min: 775 },
+        items: 4,
+        slidesToSlide: 1
+      },
     mobile: {
-        breakpoint: { max:800 , min: 540 },
+        breakpoint: { max:775 , min: 485 },
         items: 3,
         slidesToSlide: 1
       },
     smallmobile: {
-        breakpoint: { max: 485, min: 360 },
+        breakpoint: { max: 485, min: 370 },
+        items: 3,
+        slidesToSlide: 1
+      },
+      verysmallmobile: {
+        breakpoint: { max: 370, min: 240 },
         items: 2,
-        slidesToSlide: 2
+        slidesToSlide: 1
       }
   };
   var settings = {
@@ -75,7 +89,7 @@ const AboutTeamDesingCarousel = ({props}) => {
 
 
       <Carousel 
-      containerClass="carousel-containerTeam"
+      containerClass="carousel-containerTeamDev"
         responsive={responsive}
         customRightArrow={<CustomRightArrow />}
         customLeftArrow={<CustomLeftArrow />}
@@ -84,14 +98,26 @@ const AboutTeamDesingCarousel = ({props}) => {
       
       >
 
-                 <MarginLeft> <ImgIconSC Photo={Andrey} ><NamesSC>Andrey Baykov<br/>
-UI/UX Designer</NamesSC></ImgIconSC  ></MarginLeft>
-<ImgIconSC Photo={Irene} ><NamesSC>Irene Gordina<br/>
-UI/UX Designer</NamesSC></ImgIconSC  >
-                  <MarginLeft> <ImgIconSC Photo={Lisa} ><NamesSC>Lisa Raklova<br/>
-UI/UX Designer</NamesSC></ImgIconSC  ></MarginLeft>
-<ImgIconSC Photo={Andrey} ><NamesSC>Alina Sagaidak<br/>
-Motion Designer</NamesSC></ImgIconSC  >
+ <ImgIconSC Photo={Sam} > <NameSC>Sam Singer<br/>
+  Founder and Owner </NameSC></ImgIconSC>
+<ImgIconSC Photo={Kirill} > <NameSC>Kirill Drozdov<br/>
+Full-stack Developer
+ </NameSC></ImgIconSC>
+ <ImgIconSC Photo={Ruslan} > <NameSC>Ruslan Gordin<br/>
+Frontend Developer
+ </NameSC></ImgIconSC>
+ <ImgIconSC Photo={Ilya} > <NameSC>Ilya Morozov<br/>
+Backend Developer
+ </NameSC></ImgIconSC>
+ <ImgIconSC Photo={Sveta} > <NameSC>Svetlana Soboleva<br/>
+Frontend Developer
+ </NameSC></ImgIconSC>
+ <ImgIconSC Photo={Stas} > <NameSC>Stanislav Maximov<br/>
+Backend Developer
+ </NameSC></ImgIconSC>
+ <ImgIconSC Photo={Dmitry} > <NameSC>Dmitry Galtsov<br/>
+Frontend Developer
+ </NameSC></ImgIconSC>
                
                 
 

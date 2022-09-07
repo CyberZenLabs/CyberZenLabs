@@ -231,6 +231,9 @@ export const DivBoxColumnsFotos1SC = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 38px;
   justify-self: center;
+  @media (max-width: 1030px) {
+    display: none;
+  }
 `;
 
 export const DivBoxColumnsNameSC = styled.div`
@@ -320,6 +323,9 @@ export const DivBoxColumnsName1SC = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 45px;
   justify-self: center;
+  @media (max-width: 1030px) {
+    display: none;
+  }
 `;
 
 export const DivName2SC = styled.div`
@@ -343,7 +349,7 @@ export const DivBoxColumnsName2SC = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 78px;
   justify-self: center;
-  @media (max-width: 765px) {
+  @media (max-width: 780px) {
     display: none;
   }
 `;
@@ -355,7 +361,7 @@ export const DivBoxColumnsFotos3SC = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 38px;
   justify-self: center;
-  @media (max-width: 765px) {
+  @media (max-width: 780px) {
     display: none;
   }
 `;

@@ -40,7 +40,76 @@ position: relative;
 letter-spacing: 0.05em;
 
   `;
+  export const MarginLeft = styled.div`
+  
+  
+  @media (max-width: 480px) {
+ margin-left: 60px;
+  }
+  @media (max-width: 360px) {
+ margin-left: 30px;
+  }
+  
+    `;
+export const NameSC = styled.div`
+font-family: 'Orbitron';
+font-style: normal;
+font-weight: 400;
+   @media (max-width: 1024px) {
+    font-size: 14px;
+      text-align: center;
+  margin-left: 13px;
+  }
+  display: flex;
+    margin-top: 10px;
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 14px;
+  }
+  
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    height: 117%;
+    margin-right: 0px;
+    @media (max-width: 480px) {
+  font-size: 8px;
+  margin-left: 15px;
+  }
+  @media (max-width: 360px) {
+  font-size: 8px;
+  
+  }
 
+
+  `;
+  export const NamesSC = styled.div`
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+    
+    display: flex;
+      margin-top: 10px;
+      @media (max-width: 768px) {
+        text-align: center;
+        font-size: 14px;
+        margin-left: 32px;
+    }
+    
+      align-items: flex-end;
+      flex-direction: row-reverse;
+      height: 117%;
+      margin-right: 0px;
+      @media (max-width: 480px) {
+    font-size: 9px;
+    margin-left: 24px;
+    }
+    @media (max-width: 360px) {
+    font-size: 8px;
+    margin-left: 28px;
+    }
+  
+  
+    `;
 export const GridRowsIcons = styled.div`
 //border: 1px solid red;
 display: grid;
@@ -86,10 +155,31 @@ grid-column-gap: 30px;
   }
     `;
 export const ImgIconSC = styled.div`
+display: flex;
 border-radius:100%;
 width: 180px;
 height: 180px;
+margin-left: 15px;
 background-image: ${({ Photo }) => Photo && `url(${Photo})`};
+
+@media (min-width: 750px) {
+    
+  margin-left: 17px;
+    }
+@media (max-width: 480px) {
+    
+  height: 120px;
+  width:120px ;
+  margin-left: 5px;
+  background-size: contain;
+  }
+  @media (max-width: 360px) {
+    
+    height: 120px;
+    width:120px ;
+    margin-left: 15px;
+    background-size: contain;
+    }
   `;
 
 export const DivCustomArrow = styled.button`
@@ -97,24 +187,37 @@ border-radius:100%;
 width: 70px;
 height: 70px;
 background: #000;
-right: 0;
+
 `;
 export const DivCustomArrowRight = styled(CgChevronRight)`
 width:3vw;
 height: 3vw;
 position: absolute;
-right: 0px;
+right: 0;
 
 @media (max-width: 768px) {
   height: 4vw;
   width: 4vw;
+  
   }
   @media (max-width: 480px) {
   height: 5vw;
   width: 5vw;
+  
   }
+  @media (max-width: 360px) {
+ 
+
+ }
+ 
 ;`
 
+export const MarginArrow = styled.div`
+@media (max-width: 769px) {
+    margin-left: 25px;
+    
+  }
+;`
 export const DivCustomArrowLeft = styled(CgChevronLeft)`
 width:3vw;
 height: 3vw;
@@ -124,9 +227,15 @@ left: 0;
 @media (max-width: 768px) {
   height: 4vw;
   width: 4vw;
+  
   }
   @media (max-width: 480px) {
   height: 5vw;
   width: 5vw;
+  
+  }
+  @media (max-width: 360px) {
+ 
+  
   }
   ;`

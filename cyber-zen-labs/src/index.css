@@ -327,7 +327,29 @@ table {
 
   width: 106%;
   justify-content: space-between;
+  
+
 }
+.carousel-containerTeam{
+
+  width: 106%;
+    height: 138%;
+    justify-content: space-between;
+    position: static !important;
+    margin-top: -30px !important;
+  
+}
+.carousel-containerTeamDev{
+
+  width: 106%;
+    height: 142%;
+    justify-content: space-between;
+    position: static !important;
+    margin-top: -42px !important;
+  
+}
+
+
 
 .DivTaskItemContentSC {
   transition: background 0.2s;
