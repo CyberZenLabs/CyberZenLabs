@@ -349,7 +349,7 @@ export const DivBoxColumnsName2SC = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 78px;
   justify-self: center;
-  @media (max-width: 780px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;

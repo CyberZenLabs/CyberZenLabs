@@ -32,12 +32,12 @@ const AboutTeamDesingCarousel = ({props}) => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 800 },
+      breakpoint: { max: 4000, min: 769 },
       items: 0,
       slidesToSlide: 0,
     },
     mobile: {
-        breakpoint: { max:800 , min: 540 },
+        breakpoint: { max:768 , min: 540 },
         items: 3,
         slidesToSlide: 1
       },
