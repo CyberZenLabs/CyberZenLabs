@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from "react";
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import React, { useEffect, useState, useContext, useReducer } from "react";
+import { DivRootSC } from "../styled-components-css/styles-root";
+import GlobalDispatchContext from '../global_dispatch_context'
+import reducer from '../reducer'
 
 import {
     DivContainerAboutDevSC,
@@ -25,9 +29,17 @@ import {
 import Andrey from '../images/Andrey.png';
 import Irene from '../images/Irene.png';
 import Lisa from '../images/Lisa.png';
+import Alina from '../images/Alina.png';
 
 
 const AboutTeamDesingCarousel = ({props}) => {
+ 
+  const initialState = useContext(GlobalDispatchContext);
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const {
+      isBlackBack,
+      
+  } = state
 
   const responsive = {
     superLargeDesktop: {
@@ -88,10 +100,10 @@ const AboutTeamDesingCarousel = ({props}) => {
 UI/UX Designer</NamesSC></ImgIconSC  ></MarginLeft>
 <ImgIconSC Photo={Irene} ><NamesSC>Irene Gordina<br/>
 UI/UX Designer</NamesSC></ImgIconSC  >
-                  <MarginLeft> <ImgIconSC Photo={Lisa} ><NamesSC>Lisa Raklova<br/>
-UI/UX Designer</NamesSC></ImgIconSC  ></MarginLeft>
-<ImgIconSC Photo={Andrey} ><NamesSC>Alina Sagaidak<br/>
-Motion Designer</NamesSC></ImgIconSC  >
+                  <MarginLeft> <ImgIconSC Photo={Alina}  ><NamesSC>Alina Sagaidak<br/>
+Motion Designer</NamesSC></ImgIconSC  ></MarginLeft>
+<ImgIconSC Photo={Lisa}  ><NamesSC>Lisa Raklova<br/>
+UI/UX Designer </NamesSC></ImgIconSC  >
                
                 
 
