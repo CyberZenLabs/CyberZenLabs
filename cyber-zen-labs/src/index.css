@@ -346,7 +346,21 @@ table {
     justify-content: space-between;
     position: static !important;
     margin-top: -42px !important;
+ 
+}
+
+.carousel-itemTeamDev
+{
+ 
   
+}
+@media  (min-width: 1600px) {
+ 
+  .carousel-itemTeamDev
+{
+ 
+
+}
 }
 
 

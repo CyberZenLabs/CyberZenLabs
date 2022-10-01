@@ -18,7 +18,8 @@ import {
     DivCustomArrowRight,
     MarginLeft,
     MarginArrow,
-    NameSC
+    NameSC,
+    MarginLeft2,
 } from "../styled-components-css/styled-AboutTeam";
 
 
@@ -36,29 +37,43 @@ const AboutTeamDesingCarousel = ({props}) => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 1030 },
+      breakpoint: { max: 4000, min: 1601 },
       items: 0,
       slidesToSlide: 0,
+      
     },
+    PC: {
+      breakpoint: { max:1600 , min: 1201 },
+      
+      items: 5,
+      slidesToSlide: 1
+      
+    },
+    
     Desctop: {
-        breakpoint: { max:1030 , min: 775 },
+        breakpoint: { max:1200 , min: 931 },
+        
         items: 4,
-        slidesToSlide: 1
+        slidesToSlide: 2
+        
       },
     mobile: {
-        breakpoint: { max:775 , min: 485 },
+        breakpoint: { max:930 , min: 671 },
+        
         items: 3,
-        slidesToSlide: 1
+        slidesToSlide: 2
       },
     smallmobile: {
-        breakpoint: { max: 485, min: 370 },
-        items: 3,
-        slidesToSlide: 1
+      
+        breakpoint: { max: 670, min: 370 },
+        items: 2,
+        slidesToSlide: 2
       },
       verysmallmobile: {
+        
         breakpoint: { max: 370, min: 240 },
         items: 2,
-        slidesToSlide: 1
+        slidesToSlide: 2
       }
   };
   var settings = {
@@ -89,29 +104,32 @@ const AboutTeamDesingCarousel = ({props}) => {
 
 
       <Carousel 
+      
+       
       containerClass="carousel-containerTeamDev"
         responsive={responsive}
         customRightArrow={<CustomRightArrow />}
         customLeftArrow={<CustomLeftArrow />}
-  
-      
+        itemClass="carousel-itemTeamDev"
+        partialVisible={false}
+        spacing={5}
       
       >
 
- <ImgIconSC Photo={Sam} > <NameSC>Sam Singer<br/>
-  Founder and Owner </NameSC></ImgIconSC>
+ <MarginLeft2><ImgIconSC Photo={Sam} > <NameSC>Sam Singer<br/>
+  Founder and Owner </NameSC></ImgIconSC></MarginLeft2>
 <ImgIconSC Photo={Kirill} > <NameSC>Kirill Drozdov<br/>
 Full-stack Developer
  </NameSC></ImgIconSC>
- <ImgIconSC Photo={Ruslan} > <NameSC>Ruslan Gordin<br/>
+ <MarginLeft2><ImgIconSC Photo={Ruslan} > <NameSC>Ruslan Gordin<br/>
 Frontend Developer
- </NameSC></ImgIconSC>
+ </NameSC></ImgIconSC></MarginLeft2>
  <ImgIconSC Photo={Ilya} > <NameSC>Ilya Morozov<br/>
 Backend Developer
  </NameSC></ImgIconSC>
- <ImgIconSC Photo={Sveta} > <NameSC>Svetlana Soboleva<br/>
+ <MarginLeft2> <ImgIconSC Photo={Sveta} > <NameSC>Svetlana Soboleva<br/>
 Frontend Developer
- </NameSC></ImgIconSC>
+ </NameSC></ImgIconSC></MarginLeft2>
  <ImgIconSC Photo={Stas} > <NameSC>Stanislav Maximov<br/>
 Backend Developer
  </NameSC></ImgIconSC>
