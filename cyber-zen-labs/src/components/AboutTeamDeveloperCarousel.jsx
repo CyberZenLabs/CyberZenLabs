@@ -127,7 +127,7 @@ Frontend Developer
  <ImgIconSC Photo={Ilya} > <NameSC>Ilya Morozov<br/>
 Backend Developer
  </NameSC></ImgIconSC>
- <MarginLeft2> <ImgIconSC Photo={Sveta} > <NameSC>Svetlana Soboleva<br/>
+ <MarginLeft2><ImgIconSC Photo={Sveta} > <NameSC>Svetlana Soboleva<br/>
 Frontend Developer
  </NameSC></ImgIconSC></MarginLeft2>
  <ImgIconSC Photo={Stas} > <NameSC>Stanislav Maximov<br/>
