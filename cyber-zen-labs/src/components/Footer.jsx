@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-
+import ReactHowler from "react-howler";
 import {
   DivContainerFooterCenterSC,
   DivContainerFooterLeftSC,
@@ -15,25 +15,44 @@ import {
 } from "../styled-components-css/styled-Footer";
 import { DivMaxWidthSC } from "../styled-components-css/styled-navbar";
 import GlobalDispatchContext from "../global_dispatch_context";
-
+import Audio from "../audio/Homepage.mp3";
 const Footer = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
 
   const { isPage } = state;
-
+  const [music, setMusic] = useState(true);
+  const MusicBeh = () => {
+    setMusic(!music);
+  };
   return (
     <>
+      <ReactHowler
+        src={Audio}
+        playing={music}
+        preload={true}
+        loop={true}
+        volume={0.2}
+      />
       {isPage === "about" ? (
         <DivMaxWidthSC>
           <DivContainerFooterSC>
-            <DivContainerFooterLeftSC>
-              <div className="MusicContainer">
-                <div className="Bars" />
-                <div className="Bars" />
-                <div className="Bars" />
-                <div className="Bars" />
-              </div>
-              <H1FooterTextSoundOnSC>sound on</H1FooterTextSoundOnSC>
+            <DivContainerFooterLeftSC onClick={MusicBeh}>
+              {music ? (
+                <div className="MusicContainer">
+                  <div className="Bars" />
+                  <div className="Bars" />
+                  <div className="Bars" />
+                  <div className="Bars" />
+                </div>
+              ) : (
+                <div className="MusicContainerStop">
+                  <div className="BarsStop" />
+                  <div className="BarsStop" />
+                  <div className="BarsStop" />
+                  <div className="BarsStop" />
+                </div>
+              )}
+              <H1FooterTextSoundOnSC>   {music ? "sound on" : "sound off"}</H1FooterTextSoundOnSC>
             </DivContainerFooterLeftSC>
             <DivContainerFooterCenterTeamSC>
               <FooterTextTeamSC to="/team">Team</FooterTextTeamSC>
@@ -48,14 +67,23 @@ const Footer = () => {
       {isPage === "home" ? (
         <DivMaxWidthSC>
           <DivContainerFooterSC>
-            <DivContainerFooterLeftSC>
-              <div className="MusicContainer">
-                <div className="Bars" />
-                <div className="Bars" />
-                <div className="Bars" />
-                <div className="Bars" />
-              </div>
-              <H1FooterTextSoundOnSC>sound on</H1FooterTextSoundOnSC>
+            <DivContainerFooterLeftSC onClick={MusicBeh}>
+            {music ? (
+                <div className="MusicContainer">
+                  <div className="Bars" />
+                  <div className="Bars" />
+                  <div className="Bars" />
+                  <div className="Bars" />
+                </div>
+              ) : (
+                <div className="MusicContainerStop">
+                  <div className="BarsStop" />
+                  <div className="BarsStop" />
+                  <div className="BarsStop" />
+                  <div className="BarsStop" />
+                </div>
+              )}
+              <H1FooterTextSoundOnSC>   {music ? "sound on" : "sound off"}</H1FooterTextSoundOnSC>
             </DivContainerFooterLeftSC>
             <DivContainerFooterCenterSC>
               <H1FooterTextSC to="/">HOME</H1FooterTextSC>
@@ -73,14 +101,23 @@ const Footer = () => {
       {isPage === "sound" ? (
         <DivMaxWidthSC>
           <DivContainerFooterSC>
-            <DivContainerFooterLeftSC>
-              <div className="MusicContainer">
-                <div className="Bars" />
-                <div className="Bars" />
-                <div className="Bars" />
-                <div className="Bars" />
-              </div>
-              <H1FooterTextSoundOnSC>sound on</H1FooterTextSoundOnSC>
+            <DivContainerFooterLeftSC onClick={MusicBeh}>
+            {music ? (
+                <div className="MusicContainer">
+                  <div className="Bars" />
+                  <div className="Bars" />
+                  <div className="Bars" />
+                  <div className="Bars" />
+                </div>
+              ) : (
+                <div className="MusicContainerStop">
+                  <div className="BarsStop" />
+                  <div className="BarsStop" />
+                  <div className="BarsStop" />
+                  <div className="BarsStop" />
+                </div>
+              )}
+              <H1FooterTextSoundOnSC>   {music ? "sound on" : "sound off"}</H1FooterTextSoundOnSC>
             </DivContainerFooterLeftSC>
           </DivContainerFooterSC>
         </DivMaxWidthSC>
