@@ -16,6 +16,7 @@ import Team from "./pages/Team";
 import GetInTouch from "./pages/GetInTouch";
 import Services from "./pages/Services";
 import Page_404 from "./pages/404";
+import Projects from "./pages/Projects";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -32,6 +33,7 @@ root.render(
           <Route path="team" element={<Team />} />
           <Route path="getintouch" element={<GetInTouch />} />
           <Route path="services" element={<Services />} />
+          <Route path="projects" element={<Projects />} />
           <Route path="*" element={<Page_404 />} />
         </Routes>
         <Footer />
