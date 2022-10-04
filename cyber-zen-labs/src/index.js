@@ -1,13 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import NavBarTop from "./components/NavBarTop";
+import RootBox from "./components/RootBox";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contacts from "./pages/Contacts";
+import BurgerMenu from "./pages/BurgerMenu";
+import AboutDev from "./pages/AboutDev";
+import Team from "./pages/Team";
+import GetInTouch from "./pages/GetInTouch";
+import Services from "./pages/Services";
+import Page_404 from "./pages/404";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <RootBox>
+        <NavBarTop />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="aboutdev" element={<AboutDev />} />
+          <Route path="about" element={<About />} />
+          <Route path="menu" element={<BurgerMenu />} />
+          <Route path="contacts" element={<Contacts />} />
+          <Route path="team" element={<Team />} />
+          <Route path="getintouch" element={<GetInTouch />} />
+          <Route path="services" element={<Services />} />
+          <Route path="*" element={<Page_404 />} />
+        </Routes>
+        <Footer />
+      </RootBox>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
