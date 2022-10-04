@@ -117,6 +117,11 @@ export const H1FooterTextSoundOnSC = styled.button`
     margin-top: 0px;
     font-size: 12px;
   }
+  @media (max-width: 480px) {align-self: end;}
+   
+      
+    
+  
 `;
 export const H1FooterTextSC = styled(Link)`
   width: 100%;

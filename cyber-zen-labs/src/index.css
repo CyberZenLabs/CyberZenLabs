@@ -281,6 +281,12 @@ table {
     margin-bottom: 25px;
   }
 }
+@media (max-width: 480px) {
+  .MusicContainer {
+    
+    margin-bottom: 3px;
+  }
+}
 
 @keyframes MusicContainer {
   100% {
@@ -318,6 +324,12 @@ table {
   grid-column-gap: 2px;
   align-items: end;
   margin-bottom: 20px;
+}
+@media (max-width:480px) {
+  .MusicContainerStop {
+    
+    margin-bottom: 3px;
+  }
 }
 .BarsStop {
   background: #fff;
