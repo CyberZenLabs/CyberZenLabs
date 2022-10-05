@@ -54,8 +54,8 @@ const Contacts = () => {
               </DivTextWriteToUsSC>
             </DivBoxTextWriteToUsSC>
             <DivTopPenalSC>
-              <DivBoxBlurSC></DivBoxBlurSC>
-              <ImgBuddhaSC src="/default-images/buddha.png" />
+              {/* <DivBoxBlurSC></DivBoxBlurSC> */}
+              <ImgBuddhaSC />
             </DivTopPenalSC>
           </DivLeftPenalSC>
           <DivRightPenalSC>
@@ -100,8 +100,8 @@ const Contacts = () => {
             </DivColumnsemailSC>
           </DivLeftPenalSC>
           <DivRightPenalSC>
-            <DivBoxBlurSC></DivBoxBlurSC>
-            <ImgBuddhaSC src="/default-images/buddha.png"></ImgBuddhaSC>
+            {/* <DivBoxBlurSC></DivBoxBlurSC> */}
+            <ImgBuddhaSC></ImgBuddhaSC>
           </DivRightPenalSC>
         </DivColumnsContentContacts>
       </DivContainerSC>
