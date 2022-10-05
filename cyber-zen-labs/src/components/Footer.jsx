@@ -122,7 +122,7 @@ const Footer = () => {
         playing={music}
         preload={true}
         loop={true}
-        volume={0.2}
+        volume={0.04}
       />
     </>
   );
