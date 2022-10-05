@@ -26,7 +26,21 @@ import { registerSchema } from "../validations/validation.signup";
 
 const GetInTouch = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
-  const { isBlackBack, isPage, isAboutBack } = state;
+  const { isBlackBack, isPage, isAboutBack,isForm } = state;
+  
+
+  useEffect(() => {
+    dispatch({
+      type: "SET_IS_FORM",
+      status: true,
+    });
+    return () => {
+      dispatch({
+        type: "SET_IS_FORM",
+        status: false,
+      });
+    };
+  }, [isForm]);
 
   useEffect(() => {
     dispatch({

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import {
   DivWrapSC,
   DivContainerSC,
@@ -23,8 +23,25 @@ import {
   DivRowsContentContacts,
   DivTopPenalSC,
 } from "../styled-components-css/styled-contacts";
-
+import GlobalDispatchContext from "../global_dispatch_context";
 const Contacts = () => {
+  const { state, dispatch } = useContext(GlobalDispatchContext);
+  const { isForm, isBlackBack } = state;
+
+  useEffect(() => {
+    dispatch({
+      type: "SET_IS_FORM",
+      status: true,
+    });
+    return () => {
+      dispatch({
+        type: "SET_IS_FORM",
+        status: false,
+      });
+    };
+  }, [isForm]);
+
+ 
   return (
     <DivWrapSC>
       <DivContainerSC>
