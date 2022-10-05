@@ -10,6 +10,7 @@ import Dmitry from "../images/Dmitry.png";
 import Stas from "../images/Stas.png";
 import Sveta from "../images/Sveta.png";
 import Lisa from "../images/Lisa.png";
+import Alina from "../images/Alina.png";
 
 export const DivMainRowsSC = styled.div`
   width: 100%;
@@ -390,7 +391,7 @@ export const DivFoto10SC = styled.div`
   width: 180px;
   height: 180px;
   border-radius: 100%;
-  background: #c4c4c4;
+  background-image: url(${Alina});
   /*   background-size: 100%;
   background-repeat: no-repeat; */
   @media (max-width: 765px) {
