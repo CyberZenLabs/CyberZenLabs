@@ -26,7 +26,7 @@ import {
 import GlobalDispatchContext from "../global_dispatch_context";
 const Contacts = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
-  const { isForm, isBlackBack } = state;
+  const { isForm, isBlackBack,isPage } = state;
 
   useEffect(() => {
     dispatch({
@@ -40,7 +40,14 @@ const Contacts = () => {
       });
     };
   }, [isForm]);
-
+  useEffect(() => {
+    return () => {
+      dispatch({
+        type: "SET_IS_PAGE",
+        status: "home",
+      });
+    };
+  }, [isPage]);
  
   return (
     <DivWrapSC>
