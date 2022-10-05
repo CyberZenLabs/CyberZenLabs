@@ -182,6 +182,7 @@ export const DivBoxColumnIconTextSC = styled.div`
 `;
 
 export const DivBoxIconClipSC = styled.div`
+  cursor: pointer;
   width: 24px;
   height: 28px;
   background-size: 100%;

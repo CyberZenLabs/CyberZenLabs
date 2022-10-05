@@ -1,5 +1,6 @@
 import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
+import buddha from "../images/buddha.png";
 
 export const DivColumnsContentContacts = styled.div`
   width: 100%;
@@ -70,9 +71,11 @@ export const DivRightPenalSC = styled.div`
 `;
 
 export const DivBoxBlurSC = styled.div`
+  position: absolute;
   width: 100%;
   max-width: 789px;
   height: 100%;
+  max-height: 704px;
   border-radius: 100%;
   background: linear-gradient(180deg, #fd03ff 29.3%, #3ab4fa 78.61%);
   filter: blur(450px);
@@ -108,10 +111,12 @@ export const DivBoxBlurSC = styled.div`
   }
 `;
 
-export const ImgBuddhaSC = styled.img`
-  position: absolute;
+export const ImgBuddhaSC = styled.div`
+  //position: absolute;
+  background-image: url(${buddha});
   width: 789px;
   height: 704px;
+  background-size: 100%;
   z-index: 30;
   @media (max-width: 1700px) {
     width: 494px;
@@ -129,6 +134,13 @@ export const ImgBuddhaSC = styled.img`
     width: 280px;
     height: 245px;
     top: 270px;
+  }
+  @media (max-width: 540px) {
+    width: 230px;
+    height: 195px;
+    background-size: 115%;
+    margin-right: 0px;
+    padding-bottom: 50px;
   }
   @media (max-width: 480px) {
     display: none;
@@ -155,8 +167,16 @@ export const DivBoxTextWriteToUsSC = styled.div`
   display: grid;
   align-items: start;
   padding-top: 100px;
+  min-width: 500px;
   @media (max-width: 1000px) {
     width: 100%;
+    min-width: 0px;
+  }
+  @media (max-width: 705px) {
+    min-width: 305px;
+  }
+  @media (max-width: 675px) {
+    min-width: 0px;
   }
   @media (max-width: 480px) {
     justify-content: center;
