@@ -17,6 +17,7 @@ import GetInTouch from "./pages/GetInTouch";
 import Services from "./pages/Services";
 import Page_404 from "./pages/404";
 import Projects from "./pages/Projects";
+import KirdroDev from "./pages/KirdroDev";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -34,6 +35,7 @@ root.render(
           <Route path="getintouch" element={<GetInTouch />} />
           <Route path="services" element={<Services />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="kirdro_dev" element={<KirdroDev />} />
           <Route path="*" element={<Page_404 />} />
         </Routes>
         <Footer />
