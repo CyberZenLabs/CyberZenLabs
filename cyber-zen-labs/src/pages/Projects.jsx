@@ -18,18 +18,7 @@ const Projects = () => {
     const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isPage, isBlackBack } = state;
 
-  useEffect(() => {
-    dispatch({
-      type: "SET_IS_HOME",
-      status: true,
-    });
-    return () => {
-      dispatch({
-        type: "SET_IS_HOME",
-        status: false,
-      });
-    };
-  }, []);
+  
 
   useEffect(() => {
     return () => {
