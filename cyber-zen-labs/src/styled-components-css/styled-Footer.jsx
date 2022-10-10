@@ -12,7 +12,6 @@ export const DivContainerFooterSC = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 0.5fr auto 0px;
   }
-
 `;
 export const DivContainerFooterLeftSC = styled.div`
   display: grid;
@@ -25,7 +24,6 @@ export const DivContainerFooterLeftSC = styled.div`
   // max-height: 20px;
   @media (max-width: 480px) {
     align-self: end;
-
   }
 `;
 export const DivContainerFooterCenterSC = styled.div`
@@ -46,34 +44,28 @@ export const DivContainerFooterCenterSC = styled.div`
   padding-left: 20px;
   @media (max-width: 480px) {
     align-self: end;
-
   }
 `;
 export const DivContainerFooterRightSC = styled.div`
   display: grid;
-  grid-template-columns: max-content;
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
   //border:1px solid white;
-  justify-self: end;
-  @media (max-width: 480px) {
+  /* justify-self: end; */
+  /* @media (max-width: 480px) {
     align-self: end;
-  }
+  } */
 `;
 export const DivPhotoRightContainerSC = styled(Link)`
-  background-image: url(${Mail});
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100px;
-  height: 100px;
-  justify-self: end;
-  @media (max-width: 1000px) {
-    width: 65px;
-    height: 65px;
-  }
-  @media (max-width: 480px) {
-    width: 36px;
-    height: 36px;
-
-  }
+  display: grid;
+  width: 100%;
+  height: 100%;
+  max-height: 120px;
+  max-width: 120px;
+  justify-items: center;
+  align-items: center;
 `;
 //soundbar
 export const DivSoundPhotoLeftContainerSC = styled.div`

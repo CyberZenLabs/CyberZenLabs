@@ -34,6 +34,7 @@ html {
   --shadow-primary-hue: 180;
   --label-size: 9px;
   --shadow-secondary-hue: 60;
+  --color-pink: #D516FF;
   --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
   --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
   --border: 4px;

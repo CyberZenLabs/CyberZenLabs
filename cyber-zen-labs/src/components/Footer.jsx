@@ -16,6 +16,7 @@ import {
 import { DivMaxWidthSC } from "../styled-components-css/styled-navbar";
 import GlobalDispatchContext from "../global_dispatch_context";
 import Audio from "../audio/Homepage.mp3";
+import GetInTouchButton from "./GetInTouchButton";
 const Footer = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
 
@@ -93,7 +94,9 @@ const Footer = () => {
               <H1FooterTextSC to="/contacts">CONTACTS</H1FooterTextSC>
             </DivContainerFooterCenterSC>
             <DivContainerFooterRightSC>
-              <DivPhotoRightContainerSC to="/getintouch" />
+              <DivPhotoRightContainerSC to="/getintouch">
+                <GetInTouchButton/>
+              </DivPhotoRightContainerSC>
             </DivContainerFooterRightSC>
           </DivContainerFooterSC>
         </DivMaxWidthSC>
