@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import {
+  DivItemSC,
+  DivItemPhotoSC,
+  DivItemNameSC,
+  DivItemPhotoTemporarySC,
+  DivItemNameTemporarySC
 
+} from "../styled-components-css/styled-team";
 import {
     DivContainerAboutDevSC,
     DivDecriptionTextSC,
@@ -20,60 +27,90 @@ import {
     MarginArrow,
     NameSC,
     MarginLeft2,
+    DivItemsCarouselSC
 } from "../styled-components-css/styled-AboutTeam";
 
 
-import Sam from '../images/Sam.png';
-import Kirill from '../images/Kirill.png';
-import Ruslan from '../images/Ruslan.png';
-import Ilya from '../images/Ilya.png';
-import Sveta from '../images/Sveta.png';
-import Stas from '../images/Stas.png';
-import Dmitry from '../images/Dmitry.png';
-
-
-const AboutTeamDesingCarousel = ({props}) => {
-
+import Sam from "../images/Sam.png";
+import Denis from "../images/Denis.png";
+import Kirill from "../images/Kirill.png";
+import Ruslan from "../images/Ruslan.png";
+import Ilya from "../images/Ilya.png";
+import Andrey from "../images/Andrey.png";
+import Irene from "../images/Irene.png";
+import Dmitry from "../images/Dmitry.png";
+import Stas from "../images/Stas.png";
+import Sveta from "../images/Sveta.png";
+import Lisa from "../images/Lisa.png";
+import Alina from "../images/Alina.png";
+const listContent = [
+  {
+    page: (
+      <>
+      </>
+    ),
+  },
+  {
+    page: (
+      <>
+      </>
+    ),
+  },
+  {
+    page: (
+      <>
+      </>
+    ),
+  },
+];
+const AboutTeamDeveloperCarousel = ({indexSelectedButton}) => {
+  console.log("indexSelectedButton",indexSelectedButton);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 1601 },
-      items: 0,
+      items: 7,
       slidesToSlide: 0,
       
     },
     PC: {
-      breakpoint: { max:1600 , min: 1201 },
+      breakpoint: { max:1600 , min: 1331 },
+      
+      items: 6,
+      slidesToSlide: 1
+      
+    },
+    MiniPC: {
+      breakpoint: { max:1330 , min: 1101 },
       
       items: 5,
       slidesToSlide: 1
       
     },
-    
     Desctop: {
-        breakpoint: { max:1200 , min: 931 },
+        breakpoint: { max:1100 , min: 891 },
         
         items: 4,
-        slidesToSlide: 2
+        slidesToSlide: 1
         
       },
     mobile: {
-        breakpoint: { max:930 , min: 671 },
+        breakpoint: { max:890 , min: 769 },
         
-        items: 3,
-        slidesToSlide: 2
+        items: 4,
+        slidesToSlide: 1
       },
     smallmobile: {
       
-        breakpoint: { max: 670, min: 370 },
-        items: 2,
-        slidesToSlide: 2
+        breakpoint: { max: 768, min: 451 },
+        items: 3,
+        slidesToSlide: 1
       },
       verysmallmobile: {
         
-        breakpoint: { max: 370, min: 240 },
+        breakpoint: { max: 450, min: 240 },
         items: 2,
-        slidesToSlide: 2
+        slidesToSlide: 1
       }
   };
   var settings = {
@@ -98,50 +135,113 @@ const AboutTeamDesingCarousel = ({props}) => {
   };
    
   return (
-    <>
+<>
 
 
-
-
-      <Carousel 
+{indexSelectedButton === 0 ? 
+<Carousel indexSelectedButton={indexSelectedButton}
       
-       
-      containerClass="carousel-containerTeamDev"
-        responsive={responsive}
-        customRightArrow={<CustomRightArrow />}
-        customLeftArrow={<CustomLeftArrow />}
-        itemClass="carousel-itemTeamDev"
-        partialVisible={false}
-        spacing={5}
+  containerClass="carousel-containerTeamDevLeadership"
+    responsive={responsive}
+    customRightArrow={<CustomRightArrow />}
+    customLeftArrow={<CustomLeftArrow />}
+    itemClass="carousel-itemTeamDevLeadership"
+    sliderClass="carousel-sliderTeamDevLeadership"
+  
+  >
+  <DivItemSC>
+<DivItemPhotoTemporarySC Photo={Sam} indexSelectedButton={indexSelectedButton}/>
+<DivItemNameTemporarySC indexSelectedButton={indexSelectedButton}>Sam Singer <p>Founder and Owner</p></DivItemNameTemporarySC>
+</DivItemSC>
+<DivItemSC>
+<DivItemPhotoTemporarySC Photo={Denis} indexSelectedButton={indexSelectedButton}/>
+<DivItemNameTemporarySC indexSelectedButton={indexSelectedButton}>Den Gordin <p>Project-manager</p></DivItemNameTemporarySC>
+</DivItemSC>
+
+  </Carousel>
+        
+       : null}
       
-      >
+{indexSelectedButton === 1 ? 
+<Carousel 
+indexSelectedButton={indexSelectedButton}
+      
+  containerClass="carousel-containerTeamDev"
+    responsive={responsive}
+    customRightArrow={<CustomRightArrow />}
+    customLeftArrow={<CustomLeftArrow />}
+    itemClass="carousel-itemTeamDev"
+    sliderClass="carousel-sliderTeamDev"
+  
+  >
+  <DivItemSC>
+    <DivItemPhotoSC Photo={Sam}/>
+    <DivItemNameSC>Sam Singer<p>Full Stack Engineer</p><p>Blockchain Architect</p><p>System Security</p> </DivItemNameSC>
+  </DivItemSC>
+  <DivItemSC>
+    <DivItemPhotoSC Photo={Kirill}/>
+    <DivItemNameSC>Kirill Drozdov<p>Full-stack Developer</p></DivItemNameSC>
+  </DivItemSC>
+  <DivItemSC>
+    <DivItemPhotoSC Photo={Ruslan}/>
+    <DivItemNameSC>Ruslan Gordin<p>Frontend Developer</p></DivItemNameSC>
+  </DivItemSC>
+  <DivItemSC>
+    <DivItemPhotoSC Photo={Ilya}/>
+    <DivItemNameSC>Ilya Morozov<p>Backend Developer</p></DivItemNameSC>
+  </DivItemSC>
+  <DivItemSC>
+          <DivItemPhotoSC Photo={Sveta}/>
+          <DivItemNameSC>Svetlana Soboleva<p>Frontend Developer</p></DivItemNameSC>
+  </DivItemSC>
+ <DivItemSC>
+    <DivItemPhotoSC Photo={Stas}/>
+    <DivItemNameSC>Stanislav Maximov<p>Backend Developer</p></DivItemNameSC>
+  </DivItemSC>
+ <DivItemSC>
+    <DivItemPhotoSC Photo={Dmitry}/>
+    <DivItemNameSC>Dmitry Galtsov<p>Frontend Developer</p></DivItemNameSC>
+  </DivItemSC>
 
- <MarginLeft2><ImgIconSC Photo={Sam} > <NameSC>Sam Singer<br/>
-  Founder and Owner </NameSC></ImgIconSC></MarginLeft2>
-<ImgIconSC Photo={Kirill} > <NameSC>Kirill Drozdov<br/>
-Full-stack Developer
- </NameSC></ImgIconSC>
- <MarginLeft2><ImgIconSC Photo={Ruslan} > <NameSC>Ruslan Gordin<br/>
-Frontend Developer
- </NameSC></ImgIconSC></MarginLeft2>
- <ImgIconSC Photo={Ilya} > <NameSC>Ilya Morozov<br/>
-Backend Developer
- </NameSC></ImgIconSC>
- <MarginLeft2><ImgIconSC Photo={Sveta} > <NameSC>Svetlana Soboleva<br/>
-Frontend Developer
- </NameSC></ImgIconSC></MarginLeft2>
- <ImgIconSC Photo={Stas} > <NameSC>Stanislav Maximov<br/>
-Backend Developer
- </NameSC></ImgIconSC>
- <ImgIconSC Photo={Dmitry} > <NameSC>Dmitry Galtsov<br/>
-Frontend Developer
- </NameSC></ImgIconSC>
-               
-                
+  </Carousel>
+        
+       : null}
 
-</Carousel>
-    </>
+{indexSelectedButton === 2 ? 
+<Carousel indexSelectedButton={indexSelectedButton}
+      
+  containerClass="carousel-containerTeamDevDesign"
+    responsive={responsive}
+    customRightArrow={<CustomRightArrow />}
+    customLeftArrow={<CustomLeftArrow />}
+    itemClass="carousel-itemTeamDevDesign"
+    sliderClass="carousel-sliderTeamDevDesign"
+    spacing={4}
+
+  >
+  <DivItemSC>
+<DivItemPhotoSC Photo={Andrey} indexSelectedButton={indexSelectedButton}/>
+<DivItemNameSC indexSelectedButton={indexSelectedButton}>Andrey Baykov<p>UI/UX Designer</p></DivItemNameSC>
+</DivItemSC>
+<DivItemSC>
+<DivItemPhotoSC Photo={Irene} indexSelectedButton={indexSelectedButton}/>
+<DivItemNameSC indexSelectedButton={indexSelectedButton}>Irene Gordina<p>UI/UX Designer</p></DivItemNameSC>
+</DivItemSC>
+<DivItemSC>
+<DivItemPhotoSC Photo={Lisa} indexSelectedButton={indexSelectedButton}/>
+<DivItemNameSC indexSelectedButton={indexSelectedButton}>Lisa Raklova<p>UI/UX Designer</p></DivItemNameSC>
+</DivItemSC>
+<DivItemSC>
+<DivItemPhotoSC Photo={Alina} indexSelectedButton={indexSelectedButton}/>
+<DivItemNameSC indexSelectedButton={indexSelectedButton}>Alina Sagaidak<p>Motion Designer</p></DivItemNameSC>
+</DivItemSC>
+  </Carousel>
+        
+       : null}
+
+</>
   );
+
 };
 
-export default AboutTeamDesingCarousel;
+export default AboutTeamDeveloperCarousel;
