@@ -27,13 +27,7 @@ const Footer = () => {
   };
   return (
     <>
-      <ReactHowler
-        src={Audio}
-        playing={music}
-        preload={true}
-        loop={true}
-        volume={0.2}
-      />
+    
       {isPage === "about" ? (
         <DivMaxWidthSC>
           <DivContainerFooterSC>
@@ -90,7 +84,7 @@ const Footer = () => {
               <H1FooterTextSC to="/">HOME</H1FooterTextSC>
               <H1FooterTextSC to="/about">ABOUT</H1FooterTextSC>
               <H1FooterTextSC to="/services">SERVICES</H1FooterTextSC>
-              <H1FooterTextSC to="#">PROJECTS</H1FooterTextSC>
+              <H1FooterTextSC to="/projects">PROJECTS</H1FooterTextSC>
               <H1FooterTextSC to="/contacts">CONTACTS</H1FooterTextSC>
             </DivContainerFooterCenterSC>
             <DivContainerFooterRightSC>
@@ -123,8 +117,16 @@ const Footer = () => {
               <H1FooterTextSoundOnSC>   {music ? "sound on" : "sound off"}</H1FooterTextSoundOnSC>
             </DivContainerFooterLeftSC>
           </DivContainerFooterSC>
+          
         </DivMaxWidthSC>
       ) : null}
+        <ReactHowler
+        src={Audio}
+        playing={music}
+        preload={true}
+        loop={true}
+        volume={0.04}
+      />
     </>
   );
 };

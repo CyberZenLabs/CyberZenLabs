@@ -56,6 +56,7 @@ export const DivContainerFooterRightSC = styled.div`
   /* justify-self: end; */
   /* @media (max-width: 480px) {
     align-self: end;
+
   } */
 `;
 export const DivPhotoRightContainerSC = styled(Link)`
@@ -66,6 +67,7 @@ export const DivPhotoRightContainerSC = styled(Link)`
   max-width: 120px;
   justify-items: center;
   align-items: center;
+
 `;
 //soundbar
 export const DivSoundPhotoLeftContainerSC = styled.div`
@@ -109,6 +111,11 @@ export const H1FooterTextSoundOnSC = styled.button`
     margin-top: 0px;
     font-size: 12px;
   }
+  @media (max-width: 480px) {align-self: end;}
+   
+      
+    
+  
 `;
 export const H1FooterTextSC = styled(Link)`
   width: 100%;

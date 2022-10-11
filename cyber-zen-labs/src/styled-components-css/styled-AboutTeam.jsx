@@ -41,21 +41,32 @@ letter-spacing: 0.05em;
 
   `;
   export const MarginLeft = styled.div`
-  
+  @media (max-width: 680px) {
+ margin-left:calc(100% - 230px);
+  }
   
   @media (max-width: 480px) {
- margin-left: 60px;
+    margin-left:calc(100% - 150px)
   }
-  @media (max-width: 360px) {
- margin-left: 30px;
-  }
+ 
   
     `;
+    export const MarginLeft2 = styled.div`
+    @media (max-width: 680px) {
+   margin-left:calc(100% - 230px);
+    }
+    
+    @media (max-width: 480px) {
+      margin-left:calc(100% - 150px)
+    }
+   
+    
+      `;
 export const NameSC = styled.div`
 font-family: 'Orbitron';
 font-style: normal;
 font-weight: 400;
-   @media (max-width: 1024px) {
+   @media (max-width: 1600px) {
     font-size: 14px;
       text-align: center;
   margin-left: 13px;
@@ -89,7 +100,7 @@ font-weight: 400;
     
     display: flex;
       margin-top: 10px;
-      @media (max-width: 768px) {
+      @media (max-width: 891px) {
         text-align: center;
         font-size: 14px;
         margin-left: 32px;

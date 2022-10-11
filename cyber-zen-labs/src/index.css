@@ -23,8 +23,13 @@ html {
   --color-black: #000000;
   --font-size-icon-text: 16px;
   --color-red-pink: #f61067;
-  --font-family-kanit: 'Kanit';
-  --primary: radial-gradient(73.28% 231.6% at 26.72% 52.96%, #0E1A5A 0%, #0E1A5A 5.27%, #21004B 100%);
+  --font-family-kanit: "Kanit";
+  --primary: radial-gradient(
+    73.28% 231.6% at 26.72% 52.96%,
+    #0e1a5a 0%,
+    #0e1a5a 5.27%,
+    #21004b 100%
+  );
   /*--primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));*/
   --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
   --primary-hue: 0;
@@ -36,16 +41,96 @@ html {
   --shadow-secondary-hue: 60;
   --color-pink: #D516FF;
   --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
-  --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
+  --clip: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    95% 100%,
+    95% 90%,
+    85% 90%,
+    85% 100%,
+    8% 100%,
+    0 70%
+  );
   --border: 4px;
   --shimmy-distance: 5;
-  --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
-  --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
-  --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
-  --clip-four: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
-  --clip-five: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
-  --clip-six: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
-  --clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
+  --clip-one: polygon(
+    0 2%,
+    100% 2%,
+    100% 95%,
+    95% 95%,
+    95% 90%,
+    85% 90%,
+    85% 95%,
+    8% 95%,
+    0 70%
+  );
+  --clip-two: polygon(
+    0 78%,
+    100% 78%,
+    100% 100%,
+    95% 100%,
+    95% 90%,
+    85% 90%,
+    85% 100%,
+    8% 100%,
+    0 78%
+  );
+  --clip-three: polygon(
+    0 44%,
+    100% 44%,
+    100% 54%,
+    95% 54%,
+    95% 54%,
+    85% 54%,
+    85% 54%,
+    8% 54%,
+    0 54%
+  );
+  --clip-four: polygon(
+    0 0,
+    100% 0,
+    100% 0,
+    95% 0,
+    95% 0,
+    85% 0,
+    85% 0,
+    8% 0,
+    0 0
+  );
+  --clip-five: polygon(
+    0 0,
+    100% 0,
+    100% 0,
+    95% 0,
+    95% 0,
+    85% 0,
+    85% 0,
+    8% 0,
+    0 0
+  );
+  --clip-six: polygon(
+    0 40%,
+    100% 40%,
+    100% 85%,
+    95% 85%,
+    95% 85%,
+    85% 85%,
+    85% 85%,
+    8% 85%,
+    0 70%
+  );
+  --clip-seven: polygon(
+    0 63%,
+    100% 63%,
+    100% 80%,
+    95% 80%,
+    95% 80%,
+    85% 80%,
+    85% 80%,
+    8% 80%,
+    0 70%
+  );
 }
 html,
 body,
@@ -282,6 +367,11 @@ table {
     margin-bottom: 25px;
   }
 }
+@media (max-width: 480px) {
+  .MusicContainer {
+    margin-bottom: 3px;
+  }
+}
 
 @keyframes MusicContainer {
   100% {
@@ -320,12 +410,18 @@ table {
   align-items: end;
   margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+  .MusicContainerStop {
+    margin-bottom: 24px;
+  }
+}
 .BarsStop {
   background: #fff;
   width: 2px;
   height: 2px;
 }
-.carousel-item{
+.carousel-item {
   display: grid;
   justify-content: center;
   width: 70px;
@@ -333,47 +429,42 @@ table {
   padding: auto;
   transform-style: initial !important;
 }
-.carousel-slider{
+.carousel-slider {
 }
-.carousel-container{
-
+.carousel-container {
   width: 106%;
   justify-content: space-between;
-  
-
 }
-.carousel-containerTeam{
-
+.carousel-containerTeam {
   width: 106%;
-    height: 138%;
-    justify-content: space-between;
-    position: static !important;
-    margin-top: -30px !important;
-  
+  height: 138%;
+  justify-content: space-between;
+  position: static !important;
+  margin-top: -30px !important;
 }
-.carousel-containerTeamDev{
-
+.carousel-containerTeamDev {
   width: 106%;
-    height: 142%;
-    justify-content: space-between;
-    position: static !important;
-    margin-top: -42px !important;
-  
+  height: 142%;
+  justify-content: space-between;
+  position: static !important;
+  margin-top: -42px !important;
 }
-
-
 
 .DivTaskItemContentSC {
   transition: background 0.2s;
 }
 
 .DivTaskItemContentSC:hover {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
+  --primary: hsl(
+    var(--primary-hue),
+    85%,
+    calc(var(--primary-lightness, 50) * 0.8%)
+  );
 }
 
 .DivTaskItemContentSC:after,
 .DivTaskItemContentSC:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -410,7 +501,7 @@ table {
 }
 
 .cybr-btn__glitch:before {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(var(--border) * 1);
   right: calc(var(--border) * 1);
@@ -425,12 +516,12 @@ table {
   --primary-hue: 260;
 }
 
-
 @keyframes glitch {
   0% {
     clip-path: var(--clip-one);
   }
-  2%, 8% {
+  2%,
+  8% {
     clip-path: var(--clip-two);
     transform: translate(calc(var(--shimmy-distance) * -1%), 0);
   }
@@ -450,7 +541,8 @@ table {
     clip-path: var(--clip-three);
     transform: translate(0, 0);
   }
-  14%, 21% {
+  14%,
+  21% {
     clip-path: var(--clip-four);
     transform: translate(calc(var(--shimmy-distance) * 1%), 0);
   }
@@ -462,7 +554,8 @@ table {
     clip-path: var(--clip-five);
     transform: translate(calc(var(--shimmy-distance) * -1%), 0);
   }
-  35%, 45% {
+  35%,
+  45% {
     clip-path: var(--clip-six);
     transform: translate(calc(var(--shimmy-distance) * -1%));
   }
@@ -482,7 +575,9 @@ table {
     clip-path: var(--clip-seven);
     transform: translate(0, 0);
   }
-  31%, 61%, 100% {
+  31%,
+  61%,
+  100% {
     clip-path: var(--clip-four);
   }
 }

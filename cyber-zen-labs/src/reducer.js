@@ -43,6 +43,19 @@ const setIsHome = (state, action) => {
 
 
 }
+const setIsForm = (state, action) => {
+
+    const {
+        status
+    } = action
+
+    return {
+        ...state,
+        isForm: status
+    }
+
+
+}
 
 const setIsPage = (state, action) => {
 
@@ -86,6 +99,9 @@ function reducer(state, action) {
 
         case 'SET_IS_PAGE':
         return setIsPage(state, action);
+
+        case 'SET_IS_FORM':
+        return setIsForm(state, action);
 
         case 'SET_IS_ABOUT_BACK':
         return setIsAboutBack(state, action);

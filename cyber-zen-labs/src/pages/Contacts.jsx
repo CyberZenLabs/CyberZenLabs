@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import {
   DivWrapSC,
   DivContainerSC,
@@ -23,8 +23,32 @@ import {
   DivRowsContentContacts,
   DivTopPenalSC,
 } from "../styled-components-css/styled-contacts";
-
+import GlobalDispatchContext from "../global_dispatch_context";
 const Contacts = () => {
+  const { state, dispatch } = useContext(GlobalDispatchContext);
+  const { isForm, isBlackBack,isPage } = state;
+
+  useEffect(() => {
+    dispatch({
+      type: "SET_IS_FORM",
+      status: true,
+    });
+    return () => {
+      dispatch({
+        type: "SET_IS_FORM",
+        status: false,
+      });
+    };
+  }, [isForm]);
+  useEffect(() => {
+    return () => {
+      dispatch({
+        type: "SET_IS_PAGE",
+        status: "home",
+      });
+    };
+  }, [isPage]);
+ 
   return (
     <DivWrapSC>
       <DivContainerSC>
@@ -37,8 +61,8 @@ const Contacts = () => {
               </DivTextWriteToUsSC>
             </DivBoxTextWriteToUsSC>
             <DivTopPenalSC>
-              <DivBoxBlurSC></DivBoxBlurSC>
-              <ImgBuddhaSC src="/default-images/buddha.png" />
+              {/* <DivBoxBlurSC></DivBoxBlurSC> */}
+              <ImgBuddhaSC />
             </DivTopPenalSC>
           </DivLeftPenalSC>
           <DivRightPenalSC>
@@ -83,8 +107,8 @@ const Contacts = () => {
             </DivColumnsemailSC>
           </DivLeftPenalSC>
           <DivRightPenalSC>
-            <DivBoxBlurSC></DivBoxBlurSC>
-            <ImgBuddhaSC src="/default-images/buddha.png"></ImgBuddhaSC>
+            {/* <DivBoxBlurSC></DivBoxBlurSC> */}
+            <ImgBuddhaSC></ImgBuddhaSC>
           </DivRightPenalSC>
         </DivColumnsContentContacts>
       </DivContainerSC>

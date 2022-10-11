@@ -7,6 +7,7 @@ import {
   DivMaxWidthSC,
   DivShowReelSC,
   LinkShowReelSC,
+  LinkShowReel2SC,
   LinkToHomeSC,
   LogoNavBarSC,
   TextNavBarSC,
@@ -15,11 +16,13 @@ import {
   LinkToBurgerSC,
   IconBurgerSC,
   BurgerMenuDisplaySC,
+  DivDecLineSC,
+
 } from "../styled-components-css/styled-navbar";
 
 const NavBarTop = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
-  const { isBlackBack, isHome } = state;
+  const { isBlackBack, isHome,isForm } = state;
   return (
     <>
       {isHome === true ? (
@@ -53,9 +56,15 @@ const NavBarTop = () => {
               </DivLogoBoxSC>
             </LinkToHomeSC>
             <DivShowReelCenterSC>
-              <LinkShowReelSC to="#" isBlackBack={isBlackBack}>
+              {isForm===true?( <LinkShowReel2SC to="#" isBlackBack={isBlackBack}>
+              SHOWREEL
+              <DivDecLineSC />
+              </LinkShowReel2SC>
+              
+              ):(<LinkShowReelSC to="#" isBlackBack={isBlackBack}>
                 SHOWREEL
-              </LinkShowReelSC>
+              </LinkShowReelSC>)}
+             
             </DivShowReelCenterSC>
             <LinkToBurgerSC to="/menu">
               <IconBurgerSC></IconBurgerSC>
@@ -63,6 +72,7 @@ const NavBarTop = () => {
           </DivContainerNavBarSC>
         </DivMaxWidthSC>
       )}
+     
     </>
   );
 };
