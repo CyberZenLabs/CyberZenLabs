@@ -210,6 +210,7 @@ export const IoIosArrowBackSC = styled(HiX)`
   right: 10px;
   top: 10px;
   color: white;
+  cursor: pointer;
 `;
 export const DivBoxRowModalSC = styled.div`
   justify-self: center;
