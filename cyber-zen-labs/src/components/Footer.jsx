@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect,useRef } from "react";
 import ReactHowler from "react-howler";
 import {
   DivContainerFooterCenterSC,
@@ -16,10 +16,13 @@ import {
 import { DivMaxWidthSC } from "../styled-components-css/styled-navbar";
 import GlobalDispatchContext from "../global_dispatch_context";
 import Audio from "../audio/Homepage.mp3";
+import CyberModal from "./Modal";
 const Footer = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
-
+  const { isOpen } = state;
   const { isPage } = state;
+  
+ 
   const [music, setMusic] = useState(true);
   const MusicBeh = () => {
     setMusic(!music);
@@ -53,7 +56,10 @@ const Footer = () => {
               <FooterTextTeamSC to="/aboutdev">Development</FooterTextTeamSC>
             </DivContainerFooterCenterTeamSC>
             <DivContainerFooterRightSC>
-              <DivPhotoRightContainerSC to="/getintouch" />
+              <DivPhotoRightContainerSC onClick={() => dispatch({
+                type: "SET_IS_OPEN",
+                status: true,
+              })} />
             </DivContainerFooterRightSC>
           </DivContainerFooterSC>
         </DivMaxWidthSC>
@@ -87,7 +93,11 @@ const Footer = () => {
               <H1FooterTextSC to="/contacts">CONTACTS</H1FooterTextSC>
             </DivContainerFooterCenterSC>
             <DivContainerFooterRightSC>
-              <DivPhotoRightContainerSC to="/getintouch" />
+              <DivPhotoRightContainerSC 
+             onClick={() =>  dispatch({
+              type: "SET_IS_OPEN",
+              status: true,
+            })}  />
             </DivContainerFooterRightSC>
           </DivContainerFooterSC>
         </DivMaxWidthSC>
@@ -117,6 +127,11 @@ const Footer = () => {
           
         </DivMaxWidthSC>
       ) : null}
+      <CyberModal
+       open={isOpen}
+      
+       
+       />
         <ReactHowler
         src={Audio}
         playing={music}

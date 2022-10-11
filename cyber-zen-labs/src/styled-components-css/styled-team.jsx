@@ -41,12 +41,13 @@ export const DivTextTitleSC = styled.div`
   line-height: 60px;
   text-align: center;
   letter-spacing: 0.05em;
-  background: linear-gradient(270deg, #d815ff 0%, #09bbf9 102.1%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  text-fill-color: transparent;
+  background: linear-gradient(270deg, #D815FF 0%, #09BBF9 102.1%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
 
-  text-shadow: 0px 4px 20px #d516ff;
+text-shadow: 0px 4px 20px #D516FF;
   @media (max-width: 1000px) {
     font-size: 40px;
   }

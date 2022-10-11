@@ -56,13 +56,14 @@ export const DivContainerFooterRightSC = styled.div`
     margin-bottom: 15px;
   }
 `;
-export const DivPhotoRightContainerSC = styled(Link)`
+export const DivPhotoRightContainerSC = styled.div`
   background-image: url(${Mail});
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100px;
   height: 100px;
   justify-self: end;
+  cursor: pointer;
   @media (max-width: 1000px) {
     width: 65px;
     height: 65px;

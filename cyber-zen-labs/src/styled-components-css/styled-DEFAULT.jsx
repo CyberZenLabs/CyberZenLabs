@@ -10,7 +10,7 @@ export const DivWrapSC = styled.div`
 export const DivContainerSC = styled.div`
   margin: 0 auto;
   max-width: var(--max-width);
-  width: 90vw;
+ padding-bottom: 25px;
   display: grid;
   justify-items: center;
   
