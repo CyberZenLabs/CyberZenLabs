@@ -16,7 +16,11 @@ import {
 import { DivMaxWidthSC } from "../styled-components-css/styled-navbar";
 import GlobalDispatchContext from "../global_dispatch_context";
 import Audio from "../audio/Homepage.mp3";
+
 import CyberModal from "./Modal";
+
+import GetInTouchButton from "./GetInTouchButton";
+
 const Footer = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isOpen } = state;
@@ -93,11 +97,13 @@ const Footer = () => {
               <H1FooterTextSC to="/contacts">CONTACTS</H1FooterTextSC>
             </DivContainerFooterCenterSC>
             <DivContainerFooterRightSC>
+
               <DivPhotoRightContainerSC 
              onClick={() =>  dispatch({
               type: "SET_IS_OPEN",
               status: true,
             })}  />
+
             </DivContainerFooterRightSC>
           </DivContainerFooterSC>
         </DivMaxWidthSC>

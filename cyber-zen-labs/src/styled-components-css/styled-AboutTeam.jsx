@@ -66,6 +66,7 @@ export const NameSC = styled.div`
 font-family: 'Orbitron';
 font-style: normal;
 font-weight: 400;
+line-height: 18px;
    @media (max-width: 1600px) {
     font-size: 14px;
       text-align: center;
@@ -170,25 +171,21 @@ display: flex;
 border-radius:100%;
 width: 180px;
 height: 180px;
-margin-left: 15px;
 background-image: ${({ Photo }) => Photo && `url(${Photo})`};
 
 @media (min-width: 750px) {
     
-  margin-left: 17px;
     }
 @media (max-width: 480px) {
     
   height: 120px;
   width:120px ;
-  margin-left: 5px;
   background-size: contain;
   }
   @media (max-width: 360px) {
     
     height: 120px;
     width:120px ;
-    margin-left: 15px;
     background-size: contain;
     }
   `;
@@ -201,11 +198,11 @@ background: #000;
 
 `;
 export const DivCustomArrowRight = styled(CgChevronRight)`
-width:3vw;
-height: 3vw;
+width:4vw;
+height: 4vw;
 position: absolute;
+bottom: 50;
 right: 0;
-
 @media (max-width: 768px) {
   height: 4vw;
   width: 4vw;
@@ -230,8 +227,8 @@ export const MarginArrow = styled.div`
   }
 ;`
 export const DivCustomArrowLeft = styled(CgChevronLeft)`
-width:3vw;
-height: 3vw;
+width:4vw;
+height: 4vw;
 position: absolute;
 left: 0;
 
@@ -250,3 +247,11 @@ left: 0;
   
   }
   ;`
+
+export const DivItemsCarouselSC = styled.div`
+display: none;
+@media (max-width: 1600px) {
+ display: block;
+}
+  
+`

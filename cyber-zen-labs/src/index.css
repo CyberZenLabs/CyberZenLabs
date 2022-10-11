@@ -39,6 +39,7 @@ html {
   --shadow-primary-hue: 180;
   --label-size: 9px;
   --shadow-secondary-hue: 60;
+  --color-pink: #D516FF;
   --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
   --clip: polygon(
     0 0,
@@ -442,13 +443,66 @@ table {
   margin-top: -30px !important;
 }
 .carousel-containerTeamDev {
-  width: 106%;
-  height: 142%;
+  width: 100%;
+  height: max-content;
+  
   justify-content: space-between;
   position: static !important;
-  margin-top: -42px !important;
 }
 
+
+.carousel-itemTeamDev{
+  /* width: max-content !important; */
+}
+.carousel-sliderTeamDev{
+/* column-gap: 38px !important; */
+width: max-content !important;
+}
+
+/* This classes is temporary until the carousel is full */
+.carousel-containerTeamDevLeadership {
+  width: 100%;
+  height: max-content;
+  justify-content: center;
+
+  position: static !important;
+}
+.carousel-itemTeamDevLeadership{
+  width: max-content !important;
+}
+.carousel-sliderTeamDevLeadership{
+column-gap: 38px !important;
+width: max-content !important;
+}
+
+@media (min-width: 801px){
+
+  .carousel-containerTeamDevDesign {
+    width: 100%;
+    height: max-content;
+    justify-content: center;
+  
+    position: static !important;
+  }
+  .carousel-itemTeamDevDesign{
+    width: max-content !important;
+  }
+  .carousel-sliderTeamDevDesign{
+  column-gap: 38px !important;
+  width: max-content !important;
+  }
+}
+@media (max-width: 800px) {
+  .carousel-containerTeamDevDesign {
+    width: 100%;
+  height: max-content;
+  
+  justify-content: space-between;
+  position: static !important;
+  }
+
+}
+/* // */
 .DivTaskItemContentSC {
   transition: background 0.2s;
 }

@@ -112,6 +112,10 @@ border-radius:100%;
 width: 70px;
 height: 70px;
 background-image: ${({ Photo }) => Photo && `url(${Photo})`};
+  
+@media (max-width: 768px) {
+
+  }
   `;
 
 export const DivCustomArrowRight = styled(CgChevronRight)`

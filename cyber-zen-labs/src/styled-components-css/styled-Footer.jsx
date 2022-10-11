@@ -48,14 +48,18 @@ export const DivContainerFooterCenterSC = styled.div`
 `;
 export const DivContainerFooterRightSC = styled.div`
   display: grid;
-  grid-template-columns: max-content;
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
   //border:1px solid white;
-  justify-self: end;
-  @media (max-width: 480px) {
+  /* justify-self: end; */
+  /* @media (max-width: 480px) {
     align-self: end;
-    margin-bottom: 15px;
-  }
+
+  } */
 `;
+
 export const DivPhotoRightContainerSC = styled.div`
   background-image: url(${Mail});
   background-repeat: no-repeat;
@@ -72,6 +76,7 @@ export const DivPhotoRightContainerSC = styled.div`
     width: 36px;
     height: 36px;
   }
+
 `;
 //soundbar
 export const DivSoundPhotoLeftContainerSC = styled.div`
