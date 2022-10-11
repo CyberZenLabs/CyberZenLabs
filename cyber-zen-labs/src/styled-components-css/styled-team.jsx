@@ -153,6 +153,7 @@ export const DivFotoSC = styled.div`
   height: 180px;
   background-size: 100%;
   background-repeat: no-repeat;
+  
   @media (max-width: 480px) {
     width: 120px;
     height: 120px;
@@ -410,4 +411,122 @@ export const DivFoto11SC = styled.div`
  
   /*   background-size: 100%;
   background-repeat: no-repeat; */
+`;
+
+export const DivItemsSC = styled.div`
+@media (max-width: 1600px) {
+    display:none;
+  }
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  column-gap: 38px;
+  height: max-content;
+  @media (max-width: 480px) {
+    column-gap: 20px;
+
+  }
+
+`;
+
+export const DivItemSC = styled.div`
+  display: grid;
+  grid-template-rows: repeat(2, max-content); 
+  grid-row-gap: 14px;
+  justify-content: center;
+  justify-items: center;
+  
+  @media (max-width: 480px) {
+    grid-row-gap: 5px;
+  }
+`;
+
+export const DivItemPhotoSC = styled.div`
+background-image: ${({ Photo }) => Photo && `url(${Photo})`};
+width: 180px;
+height: 180px;
+background-size: 100%;
+border-radius: 100%;
+
+@media (max-width: 890px) {
+  width: 150px;
+height: 150px;
+  }
+  @media (max-width: 768px) {
+    width: 180px;
+height: 180px;
+  }
+  @media (max-width: 660px) {
+    width: 150px;
+height: 150px;
+  }
+@media (max-width: 550px) {
+  width: 120px;
+height: 120px;
+  }
+  @media (max-width: 450px) {
+  width: 150px;
+height: 150px;
+  }
+  @media (max-width: 360px) {
+  width: 120px;
+height: 120px;
+  }
+
+
+
+`;
+export const DivItemPhotoTemporarySC = styled.div`
+background-image: ${({ Photo }) => Photo && `url(${Photo})`};
+width: 180px;
+height: 180px;
+background-size: 100%;
+border-radius: 100%;
+
+@media (max-width: 480px) {
+  width: 120px;
+height: 120px;
+  }
+
+
+`;
+export const DivItemNameSC = styled.div`
+display: grid;
+justify-content: center;
+justify-items: center;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+@media (max-width: 890px) {
+  font-size: 10px;
+line-height: 13px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+line-height: 18px;
+  }
+  @media (max-width: 660px) {
+  font-size: 10px;
+line-height: 13px;
+  }
+@media (max-width: 480px) {
+  font-size: 10px;
+line-height: 13px;
+  }
+
+`;
+
+export const DivItemNameTemporarySC = styled.div`
+display: grid;
+justify-content: center;
+justify-items: center;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+
+@media (max-width: 480px) {
+  font-size: 10px;
+line-height: 13px;
+  }
+
 `;
