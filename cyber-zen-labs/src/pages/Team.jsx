@@ -129,12 +129,12 @@ const Team = () => {
       <DivRuslanBoxSC>
         <Stage width={window.innerWidth} height={window.innerHeight - 20}>
           <Layer>
-            {Tools.drowLine(PointsLine1)}
+            {Tools.drawLine(PointsLine1)}
             <Circle x={370} y={140} radius={5} fill="#ffffff" />
           </Layer>
-          <Layer>{Tools.drowLine(PointsLine3)}</Layer>
+          <Layer>{Tools.drawLine(PointsLine3)}</Layer>
           <Layer>
-            {Tools.drowLine(PointsLine2)}
+            {Tools.drawLine(PointsLine2)}
             <Circle x={1630} y={950} radius={5} fill="#ffffff" />
           </Layer>
         </Stage>

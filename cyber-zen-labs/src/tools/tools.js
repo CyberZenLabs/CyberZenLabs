@@ -15,7 +15,10 @@ const Tools = {
                     lineCap="square"
                     lineJoin="bevel"
                     bezier={false}
-
+                    shadowColor={'black'}
+                    shadowBlur={10}
+                    shadowOffset={{ x: 10, y: 10 }}
+                    shadowOpacity={1}
                     // globalCompositeOperation={
                     //     'source-over'
                     // }
