@@ -59,14 +59,23 @@ export const DivContainerFooterRightSC = styled.div`
 
   } */
 `;
-export const DivPhotoRightContainerSC = styled(Link)`
-  display: grid;
-  width: 100%;
-  height: 100%;
-  max-height: 120px;
-  max-width: 120px;
-  justify-items: center;
-  align-items: center;
+
+export const DivPhotoRightContainerSC = styled.div`
+  background-image: url(${Mail});
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100px;
+  height: 100px;
+  justify-self: end;
+  cursor: pointer;
+  @media (max-width: 1000px) {
+    width: 65px;
+    height: 65px;
+  }
+  @media (max-width: 480px) {
+    width: 36px;
+    height: 36px;
+  }
 
 `;
 //soundbar

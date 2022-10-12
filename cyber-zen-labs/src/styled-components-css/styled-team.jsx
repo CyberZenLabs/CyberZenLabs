@@ -15,8 +15,11 @@ import Alina from "../images/Alina.png";
 export const DivMainRowsSC = styled.div`
   width: 100%;
   height: 100%;
+  min-width: 1350px;
   display: grid;
   grid-template-rows: 170px 83px 93px 194px 38px;
+  @media(min-width: 1600px){min-width:1300px;}
+  @media(max-width: 1600px){min-width:unset;}
   @media (max-width: 480px) {
     grid-template-rows: 170px 83px 93px 144px 38px;
   }
@@ -41,12 +44,13 @@ export const DivTextTitleSC = styled.div`
   line-height: 60px;
   text-align: center;
   letter-spacing: 0.05em;
-  background: linear-gradient(270deg, #d815ff 0%, #09bbf9 102.1%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  text-fill-color: transparent;
+  background: linear-gradient(270deg, #D815FF 0%, #09BBF9 102.1%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
 
-  text-shadow: 0px 4px 20px #d516ff;
+text-shadow: 0px 4px 20px #D516FF;
   @media (max-width: 1000px) {
     font-size: 40px;
   }
@@ -482,7 +486,6 @@ width: 180px;
 height: 180px;
 background-size: 100%;
 border-radius: 100%;
-
 @media (max-width: 480px) {
   width: 120px;
 height: 120px;

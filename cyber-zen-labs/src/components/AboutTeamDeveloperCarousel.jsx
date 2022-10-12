@@ -43,26 +43,7 @@ import Stas from "../images/Stas.png";
 import Sveta from "../images/Sveta.png";
 import Lisa from "../images/Lisa.png";
 import Alina from "../images/Alina.png";
-const listContent = [
-  {
-    page: (
-      <>
-      </>
-    ),
-  },
-  {
-    page: (
-      <>
-      </>
-    ),
-  },
-  {
-    page: (
-      <>
-      </>
-    ),
-  },
-];
+
 const AboutTeamDeveloperCarousel = ({indexSelectedButton}) => {
   console.log("indexSelectedButton",indexSelectedButton);
   const responsive = {
@@ -150,12 +131,12 @@ const AboutTeamDeveloperCarousel = ({indexSelectedButton}) => {
   
   >
   <DivItemSC>
-<DivItemPhotoTemporarySC Photo={Sam} indexSelectedButton={indexSelectedButton}/>
-<DivItemNameTemporarySC indexSelectedButton={indexSelectedButton}>Sam Singer <p>Founder and Owner</p></DivItemNameTemporarySC>
+<DivItemPhotoSC Photo={Sam} indexSelectedButton={indexSelectedButton}/>
+<DivItemNameSC indexSelectedButton={indexSelectedButton}>Sam Singer <p>Founder and Owner</p></DivItemNameSC>
 </DivItemSC>
 <DivItemSC>
-<DivItemPhotoTemporarySC Photo={Denis} indexSelectedButton={indexSelectedButton}/>
-<DivItemNameTemporarySC indexSelectedButton={indexSelectedButton}>Den Gordin <p>Project-manager</p></DivItemNameTemporarySC>
+<DivItemPhotoSC Photo={Denis} indexSelectedButton={indexSelectedButton}/>
+<DivItemNameSC indexSelectedButton={indexSelectedButton}>Den Gordin <p>Project-manager</p></DivItemNameSC>
 </DivItemSC>
 
   </Carousel>
@@ -216,7 +197,6 @@ indexSelectedButton={indexSelectedButton}
     customLeftArrow={<CustomLeftArrow />}
     itemClass="carousel-itemTeamDevDesign"
     sliderClass="carousel-sliderTeamDevDesign"
-    spacing={4}
 
   >
   <DivItemSC>

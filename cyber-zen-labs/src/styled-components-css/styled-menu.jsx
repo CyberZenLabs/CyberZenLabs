@@ -7,7 +7,7 @@ export const SpanTextElementMenuSC = styled(Link)`
 
   color: var(--blue-pink);
   &:hover {
-    text-shadow: 0px 0px 23px #ffffff;
+    text-shadow: 7px 7px 12px #C957E5;
   }
   @media (max-width: 1000px) {
     font-size: 40px;

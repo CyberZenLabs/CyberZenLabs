@@ -131,7 +131,7 @@ export const DivBoxCarouselSC = styled.div`
 `;
 
 export const DivBoxCarouselBackgroundEllipseSC = styled.div`
-   
+   width: 1497px;
   height: 1497px;
   border: 2px solid grey;
   border-radius: 50%;
@@ -139,12 +139,12 @@ export const DivBoxCarouselBackgroundEllipseSC = styled.div`
 
 export const DivTaskItemSC = styled.div`
     position: absolute;
-  top: 0px;
+  top: 30px;
   left: calc((100% / 2) - 334px);
-  box-shadow: 0px 0px 50px 9px #7167fb45;
+  box-shadow: 0px 0px 30px 9px #7167fb45;
   border-radius: 26px;
   width: 668px;
-  height: 435px;
+  height: 405px;
   padding: 2px;
   box-sizing: border-box;
   background: var(--blue-pink);
