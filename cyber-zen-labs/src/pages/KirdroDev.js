@@ -30,13 +30,20 @@ const KirdroDev = () => {
     <DivKirdroBoxSC>
       <Stage width={window.innerWidth} height={window.innerHeight - 20}>
         <Layer>
-          {Tools.drowLine(PointsLine1)}
+          {Tools.drawLine(PointsLine1)}
           <Circle x={910} y={264} radius={5} fill="#ffffff" />
         </Layer>
 
         <Layer>
-          {Tools.drowLine(PointsLine2)}
+          {Tools.drawLine(PointsLine2)}
           <Circle x={770} y={346} radius={5} fill="#ffffff" />
+          <Circle
+            x={770}
+            y={346}
+            radius={50}
+            stroke="#ffffff"
+            dash={[10, 20, 5]}
+          />
         </Layer>
       </Stage>
     </DivKirdroBoxSC>
