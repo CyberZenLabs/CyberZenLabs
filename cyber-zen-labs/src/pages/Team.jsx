@@ -32,13 +32,18 @@ import {
   DivFoto9SC,
   DivFoto10SC,
   DivFoto11SC,
+  DivItemsSC,
+  DivItemSC,
+  DivItemPhotoSC,
+  DivItemNameSC
+
 } from "../styled-components-css/styled-team";
 import GlobalDispatchContext from "../global_dispatch_context";
-import AboutTeamDesingCarousel from "../components/AboutTeamDesingCarousel"
 import AboutTeamDeveloperCarousel from "../components/AboutTeamDeveloperCarousel"
 
-const Team = () => {
 
+const Team = () => {
+  const [indexSelectedButton, getIndexButton] = useState(0);
   const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isPage, isAboutBack } = state;
 
@@ -67,68 +72,25 @@ const Team = () => {
     {
       page: (
         <>
-          <DivBoxColumnsFotosSC>
-            <DivFotoSC />
-            <DivFoto1SC />
-          </DivBoxColumnsFotosSC>
-          <DivBoxColumnsNameSC>
-            <DivNameSC>Sam Singer Founder and Owner</DivNameSC>
-            <DivName1SC>Den Gordin Project-manager</DivName1SC>
-          </DivBoxColumnsNameSC>
+        <AboutTeamDeveloperCarousel indexSelectedButton={indexSelectedButton}></AboutTeamDeveloperCarousel>
         </>
       ),
     },
     {
       page: (
         <>
-          <DivBoxColumnsFotos1SC>
-            <DivFotoSC />
-            <DivFoto2SC />
-            <DivFoto3SC />
-            <DivFoto4SC />
-            <DivFoto5SC />
-            <DivFoto6SC />
-            <DivFoto7SC />
-           
-          </DivBoxColumnsFotos1SC>
-          
-          <DivBoxColumnsName1SC>
-            <DivName0SC>Sam Singer Founder and Owner</DivName0SC>
-            <DivName0SC>Kirill Drozdov Full-stack Developer</DivName0SC>
-            <DivName0SC>Ruslan Gordin Frontend Developer</DivName0SC>
-            <DivName0SC>Ilya Morozov Backend Developer</DivName0SC>
-            <DivName0SC>Svetlana Soboleva Frontend Developer</DivName0SC>
-            <DivName0SC>Stanislav Maximov Backend Developer</DivName0SC>
-            <DivName0SC>Dmitry Galtsov Frontend Developer</DivName0SC>
-            
-          </DivBoxColumnsName1SC>
-          <AboutTeamDeveloperCarousel></AboutTeamDeveloperCarousel>
+          <AboutTeamDeveloperCarousel indexSelectedButton={indexSelectedButton}></AboutTeamDeveloperCarousel>
         </>
       ),
     },
     {
       page: (
         <>
-          <DivBoxColumnsFotos3SC>
-            <DivFoto8SC />
-            <DivFoto9SC />
-            <DivFoto10SC />
-            <DivFoto11SC />
-            
-          </DivBoxColumnsFotos3SC>
-          <DivBoxColumnsName2SC>
-            <DivName2SC>Andrey Baykov UI/UX Designer</DivName2SC>
-            <DivName2SC>Irene Gordina UI/UX Designer</DivName2SC>
-            <DivName2SC>Alina Sagaidak Motion Designer</DivName2SC>
-            <DivName2SC>Lisa Raklova UI/UX Designer</DivName2SC>
-            
-          </DivBoxColumnsName2SC>
-          <AboutTeamDesingCarousel></AboutTeamDesingCarousel>
+        <AboutTeamDeveloperCarousel indexSelectedButton={indexSelectedButton}></AboutTeamDeveloperCarousel>
         </>
       ),
     },
   ];
-  const [indexSelectedButton, getIndexButton] = useState(0);
   const onClickTab = (index) => (e) => {
     getIndexButton(index);
   };

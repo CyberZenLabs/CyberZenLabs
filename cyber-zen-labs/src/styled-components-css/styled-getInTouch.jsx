@@ -10,7 +10,7 @@ export const DivContainerPenalsSC = styled.div`
   justify-self: center;
   grid-template-columns: 50% 50%;
   grid-column-gap: 70px;
-  @media (max-width: 1175px) {
+  @media (max-width: 1060px) {
     grid-column-gap: 25px;
   }
   @media (max-width: 810px) {
@@ -50,7 +50,7 @@ export const DivBoxTextSC = styled.div`
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
-  @media (max-width: 1175px) {
+  @media (max-width:1060px) {
     font-size: 16px;
   }
   @media (max-width: 410px) {
@@ -161,7 +161,7 @@ export const DivTextDescriptionSC = styled.div`
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
-  @media (max-width: 1175px) {
+  @media (max-width: 1060px) {
     font-size: 16px;
   }
   @media (max-width: 810px) {
@@ -182,11 +182,12 @@ export const DivBoxColumnIconTextSC = styled.div`
 `;
 
 export const DivBoxIconClipSC = styled.div`
+  cursor: pointer;
   width: 24px;
   height: 28px;
   background-size: 100%;
   background-image: url(${Clip});
-  @media (max-width: 1175px) {
+  @media (max-width: 1060px) {
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
@@ -200,7 +201,7 @@ export const DivTextAddAttachmentSC = styled.div`
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
-  @media (max-width: 1175px) {
+  @media (max-width: 1060px) {
     font-size: 16px;
   }
 `;
@@ -228,7 +229,7 @@ export const ButtonGradientSC = styled(Link)`
   align-items: center;
   color: #fff;
   cursor: pointer;
-  @media (max-width: 1175px) {
+  @media (max-width: 1060px) {
     max-width: 350px;
     max-height: 85px;
   }
@@ -247,7 +248,7 @@ export const SpanBudgetSC = styled.div`
   font-size: 24px;
   line-height: 30px;
   text-align: start;
-  @media (max-width: 1175px) {
+  @media (max-width: 1060px) {
     font-size: 16px;
   }
   @media (max-width: 410px) {

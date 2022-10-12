@@ -10,12 +10,16 @@ import Dmitry from "../images/Dmitry.png";
 import Stas from "../images/Stas.png";
 import Sveta from "../images/Sveta.png";
 import Lisa from "../images/Lisa.png";
+import Alina from "../images/Alina.png";
 
 export const DivMainRowsSC = styled.div`
   width: 100%;
   height: 100%;
+  min-width: 1350px;
   display: grid;
   grid-template-rows: 170px 83px 93px 194px 38px;
+  @media(min-width: 1600px){min-width:1300px;}
+  @media(max-width: 1600px){min-width:unset;}
   @media (max-width: 480px) {
     grid-template-rows: 170px 83px 93px 144px 38px;
   }
@@ -40,12 +44,13 @@ export const DivTextTitleSC = styled.div`
   line-height: 60px;
   text-align: center;
   letter-spacing: 0.05em;
-  background: linear-gradient(270deg, #d815ff 0%, #09bbf9 102.1%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  text-fill-color: transparent;
+  background: linear-gradient(270deg, #D815FF 0%, #09BBF9 102.1%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
 
-  text-shadow: 0px 4px 20px #d516ff;
+text-shadow: 0px 4px 20px #D516FF;
   @media (max-width: 1000px) {
     font-size: 40px;
   }
@@ -152,6 +157,7 @@ export const DivFotoSC = styled.div`
   height: 180px;
   background-size: 100%;
   background-repeat: no-repeat;
+  
   @media (max-width: 480px) {
     width: 120px;
     height: 120px;
@@ -390,7 +396,7 @@ export const DivFoto10SC = styled.div`
   width: 180px;
   height: 180px;
   border-radius: 100%;
-  background: #c4c4c4;
+  background-image: url(${Alina});
   /*   background-size: 100%;
   background-repeat: no-repeat; */
   @media (max-width: 765px) {
@@ -409,4 +415,121 @@ export const DivFoto11SC = styled.div`
  
   /*   background-size: 100%;
   background-repeat: no-repeat; */
+`;
+
+export const DivItemsSC = styled.div`
+@media (max-width: 1600px) {
+    display:none;
+  }
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  column-gap: 38px;
+  height: max-content;
+  @media (max-width: 480px) {
+    column-gap: 20px;
+
+  }
+
+`;
+
+export const DivItemSC = styled.div`
+  display: grid;
+  grid-template-rows: repeat(2, max-content); 
+  grid-row-gap: 14px;
+  justify-content: center;
+  justify-items: center;
+  
+  @media (max-width: 480px) {
+    grid-row-gap: 5px;
+  }
+`;
+
+export const DivItemPhotoSC = styled.div`
+background-image: ${({ Photo }) => Photo && `url(${Photo})`};
+width: 180px;
+height: 180px;
+background-size: 100%;
+border-radius: 100%;
+
+@media (max-width: 890px) {
+  width: 150px;
+height: 150px;
+  }
+  @media (max-width: 768px) {
+    width: 180px;
+height: 180px;
+  }
+  @media (max-width: 660px) {
+    width: 150px;
+height: 150px;
+  }
+@media (max-width: 550px) {
+  width: 120px;
+height: 120px;
+  }
+  @media (max-width: 450px) {
+  width: 150px;
+height: 150px;
+  }
+  @media (max-width: 360px) {
+  width: 120px;
+height: 120px;
+  }
+
+
+
+`;
+export const DivItemPhotoTemporarySC = styled.div`
+background-image: ${({ Photo }) => Photo && `url(${Photo})`};
+width: 180px;
+height: 180px;
+background-size: 100%;
+border-radius: 100%;
+@media (max-width: 480px) {
+  width: 120px;
+height: 120px;
+  }
+
+
+`;
+export const DivItemNameSC = styled.div`
+display: grid;
+justify-content: center;
+justify-items: center;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+@media (max-width: 890px) {
+  font-size: 10px;
+line-height: 13px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+line-height: 18px;
+  }
+  @media (max-width: 660px) {
+  font-size: 10px;
+line-height: 13px;
+  }
+@media (max-width: 480px) {
+  font-size: 10px;
+line-height: 13px;
+  }
+
+`;
+
+export const DivItemNameTemporarySC = styled.div`
+display: grid;
+justify-content: center;
+justify-items: center;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+
+@media (max-width: 480px) {
+  font-size: 10px;
+line-height: 13px;
+  }
+
 `;

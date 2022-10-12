@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import {
     DivContainerSC,
     DivWrapSC,
@@ -12,8 +12,22 @@ import {
     DivShadowTitleSC, DivBoxCarouselSC, DivBoxCarouselBackgroundEllipseSC,
 } from "../styled-components-css/styled-services";
 import ServicesItem from "../components/ServicesItem";
+import GlobalDispatchContext from "../global_dispatch_context";
 
 const Services = () => {
+    const { state, dispatch } = useContext(GlobalDispatchContext);
+  const { isPage, isBlackBack } = state;
+
+  
+
+  useEffect(() => {
+    return () => {
+      dispatch({
+        type: "SET_IS_PAGE",
+        status: "home",
+      });
+    };
+  }, [isPage]);
     return (
         <DivWrapSC>
             <DivContainerSC>
