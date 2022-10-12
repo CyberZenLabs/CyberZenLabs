@@ -38,7 +38,7 @@ const Home = () => {
     return () => {
       dispatch({
         type: "SET_IS_PAGE",
-        status: "home",
+        status: "homePage",
       });
     };
   }, [isPage]);
