@@ -2,23 +2,19 @@ import {Line} from "react-konva";
 import React from "react";
 
 
-const Tools = {
+const ToolsBlack = {
     drawLine: (pointsLine) => {
         const componentNode = pointsLine.map((item, i) => {
             return(
                 <Line
                     key={`wqadfs${i}`}
                     points={item}
-                    stroke="#ffffff"
+                    stroke="#F61067"
                     strokeWidth={1}
                     tension={0.5}
                     lineCap="square"
                     lineJoin="bevel"
                     bezier={false}
-                    shadowColor={'black'}
-                    shadowBlur={10}
-                    shadowOffset={{ x: 10, y: 10 }}
-                    shadowOpacity={1}
                     // globalCompositeOperation={
                     //     'source-over'
                     // }
@@ -31,4 +27,4 @@ const Tools = {
     }
 }
 
-export default Tools
+export default ToolsBlack

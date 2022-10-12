@@ -7,8 +7,9 @@ import GlobalDispatchContext from "../global_dispatch_context";
 const Loading = ({ containerId }) => {
   const [width, setWidth] = useState(null);
   const [height, setHeight] = useState(null);
-  const [outSideCircleArray, setOutSideCircleArray] = useState([210, 10, 5, 15, 20]);
-
+  const [outSideCircleArray, setOutSideCircleArray] = useState([
+    210, 10, 5, 15, 20,
+  ]);
 
   const outSideCircleRef = useRef();
   const inSideCircleRef = useRef();
@@ -24,7 +25,6 @@ const Loading = ({ containerId }) => {
         outSideCircleRef.current.rotate(turnRight);
         inSideCircleRef.current.rotate(leftRight);
 
-        
         // inSideCircleRef.current.rotate(leftRight);
 
         // outSideCircleRef.current.opacity((Math.sin(frame.time / period) + 1) / 2);
@@ -56,6 +56,7 @@ const Loading = ({ containerId }) => {
       <Stage width={width} height={height}>
         <Layer>
           <Circle
+            key={"circle-button-1"}
             ref={outSideCircleRef}
             x={width / 2}
             y={height / 2}
@@ -66,12 +67,13 @@ const Loading = ({ containerId }) => {
             shadowBlur={5}
           />
           <Circle
+            key={"circle-button-2"}
             ref={inSideCircleRef}
             x={width / 2}
             y={height / 2}
             radius={30}
             stroke={isBlackBack === "black" ? "#f61067" : "#D516FF"}
-            strokeWidth="5"
+            strokeWidth={5}
             dash={[40, 10, 90, 20, 5, 10, 30]}
             shadowColor={isBlackBack === "black" ? "#f61067" : "#D516FF"}
             shadowBlur={5}

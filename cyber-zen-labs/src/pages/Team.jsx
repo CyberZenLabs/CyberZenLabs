@@ -35,18 +35,41 @@ import {
   DivItemsSC,
   DivItemSC,
   DivItemPhotoSC,
-  DivItemNameSC
-
+  DivItemNameSC,
 } from "../styled-components-css/styled-team";
 import GlobalDispatchContext from "../global_dispatch_context";
-import AboutTeamDeveloperCarousel from "../components/AboutTeamDeveloperCarousel"
+import AboutTeamDeveloperCarousel from "../components/AboutTeamDeveloperCarousel";
+import { DivRuslanBoxSC } from "../styled-components-css/styled.kirdro";
+import Konva from "konva";
+import { Stage, Layer, Line, Circle } from "react-konva";
+import Tools from "../tools/tools";
 
+const PointsLine1 = [
+  [1900, 410, 1050, 410],
+  [980, 360, 1050, 410],
+  [550, 360, 980, 360],
+  [420, 250, 550, 360],
+  [420, 250, 420, 170],
+  [420, 170, 370, 140],
+];
+
+const PointsLine2 = [
+  [10, 800, 170, 800],
+  [170, 800, 280, 900],
+  [280, 900, 850, 900],
+  [850, 900, 930, 950],
+  [930, 950, 1250, 950],
+  [1250, 950, 1330, 900],
+  [1330, 900, 1550, 900],
+  [1550, 900, 1630, 950],
+];
+
+const PointsLine3 = [[100, 460, 1800, 460]];
 
 const Team = () => {
-  const [indexSelectedButton, getIndexButton] = useState(0);
   const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isPage, isAboutBack } = state;
-
+  const [indexSelectedButton, getIndexButton] = useState(0);
   useEffect(() => {
     return () => {
       dispatch({
@@ -72,21 +95,28 @@ const Team = () => {
     {
       page: (
         <>
-        <AboutTeamDeveloperCarousel indexSelectedButton={indexSelectedButton}></AboutTeamDeveloperCarousel>
+          <AboutTeamDeveloperCarousel
+            indexSelectedButton={indexSelectedButton}
+          ></AboutTeamDeveloperCarousel>
         </>
       ),
     },
     {
       page: (
         <>
-          <AboutTeamDeveloperCarousel indexSelectedButton={indexSelectedButton}></AboutTeamDeveloperCarousel>
+          <AboutTeamDeveloperCarousel
+            indexSelectedButton={indexSelectedButton}
+          ></AboutTeamDeveloperCarousel>
+          ruslan
         </>
       ),
     },
     {
       page: (
         <>
-        <AboutTeamDeveloperCarousel indexSelectedButton={indexSelectedButton}></AboutTeamDeveloperCarousel>
+          <AboutTeamDeveloperCarousel
+            indexSelectedButton={indexSelectedButton}
+          ></AboutTeamDeveloperCarousel>
         </>
       ),
     },
@@ -96,6 +126,19 @@ const Team = () => {
   };
   return (
     <>
+      <DivRuslanBoxSC>
+        <Stage width={window.innerWidth} height={window.innerHeight - 20}>
+          <Layer>
+            {Tools.drawLine(PointsLine1)}
+            <Circle x={370} y={140} radius={5} fill="#ffffff" />
+          </Layer>
+          <Layer>{Tools.drawLine(PointsLine3)}</Layer>
+          <Layer>
+            {Tools.drawLine(PointsLine2)}
+            <Circle x={1630} y={950} radius={5} fill="#ffffff" />
+          </Layer>
+        </Stage>
+      </DivRuslanBoxSC>
       <DivWrapSC>
         <DivContainerSC>
           <DivMainRowsSC>

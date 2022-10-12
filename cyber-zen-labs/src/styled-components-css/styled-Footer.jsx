@@ -148,7 +148,10 @@ export const H1FooterTextSC = styled(Link)`
   text-align: end;
   /* identical to box height */
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  text-shadow:${({ isForm }) =>
+    isForm && "0px 0px 3px #FFFFFF" };
+  color: ${({ isForm }) =>
+    isForm ? "#FFFFFF" :"rgba(255, 255, 255, 0.4)"};
   :hover {
     text-shadow: 0px 0px 3px #ffffff;
   }
