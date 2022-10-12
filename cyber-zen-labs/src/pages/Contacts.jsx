@@ -44,7 +44,7 @@ const Contacts = () => {
     return () => {
       dispatch({
         type: "SET_IS_PAGE",
-        status: "home",
+        status: "homePage",
       });
     };
   }, [isPage]);
@@ -108,7 +108,7 @@ const Contacts = () => {
           </DivLeftPenalSC>
           <DivRightPenalSC>
             {/* <DivBoxBlurSC></DivBoxBlurSC> */}
-            <ImgBuddhaSC></ImgBuddhaSC>
+            {/* <ImgBuddhaSC></ImgBuddhaSC> */}
           </DivRightPenalSC>
         </DivColumnsContentContacts>
       </DivContainerSC>
