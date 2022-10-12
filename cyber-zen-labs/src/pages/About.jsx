@@ -63,12 +63,12 @@ const About = () => {
       <DivRuslanBoxSC>
         <Stage width={window.innerWidth} height={window.innerHeight - 320}>
           <Layer>
-            {Tools.drowLine(PointsLine1)}
+            {Tools.drawLine(PointsLine1)}
             <Circle x={1500} y={264} radius={5} fill="#ffffff" />
           </Layer>
 
           <Layer>
-            {Tools.drowLine(PointsLine2)}
+            {Tools.drawLine(PointsLine2)}
             <Circle x={330} y={496} radius={5} fill="#ffffff" />
           </Layer>
         </Stage>
