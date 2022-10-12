@@ -486,7 +486,6 @@ width: 180px;
 height: 180px;
 background-size: 100%;
 border-radius: 100%;
-
 @media (max-width: 480px) {
   width: 120px;
 height: 120px;
