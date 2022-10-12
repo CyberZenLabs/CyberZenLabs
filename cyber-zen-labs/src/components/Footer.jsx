@@ -101,12 +101,12 @@ const Footer = () => {
             <Stage width={window.innerWidth} height={window.innerHeight}>
               {isBlackBack === "black" ? (
                 <Layer>
-                  {ToolsBlack.drowLine(PointsLine1)}
+                  {ToolsBlack.drawLine(PointsLine1)}
                   <Circle x={550} y={830} radius={5} fill="#F61067" />
                 </Layer>
               ) : (
                 <Layer>
-                  {Tools.drowLine(PointsLine1)}
+                  {Tools.drawLine(PointsLine1)}
                   {isForm? <Circle x={1420} y={830} radius={5} fill="#ffffff" />: <Circle x={550} y={830} radius={5} fill="#ffffff" />}
                 </Layer>
               )}

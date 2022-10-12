@@ -3,7 +3,7 @@ import React from "react";
 
 
 const ToolsBlack = {
-    drowLine: (pointsLine) => {
+    drawLine: (pointsLine) => {
         const componentNode = pointsLine.map((item, i) => {
             return(
                 <Line
