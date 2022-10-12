@@ -13,5 +13,6 @@ export const DivContainerSC = styled.div`
  padding-bottom: 25px;
   display: grid;
   justify-items: center;
+  width: 90vw;
   
 `;
