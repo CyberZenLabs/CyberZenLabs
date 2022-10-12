@@ -9,23 +9,27 @@ export const BlockModal = styled(Modal)`
   z-index: 1000;
   background: rgba(0, 0, 0, 0.3);
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: grid;
   justify-content: center;
   align-content: center;
   min-width: 360px;
   max-height: 100vh;
-  
-  @media (max-width: 1080px) {
-    z-index: 1000;
+ 
+ 
+    z-index: 10000000;
     align-content: unset;
     justify-content: unset;
-    overflow: scroll;
-  }
+   
+ 
   @media (max-width: 809px) {
   
-   
+    overflow-y: scroll;
   }
+  @media (max-height: 800px) {
+  
+  overflow-y: scroll;
+}
  
 `;
 
@@ -168,23 +172,29 @@ export const DivWrapModal = styled.div`
   display: grid;
   min-width: 360px;
   
-  
-  ${(p) => (p.isCropModal ? "width: 1322px;" : "width: 1080px;")}
-  ${(p) => (p.isCropModal ? "height: 750px;" : null)}
+ 
+ 
+
   background: radial-gradient(73.28% 231.6% at 26.72% 52.96%, #0E1A5A 0%, #0E1A5A 5.27%, #21004B 100%);
   border-radius: 30px;
   z-index: 1000;
-  margin-top: 20px;
  
-  @media (max-width: 1080px) {
+
+ 
+  
     width: 100%;
     height: 100%;
     border-radius: 0px;
     align-content: flex-start;
-    z-index: 1000;
+    z-index: 100000;
     margin-top: 0px;
+    gap: 125px;
+    @media(max-width:809px){ gap: 0px;}
+    @media (max-height: 800px) {
   
-  }
+      gap: 0px;
+}
+ 
  
   
  

@@ -15,8 +15,11 @@ import Alina from "../images/Alina.png";
 export const DivMainRowsSC = styled.div`
   width: 100%;
   height: 100%;
+  min-width: 1350px;
   display: grid;
   grid-template-rows: 170px 83px 93px 194px 38px;
+  @media(min-width: 1600px){min-width:1300px;}
+  @media(max-width: 1600px){min-width:unset;}
   @media (max-width: 480px) {
     grid-template-rows: 170px 83px 93px 144px 38px;
   }
