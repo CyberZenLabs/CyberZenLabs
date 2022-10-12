@@ -467,13 +467,25 @@ width: max-content !important;
   position: static !important;
 }
 .carousel-itemTeamDevLeadership{
-  width: max-content !important;
+  /* width: max-content !important; */
 }
 .carousel-sliderTeamDevLeadership{
-column-gap: 38px !important;
-width: max-content !important;
+/* column-gap: 38px !important; */
+/* width: max-content !important; */
 }
+@media (max-width: 480px) {
+  /* .carousel-containerTeamDevLeadership {
+    justify-content: space-between !important;
+  }
+  .carousel-itemTeamDevLeadership{
+    width: 100% !important;
+  }
+  .carousel-sliderTeamDevLeadership{
+    column-gap: 0px !important;
+    width: max-content !important;
 
+    } */
+}
 @media (min-width: 801px){
 
   .carousel-containerTeamDevDesign {

@@ -231,7 +231,8 @@ width:4vw;
 height: 4vw;
 position: absolute;
 left: 0;
-
+display: grid;
+align-content: center;
 @media (max-width: 768px) {
   height: 4vw;
   width: 4vw;
