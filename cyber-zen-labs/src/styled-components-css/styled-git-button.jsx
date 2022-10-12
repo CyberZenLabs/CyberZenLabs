@@ -6,5 +6,12 @@ export const DivGitContainerSC = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
-  border: 1px solid white;
+  max-width: 100px;
+  max-height: 100px;
+  //border: 1px solid white;
+  position: relative;
+`;
+
+export const DivMailBoxSC = styled.div`
+  position: absolute;
 `;

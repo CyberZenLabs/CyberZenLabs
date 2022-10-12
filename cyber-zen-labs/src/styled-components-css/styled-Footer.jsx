@@ -50,7 +50,7 @@ export const DivContainerFooterRightSC = styled.div`
   display: grid;
   width: 100%;
   height: 100%;
-  justify-items: center;
+  justify-items: right;
   align-items: center;
   //border:1px solid white;
   /* justify-self: end; */
@@ -58,6 +58,18 @@ export const DivContainerFooterRightSC = styled.div`
     align-self: end;
 
   } */
+`;
+
+export const DivGitButtonBoxSC = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  /* justify-items: center;
+  align-items: center; */
+  max-width: 110px;
+  max-height: 110px;
+  //border: 1px solid white;
+  cursor: pointer;
 `;
 
 export const DivPhotoRightContainerSC = styled.div`

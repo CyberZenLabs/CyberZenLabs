@@ -12,6 +12,7 @@ import {
   FooterTextTeamSC,
   DivContainerFooterCenterTeamSC,
   DivBarsSC,
+  DivGitButtonBoxSC,
 } from "../styled-components-css/styled-Footer";
 import { DivMaxWidthSC } from "../styled-components-css/styled-navbar";
 import GlobalDispatchContext from "../global_dispatch_context";
@@ -29,17 +30,15 @@ const Footer = () => {
   const [music, setMusic] = useState(true);
   const MusicBeh = () => {
     setMusic(!music);
-   
-  }; 
+  };
   const [musHook, setMusHook] = useState(true);
-  useEffect(() => { 
-      if (isOpen) { 
-        setMusHook(music);
-        setMusic(false);
-      } else if ((!isOpen)&&musHook) {
-        setMusic(true);
-      }
-    
+  useEffect(() => {
+    if (isOpen) {
+      setMusHook(music);
+      setMusic(false);
+    } else if (!isOpen && musHook) {
+      setMusic(true);
+    }
   }, [isOpen]);
   return (
     <>
@@ -116,14 +115,16 @@ const Footer = () => {
               <H1FooterTextSC to="/contacts">CONTACTS</H1FooterTextSC>
             </DivContainerFooterCenterSC>
             <DivContainerFooterRightSC>
-              <DivPhotoRightContainerSC
+              <DivGitButtonBoxSC
                 onClick={() =>
                   dispatch({
                     type: "SET_IS_OPEN",
                     status: true,
                   })
                 }
-              />
+              >
+                <GetInTouchButton />
+              </DivGitButtonBoxSC>
             </DivContainerFooterRightSC>
           </DivContainerFooterSC>
         </DivMaxWidthSC>

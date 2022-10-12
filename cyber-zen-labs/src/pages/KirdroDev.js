@@ -41,7 +41,6 @@ const KirdroDev = () => {
                         Tools.drawLine(PointsLine2)
                     }
                     <Circle x={770} y={346} radius={5} fill="#ffffff" />
-                    <Circle x={770} y={346} radius={50} stroke="#ffffff" dash={[10, 20, 5]}/>
                 </Layer>
             </Stage>
         </DivKirdroBoxSC>
