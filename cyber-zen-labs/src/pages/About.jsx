@@ -21,7 +21,7 @@ const PointsLine1 = [
 ];
 
 const PointsLine2 = [
-  [1905, 750, 990, 750],
+  [1920, 750, 990, 750],
   [990, 750, 930, 710],
   [930, 710, 500, 710],
   [500, 710, 370, 630],
@@ -49,7 +49,7 @@ const About = () => {
   useEffect(() => {
     dispatch({
       type: "SET_IS_ABOUT_BACK",
-      status: "purple",
+      status: "",
     });
     return () => {
       dispatch({

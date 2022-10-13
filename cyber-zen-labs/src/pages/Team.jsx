@@ -82,7 +82,7 @@ const Team = () => {
   useEffect(() => {
     dispatch({
       type: "SET_IS_ABOUT_BACK",
-      status: "purple",
+      status: "",
     });
     return () => {
       dispatch({
