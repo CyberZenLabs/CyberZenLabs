@@ -14,26 +14,28 @@ const Loading = ({ containerId }) => {
   const outSideCircleRef = useRef();
   const inSideCircleRef = useRef();
   const { state, dispatch } = useContext(GlobalDispatchContext);
-  const { isBlackBack } = state;
+  const { isBlackBack, isPage } = state;
 
   useEffect(() => {
-    let period = 20;
-    let anim = new Konva.Animation(
-      (frame) => {
-        var turnRight = (frame.timeDiff * period) / 800;
-        var leftRight = -(frame.timeDiff * period) / 1300;
-        outSideCircleRef.current.rotate(turnRight);
-        inSideCircleRef.current.rotate(leftRight);
+    if (outSideCircleRef) {
+      let period = 20;
+      let anim = new Konva.Animation(
+        (frame) => {
+          var turnRight = (frame.timeDiff * period) / 800;
+          var leftRight = -(frame.timeDiff * period) / 1300;
+          outSideCircleRef.current.rotate(turnRight);
+          inSideCircleRef.current.rotate(leftRight);
 
-        // inSideCircleRef.current.rotate(leftRight);
+          // inSideCircleRef.current.rotate(leftRight);
 
-        // outSideCircleRef.current.opacity((Math.sin(frame.time / period) + 1) / 2);
-      },
-      outSideCircleRef.current.getLayer(),
-      inSideCircleRef.current.getLayer()
-    );
-    anim.start();
-  }, []);
+          // outSideCircleRef.current.opacity((Math.sin(frame.time / period) + 1) / 2);
+        },
+        outSideCircleRef.current.getLayer(),
+        inSideCircleRef.current.getLayer()
+      );
+      anim.start();
+    }
+  }, [isPage]);
 
   useEffect(() => {
     var offsetHeight = document.getElementById(containerId).offsetHeight;

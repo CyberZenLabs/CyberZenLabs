@@ -203,14 +203,16 @@ const Footer = () => {
                 <H1FooterTextSC to="/contacts">CONTACTS</H1FooterTextSC>
               </DivContainerFooterCenterSC>
               <DivContainerFooterRightSC>
-                <DivPhotoRightContainerSC
+                <DivGitButtonBoxSC
                   onClick={() =>
                     dispatch({
                       type: "SET_IS_OPEN",
                       status: true,
                     })
                   }
-                />
+                >
+                  <GetInTouchButton />
+                </DivGitButtonBoxSC>
               </DivContainerFooterRightSC>
             </DivContainerFooterSC>
           </DivMaxWidthSC>
