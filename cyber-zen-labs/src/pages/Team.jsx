@@ -107,7 +107,6 @@ const Team = () => {
           <AboutTeamDeveloperCarousel
             indexSelectedButton={indexSelectedButton}
           ></AboutTeamDeveloperCarousel>
-          ruslan
         </>
       ),
     },

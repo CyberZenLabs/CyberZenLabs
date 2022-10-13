@@ -198,7 +198,7 @@ background: #000;
 
 `;
 export const DivCustomArrowRight = styled(CgChevronRight)`
-padding-bottom: 60px;
+padding-bottom: 3vw;
 width:4vw;
 height: 4vw;
 position: absolute;
@@ -207,7 +207,8 @@ right: 0;
 @media (max-width: 768px) {
   height: 4vw;
   width: 4vw;
-  
+  padding-bottom: 6vw;
+
   }
   @media (max-width: 480px) {
   height: 5vw;
@@ -234,11 +235,13 @@ position: absolute;
 left: 0;
 display: grid;
 align-content: center;
-padding-bottom: 60px;
+padding-bottom: 3vw;
+
 @media (max-width: 768px) {
   height: 4vw;
   width: 4vw;
-  
+  padding-bottom: 6vw;
+
   }
   @media (max-width: 480px) {
   height: 5vw;
