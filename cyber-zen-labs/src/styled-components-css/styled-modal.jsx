@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { HiX} from "react-icons/hi";
 
 export const BlockModal = styled(Modal)`
-  font-family: "Poppins" !important;
+  font-family: "Orbitron" !important;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.3);
   width: 100%;

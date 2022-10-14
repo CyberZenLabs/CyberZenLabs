@@ -3,7 +3,10 @@ import {
   DivWrapSC,
   DivContainerSC,
 } from "../styled-components-css/styled-DEFAULT";
-
+import { DivRuslanBoxSC } from "../styled-components-css/styled.kirdro";
+import Konva from "konva";
+import { Stage, Layer, Line, Circle } from "react-konva";
+import Tools from "../tools/tools";
 import {
   DivColumnsContentContacts,
   DivLeftPenalSC,
@@ -24,6 +27,23 @@ import {
   DivTopPenalSC,
 } from "../styled-components-css/styled-contacts";
 import GlobalDispatchContext from "../global_dispatch_context";
+const PointsLine1 = [
+  [5, 10, 660, 10],
+  [660, 10, 710, 50],
+  [710, 50, 870, 50],
+  [870, 50, 980, 150],
+  [980, 150, 985, 254],
+  [985, 254, 1000, 294],
+];
+
+const PointsLine2 = [
+  [1950, 600, 1350, 600],
+  [1350, 600, 1300, 550],
+  [1300, 550, 1150, 550],
+  [1150, 550, 1100, 500],
+  [1100, 500, 1100, 450],
+  [1100, 450, 1050, 400],
+];
 const Contacts = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isForm, isBlackBack,isPage } = state;
@@ -50,6 +70,22 @@ const Contacts = () => {
   }, [isPage]);
  
   return (
+   
+
+    <>
+    <DivRuslanBoxSC>
+        <Stage width={window.innerWidth} height={window.innerHeight - 320}>
+          <Layer>
+            {Tools.drawLine(PointsLine1)}
+            <Circle x={1000} y={294} radius={5} fill="#ffffff" />
+          </Layer>
+
+          <Layer>
+            {Tools.drawLine(PointsLine2)}
+            <Circle x={1050} y={400} radius={5} fill="#ffffff" />
+          </Layer>
+        </Stage>
+      </DivRuslanBoxSC>
     <DivWrapSC>
       <DivContainerSC>
         <DivRowsContentContacts>
@@ -113,6 +149,7 @@ const Contacts = () => {
         </DivColumnsContentContacts>
       </DivContainerSC>
     </DivWrapSC>
+    </>
   );
 };
 
