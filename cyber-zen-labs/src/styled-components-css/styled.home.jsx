@@ -1,7 +1,8 @@
 import styled from "styled-components/macro";
-
+import buddhablack from "../images/BuddhaBlack.gif";
 export const DivHomeContentSC = styled.div`
   width: 100%;
+  max-width: 100vw;
   display: grid;
   grid-template-columns: 60% 40%;
   justify-content: center;
@@ -148,4 +149,42 @@ export const DescHomeBoxColumnsSC = styled.div`
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
   }
+`;
+
+export const GifBuddhaHomeSC = styled.div`
+  //position: absolute;
+  background-image: url(${buddhablack});
+  width: 550px;
+  height: 550px;
+  background-size: 100%;
+  background-repeat:no-repeat;
+  background-position: center -75px;
+  z-index: 30;
+  /* @media (max-width: 1700px) {
+    width: 494px;
+    height: 429px;
+  }
+  @media (max-width: 1150px) {
+    width: 424px;
+    height: 359px;
+  }
+  @media (max-width: 895px) {
+    width: 330px;
+    height: 295px;
+  }
+  @media (max-width: 600px) {
+    width: 280px;
+    height: 245px;
+    top: 270px;
+  }
+  @media (max-width: 540px) {
+    width: 230px;
+    height: 195px;
+    background-size: 115%;
+    margin-right: 0px;
+    padding-bottom: 50px;
+  }
+  @media (max-width: 480px) {
+    display: none;
+  } */
 `;

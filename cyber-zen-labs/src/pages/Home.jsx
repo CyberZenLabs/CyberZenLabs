@@ -14,6 +14,7 @@ import {
   TitleHomeBoxSC,
   DivHomeContentRowsSC,
   DescHomeBoxColumnsSC,
+  GifBuddhaHomeSC,
 } from "../styled-components-css/styled.home";
 import GlobalDispatchContext from "../global_dispatch_context";
 
@@ -84,8 +85,11 @@ const Home = () => {
                   quam eu amet massa viverra.
                 </DescHomeBoxSC>
               </DivDescBoxtSC>
-            </DivTextBoxtSC>
-          </DivHomeContentSC>
+            </DivTextBoxtSC>  {isBlackBack === "black" ? (<GifBuddhaHomeSC/>):null}
+          </DivHomeContentSC> 
+         
+       
+        
         </DivContainerSC>
       </DivWrapSC>
     </>
