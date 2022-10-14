@@ -28,7 +28,7 @@ import {
 } from "../styled-components-css/styled-contacts";
 import GlobalDispatchContext from "../global_dispatch_context";
 const PointsLine1 = [
-  [5, 10, 660, 10],
+  [0, 10, 660, 10],
   [660, 10, 710, 50],
   [710, 50, 870, 50],
   [870, 50, 980, 150],
@@ -37,7 +37,7 @@ const PointsLine1 = [
 ];
 
 const PointsLine2 = [
-  [1950, 600, 1350, 600],
+  [window.innerWidth, 600, 1350, 600],
   [1350, 600, 1300, 550],
   [1300, 550, 1150, 550],
   [1150, 550, 1100, 500],
