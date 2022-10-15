@@ -12,16 +12,16 @@ import { Stage, Layer, Line, Circle } from "react-konva";
 import Tools from "../tools/tools";
 
 const PointsLine1 = [
-  [10, 10, 760, 10],
-  [760, 10, 810, 50],
-  [810, 50, 1350, 50],
-  [1350, 50, 1450, 130],
-  [1450, 130, 1450, 234],
-  [1450, 234, 1500, 264],
+  [0, 80, 760, 80],
+  [760, 80, 810, 120],
+  [810, 120, 1350, 120],
+  [1350, 120, 1450, 200],
+  [1450, 200, 1450, 304],
+  [1450,304, 1500, 334],
 ];
 
 const PointsLine2 = [
-  [1920, 750, 990, 750],
+  [window.innerWidth, 750, 990, 750],
   [990, 750, 930, 710],
   [930, 710, 500, 710],
   [500, 710, 370, 630],
@@ -61,10 +61,10 @@ const About = () => {
   return (
     <>
       <DivRuslanBoxSC>
-        <Stage width={window.innerWidth} height={window.innerHeight - 320}>
+        <Stage width={window.innerWidth} height={window.innerHeight - 170}>
           <Layer>
             {Tools.drawLine(PointsLine1)}
-            <Circle x={1500} y={264} radius={5} fill="#ffffff" />
+            <Circle x={1500} y={334} radius={5} fill="#ffffff" />
           </Layer>
 
           <Layer>

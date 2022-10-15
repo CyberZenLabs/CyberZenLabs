@@ -22,12 +22,8 @@ import {
 } from "../styled-components-css/styled-navbar";
 import GlobalDispatchContext from "../global_dispatch_context";
 import Audio from "../audio/Homepage.mp3";
-
 import CyberModal from "./Modal";
-
 import GetInTouchButton from "./GetInTouchButton";
-import ToolsBlack from "../tools/toolsBlack.js";
-
 const PointsLine1 = [
   [0, 730, 415, 730],
   [415, 730, 510, 830],
@@ -51,6 +47,10 @@ const Footer = () => {
       setMusic(true);
     }
   }, [isOpen]);
+  useEffect(() => {
+   if (isPage==="none")
+   {  setMusic(false);}
+  }, [isPage]);
   return (
     <>
       {isPage === "about" ? (
@@ -104,7 +104,7 @@ const Footer = () => {
             <Stage width={window.innerWidth} height={window.innerHeight}>
               {isBlackBack === "black" ? (
                 <Layer>
-                  {ToolsBlack.drawLine(PointsLine1)}
+                  {Tools.drawLineBlack(PointsLine1)}
                   <Circle x={550} y={830} radius={5} fill="#F61067" />
                 </Layer>
               ) : (
