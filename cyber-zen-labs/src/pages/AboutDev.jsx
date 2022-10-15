@@ -149,7 +149,9 @@ const About = () => {
                     <ImgIconSC Photo={Selenium} />
                     <ImgIconSC Photo={Figma} />
                     <ImgIconSC Photo={AfterEffects} />
+                    <div></div>
                   </GridColumnsSecondIcons>
+                  
                 </GridIconsSC>
 
                 <AboutDevCarousel></AboutDevCarousel>

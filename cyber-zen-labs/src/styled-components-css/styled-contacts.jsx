@@ -34,10 +34,10 @@ export const DivLeftPenalSC = styled.div`
   height: 100%;
   max-width: 709px;
   display: grid;
-  grid-template-rows: 245px 183px 84px 84px;
+  grid-template-rows: 120px 183px 84px 84px;
   @media (max-width: 1000px) {
     width: 100%;
-    grid-template-rows: 245px 83px 44px 44px;
+    grid-template-rows: 120px 83px 44px 44px;
   }
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;

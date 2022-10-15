@@ -68,12 +68,14 @@ export const GridRowsIcons = styled.div`
 display: grid;
 grid-row-gap:30px;
 align-self:flex-end;
+
   `;
 export const CarouselHidden = styled.div`
 
 width:100%;
   `;
 export const GridIconsSC = styled.div`
+
 //border: 1px solid red;
 display: grid;
 grid-template-rows: repeat(2, 70px);
@@ -84,6 +86,7 @@ justify-content: center;
 grid-row-gap:30px;
 align-self:flex-end;
 width: 100%;
+
 @media (max-width: 1420px) {
   display:none;
   }
