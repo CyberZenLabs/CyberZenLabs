@@ -7,6 +7,20 @@ width: 100%;
 justify-content: center;
 justify-items: center;
 `;
+export const DivBlure=styled.div`
+background: linear-gradient( 90.02deg,rgba(23,175,249,0.4) -7.59%,rgba(213,22,255,0.4) 93.79% );
+    -webkit-filter: blur(120px);
+    filter: blur(45px);
+    position: absolute;
+    top: 50;
+   
+    width: 100%;
+    max-width: 1175px;
+    height: 100%;
+    max-height: 201px;
+    @media (max-width: 1420px) {
+  display:none;
+  }`;
 export const GridContainerItemsSC = styled.div`
 display: grid;
 width: 83%;
@@ -96,6 +110,7 @@ export const GridColumnsSecondIcons = styled.div`
 display: grid;
 grid-template-columns: repeat(11, 1fr);
 grid-column-gap: 30px;
+z-index: 10000000;
 
   `;
   export const GridColumnsIcons = styled.div`
@@ -106,6 +121,7 @@ grid-column-gap: 30px;
   grid-row-gap: 30px;
   justify-items: center;
   justify-content: center;
+  z-index: 10000000;
   @media (max-width: 1420px) {
     grid-template-columns: repeat(8, 1fr);
   }

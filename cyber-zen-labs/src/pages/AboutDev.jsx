@@ -16,6 +16,7 @@ import {
   GridColumnsSecondIcons,
   GridIconsSC,
   CarouselHidden,
+  DivBlure,
 } from "../styled-components-css/styled-AboutDev";
 import GlobalDispatchContext from "../global_dispatch_context";
 import AboutDevCarousel from "../components/AboutDevCarousel";
@@ -149,15 +150,17 @@ const About = () => {
                     <ImgIconSC Photo={Selenium} />
                     <ImgIconSC Photo={Figma} />
                     <ImgIconSC Photo={AfterEffects} />
-                    <div></div>
+                   
                   </GridColumnsSecondIcons>
-                  
+                  <DivBlure/>
                 </GridIconsSC>
+              
 
                 <AboutDevCarousel></AboutDevCarousel>
 
                 {/* sd */}
               </GridRowsIcons>
+              
             </GridContainerItemsSC>
           </DivContainerAboutDevSC>
         </DivContainerSC>

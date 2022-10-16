@@ -1,10 +1,13 @@
+
+
 import styled from "styled-components/macro";
 
 export const DivWrapSC = styled.div`
   // width: 100vw;
   display: grid;
-  min-height: calc(900px - 280px);
+  min-height: calc(100vh - 320px);
   //padding-top: 160px;
+  
 `;
 
 export const DivContainerSC = styled.div`
@@ -15,3 +18,5 @@ export const DivContainerSC = styled.div`
   justify-items: center;
   width: 90vw;
 `;
+
+
