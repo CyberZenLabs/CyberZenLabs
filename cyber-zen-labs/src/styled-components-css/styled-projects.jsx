@@ -6,7 +6,7 @@ export const DivContentBoxRowsSC = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: max-content 27% auto;
+  grid-template-rows: max-content 22% auto;
 `;
 export const DivImgProject=styled.div`
 
@@ -126,7 +126,7 @@ export const DivBoxCarouselSC = styled.div`
     width: 100%;
   height: 442px;
   overflow: hidden;
-  padding-top: 144px;;
+  padding-top: 105px;
   position: relative;
 `;
 
