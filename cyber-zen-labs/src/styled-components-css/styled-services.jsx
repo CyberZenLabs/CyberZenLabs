@@ -80,15 +80,17 @@ export const DivBoxCarouselSC = styled.div`
     width: 100%;
   height: 442px;
   overflow: hidden;
-  padding-top: 144px;;
+  
   position: relative;
 `;
 
 export const DivBoxCarouselBackgroundEllipseSC = styled.div`
-    width: 1497px;
+    width: 100%;
   height: 1497px;
   border: 2px solid grey;
   border-radius: 50%;
+  position: relative;
+  top: 150px;
 `;
 
 export const DivTaskItemSC = styled.div`
