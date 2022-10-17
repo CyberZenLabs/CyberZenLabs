@@ -125,18 +125,19 @@ export const DivContentTextSC = styled.div`
 export const DivBoxCarouselSC = styled.div`
     width: 100%;
   height: 442px;
-  overflow: hidden;
+
  
   position: relative;
 `;
 
 export const DivBoxCarouselBackgroundEllipseSC = styled.div`
    width: 100%;
-  height: 1497px;
-  border: 2px solid grey;
+  height: 1900px;
+  border: 2px solid white;
   border-radius: 50%;
   position: relative;
   top: 150px;
+  
 `;
 
 export const DivTaskItemSC = styled.div`
