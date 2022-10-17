@@ -12,6 +12,9 @@ export const DivKirdroBoxSC = styled.div`
 export const DivRuslanBoxSC = styled.div`
   display: grid;
   height: 100%;
+  //top: 80px;
+  //bottom: 0;
+  
   justify-items: center;
   align-items: center;
   position: absolute;

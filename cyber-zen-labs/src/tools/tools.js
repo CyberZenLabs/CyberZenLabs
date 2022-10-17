@@ -2,6 +2,7 @@ import { Line } from "react-konva";
 import React from "react";
 
 const Tools = {
+
     drawLine: (pointsLine) => {
 
         const componentNode = pointsLine.map((item, i) => {
@@ -165,6 +166,7 @@ const Tools = {
         })
         return array
     },
+
 };
 
 export default Tools;

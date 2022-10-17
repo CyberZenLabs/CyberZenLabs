@@ -38,7 +38,7 @@ const RootBox = (props) => {
 
   return (
       <GlobalDispatchContext.Provider value={{ state, dispatch }}>
-        <DivRootSC isBlackBack={isBlackBack} isAboutBack ={isAboutBack}>
+        <DivRootSC isBlackBack={isBlackBack} isAboutBack ={isAboutBack} id="about-line-id">
             {children}
         </DivRootSC>
       </GlobalDispatchContext.Provider>
