@@ -49,6 +49,8 @@ const About = () => {
         x:0,
         y:0
     })
+    const [width, setWidth] = useState(null);
+    const [height, setHeight] = useState(null);
 
     useEffect(() => {
         dispatch({
@@ -80,7 +82,15 @@ const About = () => {
         processCoords()
     }, [])
 
+    useEffect(() => {
+        var offsetHeight = document.getElementById('about-line-id').offsetHeight;
+        var offsetWidth = document.getElementById('about-line-id').offsetWidth;
 
+        setWidth(offsetWidth);
+        setHeight(offsetHeight);
+    }, [window.innerWidth]);
+
+    console.log('lol', width, height);
     const processCoords = () => {
 
         const coords = Tools.getResponseCoords(PointsLine1,{
@@ -138,7 +148,7 @@ const About = () => {
     return (
         <>
             <DivRuslanBoxSC>
-                <Stage width={size.width} height={size.height - 170}>
+                <Stage width={width} height={height}>
                     <Layer>
                         {Tools.drawLine(pointsLine1)}
                         <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
@@ -151,7 +161,7 @@ const About = () => {
 
                 </Stage>
             </DivRuslanBoxSC>
-            <DivWrapMenuSC>
+            <DivWrapMenuSC id="about-line-id">
                 <DivContainerAboutSC>
                     <GridContentSC>
                         <SpanTextElementSC to="/">Home</SpanTextElementSC>
