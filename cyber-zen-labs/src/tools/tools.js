@@ -3,9 +3,11 @@ import React from "react";
 
 const Tools = {
   drawLine: (pointsLine) => {
+    
     const componentNode = pointsLine.map((item, i) => {
       return (
         <Line
+        stoke="linear-gradient(270deg, #D815FF 0%, #09BBF9 102.1%)"
           key={`wqadfs${i}`}
           points={item}
           stroke="#ffffff"

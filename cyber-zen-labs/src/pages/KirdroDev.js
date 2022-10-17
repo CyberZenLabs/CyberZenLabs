@@ -35,7 +35,7 @@ const KirdroDev = () => {
         </Layer>
 
 
-                <Layer>
+                <Layer >
                     {
                         Tools.drawLine(PointsLine2)
                     }
