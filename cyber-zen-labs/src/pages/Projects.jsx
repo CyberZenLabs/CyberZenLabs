@@ -16,9 +16,20 @@ import GlobalDispatchContext from "../global_dispatch_context";
 
 const Projects = () => {
     const { state, dispatch } = useContext(GlobalDispatchContext);
-  const { isPage, isBlackBack } = state;
+  const { isPage, isBlackBack,isProj } = state;
 
-  
+  useEffect(() => {
+    dispatch({
+      type: "SET_IS_PROJ",
+      status: true,
+    });
+    return () => {
+      dispatch({
+        type: "SET_IS_PROJ",
+        status: false,
+      });
+    };
+  }, [isProj]);
 
   useEffect(() => {
     return () => {

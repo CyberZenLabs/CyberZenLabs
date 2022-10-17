@@ -56,6 +56,32 @@ const setIsForm = (state, action) => {
 
 
 }
+const setIsServ = (state, action) => {
+
+    const {
+        status
+    } = action
+
+    return {
+        ...state,
+        isServ: status
+    }
+
+
+}
+const setIsProj = (state, action) => {
+
+    const {
+        status
+    } = action
+
+    return {
+        ...state,
+        isProj: status
+    }
+
+
+}
 const setIsOpen = (state, action) => {
     const { status } = action;
   
@@ -111,6 +137,12 @@ function reducer(state, action) {
         case 'SET_IS_FORM':
         return setIsForm(state, action);
 
+        case 'SET_IS_PROJ':
+            return setIsProj(state, action);
+
+     case 'SET_IS_SERV':
+                return setIsServ(state, action);
+                
         case "SET_IS_OPEN":
             return setIsOpen(state, action);
 

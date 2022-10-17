@@ -32,7 +32,7 @@ const PointsLine1 = [
 
 const Footer = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
-  const { isOpen, isBlackBack, isPage, isForm, isHome } = state;
+  const { isOpen, isBlackBack, isPage, isForm, isHome, isServ, isProj } = state;
 
   const [music, setMusic] = useState(true);
   const MusicBeh = () => {
@@ -147,8 +147,8 @@ const Footer = () => {
                   HOME
                 </H1FooterTextSC>
                 <H1FooterTextSC to="/about">ABOUT</H1FooterTextSC>
-                <H1FooterTextSC to="/services">SERVICES</H1FooterTextSC>
-                <H1FooterTextSC to="/projects">PROJECTS</H1FooterTextSC>
+                <H1FooterTextSC to="/services" isForm={isServ}>SERVICES</H1FooterTextSC>
+                <H1FooterTextSC to="/projects" isForm={isProj}>PROJECTS</H1FooterTextSC>
                 <H1FooterTextSC to="/contacts" isForm={isForm}>
                   CONTACTS
                 </H1FooterTextSC>
@@ -196,11 +196,15 @@ const Footer = () => {
                 </H1FooterTextSoundOnSC>
               </DivContainerFooterLeftSC>
               <DivContainerFooterCenterSC>
-                <H1FooterTextSC to="/">HOME</H1FooterTextSC>
+                 <H1FooterTextSC to="/" isForm={isHome}>
+                  HOME
+                </H1FooterTextSC>
                 <H1FooterTextSC to="/about">ABOUT</H1FooterTextSC>
-                <H1FooterTextSC to="/services">SERVICES</H1FooterTextSC>
-                <H1FooterTextSC to="/projects">PROJECTS</H1FooterTextSC>
-                <H1FooterTextSC to="/contacts">CONTACTS</H1FooterTextSC>
+                <H1FooterTextSC to="/services" isForm={isServ}>SERVICES</H1FooterTextSC>
+                <H1FooterTextSC to="/projects" isForm={isProj}>PROJECTS</H1FooterTextSC>
+                <H1FooterTextSC to="/contacts" isForm={isForm}>
+                  CONTACTS
+                </H1FooterTextSC>
               </DivContainerFooterCenterSC>
               <DivContainerFooterRightSC>
                 <DivGitButtonBoxSC
