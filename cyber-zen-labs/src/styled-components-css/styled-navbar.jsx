@@ -13,6 +13,10 @@ export const DivMaxWidthSC = styled.div`
     height: 40px;
   }
 `;
+export const FooterLinesSC = styled.div`
+  position: absolute;
+  pointer-events: none;
+`;
 export const  LinkShowReel2SC=styled.div`
 font-family: 'Orbitron';
 font-style: normal;

@@ -16,9 +16,20 @@ import GlobalDispatchContext from "../global_dispatch_context";
 
 const Services = () => {
     const { state, dispatch } = useContext(GlobalDispatchContext);
-  const { isPage, isBlackBack } = state;
+  const { isPage, isBlackBack,isServ } = state;
 
-  
+  useEffect(() => {
+    dispatch({
+      type: "SET_IS_SERV",
+      status: true,
+    });
+    return () => {
+      dispatch({
+        type: "SET_IS_SERV",
+        status: false,
+      });
+    };
+  }, []);
 
   useEffect(() => {
     return () => {

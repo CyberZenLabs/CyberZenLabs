@@ -157,7 +157,9 @@ indexSelectedButton={indexSelectedButton}
   >
   <DivItemSC>
     <DivItemPhotoSC Photo={Sam}/>
-    <DivItemNameSC>Sam Singer<p>Full Stack Engineer</p><p>Blockchain Architect</p><p>System Security</p> </DivItemNameSC>
+    {/* <DivItemNameSC>Sam Singer<p>Full Stack Engineer</p><p>Blockchain Architect</p><p>System Security</p> </DivItemNameSC> */}
+    <DivItemNameSC indexSelectedButton={indexSelectedButton}>Sam Singer <p>Founder and Owner</p></DivItemNameSC>
+
   </DivItemSC>
   <DivItemSC>
     <DivItemPhotoSC Photo={Kirill}/>

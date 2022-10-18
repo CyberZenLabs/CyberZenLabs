@@ -50,7 +50,7 @@ export const DivContainerFooterRightSC = styled.div`
   display: grid;
   width: 100%;
   height: 100%;
-  justify-items: center;
+  justify-items: right;
   align-items: center;
   //border:1px solid white;
   /* justify-self: end; */
@@ -58,6 +58,18 @@ export const DivContainerFooterRightSC = styled.div`
     align-self: end;
 
   } */
+`;
+
+export const DivGitButtonBoxSC = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  /* justify-items: center;
+  align-items: center; */
+  max-width: 110px;
+  max-height: 110px;
+  //border: 1px solid white;
+  cursor: pointer;
 `;
 
 export const DivPhotoRightContainerSC = styled.div`
@@ -136,7 +148,10 @@ export const H1FooterTextSC = styled(Link)`
   text-align: end;
   /* identical to box height */
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  text-shadow:${({ isForm }) =>
+    isForm && "0px 0px 3px #FFFFFF" };
+  color: ${({ isForm }) =>
+    isForm ? "#FFFFFF" :"rgba(255, 255, 255, 0.4)"};
   :hover {
     text-shadow: 0px 0px 3px #ffffff;
   }
