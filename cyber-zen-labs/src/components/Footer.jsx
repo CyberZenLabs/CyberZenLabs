@@ -48,8 +48,9 @@ const Footer = () => {
     }
   }, [isOpen]);
   useEffect(() => {
-   if (isPage==="none")
-   {  setMusic(false);}
+    if (isPage === "none") {
+      setMusic(false);
+    }
   }, [isPage]);
   return (
     <>
@@ -147,8 +148,12 @@ const Footer = () => {
                   HOME
                 </H1FooterTextSC>
                 <H1FooterTextSC to="/about">ABOUT</H1FooterTextSC>
-                <H1FooterTextSC to="/services" isForm={isServ}>SERVICES</H1FooterTextSC>
-                <H1FooterTextSC to="/projects" isForm={isProj}>PROJECTS</H1FooterTextSC>
+                <H1FooterTextSC to="/services" isForm={isServ}>
+                  SERVICES
+                </H1FooterTextSC>
+                <H1FooterTextSC to="/projects" isForm={isProj}>
+                  PROJECTS
+                </H1FooterTextSC>
                 <H1FooterTextSC to="/contacts" isForm={isForm}>
                   CONTACTS
                 </H1FooterTextSC>
@@ -196,12 +201,16 @@ const Footer = () => {
                 </H1FooterTextSoundOnSC>
               </DivContainerFooterLeftSC>
               <DivContainerFooterCenterSC>
-                 <H1FooterTextSC to="/" isForm={isHome}>
+                <H1FooterTextSC to="/" isForm={isHome}>
                   HOME
                 </H1FooterTextSC>
                 <H1FooterTextSC to="/about">ABOUT</H1FooterTextSC>
-                <H1FooterTextSC to="/services" isForm={isServ}>SERVICES</H1FooterTextSC>
-                <H1FooterTextSC to="/projects" isForm={isProj}>PROJECTS</H1FooterTextSC>
+                <H1FooterTextSC to="/services" isForm={isServ}>
+                  SERVICES
+                </H1FooterTextSC>
+                <H1FooterTextSC to="/projects" isForm={isProj}>
+                  PROJECTS
+                </H1FooterTextSC>
                 <H1FooterTextSC to="/contacts" isForm={isForm}>
                   CONTACTS
                 </H1FooterTextSC>
