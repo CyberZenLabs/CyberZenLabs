@@ -7,6 +7,10 @@ html {
   min-width: 350px;
   color: #fff;
 }
+.ReactModal__Overlay {z-index: 1000000000;}
+
+.ReactModal__Overlay--after-open
+{z-index: 1000000000;}
 
 :root {
   --max-width: 1720px;
