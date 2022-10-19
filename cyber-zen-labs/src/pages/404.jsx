@@ -19,17 +19,18 @@ import { Stage, Layer, Line, Circle } from "react-konva";
 import Tools from "../tools/tools";
 
 const PointsLine1 = [
-  [0, 80, 760, 80],
-  [760, 80, 810, 120],
-  [810, 120, 1350, 120],
-  [1350, 120, 1450, 200],
-  [1450, 200, 1450, 304],
-  [1450,304, 1500, 334],
+  [0, 160, 760, 160],
+  [760, 160, 810, 200],
+  [810, 200, 1350, 200],
+  [1350, 200, 1450, 280],
+  [1450, 280, 1450, 384],
+  [1450,384, 1500, 414],
 ];
+
 const PointsLine2 = [
-  [4000, 750, 990, 750],
-  [990, 750, 930, 710],
-  [930, 710, 500, 710],
+  [4000, 750, 1130, 750],
+  [1130, 750, 1070, 710],
+  [1070, 710, 500, 710],
   [500, 710, 370, 630],
   [370, 630, 370, 526],
   [370, 526, 330, 496],
@@ -139,19 +140,20 @@ const processCoords = () => {
 }
   return (
     <>
-      <DivRuslanBoxSC>
-        <Stage width={window.innerWidth} height={window.innerHeight - 170}>
-          <Layer>
-            {Tools.drawLine(pointsLine1)}
-            <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
-          </Layer>
+        <DivRuslanBoxSC>
+                <Stage width={size.width} height={size.height}>
+                    <Layer>
+                        {Tools.drawLine(pointsLine1)}
+                        <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
+                    </Layer>
 
-          <Layer>
-            {Tools.drawLine(pointsLine2)}
-            <Circle  x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
-          </Layer>
-        </Stage>
-      </DivRuslanBoxSC>
+                    <Layer>
+                        {Tools.drawLine(pointsLine2)}
+                        <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
+                    </Layer>
+
+                </Stage>
+            </DivRuslanBoxSC>
       <DivWrapSC>
         <DivContainerSC>
           <GrifContentSC>
