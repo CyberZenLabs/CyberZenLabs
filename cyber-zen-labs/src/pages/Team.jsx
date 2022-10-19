@@ -45,7 +45,7 @@ import { Stage, Layer, Line, Circle } from "react-konva";
 import Tools from "../tools/tools";
 
 const PointsLine1 = [
-  [1900, 410, 1050, 410],
+  [1920, 410, 1050, 410],
   [980, 360, 1050, 410],
   [550, 360, 980, 360],
   [420, 250, 550, 360],
@@ -54,7 +54,7 @@ const PointsLine1 = [
 ];
 
 const PointsLine2 = [
-  [10, 750, 170, 750],
+  [0, 750, 170, 750],
   [170, 750, 280, 850],
   [280, 850, 850, 850],
   [850, 850, 930, 900],

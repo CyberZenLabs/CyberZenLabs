@@ -142,12 +142,12 @@ const processCoords = () => {
       <DivRuslanBoxSC>
         <Stage width={window.innerWidth} height={window.innerHeight - 170}>
           <Layer>
-            {Tools.drawLine(PointsLine1)}
+            {Tools.drawLine(pointsLine1)}
             <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
           </Layer>
 
           <Layer>
-            {Tools.drawLine(PointsLine2)}
+            {Tools.drawLine(pointsLine2)}
             <Circle  x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
           </Layer>
         </Stage>
