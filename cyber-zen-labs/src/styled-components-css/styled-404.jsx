@@ -30,6 +30,9 @@ export const H1TitleSC = styled.h1`
   @media (max-width: 525px) {
     font-size: 40px;
   }
+  @media (max-width: 430px) {
+    font-size: 38px;
+  }
   @media (max-width: 360px) {
     font-size: 36px;
   }
@@ -57,6 +60,9 @@ export const H1TitleTextSC = styled.h1`
   @media (max-width: 525px) {
     font-size: 26px;
   }
+  @media (max-width: 430px) {
+    font-size: 24px;
+  }
   @media (max-width: 360px) {
     font-size: 22px;
   }
@@ -76,6 +82,9 @@ export const DivBodyTextSC = styled.h1`
   }
   @media (max-width: 525px) {
     font-size: 16px;
+  }
+  @media (max-width: 430px) {
+    font-size: 13px;
   }
   @media (max-width: 360px) {
     font-size: 10px;
