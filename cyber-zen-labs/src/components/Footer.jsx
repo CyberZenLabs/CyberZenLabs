@@ -68,6 +68,18 @@ const Footer = () => {
         var offsetHeight = document.getElementById("footer-dkjaskdn").offsetHeight;
         var offsetWidth = document.getElementById("footer-dkjaskdn").offsetWidth;
 
+        var rightPointLine1 = document.getElementById("footer-page-box").offsetWidth + document.getElementById("footer-page-box").offsetLeft;
+        var leftPointLine1 = document.getElementById("footer-page-box").offsetLeft;
+
+        var _pointsLine1 = pointsLine1
+        _pointsLine1[0][2] = leftPointLine1
+        _pointsLine1[1][0] = leftPointLine1
+        
+        _pointsLine1[1][2] = rightPointLine1
+
+        setPointsLine1(_pointsLine1)
+        console.log("kek", rightPointLine1, leftPointLine1);
+
         setWidth(offsetWidth);
         setHeight(offsetHeight);
         setSize({
@@ -86,6 +98,8 @@ const Footer = () => {
             window.innerWidth >= 1921 ? false : true
         );
 
+        
+
         const coordsLine2 = Tools.getResponseCoords(
             PointsLine2,
             {
@@ -99,7 +113,7 @@ const Footer = () => {
         //   y: coords[coords.length - 1][coords[coords.length - 1].length - 1],
         // });
 
-        setPointsLine1(coordsLine1);
+        // setPointsLine1(coordsLine1);
         setPointsLine2(coordsLine2);
         getSize();
         window.addEventListener(
@@ -131,7 +145,7 @@ const Footer = () => {
                 //   ],
                 // });
 
-                setPointsLine1(_coordsLine1);
+                // setPointsLine1(_coordsLine1);
                 setPointsLine2(_coordsLine2);
                 getSize();
             },
@@ -153,7 +167,7 @@ const Footer = () => {
             setMusic(false);
         }
     }, [isPage]);
-    console.log("kek", size);
+    
     return (
         <DivWrapFooterSC id="footer-dkjaskdn">
             {isPage === "about" ? (
@@ -254,7 +268,7 @@ const Footer = () => {
                                     {music ? "sound on" : "sound off"}
                                 </H1FooterTextSoundOnSC>
                             </DivContainerFooterLeftSC>
-                            <DivContainerFooterCenterSC>
+                            <DivContainerFooterCenterSC id="footer-page-box">
                                 <H1FooterTextSC to="/" isForm={isHome}>
                                     HOME
                                 </H1FooterTextSC>
@@ -311,7 +325,7 @@ const Footer = () => {
                                     {music ? "sound on" : "sound off"}
                                 </H1FooterTextSoundOnSC>
                             </DivContainerFooterLeftSC>
-                            <DivContainerFooterCenterSC>
+                            <DivContainerFooterCenterSC id="footer-page-box">
                                 <H1FooterTextSC to="/" isForm={isHome}>
                                     HOME
                                 </H1FooterTextSC>
