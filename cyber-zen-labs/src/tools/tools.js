@@ -41,6 +41,8 @@ const Tools = {
                     lineCap="square"
                     lineJoin="bevel"
                     bezier={false}
+                    shadowColor={"#f61067"}
+                    shadowBlur={5}
                     // globalCompositeOperation={
                     //     'source-over'
                     // }
