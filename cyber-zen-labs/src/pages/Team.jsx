@@ -45,7 +45,7 @@ import { Stage, Layer, Line, Circle } from "react-konva";
 import Tools from "../tools/tools";
 
 const PointsLine1 = [
-  [1900, 410, 1050, 410],
+  [1920, 410, 1050, 410],
   [980, 360, 1050, 410],
   [550, 360, 980, 360],
   [420, 250, 550, 360],
@@ -54,14 +54,14 @@ const PointsLine1 = [
 ];
 
 const PointsLine2 = [
-  [10, 800, 170, 800],
-  [170, 800, 280, 900],
-  [280, 900, 850, 900],
-  [850, 900, 930, 950],
-  [930, 950, 1250, 950],
-  [1250, 950, 1330, 900],
-  [1330, 900, 1550, 900],
-  [1550, 900, 1630, 950],
+  [0, 680, 170, 680],
+  [170, 680, 280, 780],
+  [280, 780, 850, 780],
+  [850, 780, 930, 830],
+  [930, 830, 1250, 830],
+  [1250, 830, 1330, 780],
+  [1330, 780, 1550, 780],
+  [1550, 780, 1630, 830],
 ];
 
 const PointsLine3 = [[100, 460, 1800, 460]];
@@ -134,7 +134,7 @@ const Team = () => {
           <Layer>{Tools.drawLine(PointsLine3)}</Layer>
           <Layer>
             {Tools.drawLine(PointsLine2)}
-            <Circle x={1630} y={950} radius={5} fill="#ffffff" />
+            <Circle x={1630} y={830} radius={5} fill="#ffffff" />
           </Layer>
         </Stage>
       </DivRuslanBoxSC>
