@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, useRef } from "react";
+import React, { useContext, useState, useEffect, useLayoutEffect } from "react";
 import ReactHowler from "react-howler";
 import { Stage, Layer, Line, Circle } from "react-konva";
 import Tools from "../tools/tools";
@@ -18,16 +18,19 @@ import {
 } from "../styled-components-css/styled-Footer";
 import {
   DivMaxWidthSC,
+  DivWrapFooterSC,
   FooterLinesSC,
 } from "../styled-components-css/styled-navbar";
 import GlobalDispatchContext from "../global_dispatch_context";
 import Audio from "../audio/Homepage.mp3";
 import CyberModal from "./Modal";
 import GetInTouchButton from "./GetInTouchButton";
+
+const PointsLine2 = [[0, 0, 415, 0]];
+
 const PointsLine1 = [
-  [0, 700, 415, 700],
-  [415, 700, 510, 780],
-  [510, 780, 1490, 780],
+  [415, 0, 510, 80],
+  [510, 80, 1490, 80],
 ];
 
 const Footer = () => {
@@ -35,11 +38,16 @@ const Footer = () => {
   const { isOpen, isBlackBack, isPage, isForm, isHome, isServ, isProj } = state;
 
   const [pointsLine1, setPointsLine1] = useState(PointsLine1);
+  const [pointsLine2, setPointsLine2] = useState(PointsLine2);
+  const [width, setWidth] = useState(null);
+  const [height, setHeight] = useState(null);
 
   const [size, setSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: width,
+    height: height,
   });
+
+  // console.log('lol', size);
 
   const [music, setMusic] = useState(true);
   const MusicBeh = () => {
@@ -51,26 +59,69 @@ const Footer = () => {
     processCoords();
   }, []);
 
-  const processCoords = () => {
-    const coords = Tools.getResponseCoords(PointsLine1, {
-      width: window.innerWidth,
-      height: window.innerHeight,
+  useLayoutEffect(() => {
+    getSize();
+    // console.log(document.getElementById('footer-dkjaskdn').offsetHeight, document.getElementById('footer-dkjaskdn').innerWidth);
+  }, []);
+
+  const getSize = () => {
+    var offsetHeight = document.getElementById("footer-dkjaskdn").offsetHeight;
+    var offsetWidth = document.getElementById("footer-dkjaskdn").offsetWidth;
+
+    setWidth(offsetWidth);
+    setHeight(offsetHeight);
+    setSize({
+      width: offsetWidth,
+      height: offsetHeight,
     });
+  };
+
+  const processCoords = () => {
+    const coordsLine1 = Tools.getResponseCoords(
+      PointsLine1,
+      {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      },
+      window.innerWidth >= 1921 ? false : true
+    );
+
+    const coordsLine2 = Tools.getResponseCoords(
+      PointsLine2,
+      {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      },
+      window.innerWidth >= 1921 ? false : true
+    );
 
     // setPointsCircle1({
     //   x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
     //   y: coords[coords.length - 1][coords[coords.length - 1].length - 1],
     // });
 
-    setPointsLine1(coords);
+    setPointsLine1(coordsLine1);
+    setPointsLine1(coordsLine2);
+    getSize();
     window.addEventListener(
       "resize",
       function (event) {
-        // console.log('>>><><>>>>><><>', event.target.innerHeight, event.target.outerHeight)
-        const coords2 = Tools.getResponseCoords(PointsLine1, {
-          width: event.target.innerWidth,
-          height: event.target.innerHeight,
-        });
+        const _coordsLine1 = Tools.getResponseCoords(
+          PointsLine1,
+          {
+            width: event.target.innerWidth,
+            height: event.target.innerHeight,
+          },
+          event.target.innerWidth >= 1921 ? false : true
+        );
+
+        const _coordsLine2 = Tools.getResponseCoords(
+          PointsLine2,
+          {
+            width: event.target.innerWidth,
+            height: event.target.innerHeight,
+          }
+        );
 
         // setPointsCircle1({
         //   x: coords2[coords2.length - 1][
@@ -81,13 +132,9 @@ const Footer = () => {
         //   ],
         // });
 
-        setPointsLine1(coords2);
-
-        // console.log('><><><><><>', event.target.outerWidth)
-        setSize({
-          width: event.target.innerWidth,
-          height: event.target.innerHeight,
-        });
+        setPointsLine1(_coordsLine1);
+        setPointsLine2(_coordsLine2);
+        getSize();
       },
       true
     );
@@ -107,9 +154,9 @@ const Footer = () => {
       setMusic(false);
     }
   }, [isPage]);
-
+  console.log("kek", size);
   return (
-    <>
+    <DivWrapFooterSC id="footer-dkjaskdn">
       {isPage === "about" ? (
         <DivMaxWidthSC>
           <DivContainerFooterSC>
@@ -160,26 +207,32 @@ const Footer = () => {
           <FooterLinesSC>
             <Stage width={size.width} height={size.height}>
               {isBlackBack === "black" ? (
-                <Layer>
-                  {Tools.drawLineBlack(pointsLine1)}
-                  <Circle
-                    shadowColor={"#f61067"}
-                    shadowBlur={5}
-                    x={550}
-                    y={828}
-                    radius={5}
-                    fill="#F61067"
-                  />
-                </Layer>
+                <>
+                  <Layer>{Tools.drawLineBlack(pointsLine2)}</Layer>
+                  <Layer>
+                    {Tools.drawLineBlack(pointsLine1)}
+                    <Circle
+                      shadowColor={"#f61067"}
+                      shadowBlur={5}
+                      x={550}
+                      y={828}
+                      radius={5}
+                      fill="#F61067"
+                    />
+                  </Layer>
+                </>
               ) : (
-                <Layer>
-                  {Tools.drawLine(pointsLine1)}
-                  {isForm ? (
-                    <Circle x={1420} y={828} radius={5} fill="#ffffff" />
-                  ) : (
-                    <Circle x={550} y={828} radius={5} fill="#ffffff" />
-                  )}
-                </Layer>
+                <>
+                  <Layer>{Tools.drawLine(pointsLine2)}</Layer>
+                  <Layer>
+                    {Tools.drawLine(pointsLine1)}
+                    {isForm ? (
+                      <Circle x={1420} y={828} radius={5} fill="#ffffff" />
+                    ) : (
+                      <Circle x={550} y={828} radius={5} fill="#ffffff" />
+                    )}
+                  </Layer>
+                </>
               )}
             </Stage>
           </FooterLinesSC>
@@ -329,7 +382,7 @@ const Footer = () => {
         loop={true}
         volume={0}
       />
-    </>
+    </DivWrapFooterSC>
   );
 };
 
