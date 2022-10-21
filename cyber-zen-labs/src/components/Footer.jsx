@@ -68,9 +68,11 @@ const Footer = () => {
         var offsetHeight = document.getElementById("footer-dkjaskdn").offsetHeight;
         var offsetWidth = document.getElementById("footer-dkjaskdn").offsetWidth;
 
-        var rightPointLine1 = document.getElementById("footer-page-box").offsetWidth + document.getElementById("footer-page-box").offsetLeft;
-        var leftPointLine1 = document.getElementById("footer-page-box").offsetLeft;
 
+        var rect = document.getElementById("footer-page-box").getBoundingClientRect();
+        var rightPointLine1 = rect.right;
+        var leftPointLine1 = rect.left;
+        // console.log(rect.top, rect.right, rect.bottom, rect.left);
         var _pointsLine1 = pointsLine1
         _pointsLine1[0][2] = leftPointLine1
         _pointsLine1[1][0] = leftPointLine1
@@ -78,7 +80,7 @@ const Footer = () => {
         _pointsLine1[1][2] = rightPointLine1
 
         setPointsLine1(_pointsLine1)
-        console.log("kek", rightPointLine1, leftPointLine1);
+        console.log("kek", rightPointLine1, leftPointLine1, '>>>', rect.top, rect.right, rect.bottom, rect.left);
 
         setWidth(offsetWidth);
         setHeight(offsetHeight);
