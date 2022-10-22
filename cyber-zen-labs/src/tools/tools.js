@@ -31,7 +31,7 @@ const Tools = {
     const componentNode = pointsLine.map((item, i) => {
       return (
         <Line
-          key={`wqadfs${i}`}
+          key={`wqhfghs${i}`}
           points={item}
           stroke="#F61067"
           strokeWidth={1}

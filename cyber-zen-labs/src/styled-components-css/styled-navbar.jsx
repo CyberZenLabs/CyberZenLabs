@@ -16,7 +16,7 @@ export const DivMaxWidthSC = styled.div`
 export const FooterLinesSC = styled.div`
   position: absolute;
   pointer-events: none;
-  top: -50px;
+  top: -40px;
 `;
 export const  LinkShowReel2SC=styled.div`
 font-family: 'Orbitron';

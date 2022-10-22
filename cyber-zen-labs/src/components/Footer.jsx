@@ -68,20 +68,22 @@ const Footer = () => {
         var offsetHeight = document.getElementById("footer-dkjaskdn").offsetHeight;
         var offsetWidth = document.getElementById("footer-dkjaskdn").offsetWidth;
 
-
         var rect = document.getElementById("footer-page-box").getBoundingClientRect();
         var rightPointLine1 = rect.right;
         var leftPointLine1 = rect.left;
-        // console.log(rect.top, rect.right, rect.bottom, rect.left);
+
         var _pointsLine1 = pointsLine1
+        _pointsLine1[0][0] = leftPointLine1 - 70
         _pointsLine1[0][2] = leftPointLine1
         _pointsLine1[1][0] = leftPointLine1
-        
         _pointsLine1[1][2] = rightPointLine1
 
-        setPointsLine1(_pointsLine1)
-        console.log("kek", rightPointLine1, leftPointLine1, '>>>', rect.top, rect.right, rect.bottom, rect.left);
+        var _pointsLine2 = pointsLine2
+        pointsLine2[0][2] = leftPointLine1 - 70
 
+        setPointsLine1(_pointsLine1)
+        setPointsLine2(_pointsLine2)
+        
         setWidth(offsetWidth);
         setHeight(offsetHeight);
         setSize({
@@ -91,24 +93,24 @@ const Footer = () => {
     };
 
     const processCoords = () => {
-        const coordsLine1 = Tools.getResponseCoords(
-            PointsLine1,
-            {
-                width: window.innerWidth,
-                height: window.innerHeight,
-            },
-            window.innerWidth >= 1921 ? false : true
-        );
+        // const coordsLine1 = Tools.getResponseCoords(
+        //     PointsLine1,
+        //     {
+        //         width: window.innerWidth,
+        //         height: window.innerHeight,
+        //     },
+        //     window.innerWidth >= 1921 ? false : true
+        // );
 
         
 
-        const coordsLine2 = Tools.getResponseCoords(
-            PointsLine2,
-            {
-                width: window.innerWidth,
-                height: window.innerHeight,
-            }
-        );
+        // const coordsLine2 = Tools.getResponseCoords(
+        //     PointsLine2,
+        //     {
+        //         width: window.innerWidth,
+        //         height: window.innerHeight,
+        //     }
+        // );
 
         // setPointsCircle1({
         //   x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
@@ -116,27 +118,27 @@ const Footer = () => {
         // });
 
         // setPointsLine1(coordsLine1);
-        setPointsLine2(coordsLine2);
+        // setPointsLine2(coordsLine2);
         getSize();
         window.addEventListener(
             "resize",
             function (event) {
-                const _coordsLine1 = Tools.getResponseCoords(
-                    PointsLine1,
-                    {
-                        width: event.target.innerWidth,
-                        height: event.target.innerHeight,
-                    },
-                    event.target.innerWidth >= 1921 ? false : true
-                );
+                // const _coordsLine1 = Tools.getResponseCoords(
+                //     PointsLine1,
+                //     {
+                //         width: event.target.innerWidth,
+                //         height: event.target.innerHeight,
+                //     },
+                //     event.target.innerWidth >= 1921 ? false : true
+                // );
 
-                const _coordsLine2 = Tools.getResponseCoords(
-                    PointsLine2,
-                    {
-                        width: event.target.innerWidth,
-                        height: event.target.innerHeight,
-                    }
-                );
+                // const _coordsLine2 = Tools.getResponseCoords(
+                //     PointsLine2,
+                //     {
+                //         width: event.target.innerWidth,
+                //         height: event.target.innerHeight,
+                //     }
+                // );
 
                 // setPointsCircle1({
                 //   x: coords2[coords2.length - 1][
@@ -148,7 +150,7 @@ const Footer = () => {
                 // });
 
                 // setPointsLine1(_coordsLine1);
-                setPointsLine2(_coordsLine2);
+                // setPointsLine2(_coordsLine2);
                 getSize();
             },
             true
@@ -220,7 +222,7 @@ const Footer = () => {
                 <>
                     {" "}
                     <FooterLinesSC>
-                        <Stage width={size.width} height={size.height}>
+                        <Stage width={size.width} height={size.height - 10}>
                             {isBlackBack === "black" ? (
                                 <Layer>
                                     {Tools.drawLineBlack(pointsLine2)}
