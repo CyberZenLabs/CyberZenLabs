@@ -11,8 +11,8 @@ export const DivContentBoxRowsSC = styled.div`
 export const DivImgProject=styled.div`
 
 background-image: url(${GeoEco});
-width: 95%;
-height: 100%;
+width: 93%;
+height: 95%;
 background-size: cover;
 background-repeat: no-repeat;
 display: grid;
@@ -28,7 +28,7 @@ export const DivDescriptionProject=styled.div`
 font-family: 'Orbitron';
 font-style: normal;
 font-weight: 400;
-font-size: 22px;
+font-size: 20px;
 line-height: 28px;
 letter-spacing: 0.05em;
 padding: 0 20px;
@@ -38,7 +38,7 @@ export const DivTextProject=styled.div`
 font-family: 'Kanit';
 font-style: normal;
 font-weight: 400;
-font-size: 64px;
+font-size: 60px;
 line-height: 105%;
 
 /* or 67px */
@@ -72,7 +72,8 @@ export const DivGridProject =styled.div`
 display: grid;
 grid-template-rows: max-content max-content;
 align-items: start;
-    height: 95%;
+    height: 85%;
+    gap: 10px;
 `;
 
 export const DivShadowTitleSC = styled.div`
@@ -97,8 +98,8 @@ export const DivColumnsIconAndTextSC = styled.div`
   max-height: 36px;
   max-width: 438px;
   display: grid;
-  grid-template-columns: 1fr 16fr;
-  align-self: end;
+  grid-template-columns: 1fr max-content;
+  align-self: center;
   justify-self: center;
 `;
 
@@ -142,12 +143,12 @@ export const DivBoxCarouselBackgroundEllipseSC = styled.div`
 
 export const DivTaskItemSC = styled.div`
     position: absolute;
-  top: 30px;
-  left: calc((100% / 2) - 334px);
+  bottom: 40px;
+  left: calc((100% / 2) - 304px);
   box-shadow: 0px 0px 30px 9px #7167fb45;
   border-radius: 26px;
-  width: 668px;
-  height: 370px;
+  width: 608px;
+  height: 450px;
   padding: 2px;
   box-sizing: border-box;
   background: var(--blue-pink);
