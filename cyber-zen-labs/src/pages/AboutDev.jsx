@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect,useState } from "react";
 import {
   DivContainerSC,
   DivWrapSC,
@@ -48,29 +48,51 @@ import { DivRuslanBoxSC } from "../styled-components-css/styled.kirdro";
 import Konva from "konva";
 import { Stage, Layer, Line, Circle } from "react-konva";
 import Tools from "../tools/tools";
-
 const PointsLine1 = [
-  [1900, 410, 1510, 410],
+  [4000, 410, 1510, 410],
   [1430, 500, 1510, 410],
   [1050, 500, 1430, 500],
   [1050, 500, 980, 410],
   [980, 410, 800, 410],
-  [730, 500, 800, 410],
+  [800, 410, 730, 500],
 ];
+
+
 const PointsLine2 = [
-  [0, 680, 170, 680],
-  [170, 680, 280, 780],
-  [280, 780, 850, 780],
-  [850, 780, 930, 830],
-  [930, 830, 1250, 830],
-  [1250, 830, 1330, 780],
-  [1330, 780, 1550, 780],
-  [1550, 780, 1630, 830],
+  [0, 660, 170, 660],
+  [170, 660, 280, 760],
+  [280, 760, 850, 760],
+  [850, 760, 930, 810],
+  [930, 810, 1250, 810],
+  [1250, 810, 1330, 760],
+  [1330, 760, 1550, 760],
+  [1550, 760, 1630, 810],
 ];
 
 const About = () => {
+ 
+ 
   const { state, dispatch } = useContext(GlobalDispatchContext);
-  const { isBlackBack, isPage, isAboutBack } = state;
+  const { isBlackBack, isPage, isAboutBack, } = state;
+  const [size, setSize] = useState({
+      width:window.innerWidth,
+      height:window.innerHeight
+  })
+
+  const [pointsLine1, setPointsLine1] = useState(PointsLine1)
+  const [pointsCircle1, setPointsCircle1] = useState({
+      x:0,
+      y:0
+  })
+
+  const [pointsLine2, setPointsLine2] = useState(PointsLine2)
+  const [pointsCircle2, setPointsCircle2] = useState({
+      x:0,
+      y:0
+  })
+  const [width, setWidth] = useState(null);
+  const [height, setHeight] = useState(null);
+
   useEffect(() => {
     return () => {
       dispatch({
@@ -92,20 +114,93 @@ const About = () => {
       });
     };
   }, [isAboutBack]);
+ 
+  useEffect(() => {
+
+
+    processCoords()
+
+}, [])
+
+useEffect(() => {
+    var offsetHeight = document.getElementById('about-line-id').offsetHeight;
+    var offsetWidth = document.getElementById('about-line-id').offsetWidth;
+
+    setWidth(offsetWidth);
+    setHeight(offsetHeight);
+}, [window.innerWidth]);
+
+
+const processCoords = () => {
+
+    console.log('>>><><>>>>><><>', pointsLine2)
+    const coords = Tools.getResponseCoords(PointsLine1,{
+        width:window.innerWidth,
+        height:window.innerHeight
+    });
+    const coordsLine2 = Tools.getResponseCoords(PointsLine2,{
+        width:window.innerWidth,
+        height:window.innerHeight
+    });
+
+    setPointsCircle1({
+        x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
+        y: coords[coords.length - 1][coords[coords.length - 1].length - 1]
+    })
+    setPointsCircle2(
+        {
+            x: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 2],
+            y: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 1]
+        }
+    )
+    setPointsLine1(coords)
+    setPointsLine2(coordsLine2)
+
+    window.addEventListener('resize', function(event) {
+        // console.log('>>><><>>>>><><>', event.target.innerHeight, event.target.outerHeight)
+        const coords2 = Tools.getResponseCoords(PointsLine1, {
+            width:event.target.innerWidth,
+            height:event.target.innerHeight
+        });
+        const _coordsLine2 = Tools.getResponseCoords(PointsLine2,{
+            width:window.innerWidth,
+            height:window.innerHeight
+        });
+        setPointsCircle1({
+            x: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2],
+            y: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1]
+        })
+        setPointsCircle2(
+            {
+                x: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 2],
+                y: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 1]
+            }
+        )
+        setPointsLine1(coords2)
+        setPointsLine2(_coordsLine2)
+        // console.log('><><><><><>', event.target.outerWidth)
+        setSize({
+            width:event.target.innerWidth,
+            height:event.target.innerHeight
+        })
+    }, true);
+}
   return (
     <>
-      <DivRuslanBoxSC>
-        <Stage width={window.innerWidth} height={window.innerHeight - 20}>
-          <Layer>
-            {Tools.drawLine(PointsLine1)}
-            <Circle x={730} y={500} radius={5} fill="#ffffff" />
-          </Layer>
-          <Layer>
-            {Tools.drawLine(PointsLine2)}
-            <Circle x={1630} y={830} radius={5} fill="#ffffff" />
-          </Layer>
-        </Stage>
-      </DivRuslanBoxSC>
+         <DivRuslanBoxSC>
+                <Stage width={size.width} height={size.height}>
+                    <Layer>
+                        {Tools.drawLine(pointsLine1)}
+                        <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
+                    </Layer>
+
+                    <Layer>
+                        {Tools.drawLine(pointsLine2)}
+                        <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
+                    </Layer>
+
+                </Stage>
+            </DivRuslanBoxSC>
       <DivWrapSC>
         <DivContainerSC>
           <DivContainerAboutDevSC>

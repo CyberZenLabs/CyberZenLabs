@@ -192,7 +192,7 @@ const processCoords = () => {
             </DivBoxTextWriteToUsSC>
             <DivTopPenalSC>
               {/* <DivBoxBlurSC></DivBoxBlurSC> */}
-              <ImgBuddhaSC />
+             {/* <ImgBuddhaSC /> */}
             </DivTopPenalSC>
           </DivLeftPenalSC>
           <DivRightPenalSC>
