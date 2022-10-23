@@ -61,7 +61,7 @@ export const DivRightPenalSC = styled.div`
   height: 100%;
   display: grid;
   justify-items: end;
-  z-index: 3;
+  
   @media (max-width: 768px) {
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;

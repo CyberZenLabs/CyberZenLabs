@@ -16,6 +16,7 @@ export const DivMaxWidthSC = styled.div`
 export const FooterLinesSC = styled.div`
   position: absolute;
   pointer-events: none;
+  top: -40px;
 `;
 export const  LinkShowReel2SC=styled.div`
 font-family: 'Orbitron';
@@ -108,6 +109,10 @@ export const DivTextWriteToUsSC = styled.div`
     line-height: 16px;
     height: 16px;
   }
+`;
+
+export const DivWrapFooterSC = styled.div`
+  position: relative;
 `;
 
 export const DivContainerNavBarHomeSC = styled.div`
