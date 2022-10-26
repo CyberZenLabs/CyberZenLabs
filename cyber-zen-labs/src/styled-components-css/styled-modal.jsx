@@ -17,7 +17,7 @@ export const BlockModal = styled(Modal)`
   max-height: 100vh;
  
  
-    z-index: 10000000;
+    z-index: 10000;
     align-content: unset;
     justify-content: unset;
    

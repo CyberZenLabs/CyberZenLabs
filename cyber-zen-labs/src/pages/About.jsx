@@ -95,8 +95,6 @@ const About = () => {
 
 
     const processCoords = () => {
-
-        console.log('>>><><>>>>><><>', pointsLine2)
         const coords = Tools.getResponseCoords(PointsLine1,{
             width:window.innerWidth,
             height:window.innerHeight

@@ -10,37 +10,60 @@ import { DivRuslanBoxSC } from "../styled-components-css/styled.kirdro";
 import Konva from "konva";
 import { Stage, Layer, Line, Circle } from "react-konva";
 import Tools from "../tools/tools";
+
+const PointsLine1 = [
+  [0, 580, 360, 580],
+  [361, 580, 406, 535],
+  [407, 535, 620, 535],
+  [621, 535, 661, 495],
+  [661, 494, 661, 425],
+  [661, 424, 691, 394],
+];
+
+const PointsLine2 = [
+  [1920, 845, 1650, 845],
+  [1650, 845, 1610, 805],
+  [1610, 805, 1360, 805],
+  [1360, 805, 1290, 735],
+  [1290, 735, 1290, 645],
+  [1290, 645, 1260, 615],
+
+];
+const PointsLine3 = [
+  [1920, 195, 1550, 195],
+  [1550, 195, 1520, 225],
+  [1520, 225, 1275, 225],
+  [1275, 225, 1225, 275],
+  [1225, 275, 1225, 350],
+  [1225, 350, 1200, 370],
+];
+
 const BurgerMenu = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isBlackBack, isPage } = state;
-  const PointsLine1 = [
-    [0, 715, 360, 715],
-    [360, 715, 385, 670],
-    [385, 670, 600, 670],
-    [600, 670, 660, 600],
-    [660, 600, 660, 510],
-    [660, 510, 690, 480],
-  ];
-  
-  const PointsLine2 = [
-    [1920, 980, 1650, 980],
-    [1650, 980, 1610, 940],
-    [1610, 940, 1360, 940],
-    [1360, 940, 1290, 870],
-    [1290, 870, 1290, 780],
-    [1290, 780, 1260, 750],
+  const [size, setSize] = useState({
+    width:window.innerWidth,
+    height:window.innerHeight
+})
 
-  ];
-  const PointsLine3 = [
-    [1920, 285, 1550, 285],
-    [1550, 285, 1520, 315],
-    [1520, 315, 1275, 315],
-    [1275, 315, 1225, 365],
-    [1225, 365, 1225, 440],
-    [1225, 440, 1200, 460],
+const [pointsLine1, setPointsLine1] = useState(PointsLine1)
+const [pointsCircle1, setPointsCircle1] = useState({
+    x:0,
+    y:0
+})
 
-
-  ];
+const [pointsLine2, setPointsLine2] = useState(PointsLine2)
+const [pointsCircle2, setPointsCircle2] = useState({
+    x:0,
+    y:0
+})
+const [pointsLine3, setPointsLine3] = useState(PointsLine3)
+const [pointsCircle3, setPointsCircle3] = useState({
+    x:0,
+    y:0
+})
+const [width, setWidth] = useState(null);
+const [height, setHeight] = useState(null);
   useEffect(() => {
     return () => {
       dispatch({
@@ -49,22 +72,116 @@ const BurgerMenu = () => {
       });
     };
   }, [isPage]);
+  useEffect(() => {
+
+
+    processCoords()
+
+}, [])
+  useEffect(() => {
+    var offsetHeight = document.getElementById('about-line-id').offsetHeight;
+    var offsetWidth = document.getElementById('about-line-id').offsetWidth;
+
+    setWidth(offsetWidth);
+    setHeight(offsetHeight);
+}, [window.innerWidth]);
+
+const processCoords = () => {
+
+  console.log('>>><><>>>>><><>', pointsLine2)
+  const coords = Tools.getResponseCoords(PointsLine1,{
+      width:window.innerWidth,
+      height:window.innerHeight
+  });
+  const coordsLine2 = Tools.getResponseCoords(PointsLine2,{
+      width:window.innerWidth,
+      height:window.innerHeight
+  });
+  const coordsLine3 = Tools.getResponseCoords(PointsLine3,{
+    width:window.innerWidth,
+    height:window.innerHeight
+});
+  setPointsCircle1({
+      x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
+      y: coords[coords.length - 1][coords[coords.length - 1].length - 1]
+  })
+  setPointsCircle2(
+      {
+          x: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 2],
+          y: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 1]
+      }
+  )
+  setPointsCircle3(
+    {
+        x: coordsLine3[coordsLine3.length - 1][coordsLine3[coordsLine3.length - 1].length - 2],
+        y: coordsLine3[coordsLine3.length - 1][coordsLine3[coordsLine3.length - 1].length - 1]
+    }
+)
+  setPointsLine1(coords)
+  setPointsLine2(coordsLine2)
+  setPointsLine3(coordsLine3)
+
+  window.addEventListener('resize', function(event) {
+      // console.log('>>><><>>>>><><>', event.target.innerHeight, event.target.outerHeight)
+      const coords2 = Tools.getResponseCoords(PointsLine1, {
+          width:event.target.innerWidth,
+          height:event.target.innerHeight
+      });
+      const _coordsLine2 = Tools.getResponseCoords(PointsLine2,{
+          width:window.innerWidth,
+          height:window.innerHeight
+      });
+      const _coordsLine3 = Tools.getResponseCoords(PointsLine3,{
+        width:window.innerWidth,
+        height:window.innerHeight
+      });
+
+      setPointsCircle1({
+          x: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2],
+          y: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1]
+      })
+      setPointsCircle2(
+          {
+              x: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 2],
+              y: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 1]
+          }
+      )
+      setPointsCircle3(
+        {
+            x: _coordsLine3[_coordsLine3.length - 1][_coordsLine3[_coordsLine3.length - 1].length - 2],
+            y: _coordsLine3[_coordsLine3.length - 1][_coordsLine3[_coordsLine3.length - 1].length - 1]
+        }
+    )
+      setPointsLine1(coords2)
+      setPointsLine2(_coordsLine2)
+      setPointsLine3(_coordsLine3)
+
+      // console.log('><><><><><>', event.target.outerWidth)
+      setSize({
+          width:event.target.innerWidth,
+          height:event.target.innerHeight
+      })
+  }, true);
+}
+
+
+
   return (
     <>
     <DivRuslanBoxSC>
-    <Stage width={window.innerWidth} height={window.innerHeight}>
+    <Stage width={size.width} height={size.height}>
       <Layer>
-        {Tools.drawLine(PointsLine1)}
-        <Circle x={690} y={480} radius={5} fill="#ffffff" />
+        {Tools.drawLine(pointsLine1)}
+        <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
       </Layer>
 
       <Layer>
-        {Tools.drawLine(PointsLine2)}
-        <Circle x={1260} y={750} radius={5} fill="#ffffff" />
+        {Tools.drawLine(pointsLine2)}
+        <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
       </Layer>
       <Layer>
-        {Tools.drawLine(PointsLine3)}
-        <Circle x={1200} y={460} radius={5} fill="#ffffff" />
+        {Tools.drawLine(pointsLine3)}
+        <Circle x={pointsCircle3.x} y={pointsCircle3.y} radius={5} fill="#ffffff" />
       </Layer>
     </Stage>
   </DivRuslanBoxSC>

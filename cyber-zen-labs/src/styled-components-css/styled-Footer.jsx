@@ -42,9 +42,6 @@ export const DivContainerFooterCenterSC = styled.div`
     display: none;
   }
   padding-left: 20px;
-  @media (max-width: 480px) {
-    align-self: end;
-  }
 `;
 export const DivContainerFooterRightSC = styled.div`
   display: grid;
@@ -88,7 +85,6 @@ export const DivPhotoRightContainerSC = styled.div`
     width: 36px;
     height: 36px;
   }
-
 `;
 //soundbar
 export const DivSoundPhotoLeftContainerSC = styled.div`
@@ -132,11 +128,6 @@ export const H1FooterTextSoundOnSC = styled.button`
     margin-top: 0px;
     font-size: 12px;
   }
-  @media (max-width: 480px) {align-self: end;}
-   
-      
-    
-  
 `;
 export const H1FooterTextSC = styled(Link)`
   width: 100%;
@@ -148,10 +139,8 @@ export const H1FooterTextSC = styled(Link)`
   text-align: end;
   /* identical to box height */
   text-transform: uppercase;
-  text-shadow:${({ isForm }) =>
-    isForm && "0px 0px 3px #FFFFFF" };
-  color: ${({ isForm }) =>
-    isForm ? "#FFFFFF" :"rgba(255, 255, 255, 0.4)"};
+  text-shadow: ${({ isForm }) => isForm && "0px 0px 3px #FFFFFF"};
+  color: ${({ isForm }) => (isForm ? "#FFFFFF" : "rgba(255, 255, 255, 0.4)")};
   :hover {
     text-shadow: 0px 0px 3px #ffffff;
   }

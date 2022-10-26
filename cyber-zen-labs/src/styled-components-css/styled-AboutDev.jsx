@@ -28,6 +28,8 @@ justify-content: center;
 justify-items: center;
 grid-template-rows: 275px 1fr;
  grid-row-gap: 30px;
+ @media (min-height:1000px){grid-row-gap:0px;
+padding-bottom:30px;}
   `;
 export const DivDecriptionTextSC = styled.div`
 display: grid;
