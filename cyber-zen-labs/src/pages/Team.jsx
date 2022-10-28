@@ -165,6 +165,13 @@ const processCoords = () => {
     setPointsLine3(coordsLine3)
 
     window.addEventListener('resize', function(event) {
+      if(window.innerHeight<873){
+        var _pointsLine3 = PointsLine3
+        _pointsLine3[0][1] = 455
+        _pointsLine3[0][3] = 455
+        
+
+      }
         // console.log('>>><><>>>>><><>', event.target.innerHeight, event.target.outerHeight)
         const coords2 = Tools.getResponseCoords(PointsLine1, {
             width:event.target.innerWidth,

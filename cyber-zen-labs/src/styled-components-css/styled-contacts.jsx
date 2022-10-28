@@ -159,14 +159,13 @@ export const ImgBuddhaSC = styled.div`
 `;
 
 export const DivTopPenalSC = styled.div`
+
   width: 100%;
   height: 100%;
   display: grid;
   justify-items: end;
   z-index: 3;
-  @media (max-width: 768px) {
-    align-items: end;
-  }
+ 
   @media (max-width: 600px) {
     align-items: end;
   }

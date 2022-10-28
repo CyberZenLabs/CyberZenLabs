@@ -29,11 +29,14 @@ export const DivLineAboutTeamSC=styled.div`
   height: 100%;
   //top: 80px;
   //bottom: 0;
-  min-height: 900px;
+  min-height: 923px;
   justify-items: center;
   align-items: center;
   position: absolute;
   pointer-events: none;
+  @media (max-height:873px) {
+    min-height: 873px;
+  }
 `;
 export const DivBoxTextTitleSC = styled.div`
   width: 100%;

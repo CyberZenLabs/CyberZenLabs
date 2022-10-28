@@ -150,6 +150,15 @@ export const DescHomeBoxColumnsSC = styled.div`
     grid-template-columns: 1fr;
   }
 `;
+export const DivHomeLineBoxSC = styled.div`
+  display: grid;
+  height: 100%;
+  min-height: 785px;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  pointer-events: none;
+`;
 
 export const GifBuddhaHomeSC = styled.div`
   //position: absolute;

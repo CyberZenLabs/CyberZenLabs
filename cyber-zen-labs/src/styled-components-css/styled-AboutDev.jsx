@@ -68,7 +68,7 @@ export const DivLineAboutDevSC=styled.div`
   height: 100%;
   //top: 80px;
   //bottom: 0;
-  min-height: 770px;
+  min-height: 900px;
   justify-items: center;
   align-items: center;
   position: absolute;

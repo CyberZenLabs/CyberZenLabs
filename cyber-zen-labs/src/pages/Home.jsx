@@ -15,6 +15,7 @@ import {
   DivHomeContentRowsSC,
   DescHomeBoxColumnsSC,
   GifBuddhaHomeSC,
+  DivHomeLineBoxSC,
 } from "../styled-components-css/styled.home";
 import GlobalDispatchContext from "../global_dispatch_context";
 import {
@@ -203,7 +204,7 @@ const Home = () => {
 
   return (
     <>
-      <DivKirdroBoxSC>
+      <DivHomeLineBoxSC>
         <Stage width={size.width} height={size.height}>
           {isBlackBack === "black" ? (
             <Layer>
@@ -251,7 +252,7 @@ const Home = () => {
             </Layer>
           )}
         </Stage>
-      </DivKirdroBoxSC>
+      </DivHomeLineBoxSC>
       <DivWrapSC>
         <DivContainerSC>
           <DivHomeContentRowsSC>

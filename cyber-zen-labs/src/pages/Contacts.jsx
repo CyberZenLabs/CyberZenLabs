@@ -191,10 +191,11 @@ const processCoords = () => {
                 <DivDecLineSC />
               </DivTextWriteToUsSC>
             </DivBoxTextWriteToUsSC>
-            <DivTopPenalSC>
-              {/* <DivBoxBlurSC></DivBoxBlurSC> */}
-             {/* <ImgBuddhaSC /> */}
-            </DivTopPenalSC>
+            {/* <DivTopPenalSC>
+              <DivBoxBlurSC></DivBoxBlurSC> 
+            <ImgBuddhaSC /> 
+            </DivTopPenalSC> */}
+
           </DivLeftPenalSC>
           <DivRightPenalSC>
             <DivColumnsTelephoneSC>
