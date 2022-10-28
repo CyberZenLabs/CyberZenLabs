@@ -12,6 +12,9 @@ export const DivContainerFooterSC = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 0.5fr auto 0px;
   }
+  @media (max-width: 480px) {
+    align-items: end;
+  }
 `;
 export const DivContainerFooterLeftSC = styled.div`
   display: grid;
@@ -183,5 +186,8 @@ export const DivContainerFooterCenterTeamSC = styled.div`
   @media (max-width: 768px) {
     justify-self: start;
     grid-template-columns: 1.5fr 2fr;
+  }
+  @media (max-width: 480px) {
+  padding-bottom: 20px;
   }
 `;

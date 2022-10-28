@@ -17,6 +17,8 @@ import {
   GridIconsSC,
   CarouselHidden,
   DivBlure,
+  DivLineAboutDevSC
+  
 } from "../styled-components-css/styled-AboutDev";
 import GlobalDispatchContext from "../global_dispatch_context";
 import AboutDevCarousel from "../components/AboutDevCarousel";
@@ -187,7 +189,8 @@ const processCoords = () => {
 }
   return (
     <>
-         <DivRuslanBoxSC>
+            <DivLineAboutDevSC>
+         
                 <Stage width={size.width} height={size.height}>
                     <Layer>
                         {Tools.drawLine(pointsLine1)}
@@ -200,7 +203,8 @@ const processCoords = () => {
                     </Layer>
 
                 </Stage>
-            </DivRuslanBoxSC>
+                </DivLineAboutDevSC>
+            
       <DivWrapSC>
         <DivContainerSC>
           <DivContainerAboutDevSC>

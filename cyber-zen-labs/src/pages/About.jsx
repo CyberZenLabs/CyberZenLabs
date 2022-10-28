@@ -1,9 +1,10 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useState,useLayoutEffect} from "react";
 import {
     DivContainerAboutSC,
     DivWrapMenuSC,
     GridContentSC,
     SpanTextElementSC,
+    DivLineAboutSC,
 } from "../styled-components-css/styled-About";
 import GlobalDispatchContext from "../global_dispatch_context";
 import { DivRuslanBoxSC } from "../styled-components-css/styled.kirdro";
@@ -28,6 +29,8 @@ const PointsLine2 = [
     [370, 630, 370, 526],
     [370, 526, 330, 496],
 ];
+
+
 
 
 const About = () => {
@@ -88,13 +91,15 @@ const About = () => {
     useEffect(() => {
         var offsetHeight = document.getElementById('about-line-id').offsetHeight;
         var offsetWidth = document.getElementById('about-line-id').offsetWidth;
-
+       
         setWidth(offsetWidth);
-        setHeight(offsetHeight);
+        setHeight(offsetHeight); 
     }, [window.innerWidth]);
-
+   
 
     const processCoords = () => {
+        
+        
         const coords = Tools.getResponseCoords(PointsLine1,{
             width:window.innerWidth,
             height:window.innerHeight
@@ -118,6 +123,7 @@ const About = () => {
         setPointsLine2(coordsLine2)
 
         window.addEventListener('resize', function(event) {
+           
             // console.log('>>><><>>>>><><>', event.target.innerHeight, event.target.outerHeight)
             const coords2 = Tools.getResponseCoords(PointsLine1, {
                 width:event.target.innerWidth,
@@ -150,7 +156,7 @@ const About = () => {
 
     return (
         <>
-            <DivRuslanBoxSC>
+            <DivLineAboutSC>
                 <Stage width={size.width} height={size.height}>
                     <Layer>
                         {Tools.drawLine(pointsLine1)}
@@ -163,9 +169,9 @@ const About = () => {
                     </Layer>
 
                 </Stage>
-            </DivRuslanBoxSC>
-            <DivWrapMenuSC >
-                <DivContainerAboutSC>
+            </DivLineAboutSC>
+            <DivWrapMenuSC  >
+                <DivContainerAboutSC id="about-line">
                     <GridContentSC>
                         <SpanTextElementSC to="/">Home</SpanTextElementSC>
                         <SpanTextElementSC to="/team">Team</SpanTextElementSC>

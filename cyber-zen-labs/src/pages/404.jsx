@@ -11,6 +11,7 @@ import {
   H1TitleColumnsSC,
   H1TitleTextSC,
   DivBodyTextSC,
+  DivLine404SC,
 } from "../styled-components-css/styled-404";
 import GlobalDispatchContext from "../global_dispatch_context";
 import { DivRuslanBoxSC } from "../styled-components-css/styled.kirdro";
@@ -32,8 +33,8 @@ const PointsLine2 = [
   [1130, 750, 1070, 710],
   [1070, 710, 500, 710],
   [500, 710, 370, 630],
-  [370, 630, 370, 526],
-  [370, 526, 330, 496],
+  [370, 630, 370, 576],
+  [370, 576, 330, 546],
 ];
 const Page_404 = () => {
   
@@ -140,7 +141,8 @@ const processCoords = () => {
 }
   return (
     <>
-        <DivRuslanBoxSC>
+            <DivLine404SC>
+        
                 <Stage width={size.width} height={size.height}>
                     <Layer>
                         {Tools.drawLine(pointsLine1)}
@@ -153,7 +155,8 @@ const processCoords = () => {
                     </Layer>
 
                 </Stage>
-            </DivRuslanBoxSC>
+                </DivLine404SC>
+            
       <DivWrapSC>
         <DivContainerSC>
           <GrifContentSC>

@@ -12,6 +12,9 @@ export const GridContentSC = styled.div`
   @media (max-width:1000px) {
     grid-row-gap: 60px;
 }
+@media (max-height:550px) {
+  grid-row-gap: 45px;
+}
 @media (max-width:480px) {
   grid-row-gap: 40px;
 }
@@ -29,6 +32,10 @@ export const SpanTextElementSC = styled(Link)`
   font-size: 40px;
 line-height: 50px;
 }
+@media (max-height:550px) {
+  font-size: 30px;
+line-height: 40px;
+}
 @media (max-width:480px) {
   font-size: 22px;
 line-height: 28px;
@@ -44,6 +51,7 @@ export const DivContainerAboutSC = styled.div`
 display: grid;
   align-content: center;
   justify-content: center;
+  position: relative;
 `;
 export const DivWrapMenuSC = styled.div`
  // width: 100vw;
@@ -55,4 +63,15 @@ export const DivWrapMenuSC = styled.div`
   justify-content: center;
   align-content: center;
   //border:1px solid red;
+`;
+export const DivLineAboutSC=styled.div`
+ display: grid;
+  height: 100%;
+  //top: 80px;
+  //bottom: 0;
+  min-height: 530px;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  pointer-events: none;
 `;
