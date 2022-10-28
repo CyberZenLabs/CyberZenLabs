@@ -36,6 +36,7 @@ import {
   DivItemSC,
   DivItemPhotoSC,
   DivItemNameSC,
+  DivLineAboutTeamSC,
 } from "../styled-components-css/styled-team";
 import GlobalDispatchContext from "../global_dispatch_context";
 import AboutTeamDeveloperCarousel from "../components/AboutTeamDeveloperCarousel";
@@ -64,7 +65,7 @@ const PointsLine2 = [
   [1550, 750, 1630, 800],
 ];
 
-const PointsLine3 = [[100, 460, 1800, 460]];
+const PointsLine3 = [[100, 430, 1800, 430]];
 
 const Team = () => {
   
@@ -231,7 +232,7 @@ const processCoords = () => {
   };
   return (
     <>
-      <DivRuslanBoxSC>
+      <DivLineAboutTeamSC>
         <Stage  width={size.width} height={size.height} >
           <Layer>
             {Tools.drawLine(pointsLine1)}
@@ -243,7 +244,7 @@ const processCoords = () => {
             <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
           </Layer>
         </Stage>
-      </DivRuslanBoxSC>
+      </DivLineAboutTeamSC>
       <DivWrapSC>
         <DivContainerSC>
           <DivMainRowsSC>

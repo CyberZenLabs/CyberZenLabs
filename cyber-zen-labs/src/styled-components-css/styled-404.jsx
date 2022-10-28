@@ -27,6 +27,9 @@ export const H1TitleSC = styled.h1`
   @media (max-width: 1000px) {
     font-size: 70px;
   }
+  @media (max-height: 550px) {
+    font-size: 50px;
+  }
   @media (max-width: 525px) {
     font-size: 40px;
   }
@@ -80,6 +83,9 @@ export const DivBodyTextSC = styled.h1`
   @media (max-width: 768px) {
     font-size: 24px;
   }
+  @media (max-height: 550px) {
+    font-size: 20px;
+  }
   @media (max-width: 525px) {
     font-size: 16px;
   }
@@ -99,4 +105,19 @@ export const DivTextContentSC = styled.div`
   @media (max-width: 1000px) {
     justify-content: center;
   }
+  @media (max-height: 550px) {
+    gap: 0px;
+    margin-top: -5px;
+  }
+`;
+export const DivLine404SC=styled.div`
+ display: grid;
+  height: 100%;
+  //top: 80px;
+  //bottom: 0;
+  min-height: 472px;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  pointer-events: none;
 `;

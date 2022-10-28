@@ -14,7 +14,7 @@ export const DivRuslanBoxSC = styled.div`
   height: 100%;
   //top: 80px;
   //bottom: 0;
-  
+ 
   justify-items: center;
   align-items: center;
   position: absolute;

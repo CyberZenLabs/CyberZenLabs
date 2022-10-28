@@ -11,7 +11,18 @@ export const DivColumnsContentContacts = styled.div`
     display: none;
   }
 `;
-
+export const DivLineContactsSC=styled.div`
+ display: grid;
+  height: 100%;
+  //top: 80px;
+  //bottom: 0;
+  
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  pointer-events: none;
+  
+`;
 export const DivRowsContentContacts = styled.div`
   display: none;
   @media (max-width: 768px) {

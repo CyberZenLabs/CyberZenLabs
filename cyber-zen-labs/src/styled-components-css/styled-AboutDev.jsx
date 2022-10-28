@@ -63,7 +63,17 @@ width: 100%;
 
   }
 `;
-
+export const DivLineAboutDevSC=styled.div`
+ display: grid;
+  height: 100%;
+  //top: 80px;
+  //bottom: 0;
+  min-height: 770px;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  pointer-events: none;
+`;
 export const DivCustomTextSC = styled.div`
 pointer-events: none;
 text-align: left;

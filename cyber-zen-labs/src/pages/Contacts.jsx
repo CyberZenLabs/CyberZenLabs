@@ -25,6 +25,7 @@ import {
   DivBoxBlurSC,
   DivRowsContentContacts,
   DivTopPenalSC,
+  DivLineContactsSC
 } from "../styled-components-css/styled-contacts";
 import GlobalDispatchContext from "../global_dispatch_context";
 const PointsLine1 = [
@@ -166,7 +167,7 @@ const processCoords = () => {
    
 
     <>
-      <DivRuslanBoxSC>
+      <DivLineContactsSC>
                 <Stage width={size.width} height={size.height}>
                     <Layer>
                         {Tools.drawLine(pointsLine1)}
@@ -179,7 +180,7 @@ const processCoords = () => {
                     </Layer>
 
                 </Stage>
-            </DivRuslanBoxSC>
+            </DivLineContactsSC>
     <DivWrapSC>
       <DivContainerSC>
         <DivRowsContentContacts>

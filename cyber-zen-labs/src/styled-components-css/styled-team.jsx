@@ -24,7 +24,17 @@ export const DivMainRowsSC = styled.div`
     grid-template-rows: 170px 83px 93px 144px 38px;
   }
 `;
-
+export const DivLineAboutTeamSC=styled.div`
+ display: grid;
+  height: 100%;
+  //top: 80px;
+  //bottom: 0;
+  min-height: 900px;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  pointer-events: none;
+`;
 export const DivBoxTextTitleSC = styled.div`
   width: 100%;
   height: 110%;
