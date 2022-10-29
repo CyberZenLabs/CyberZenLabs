@@ -167,8 +167,8 @@ const processCoords = () => {
     window.addEventListener('resize', function(event) {
       if(window.innerHeight<873){
         var _pointsLine3 = PointsLine3
-        _pointsLine3[0][1] = 455
-        _pointsLine3[0][3] = 455
+        _pointsLine3[0][1] = 470
+        _pointsLine3[0][3] = 470
         
 
       }
