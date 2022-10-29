@@ -67,9 +67,9 @@ export const DivWrapMenuSC = styled.div`
 export const DivLineAboutSC=styled.div`
  display: grid;
   height: 100%;
-  //top: 80px;
+  top: ${({top}) => (top)}px;
   //bottom: 0;
-  min-height: 530px;
+  //min-height: 530px;
   justify-items: center;
   align-items: center;
   position: absolute;
