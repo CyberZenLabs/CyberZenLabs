@@ -3,6 +3,8 @@ import {
   DivContainerAboutSC,
   DivWrapMenuSC,
   GridContentSC,
+  DivLineBurgerMenuSC,
+  
 } from "../styled-components-css/styled-About";
 import { SpanTextElementMenuSC } from "../styled-components-css/styled-menu";
 import GlobalDispatchContext from "../global_dispatch_context";
@@ -168,7 +170,7 @@ const processCoords = () => {
 
   return (
     <>
-    <DivRuslanBoxSC>
+    <DivLineBurgerMenuSC>
     <Stage width={size.width} height={size.height}>
       <Layer>
         {Tools.drawLine(pointsLine1)}
@@ -184,7 +186,7 @@ const processCoords = () => {
         <Circle x={pointsCircle3.x} y={pointsCircle3.y} radius={5} fill="#ffffff" />
       </Layer>
     </Stage>
-  </DivRuslanBoxSC>
+  </DivLineBurgerMenuSC>
     <DivWrapMenuSC>
       <DivContainerAboutSC>
         <GridContentSC>

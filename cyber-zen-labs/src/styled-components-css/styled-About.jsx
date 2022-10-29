@@ -75,3 +75,14 @@ export const DivLineAboutSC=styled.div`
   position: absolute;
   pointer-events: none;
 `;
+export const DivLineBurgerMenuSC=styled.div`
+ display: grid;
+  height: 100%;
+  //top: 80px;
+  //bottom: 0;
+  min-height: 700px;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  pointer-events: none;
+`;
