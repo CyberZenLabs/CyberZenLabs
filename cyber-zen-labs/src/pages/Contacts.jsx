@@ -114,11 +114,11 @@ const processCoords = () => {
     const coords = Tools.getResponseCoords(PointsLine1,{
         width:window.innerWidth,
         height:window.innerHeight
-    });
+      } , true,1920, 900);
     const coordsLine2 = Tools.getResponseCoords(PointsLine2,{
         width:window.innerWidth,
         height:window.innerHeight
-    });
+      } , true,1920, 900);
 
     setPointsCircle1({
         x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
@@ -130,19 +130,58 @@ const processCoords = () => {
             y: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 1]
         }
     )
-    setPointsLine1(coords)
-    setPointsLine2(coordsLine2)
-
+    // setPointsLine1(coords)
+    // setPointsLine2(coordsLine2)
+    
+    let _coordsTemp = Tools.copy(coords)
+    let _coordsTemp2 = Tools.copy(coordsLine2)
+    if (window.innerWidth <= 650) {
+      _coordsTemp[0][2] = _coordsTemp[0][2] - 50
+      _coordsTemp[1][0] = _coordsTemp[1][0] - 50
+      _coordsTemp[1][2] = _coordsTemp[1][2] - 50
+      _coordsTemp[2][0] = _coordsTemp[2][0] - 50
+      _coordsTemp[2][2] = _coordsTemp[2][2] - 50
+      _coordsTemp[3][0] = _coordsTemp[3][0] - 50
+      _coordsTemp[3][2] = _coordsTemp[3][2] - 30
+      _coordsTemp[4][0] = _coordsTemp[4][0]  - 30
+      _coordsTemp[4][2] = _coordsTemp[4][2]  - 30
+      _coordsTemp[5][0] = _coordsTemp[5][0]  - 30
+      _coordsTemp[5][2] = _coordsTemp[5][2]  - 10
+      setPointsCircle1({
+          x: coords[coords.length - 1][coords[coords.length - 1].length - 2] - 10,
+          y: coords[coords.length - 1][coords[coords.length - 1].length - 1]
+      })
+      _coordsTemp2[0][2] = _coordsTemp2[0][2] + 50
+      _coordsTemp2[1][0] = _coordsTemp2[1][0] + 50
+      _coordsTemp2[1][2] = _coordsTemp2[1][2] + 50
+      _coordsTemp2[2][0] = _coordsTemp2[2][0] + 50
+      _coordsTemp2[2][2] = _coordsTemp2[2][2] + 40
+      _coordsTemp2[3][0] = _coordsTemp2[3][0] + 40
+      _coordsTemp2[3][2] = _coordsTemp2[3][2] + 10
+      _coordsTemp2[4][0] = _coordsTemp2[4][0] + 10
+      _coordsTemp2[4][2] = _coordsTemp2[4][2] + 10
+      _coordsTemp2[5][0] = _coordsTemp2[5][0] + 10
+      _coordsTemp2[5][2] = _coordsTemp2[5][2] - 10
+      setPointsCircle2(
+          {
+              x: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 2] - 10,
+              y: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 1]
+          }
+      )
+  }
+  console.log('>>><>>><>', coords, _coordsTemp)
+  setPointsLine1(_coordsTemp)
+  setPointsLine2(_coordsTemp2)
     window.addEventListener('resize', function(event) {
         // console.log('>>><><>>>>><><>', event.target.innerHeight, event.target.outerHeight)
         const coords2 = Tools.getResponseCoords(PointsLine1, {
             width:event.target.innerWidth,
             height:event.target.innerHeight
-        });
+          } , true,1920, 900);
         const _coordsLine2 = Tools.getResponseCoords(PointsLine2,{
             width:window.innerWidth,
             height:window.innerHeight
-        });
+        } , true,1920, 900);
         setPointsCircle1({
             x: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2],
             y: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1]
@@ -153,8 +192,52 @@ const processCoords = () => {
                 y: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 1]
             }
         )
-        setPointsLine1(coords2)
-        setPointsLine2(_coordsLine2)
+        let _coordsTemp1 = Tools.copy(coords2)
+        let _coordsTemp22 = Tools.copy(_coordsLine2)
+        if (event.target.innerWidth <= 650) {
+          _coordsTemp1[0][2] = _coordsTemp1[0][2] - 50
+          _coordsTemp1[1][0] = _coordsTemp1[1][0] - 50
+          _coordsTemp1[1][2] = _coordsTemp1[1][2] - 50
+          _coordsTemp1[2][0] = _coordsTemp1[2][0] - 50
+          _coordsTemp1[2][2] = _coordsTemp1[2][2] - 50
+          _coordsTemp1[3][0] = _coordsTemp1[3][0] - 50
+          _coordsTemp1[3][2] = _coordsTemp1[3][2] - 30
+          _coordsTemp1[4][0] = _coordsTemp1[4][0]  - 30
+          _coordsTemp1[4][2] = _coordsTemp1[4][2]  - 30
+          _coordsTemp1[5][0] = _coordsTemp1[5][0]  - 30
+          _coordsTemp1[5][2] = _coordsTemp1[5][2]  - 10
+            setPointsCircle1({
+                x: coords[coords.length - 1][coords[coords.length - 1].length - 2] - 10,
+                y: coords[coords.length - 1][coords[coords.length - 1].length - 1]
+            })
+            _coordsTemp22[0][2] = _coordsTemp22[0][2] + 50
+      _coordsTemp22[1][0] = _coordsTemp22[1][0] + 50
+      _coordsTemp22[1][2] = _coordsTemp22[1][2] + 50
+      _coordsTemp22[2][0] = _coordsTemp22[2][0] + 50
+      _coordsTemp22[2][2] = _coordsTemp22[2][2] + 40
+      _coordsTemp22[3][0] = _coordsTemp22[3][0] + 40
+      _coordsTemp22[3][2] = _coordsTemp22[3][2] + 10
+      _coordsTemp22[4][0] = _coordsTemp22[4][0] + 10
+      _coordsTemp22[4][2] = _coordsTemp22[4][2] + 10
+      _coordsTemp22[5][0] = _coordsTemp22[5][0] + 10
+      _coordsTemp22[5][2] = _coordsTemp22[5][2] - 10
+            setPointsCircle2(
+                {
+                    x: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 2] - 10,
+                    y: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 1]
+                }
+            )
+        }
+        console.log('>>><>>><>', coords, _coordsTemp)
+        setPointsLine1(_coordsTemp)
+        setPointsLine2(_coordsTemp2)
+
+        if (event.target.innerWidth <= 650) {
+            coords2[1][1] = coords2[1][1] + 10
+            coords2[2][0] = coords2[2][0] + 10
+        }
+        setPointsLine1(_coordsTemp1)
+        setPointsLine2(_coordsTemp22)
         // console.log('><><><><><>', event.target.outerWidth)
         setSize({
             width:event.target.innerWidth,
