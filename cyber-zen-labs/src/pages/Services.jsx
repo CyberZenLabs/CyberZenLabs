@@ -48,7 +48,7 @@ const Services = () => {
         //     a = (a + Math.PI / 360) % (Math.PI * 2);
         //     rotate(a);
         // }, 10);
-        
+
 
         return () => {
             dispatch({
