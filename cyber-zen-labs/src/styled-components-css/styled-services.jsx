@@ -54,14 +54,21 @@ export const DivColumnsIconAndTextSC = styled.div`
   grid-template-columns: 1fr 16fr;
   align-self: end;
   justify-self: center;
+  align-items: center;
 `;
 
 export const IconMouseSC = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 15px;
+  height: 22px;
+  
+  border-radius: 50%;
   background-image: url(${IconMouse});
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.5;
+  animation: fadeInFromNone 2s ease-out infinite;
+  box-shadow: 0px 0px 12px 2px #09bbf9;
+  
 `;
 
 export const DivContentTextSC = styled.div`
@@ -95,8 +102,8 @@ export const DivBoxCarouselBackgroundEllipseSC = styled.div`
 
 export const DivTaskItemSC = styled.div`
     position: absolute;
-  top: 50px;
-  left: calc((100% / 2) - 334px);
+  top: ${({position}) => (position.x)}px;
+  left: ${({position}) => (position.y)}px;
   box-shadow: 0px 0px 50px 9px #7167fb45;
   border-radius: 26px;
   width: 668px;

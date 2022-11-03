@@ -172,7 +172,8 @@ const Tools = {
     },
     copy: (state) => {
         return JSON.parse(JSON.stringify(state))
-    }
+    },
+
 };
 
 export default Tools;

@@ -1,10 +1,14 @@
 import React from 'react';
 import {DivTaskItemContentSC, DivTaskItemContentTempSC, DivTaskItemSC} from "../styled-components-css/styled-services";
 
-const ServicesItem = () => {
+const ServicesItem = (props) => {
+    const {
+        position
+    } = props
+
     return (
 
-        <DivTaskItemSC>
+        <DivTaskItemSC id={'DivTaskItemSC'} position={position}>
             <DivTaskItemContentSC className={'DivTaskItemContentSC'}>
                Web/Mobile development
             </DivTaskItemContentSC>
