@@ -53,6 +53,14 @@ const PointsLine1 = [
   [420, 210, 420, 130],
   [420, 130, 370, 110],
 ];
+// const PointsLine1 = [
+//   [0, 200, 120, 200],
+//   [120, 200, 200, 230],
+//   [200, 230, 900, 230],
+//   [900, 230, 1150, 270],
+//   [1150, 270, 1400, 270],
+//   [1400, 270, 1600, 350],
+// ];
 
 const PointsLine2 = [
   [0, 650, 170, 650],
@@ -64,8 +72,19 @@ const PointsLine2 = [
   [1330, 750, 1550, 750],
   [1550, 750, 1630, 800],
 ];
+// const PointsLine2 = [
+//   [4000, 800, 1350, 800],
+//   [170, 650, 280, 750],
+//   [280, 750, 850, 750],
+//   [850, 750, 930, 800],
+//   [930, 800, 1250, 800],
+//   [1250, 800, 1330, 750],
+//   [1330, 750, 1550, 750],
+//   [1550, 750, 1630, 800],
+// ];
 
-const PointsLine3 = [[100, 430, 1800, 430]];
+
+const PointsLine3 = [[100, 420, 1800, 420]];
 
 const Team = () => {
   
@@ -172,6 +191,22 @@ const processCoords = () => {
         
 
       }
+      else{ var _pointsLine3 = PointsLine3
+        _pointsLine3[0][1] = 420
+        _pointsLine3[0][3] = 420}
+        if(window.innerWidth<1500){
+          var _pointsLine1 = PointsLine1
+          _pointsLine1[0]= [0, 200, 120, 200]
+          _pointsLine1[1]= [120, 200, 200, 230]
+          _pointsLine1[2]= [200, 230, 900, 230]
+          _pointsLine1[3]= [900, 230, 1150, 270]
+          _pointsLine1[4]= [1150, 270, 1400, 270]
+          _pointsLine1[5]= [1400, 270, 1600, 350]
+            
+          
+          
+  
+        }
         // console.log('>>><><>>>>><><>', event.target.innerHeight, event.target.outerHeight)
         const coords2 = Tools.getResponseCoords(PointsLine1, {
             width:event.target.innerWidth,
@@ -206,6 +241,15 @@ const processCoords = () => {
     }, true);
 }
   const listContent = [
+    {
+      page: (
+        <>
+          <AboutTeamDeveloperCarousel
+            indexSelectedButton={indexSelectedButton}
+          ></AboutTeamDeveloperCarousel>
+        </>
+      ),
+    },
     {
       page: (
         <>
@@ -280,6 +324,13 @@ const processCoords = () => {
               >
                 Design
               </DivPageSC>
+              <DivPageSC
+                isActive={indexSelectedButton === 3}
+                onClick={onClickTab(3)}
+              >
+                Cryptocurrency trading
+              </DivPageSC>
+              
             </DivBoxColumnsPagesSC>
             {listContent[indexSelectedButton].page}
           </DivMainRowsSC>

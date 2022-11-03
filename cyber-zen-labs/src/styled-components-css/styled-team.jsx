@@ -29,6 +29,9 @@ export const DivLineAboutTeamSC=styled.div`
   height: 100%;
   //top: 80px;
   //bottom: 0;
+  @media (max-width:660px) {
+    min-height: 923px;
+  }
   min-height: 923px;
   justify-items: center;
   align-items: center;
@@ -122,7 +125,8 @@ export const DivBoxColumnsPagesSC = styled.div`
   max-width: 648px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1.4fr 1.6fr 1fr;
+  grid-template-columns: max-content max-content max-content max-content;
+  column-gap: 20px;
 `;
 
 export const DivPageSC = styled.div`
@@ -132,7 +136,7 @@ export const DivPageSC = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
-  line-height: 38px;
+  line-height: 65px;
   /* identical to box height */
   letter-spacing: 0.05em;
   text-shadow: ${(p) => (p.isActive ? "6px 5px 5px #a557e5" : "#FFF")};
