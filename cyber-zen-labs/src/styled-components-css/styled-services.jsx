@@ -102,8 +102,8 @@ export const DivBoxCarouselBackgroundEllipseSC = styled.div`
 
 export const DivTaskItemSC = styled.div`
     position: absolute;
-  top: ${({position}) => (position.x)}px;
-  left: ${({position}) => (position.y)}px;
+  top: ${({position}) => (position.y)}px;
+  left: ${({position}) => (position.x)}px;
   box-shadow: 0px 0px 50px 9px #7167fb45;
   border-radius: 26px;
   width: 668px;

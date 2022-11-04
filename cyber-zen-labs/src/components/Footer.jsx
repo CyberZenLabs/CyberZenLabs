@@ -72,6 +72,8 @@ const Footer = () => {
         var rightPointLine1 = rect.right;
         var leftPointLine1 = rect.left;
 
+        // console.log('lolol',leftPointLine1);
+
         var _pointsLine1 = pointsLine1
         _pointsLine1[0][0] = leftPointLine1 - 70
         _pointsLine1[0][2] = leftPointLine1
@@ -93,64 +95,10 @@ const Footer = () => {
     };
 
     const processCoords = () => {
-        // const coordsLine1 = Tools.getResponseCoords(
-        //     PointsLine1,
-        //     {
-        //         width: window.innerWidth,
-        //         height: window.innerHeight,
-        //     },
-        //     window.innerWidth >= 1921 ? false : true
-        // );
-
-        
-
-        // const coordsLine2 = Tools.getResponseCoords(
-        //     PointsLine2,
-        //     {
-        //         width: window.innerWidth,
-        //         height: window.innerHeight,
-        //     }
-        // );
-
-        // setPointsCircle1({
-        //   x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
-        //   y: coords[coords.length - 1][coords[coords.length - 1].length - 1],
-        // });
-
-        // setPointsLine1(coordsLine1);
-        // setPointsLine2(coordsLine2);
         getSize();
         window.addEventListener(
             "resize",
             function (event) {
-                // const _coordsLine1 = Tools.getResponseCoords(
-                //     PointsLine1,
-                //     {
-                //         width: event.target.innerWidth,
-                //         height: event.target.innerHeight,
-                //     },
-                //     event.target.innerWidth >= 1921 ? false : true
-                // );
-
-                // const _coordsLine2 = Tools.getResponseCoords(
-                //     PointsLine2,
-                //     {
-                //         width: event.target.innerWidth,
-                //         height: event.target.innerHeight,
-                //     }
-                // );
-
-                // setPointsCircle1({
-                //   x: coords2[coords2.length - 1][
-                //     coords2[coords2.length - 1].length - 2
-                //   ],
-                //   y: coords2[coords2.length - 1][
-                //     coords2[coords2.length - 1].length - 1
-                //   ],
-                // });
-
-                // setPointsLine1(_coordsLine1);
-                // setPointsLine2(_coordsLine2);
                 getSize();
             },
             true
