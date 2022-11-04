@@ -94,7 +94,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    processCoords()
+    processCoords();
   }, []);
 
   useEffect(() => {
@@ -105,6 +105,29 @@ const Home = () => {
       });
     };
   }, [isPage]);
+
+  const getSizeCoords1 = (pointArr) => {
+    let rect = document
+      .getElementById("cyb-zen-title-home")
+      .getBoundingClientRect();
+    let leftPointCybZen = rect.right;
+    console.log("kekekeke", leftPointCybZen);
+    pointArr[2][2] = leftPointCybZen - 15;
+    pointArr[3][0] = leftPointCybZen - 15;
+    pointArr[3][2] = leftPointCybZen + 27;
+    pointArr[4][0] = leftPointCybZen + 27;
+    pointArr[4][2] = leftPointCybZen + 27;
+    pointArr[5][0] = leftPointCybZen + 27;
+    pointArr[5][2] = leftPointCybZen + 60;
+    // _coordsTemp[2][0] = _coordsTemp[2][0] + 10;
+    // _coordsTemp[3][2] = _coordsTemp[3][2] + 20;
+    // _coordsTemp[4][0] = _coordsTemp[4][0] + 20;
+    // _coordsTemp[4][2] = _coordsTemp[4][2] + 20;
+    // _coordsTemp[5][0] = _coordsTemp[5][0] + 20;
+    // _coordsTemp[5][2] = _coordsTemp[5][2] + 27;
+
+    return pointArr;
+  };
 
   const processCoords = () => {
     const coords = Tools.getResponseCoords(PointsLine1, {
@@ -118,11 +141,6 @@ const Home = () => {
     const coordsLine3 = Tools.getResponseCoords(PointsLine3, {
       width: window.innerWidth,
       height: window.innerHeight,
-    });
-
-    setPointsCircle1({
-      x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
-      y: coords[coords.length - 1][coords[coords.length - 1].length - 1],
     });
 
     setPointsCircle2({
@@ -142,9 +160,23 @@ const Home = () => {
         coordsLine3[coordsLine3.length - 1].length - 1
       ],
     });
-    setPointsLine1(coords);
-    setPointsLine2(coordsLine2);
-    setPointsLine3(coordsLine3);
+
+    let _coordsTemp = Tools.copy(coords);
+    let _coordsTemp2 = Tools.copy(coordsLine2);
+    let _coordsTemp3 = Tools.copy(coordsLine3);
+
+    if (window.innerWidth <= 1470) {
+      getSizeCoords1(_coordsTemp);
+    }
+
+    setPointsCircle1({
+      x: _coordsTemp[_coordsTemp.length - 1][_coordsTemp[_coordsTemp.length - 1].length - 2],
+      y: _coordsTemp[_coordsTemp.length - 1][_coordsTemp[_coordsTemp.length - 1].length - 1],
+    });
+
+    setPointsLine1(_coordsTemp);
+    setPointsLine2(_coordsTemp2);
+    setPointsLine3(_coordsTemp3);
 
     window.addEventListener(
       "resize",
@@ -162,6 +194,7 @@ const Home = () => {
           width: event.target.innerWidth,
           height: event.target.innerHeight,
         });
+
         setPointsCircle1({
           x: coords2[coords2.length - 1][
             coords2[coords2.length - 1].length - 2
@@ -189,9 +222,26 @@ const Home = () => {
           ],
         });
 
-        setPointsLine1(coords2);
-        setPointsLine2(_coordsLine2);
-        setPointsLine3(_coordsLine3);
+        let _coordsTemp11 = Tools.copy(coords2);
+        let _coordsTemp22 = Tools.copy(_coordsLine2);
+        let _coordsTemp33 = Tools.copy(_coordsLine3);
+
+        if (event.target.innerWidth <= 1470) {
+          getSizeCoords1(_coordsTemp11);
+        }
+
+        setPointsCircle1({
+          x: _coordsTemp11[_coordsTemp11.length - 1][
+            _coordsTemp11[_coordsTemp11.length - 1].length - 2
+          ],
+          y: _coordsTemp11[_coordsTemp11.length - 1][
+            _coordsTemp11[_coordsTemp11.length - 1].length - 1
+          ],
+        });
+
+        setPointsLine1(_coordsTemp11);
+        setPointsLine2(_coordsTemp22);
+        setPointsLine3(_coordsTemp33);
         // console.log('><><><><><>', event.target.outerWidth)
         setSize({
           width: event.target.innerWidth,
@@ -209,45 +259,90 @@ const Home = () => {
           {isBlackBack === "black" ? (
             <Layer>
               {Tools.drawLineBlack(pointsLine1)}
-              <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#F61067" />
+              <Circle
+                x={pointsCircle1.x}
+                y={pointsCircle1.y}
+                radius={5}
+                fill="#F61067"
+              />
             </Layer>
           ) : (
             <Layer>
               {Tools.drawLine(pointsLine1)}
               {isForm ? (
-                <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
+                <Circle
+                  x={pointsCircle1.x}
+                  y={pointsCircle1.y}
+                  radius={5}
+                  fill="#ffffff"
+                />
               ) : (
-                <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
+                <Circle
+                  x={pointsCircle1.x}
+                  y={pointsCircle1.y}
+                  radius={5}
+                  fill="#ffffff"
+                />
               )}
             </Layer>
           )}
           {isBlackBack === "black" ? (
             <Layer>
-              {Tools.LineBlack(pointsLine2)}
-              <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="black" />
+              {Tools.drawLineBlack(pointsLine2)}
+              <Circle
+                x={pointsCircle2.x}
+                y={pointsCircle2.y}
+                radius={5}
+                fill="#F61067"
+              />
             </Layer>
           ) : (
             <Layer>
               {Tools.drawLine(pointsLine2)}
               {isForm ? (
-                <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
+                <Circle
+                  x={pointsCircle2.x}
+                  y={pointsCircle2.y}
+                  radius={5}
+                  fill="#ffffff"
+                />
               ) : (
-                <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
+                <Circle
+                  x={pointsCircle2.x}
+                  y={pointsCircle2.y}
+                  radius={5}
+                  fill="#ffffff"
+                />
               )}
             </Layer>
           )}
           {isBlackBack === "black" ? (
             <Layer>
               {Tools.drawLineBlack(pointsLine3)}
-              <Circle x={pointsCircle3.x} y={pointsCircle3.y} radius={5} fill="#F61067" />
+              <Circle
+                x={pointsCircle3.x}
+                y={pointsCircle3.y}
+                radius={5}
+                fill="#F61067"
+              />
             </Layer>
           ) : (
             <Layer>
               {Tools.drawLine(pointsLine3)}
               {isForm ? (
-                <Circle x={pointsCircle3.x} y={pointsCircle3.y} radius={5} fill="#ffffff" />
+                <Circle
+                  x={pointsCircle3.x}
+                  y={pointsCircle3.y}
+                  radius={5}
+                  fill="#ffffff"
+                />
               ) : (
-                <Circle x={pointsCircle3.x} y={pointsCircle3.y} radius={5} fill="#ffffff" />
+                <Circle
+                  x={pointsCircle3.x}
+                  y={pointsCircle3.y}
+                  radius={5}
+                  fill="#ffffff"
+                />
               )}
             </Layer>
           )}
@@ -278,7 +373,10 @@ const Home = () => {
           <DivHomeContentSC>
             <DivTextBoxtSC>
               <DivTitleBoxtSC>
-                <TitleHomeBoxSC isBlackBack={isBlackBack}>
+                <TitleHomeBoxSC
+                  id="cyb-zen-title-home"
+                  isBlackBack={isBlackBack}
+                >
                   CYBERZEN LABS
                   {isBlackBack === "black" ? null : (
                     <DivShadowBoxSC></DivShadowBoxSC>

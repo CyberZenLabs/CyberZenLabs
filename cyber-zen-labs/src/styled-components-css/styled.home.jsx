@@ -47,10 +47,10 @@ export const TitleHomeBoxSC = styled.h1`
     isBlackBack === "black" ? "0px 0px 8px #F61067" : "none"};
   position: relative;
   width: max-content;
-  @media (max-width: 1400px) {
+  @media (max-width: 1919px) {
     font-size: 70px;
   }
-  @media (max-width: 1250px) {
+  @media (max-width: 1700px) {
     font-size: 60px;
   }
   @media (max-width: 1130px) {
@@ -71,8 +71,9 @@ export const SloganBoxSC = styled.h1`
   line-height: 45px;
   letter-spacing: 0.05em;
   pointer-events: none;
-  @media (max-width: 1000px) {
-    font-size: 22px;
+  width: max-content;
+  @media (max-width: 1700px) {
+    font-size: 33px;
   }
   @media (max-width: 600px) {
     display: grid;
@@ -84,6 +85,9 @@ export const SloganBoxSC = styled.h1`
 export const DivDescBoxtSC = styled.div`
   width: 85%;
   display: grid;
+  @media (max-width: 1919px) {
+    width: 75%;
+  }
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
@@ -101,8 +105,8 @@ export const DescHomeBoxSC = styled.span`
 
   text-shadow: ${({ isBlackBack }) =>
     isBlackBack === "black" ? "none" : "0px 5px 30px"};
-  @media (max-width: 1000px) {
-    font-size: 26px;
+  @media (max-width: 1700px) {
+    font-size: 33px;
   }
   @media (max-width: 768px) {
     font-size: 20px;
