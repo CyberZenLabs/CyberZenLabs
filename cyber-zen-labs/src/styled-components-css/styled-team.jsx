@@ -76,6 +76,9 @@ text-shadow: 0px 4px 20px #D516FF;
   @media (max-width: 560px) {
     font-size: 24px;
   }
+  @media (max-height: 480px) {
+    font-size: 20px;
+  }
   @media (max-width: 480px) {
     font-size: 20px;
   }
@@ -115,6 +118,10 @@ export const DivTextTeamSC = styled.div`
   @media (max-width: 480px) {
     font-size: 20px;
   }
+  @media (max-height: 480px) {
+    font-size: 20px;
+    line-height: 95px;
+  }
   @media (max-width: 360px) {
     font-size: 16px;
   }
@@ -127,6 +134,8 @@ export const DivBoxColumnsPagesSC = styled.div`
   display: grid;
   grid-template-columns: max-content max-content max-content max-content;
   column-gap: 20px;
+  @media(max-width:480px){column-gap: 10px;}
+  @media(max-width:375px){column-gap: 4px;}
 `;
 
 export const DivPageSC = styled.div`
@@ -142,17 +151,25 @@ export const DivPageSC = styled.div`
   text-shadow: ${(p) => (p.isActive ? "6px 5px 5px #a557e5" : "#FFF")};
   //border: 1px solid red;
   height: fit-content;
-  @media (max-width: 1000px) {
-    font-size: 24px;
+  @media (max-width: 1100px) {
+    font-size: 26px;
   }
-  @media (max-width: 560px) {
-    font-size: 18px;
+  @media (max-width: 965px) {
+    font-size: 20px;
   }
-  @media (max-width: 480px) {
+  
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media (max-width: 620px) {
     font-size: 14px;
   }
-  @media (max-width: 360px) {
+  @media (max-width: 550px) {
     font-size: 12px;
+  }
+  @media (max-width: 480px) {
+    font-size: 10px;
   }
 `;
 

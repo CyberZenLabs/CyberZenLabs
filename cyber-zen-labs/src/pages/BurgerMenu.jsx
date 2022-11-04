@@ -120,35 +120,16 @@ const processCoords = () => {
     }
 )
 
-let _coordsTemp = Tools.copy(PointsLine1)
+let _coordsTemp = Tools.copy(coords)
 let _coordsTemp2 = Tools.copy(coordsLine2)
 let _coordsTemp3 = Tools.copy(coordsLine3)
 
 if (window.innerWidth < 1550) {
-
-  _coordsTemp2[1][2] = _coordsTemp2[1][2] - 10
-  _coordsTemp2[2][0] = _coordsTemp2[2][0] - 10
-  _coordsTemp2[3][2] = _coordsTemp2[3][2] - 20
-  _coordsTemp2[4][0] = _coordsTemp2[4][0] - 20
-  _coordsTemp2[4][2] = _coordsTemp2[4][2] - 20
-  _coordsTemp2[5][0] = _coordsTemp2[5][0] - 20
-  _coordsTemp2[5][2] = _coordsTemp2[5][2] - 27
-  setPointsCircle2({
-          x: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 2] - 27,
-          y: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 1]
-      })
-      _coordsTemp3[1][2] = _coordsTemp3[1][2] - 10
-      _coordsTemp3[2][0] = _coordsTemp3[2][0] - 10
-      _coordsTemp3[3][2] = _coordsTemp3[3][2] - 20
-      _coordsTemp3[4][0] = _coordsTemp3[4][0] - 20
-      _coordsTemp3[4][2] = _coordsTemp3[4][2] - 20
-      _coordsTemp3[5][0] = _coordsTemp3[5][0] - 20
-      _coordsTemp3[5][2] = _coordsTemp3[5][2] - 27
-      setPointsCircle3({
-              x: coordsLine3[coordsLine3.length - 1][coordsLine3[coordsLine3.length - 1].length - 2],
-              y: coordsLine3[coordsLine3.length - 1][coordsLine3[coordsLine3.length - 1].length - 1]
-          })
-
+  _coordsTemp[0][2] =  _coordsTemp[0][2] - 100
+  _coordsTemp[1][2] =  _coordsTemp[1][2] - 100
+  _coordsTemp[1][0] =  _coordsTemp[1][0] - 100
+  _coordsTemp[2][0] =  _coordsTemp[2][0] - 50
+  _coordsTemp[2][2] =  _coordsTemp[2][2] - 50
 }
 setPointsLine1(_coordsTemp)
   setPointsLine2(_coordsTemp2)

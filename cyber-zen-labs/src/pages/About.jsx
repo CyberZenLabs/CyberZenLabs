@@ -245,7 +245,7 @@ const About = () => {
 
     return (
         <>
-            {/* <DivLineAboutSC top={window.innerWidth <= 480 ? 80 : null||window.innerHeight <=640 ? 0 : null}  >
+            <DivLineAboutSC >
                 <Stage width={size.width} height={size.height}>
                     <Layer>
                         {Tools.drawLine(pointsLine1)}
@@ -258,7 +258,7 @@ const About = () => {
                     </Layer>
 
                 </Stage>
-            </DivLineAboutSC> */}
+            </DivLineAboutSC>
             <DivWrapMenuSC  >
                 <DivContainerAboutSC id="about-line">
                     <GridContentSC>
