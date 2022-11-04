@@ -68,20 +68,20 @@ const Footer = () => {
         var offsetHeight = document.getElementById("footer-dkjaskdn").offsetHeight;
         var offsetWidth = document.getElementById("footer-dkjaskdn").offsetWidth;
 
-        // var rect = document.getElementById("footer-page-box").getBoundingClientRect();
-        // var rightPointLine1 = rect.right;
-        // var leftPointLine1 = rect.left;
+        var rect = document.getElementById("footer-page-box").getBoundingClientRect();
+        var rightPointLine1 = rect.right;
+        var leftPointLine1 = rect.left;
 
         // console.log('lolol',leftPointLine1);
 
         var _pointsLine1 = pointsLine1
-        // _pointsLine1[0][0] = leftPointLine1 - 70
-        // _pointsLine1[0][2] = leftPointLine1
-        // _pointsLine1[1][0] = leftPointLine1
-        // _pointsLine1[1][2] = rightPointLine1
+        _pointsLine1[0][0] = leftPointLine1 - 70
+        _pointsLine1[0][2] = leftPointLine1
+        _pointsLine1[1][0] = leftPointLine1
+        _pointsLine1[1][2] = rightPointLine1
 
         var _pointsLine2 = pointsLine2
-        // pointsLine2[0][2] = leftPointLine1 - 70
+        pointsLine2[0][2] = leftPointLine1 - 70
 
         setPointsLine1(_pointsLine1)
         setPointsLine2(_pointsLine2)

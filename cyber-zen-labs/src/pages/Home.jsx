@@ -106,25 +106,124 @@ const Home = () => {
     };
   }, [isPage]);
 
-  const getSizeCoords1 = (pointArr) => {
-    let rect = document
-      .getElementById("cyb-zen-title-home")
-      .getBoundingClientRect();
-    let leftPointCybZen = rect.right;
-    console.log("kekekeke", leftPointCybZen);
-    pointArr[2][2] = leftPointCybZen - 15;
-    pointArr[3][0] = leftPointCybZen - 15;
-    pointArr[3][2] = leftPointCybZen + 27;
-    pointArr[4][0] = leftPointCybZen + 27;
-    pointArr[4][2] = leftPointCybZen + 27;
-    pointArr[5][0] = leftPointCybZen + 27;
-    pointArr[5][2] = leftPointCybZen + 60;
-    // _coordsTemp[2][0] = _coordsTemp[2][0] + 10;
-    // _coordsTemp[3][2] = _coordsTemp[3][2] + 20;
-    // _coordsTemp[4][0] = _coordsTemp[4][0] + 20;
-    // _coordsTemp[4][2] = _coordsTemp[4][2] + 20;
-    // _coordsTemp[5][0] = _coordsTemp[5][0] + 20;
-    // _coordsTemp[5][2] = _coordsTemp[5][2] + 27;
+  const getSizeCoords = (pointArr, innerWidth, boxId, lineNumber) => {
+    let rect;
+    let rightPointCybZen;
+
+    if (boxId) {
+      rect = document.getElementById(`${boxId}`).getBoundingClientRect();
+      rightPointCybZen = rect.right;
+    }
+
+    switch (lineNumber) {
+      case "line-1":
+        if (innerWidth >= 1024) {
+          pointArr[1][2] = pointArr[0][2] + 30;
+          pointArr[2][0] = pointArr[0][2] + 30;
+          pointArr[2][2] = rightPointCybZen - 15;
+          pointArr[3][0] = rightPointCybZen - 15;
+          pointArr[3][2] = rightPointCybZen + 27;
+          pointArr[4][0] = rightPointCybZen + 27;
+          pointArr[4][2] = rightPointCybZen + 27;
+          pointArr[5][0] = rightPointCybZen + 27;
+          pointArr[5][2] = rightPointCybZen + 60;
+        } else if (innerWidth >= 768) {
+          pointArr[1][2] = pointArr[0][2] + 30;
+          pointArr[2][0] = pointArr[0][2] + 30;
+          pointArr[2][2] = rightPointCybZen - 15;
+          pointArr[3][0] = rightPointCybZen - 15;
+          pointArr[3][2] = rightPointCybZen + 27;
+          pointArr[4][0] = rightPointCybZen + 27;
+          pointArr[4][2] = rightPointCybZen + 27;
+          pointArr[5][0] = rightPointCybZen + 27;
+          pointArr[5][2] = rightPointCybZen + 60;
+        } else {
+          pointArr[1][2] = pointArr[0][2] + 30;
+          pointArr[2][0] = pointArr[0][2] + 30;
+          pointArr[2][2] = rightPointCybZen - 15;
+          pointArr[3][0] = rightPointCybZen - 15;
+          pointArr[3][2] = rightPointCybZen + 27;
+          pointArr[4][0] = rightPointCybZen + 27;
+          pointArr[4][2] = rightPointCybZen + 27;
+          pointArr[5][0] = rightPointCybZen + 27;
+          pointArr[5][2] = rightPointCybZen + 60;
+        }
+        break;
+      case "line-2":
+        if (innerWidth >= 1024) {
+          pointArr[1][2] = pointArr[0][2] + 30;
+          pointArr[2][0] = pointArr[0][2] + 30;
+          pointArr[2][2] = rightPointCybZen - 15;
+          pointArr[3][0] = rightPointCybZen - 15;
+          pointArr[3][2] = rightPointCybZen + 15;
+          pointArr[4][0] = rightPointCybZen + 15;
+          pointArr[4][2] = rightPointCybZen + 15;
+          pointArr[5][0] = rightPointCybZen + 15;
+          pointArr[5][2] = rightPointCybZen + 48;
+        } else if (innerWidth >= 768) {
+          pointArr[1][2] = pointArr[0][2] + 30;
+          pointArr[2][0] = pointArr[0][2] + 30;
+          pointArr[2][2] = rightPointCybZen - 15;
+          pointArr[3][0] = rightPointCybZen - 15;
+          pointArr[3][2] = rightPointCybZen + 15;
+          pointArr[4][0] = rightPointCybZen + 15;
+          pointArr[4][2] = rightPointCybZen + 15;
+          pointArr[5][0] = rightPointCybZen + 15;
+          pointArr[5][2] = rightPointCybZen + 48;
+        } else {
+          pointArr[1][2] = pointArr[0][2] + 30;
+          pointArr[2][0] = pointArr[0][2] + 30;
+          pointArr[2][2] = rightPointCybZen - 15;
+          pointArr[3][0] = rightPointCybZen - 15;
+          pointArr[3][2] = rightPointCybZen + 15;
+          pointArr[4][0] = rightPointCybZen + 15;
+          pointArr[4][2] = rightPointCybZen + 15;
+          pointArr[5][0] = rightPointCybZen + 15;
+          pointArr[5][2] = rightPointCybZen + 48;
+        }
+        break;
+      case "line-3":
+        if (innerWidth >= 1024) {
+          pointArr[5][2] = rightPointCybZen + 60;
+          pointArr[5][0] = pointArr[5][2] + 35;
+          pointArr[4][2] = pointArr[5][0];
+          pointArr[4][0] = pointArr[4][2];
+          pointArr[3][2] = pointArr[4][0];
+          pointArr[3][0] = pointArr[3][2] + 35;
+          pointArr[2][2] = pointArr[3][0];
+          pointArr[2][0] = pointArr[2][2] + 110;
+          pointArr[1][2] = pointArr[2][0];
+          pointArr[1][0] = pointArr[1][2] + 35;
+          pointArr[0][2] = pointArr[1][0];
+        } else if (innerWidth >= 768) {
+          pointArr[5][2] = rightPointCybZen + 60;
+          pointArr[5][0] = pointArr[5][2] + 35;
+          pointArr[4][2] = pointArr[5][0];
+          pointArr[4][0] = pointArr[4][2];
+          pointArr[3][2] = pointArr[4][0];
+          pointArr[3][0] = pointArr[3][2] + 35;
+          pointArr[2][2] = pointArr[3][0];
+          pointArr[2][0] = pointArr[2][2] + 110;
+          pointArr[1][2] = pointArr[2][0];
+          pointArr[1][0] = pointArr[1][2] + 35;
+          pointArr[0][2] = pointArr[1][0];
+        } else {
+          pointArr[5][2] = rightPointCybZen + 60;
+          pointArr[5][0] = pointArr[5][2] + 35;
+          pointArr[4][2] = pointArr[5][0];
+          pointArr[4][0] = pointArr[4][2];
+          pointArr[3][2] = pointArr[4][0];
+          pointArr[3][0] = pointArr[3][2] + 35;
+          pointArr[2][2] = pointArr[3][0];
+          pointArr[2][0] = pointArr[2][2] + 110;
+          pointArr[1][2] = pointArr[2][0];
+          pointArr[1][0] = pointArr[1][2] + 35;
+          pointArr[0][2] = pointArr[1][0];
+        }
+        break;
+      default:
+        break;
+    }
 
     return pointArr;
   };
@@ -143,35 +242,56 @@ const Home = () => {
       height: window.innerHeight,
     });
 
-    setPointsCircle2({
-      x: coordsLine2[coordsLine2.length - 1][
-        coordsLine2[coordsLine2.length - 1].length - 2
-      ],
-      y: coordsLine2[coordsLine2.length - 1][
-        coordsLine2[coordsLine2.length - 1].length - 1
-      ],
-    });
-
-    setPointsCircle3({
-      x: coordsLine3[coordsLine3.length - 1][
-        coordsLine3[coordsLine3.length - 1].length - 2
-      ],
-      y: coordsLine3[coordsLine3.length - 1][
-        coordsLine3[coordsLine3.length - 1].length - 1
-      ],
-    });
-
     let _coordsTemp = Tools.copy(coords);
     let _coordsTemp2 = Tools.copy(coordsLine2);
     let _coordsTemp3 = Tools.copy(coordsLine3);
 
     if (window.innerWidth <= 1470) {
-      getSizeCoords1(_coordsTemp);
+      getSizeCoords(
+        _coordsTemp,
+        window.innerWidth,
+        "cyb-zen-title-home",
+        "line-1"
+      );
+      getSizeCoords(
+        _coordsTemp2,
+        window.innerWidth,
+        "cyb-zen-desc-home",
+        "line-2"
+      );
+      getSizeCoords(
+        _coordsTemp3,
+        window.innerWidth,
+        "cyb-zen-title-home",
+        "line-3"
+      );
     }
 
     setPointsCircle1({
-      x: _coordsTemp[_coordsTemp.length - 1][_coordsTemp[_coordsTemp.length - 1].length - 2],
-      y: _coordsTemp[_coordsTemp.length - 1][_coordsTemp[_coordsTemp.length - 1].length - 1],
+      x: _coordsTemp[_coordsTemp.length - 1][
+        _coordsTemp[_coordsTemp.length - 1].length - 2
+      ],
+      y: _coordsTemp[_coordsTemp.length - 1][
+        _coordsTemp[_coordsTemp.length - 1].length - 1
+      ],
+    });
+
+    setPointsCircle2({
+      x: _coordsTemp2[_coordsTemp2.length - 1][
+        _coordsTemp2[_coordsTemp2.length - 1].length - 2
+      ],
+      y: _coordsTemp2[_coordsTemp2.length - 1][
+        _coordsTemp2[_coordsTemp2.length - 1].length - 1
+      ],
+    });
+
+    setPointsCircle3({
+      x: _coordsTemp3[_coordsTemp3.length - 1][
+        _coordsTemp3[_coordsTemp3.length - 1].length - 2
+      ],
+      y: _coordsTemp3[_coordsTemp3.length - 1][
+        _coordsTemp3[_coordsTemp3.length - 1].length - 1
+      ],
     });
 
     setPointsLine1(_coordsTemp);
@@ -204,30 +324,29 @@ const Home = () => {
           ],
         });
 
-        setPointsCircle2({
-          x: _coordsLine2[_coordsLine2.length - 1][
-            _coordsLine2[_coordsLine2.length - 1].length - 2
-          ],
-          y: _coordsLine2[_coordsLine2.length - 1][
-            _coordsLine2[_coordsLine2.length - 1].length - 1
-          ],
-        });
-
-        setPointsCircle3({
-          x: _coordsLine3[_coordsLine3.length - 1][
-            _coordsLine3[_coordsLine3.length - 1].length - 2
-          ],
-          y: _coordsLine3[_coordsLine3.length - 1][
-            _coordsLine3[_coordsLine3.length - 1].length - 1
-          ],
-        });
-
         let _coordsTemp11 = Tools.copy(coords2);
         let _coordsTemp22 = Tools.copy(_coordsLine2);
         let _coordsTemp33 = Tools.copy(_coordsLine3);
 
         if (event.target.innerWidth <= 1470) {
-          getSizeCoords1(_coordsTemp11);
+          getSizeCoords(
+            _coordsTemp11,
+            event.target.innerWidth,
+            "cyb-zen-title-home",
+            "line-1"
+          );
+          getSizeCoords(
+            _coordsTemp22,
+            event.target.innerWidth,
+            "cyb-zen-desc-home",
+            "line-2"
+          );
+          getSizeCoords(
+            _coordsTemp33,
+            event.target.innerWidth,
+            "cyb-zen-title-home",
+            "line-3"
+          );
         }
 
         setPointsCircle1({
@@ -236,6 +355,24 @@ const Home = () => {
           ],
           y: _coordsTemp11[_coordsTemp11.length - 1][
             _coordsTemp11[_coordsTemp11.length - 1].length - 1
+          ],
+        });
+
+        setPointsCircle2({
+          x: _coordsTemp22[_coordsTemp22.length - 1][
+            _coordsTemp22[_coordsTemp22.length - 1].length - 2
+          ],
+          y: _coordsTemp22[_coordsTemp22.length - 1][
+            _coordsTemp22[_coordsTemp22.length - 1].length - 1
+          ],
+        });
+
+        setPointsCircle3({
+          x: _coordsTemp33[_coordsTemp33.length - 1][
+            _coordsTemp33[_coordsTemp33.length - 1].length - 2
+          ],
+          y: _coordsTemp33[_coordsTemp33.length - 1][
+            _coordsTemp33[_coordsTemp33.length - 1].length - 1
           ],
         });
 
@@ -269,21 +406,12 @@ const Home = () => {
           ) : (
             <Layer>
               {Tools.drawLine(pointsLine1)}
-              {isForm ? (
-                <Circle
-                  x={pointsCircle1.x}
-                  y={pointsCircle1.y}
-                  radius={5}
-                  fill="#ffffff"
-                />
-              ) : (
-                <Circle
-                  x={pointsCircle1.x}
-                  y={pointsCircle1.y}
-                  radius={5}
-                  fill="#ffffff"
-                />
-              )}
+              <Circle
+                x={pointsCircle1.x}
+                y={pointsCircle1.y}
+                radius={5}
+                fill="#ffffff"
+              />
             </Layer>
           )}
           {isBlackBack === "black" ? (
@@ -350,7 +478,7 @@ const Home = () => {
       </DivHomeLineBoxSC>
       <DivWrapSC>
         <DivContainerSC>
-          <DivHomeContentRowsSC>
+          {/* <DivHomeContentRowsSC>
             <DivTextBoxtSC>
               <TitleHomeBoxSC isBlackBack={isBlackBack}>
                 CYBERZEN LABS
@@ -368,7 +496,7 @@ const Home = () => {
                 </DescHomeBoxSC>
               </DivDescBoxtSC>
             </DescHomeBoxColumnsSC>
-          </DivHomeContentRowsSC>
+          </DivHomeContentRowsSC> */}
 
           <DivHomeContentSC>
             <DivTextBoxtSC>
@@ -385,13 +513,13 @@ const Home = () => {
                 <SloganBoxSC>The future is now</SloganBoxSC>
               </DivTitleBoxtSC>
               <DivDescBoxtSC>
-                <DescHomeBoxSC isBlackBack={isBlackBack}>
+                <DescHomeBoxSC id="cyb-zen-desc-home" isBlackBack={isBlackBack}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
                   quam eu amet massa viverra.
                 </DescHomeBoxSC>
               </DivDescBoxtSC>
             </DivTextBoxtSC>{" "}
-            {isBlackBack === "black" ? <GifBuddhaHomeSC /> : null}
+            {/* {isBlackBack === "black" ? <GifBuddhaHomeSC /> : null} */}
           </DivHomeContentSC>
         </DivContainerSC>
       </DivWrapSC>

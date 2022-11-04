@@ -9,7 +9,7 @@ export const DivHomeContentSC = styled.div`
   align-items: center;
   height: 100%;
   @media (max-width: 768px) {
-    display: none;
+    grid-template-columns: 100%;
   }
 `;
 
@@ -19,6 +19,9 @@ export const DivTextBoxtSC = styled.div`
   grid-template-rows: max-content max-content;
   row-gap: 80px;
   margin-bottom: 100px;
+  @media (max-width: 1024px) {
+    margin-bottom: 0px;
+  }
   @media (max-width: 768px) {
     row-gap: 0px;
     margin-bottom: 0px;
@@ -53,16 +56,16 @@ export const TitleHomeBoxSC = styled.h1`
   @media (max-width: 1700px) {
     font-size: 60px;
   }
-  @media (max-width: 1130px) {
+  @media (max-width: 1024px) {
     font-size: 52px;
   }
-  @media (max-width: 1000px) {
+  /* @media (max-width: 1000px) {
     font-size: 44px;
   }
   @media (max-width: 600px) {
     justify-self: center;
     font-size: 28px;
-  }
+  } */
 `;
 
 export const SloganBoxSC = styled.h1`
