@@ -303,14 +303,14 @@ _pointsLine3[0][3] = 500
           }
           if(window.innerHeight<720){
             var _pointsLine2 = PointsLine2
-            _pointsLine2[0]=  [4000, 710, 1750, 710]
-            _pointsLine2[1]=  [1750, 710, 1550, 800]
-            _pointsLine2[2]= [1550, 800, 1150, 800]
-            _pointsLine2[3]=   [1030, 850, 850, 850]
-            _pointsLine2[4]=   [1150, 800, 1030, 850]
+            _pointsLine2[0]=  [4000, 750, 1750, 750]
+            _pointsLine2[1]=  [1750, 750, 1550, 840]
+            _pointsLine2[2]= [1550, 840, 1150, 840]
+            _pointsLine2[3]=   [1030, 890, 850, 890]
+            _pointsLine2[4]=   [1150, 840, 1030, 890]
             _pointsLine2[5]=   [0,0,0,0]
             _pointsLine2[6]=   [0,0,0,0]
-            _pointsLine2[7]= [850, 850, 710, 810]
+            _pointsLine2[7]= [850, 890, 710, 850]
       
           }
           
