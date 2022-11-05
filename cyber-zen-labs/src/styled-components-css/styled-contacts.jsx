@@ -7,6 +7,8 @@ export const DivColumnsContentContacts = styled.div`
   height: fit-content;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-self: center;
+// border: 1px solid red;
   @media (max-width: 768px) {
     display: none;
   }
@@ -47,11 +49,13 @@ export const DivLeftPenalSC = styled.div`
   width: 90%;
   height: 100%;
   max-width: 709px;
+   // border: 1px solid red;
   display: grid;
-  grid-template-rows: 120px 183px 84px 84px;
+  grid-template-rows: 20px 183px 84px 84px;
   @media (max-width: 1000px) {
+    padding-top: 100px;
     width: 100%;
-    grid-template-rows: 120px 83px 44px 44px;
+    grid-template-rows: 20px 83px 44px 44px;
   }
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -179,11 +183,12 @@ export const DivBoxTextWriteToUsSC = styled.div`
   height: 100%;
   display: grid;
   align-items: start;
-  padding-top: 100px;
+ //padding-top: 100px;
   min-width: 500px;
   @media (max-width: 1000px) {
     width: 100%;
     min-width: 0px;
+ 
   }
   @media (max-width: 705px) {
     min-width: 305px;
