@@ -82,7 +82,7 @@ const PointsLine2 = [
 // ];
 
 
-const PointsLine3 = [[100,  420, 1800, 420]];
+const PointsLine3 = [[100,  430, 1800, 430]];
 
 const Team = () => {
   
@@ -152,7 +152,14 @@ useEffect(() => {
 
 
 const processCoords = () => {
-  if(window.innerHeight<873){
+  if(window.innerHeight>933){
+    var _pointsLine3 = PointsLine3
+    _pointsLine3[0][1] = 420
+    _pointsLine3[0][3] = 420
+    
+
+  }
+  if(window.innerHeight<933){
     var _pointsLine3 = PointsLine3
     _pointsLine3[0][1] = 470
     _pointsLine3[0][3] = 470
@@ -165,6 +172,19 @@ const processCoords = () => {
 _pointsLine3[0][3] = 500
     
 
+  }
+  if(window.innerWidth>1100){
+    var _pointsLine2 = PointsLine2
+   
+    _pointsLine2[0]=   [0, 650, 170, 650]
+      _pointsLine2[1]=   [170, 650, 280, 750]
+      _pointsLine2[2]=  [280, 750, 850, 750]
+      _pointsLine2[3]=   [850, 750, 930, 800]
+      _pointsLine2[4]=    [930, 800, 1250, 800]
+      _pointsLine2[5]=   [1250, 800, 1330, 750]
+      _pointsLine2[6]=   [1330, 750, 1550, 750]
+      _pointsLine2[7]= [1550, 750, 1630, 800]
+    
   }
   if(window.innerWidth<1100){
     var _pointsLine2 = PointsLine2
@@ -191,6 +211,18 @@ _pointsLine3[0][3] = 500
       _pointsLine2[7]= [850, 900, 710, 860]
   }
  
+  if(window.innerWidth>1500){
+    var _pointsLine1 = PointsLine1
+    _pointsLine1[0]= [4000, 370, 1050, 370]
+    _pointsLine1[1]= [980, 320, 1050, 370]
+    _pointsLine1[2]= [550, 320, 980, 320]
+    _pointsLine1[3]= [420, 210, 550, 320]
+    _pointsLine1[4]= [420, 210, 420, 130]
+    _pointsLine1[5]= [420, 130, 370, 110]
+      
+   
+
+  }
     if(window.innerWidth<1500){
       var _pointsLine1 = PointsLine1
       _pointsLine1[0]= [0, 200, 120, 200]
@@ -259,19 +291,39 @@ _pointsLine3[0][3] = 500
                 y: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 1]
             }
         )
-        if(window.innerHeight<873){
+        if(window.innerHeight>933){
+          var _pointsLine3 = PointsLine3
+          _pointsLine3[0][1] = 420
+          _pointsLine3[0][3] = 420
+          
+      
+        }
+        if(window.innerHeight<933){
           var _pointsLine3 = PointsLine3
           _pointsLine3[0][1] = 470
-    _pointsLine3[0][3] = 470
+          _pointsLine3[0][3] = 470
           
-  
+      
         }
         if(window.innerHeight<640){
           var _pointsLine3 = PointsLine3
           _pointsLine3[0][1] = 500
-    _pointsLine3[0][3] = 500
+      _pointsLine3[0][3] = 500
           
-  
+      
+        }
+        if(window.innerWidth>1100){
+          var _pointsLine2 = PointsLine2
+         
+          _pointsLine2[0]=   [0, 650, 170, 650]
+            _pointsLine2[1]=   [170, 650, 280, 750]
+            _pointsLine2[2]=  [280, 750, 850, 750]
+            _pointsLine2[3]=   [850, 750, 930, 800]
+            _pointsLine2[4]=    [930, 800, 1250, 800]
+            _pointsLine2[5]=   [1250, 800, 1330, 750]
+            _pointsLine2[6]=   [1330, 750, 1550, 750]
+            _pointsLine2[7]= [1550, 750, 1630, 800]
+          
         }
         
         if(window.innerWidth<1100){
@@ -286,6 +338,19 @@ _pointsLine3[0][3] = 500
             _pointsLine2[6]=   [0,0,0,0]
             _pointsLine2[7]= [850, 800, 710, 760]
         }
+        
+  if(window.innerWidth>1500){
+    var _pointsLine1 = PointsLine1
+    _pointsLine1[0]= [4000, 370, 1050, 370]
+    _pointsLine1[1]= [980, 320, 1050, 370]
+    _pointsLine1[2]= [550, 320, 980, 320]
+    _pointsLine1[3]= [420, 210, 550, 320]
+    _pointsLine1[4]= [420, 210, 420, 130]
+    _pointsLine1[5]= [420, 130, 370, 110]
+      
+   
+
+  }
        
           if(window.innerWidth<1500){
             var _pointsLine1 = PointsLine1
@@ -313,7 +378,7 @@ _pointsLine3[0][3] = 500
             _pointsLine2[7]= [850, 890, 710, 850]
       
           }
-          
+         
         setPointsLine1(coords2)
         setPointsLine2(_coordsLine2)
         setPointsLine3(_coordsLine3)

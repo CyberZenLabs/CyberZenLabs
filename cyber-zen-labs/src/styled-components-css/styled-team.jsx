@@ -25,6 +25,7 @@ export const DivMainRowsSC = styled.div`
   }
 `;
 export const DivLineAboutTeamSC=styled.div`
+
  display: grid;
   height: 100%;
   //top: 80px;
