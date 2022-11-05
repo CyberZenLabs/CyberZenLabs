@@ -135,7 +135,7 @@ export const DivBoxColumnsPagesSC = styled.div`
   grid-template-columns: max-content max-content max-content max-content;
   column-gap: 20px;
   @media(max-width:480px){column-gap: 10px;}
-  @media(max-width:375px){column-gap: 4px;}
+  @media(max-width:380px){column-gap: 7px;}
 `;
 
 export const DivPageSC = styled.div`

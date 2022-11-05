@@ -51,7 +51,7 @@ const AboutTeamDeveloperCarousel = ({indexSelectedButton}) => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 1601 },
-      items: 7,
+      items: 6,
       slidesToSlide: 0,
       
     },
