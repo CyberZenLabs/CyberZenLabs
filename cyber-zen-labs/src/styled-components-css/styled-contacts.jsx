@@ -25,14 +25,17 @@ export const DivLineContactsSC=styled.div`
 `;
 export const DivRowsContentContacts = styled.div`
   display: none;
+ // border: 1px solid red;
   @media (max-width: 768px) {
     display: grid;
     width: 100%;
-    height: fit-content;
+   // height: fit-content;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
+    max-height:850px;
   }
   @media (max-width: 480px) {
+     max-height:400px;
     grid-template-rows: 1fr 2fr;
   }
   @media (max-width: 360px) {
@@ -72,12 +75,12 @@ export const DivRightPenalSC = styled.div`
   height: 100%;
   display: grid;
   justify-items: end;
-  
+  //border: 1px solid red;
   @media (max-width: 768px) {
-    grid-template-rows: 1fr 1fr 1fr;
+    //grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
     height: 70%;
-    align-self: center;
+    //align-self: center;
   }
 `;
 
@@ -190,6 +193,7 @@ export const DivBoxTextWriteToUsSC = styled.div`
   }
   @media (max-width: 480px) {
     justify-content: center;
+    padding-top: 0px;
   }
 `;
 export const DivTextWriteToUsSC = styled.div`
@@ -212,7 +216,7 @@ export const DivTextWriteToUsSC = styled.div`
 
   text-shadow: 1px 1px 20px #8b22c3;
   @media (max-width: 1000px) {
-    font-size: 30px;
+    font-size: 35px;
     line-height: 38px;
     height: 38px;
   }
@@ -252,7 +256,7 @@ export const DivTextTelephoneSC = styled.div`
   align-content: end;
   //border: 1px solid red;
   @media (max-width: 1000px) {
-    font-size: 16px;
+    font-size: 20px;
   }
   @media (max-width: 768px) {
     font-size: 24px;
@@ -273,7 +277,7 @@ export const DivNumTelephoneSC = styled.div`
   display: grid;
   align-content: end;
   @media (max-width: 1000px) {
-    font-size: 16px;
+    font-size: 20px;
   }
   @media (max-width: 768px) {
     font-size: 24px;
@@ -306,7 +310,7 @@ export const DivNumTelegramSC = styled.div`
   display: grid;
   align-content: end;
   @media (max-width: 1000px) {
-    font-size: 16px;
+    font-size: 20px;
   }
   @media (max-width: 768px) {
     font-size: 24px;
@@ -328,7 +332,7 @@ export const DivTextTelegramSC = styled.div`
   align-content: end;
   //border: 1px solid red;
   @media (max-width: 1000px) {
-    font-size: 16px;
+    font-size:20px;
   }
   @media (max-width: 768px) {
     font-size: 24px;
@@ -351,12 +355,12 @@ export const DivColumnsemailSC = styled.div`
 `;
 
 export const DivDecLineSC = styled.div`
-  max-width: 487px;
+  max-width: 497px;
   width: 100%;
   height: 4px;
   background: var(--blue-pink);
   @media (max-width: 1000px) {
-    max-width: 229px;
+    max-width: 269px;
     height: 2px;
   }
   @media (max-width: 768px) {
