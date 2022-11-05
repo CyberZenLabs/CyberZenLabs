@@ -178,18 +178,18 @@ _pointsLine3[0][3] = 500
       _pointsLine2[6]=   [0,0,0,0]
       _pointsLine2[7]= [850, 800, 710, 760]
   }
-  if(window.innerHeight<840){
-    var _pointsLine2 = PointsLine2
+  // if(window.innerHeight<840){
+  //   var _pointsLine2 = PointsLine2
    
-    _pointsLine2[0]=  [4000, 760, 1750, 760]
-      _pointsLine2[1]=  [1750, 760, 1550, 850]
-      _pointsLine2[2]= [1550, 850, 1150, 850]
-      _pointsLine2[3]=   [1030, 900, 850, 900]
-      _pointsLine2[4]=   [1150, 850, 1030, 900]
-      _pointsLine2[5]=   [0,0,0,0]
-      _pointsLine2[6]=   [0,0,0,0]
-      _pointsLine2[7]= [850, 900, 710, 860]
-  }
+  //   _pointsLine2[0]=  [4000, 760, 1750, 760]
+  //     _pointsLine2[1]=  [1750, 760, 1550, 850]
+  //     _pointsLine2[2]= [1550, 850, 1150, 850]
+  //     _pointsLine2[3]=   [1030, 900, 850, 900]
+  //     _pointsLine2[4]=   [1150, 850, 1030, 900]
+  //     _pointsLine2[5]=   [0,0,0,0]
+  //     _pointsLine2[6]=   [0,0,0,0]
+  //     _pointsLine2[7]= [850, 900, 710, 860]
+  // }
  
     if(window.innerWidth<1500){
       var _pointsLine1 = PointsLine1
@@ -301,18 +301,18 @@ _pointsLine3[0][3] = 500
             
     
           }
-          if(window.innerHeight<540){
-            var _pointsLine2 = PointsLine2
+          // if(window.innerHeight<540){
+          //   var _pointsLine2 = PointsLine2
            
-            _pointsLine2[0]=  [4000, 960, 1750, 960]
-              _pointsLine2[1]=  [1750, 960, 1550, 1050]
-              _pointsLine2[2]= [1550, 1050, 1150, 1050]
-              _pointsLine2[3]=   [1030, 1100, 850, 1100]
-              _pointsLine2[4]=   [1150, 1050, 1030, 1100]
-              _pointsLine2[5]=   [0,0,0,0]
-              _pointsLine2[6]=   [0,0,0,0]
-              _pointsLine2[7]= [850, 1100, 710, 1160]
-          }
+          //   _pointsLine2[0]=  [4000, 960, 1750, 960]
+          //     _pointsLine2[1]=  [1750, 960, 1550, 1050]
+          //     _pointsLine2[2]= [1550, 1050, 1150, 1050]
+          //     _pointsLine2[3]=   [1030, 1100, 850, 1100]
+          //     _pointsLine2[4]=   [1150, 1050, 1030, 1100]
+          //     _pointsLine2[5]=   [0,0,0,0]
+          //     _pointsLine2[6]=   [0,0,0,0]
+          //     _pointsLine2[7]= [850, 1100, 710, 1160]
+          // }
           
         setPointsLine1(coords2)
         setPointsLine2(_coordsLine2)

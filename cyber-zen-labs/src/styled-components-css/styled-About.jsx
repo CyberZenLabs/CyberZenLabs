@@ -16,7 +16,16 @@ export const GridContentSC = styled.div`
   grid-row-gap: 45px;
 }
 @media (max-width:480px) {
-  grid-row-gap: 40px;
+  grid-row-gap: 30px;
+}
+@media (max-width:380px) {
+  grid-row-gap: 30px;
+}
+@media (max-height:480px) {
+  grid-row-gap: 30px;
+}
+@media (max-height:380px) {
+  grid-row-gap: 30px;
 }
   `;
 

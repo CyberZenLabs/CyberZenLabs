@@ -245,7 +245,7 @@ const About = () => {
 
     return (
         <>
-            <DivLineAboutSC >
+            <DivLineAboutSC  top={window.innerHeight < 600 ? 40 : null} >
                 <Stage width={size.width} height={size.height}>
                     <Layer>
                         {Tools.drawLine(pointsLine1)}
