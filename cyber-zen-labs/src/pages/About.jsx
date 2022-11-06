@@ -207,8 +207,8 @@ const About = () => {
                 _coordsTemp1[5][0] = _coordsTemp1[5][0] + 20
                 _coordsTemp1[5][2] = _coordsTemp1[5][2] + 27
                 setPointsCircle1({
-                    x: coords[coords.length - 1][coords[coords.length - 1].length - 2] + 27,
-                    y: coords[coords.length - 1][coords[coords.length - 1].length - 1]
+                    x: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2] + 27,
+                    y: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1]
                 })
                 _coordsTemp22[1][2] = _coordsTemp22[1][2] - 10
                 _coordsTemp22[2][0] = _coordsTemp22[2][0] - 10
@@ -219,8 +219,8 @@ const About = () => {
                 _coordsTemp22[5][2] = _coordsTemp22[5][2] - 27
                 setPointsCircle2(
                     {
-                        x: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 2] - 27,
-                        y: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 1]
+                        x: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 2] - 27,
+                        y: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 1]
                     }
                 )
             }
@@ -245,7 +245,7 @@ const About = () => {
 
     return (
         <>
-            <DivLineAboutSC top={window.innerWidth > 480 ? 80 : null}  >
+            <DivLineAboutSC  top={window.innerHeight < 600 ? 40 : null} >
                 <Stage width={size.width} height={size.height}>
                     <Layer>
                         {Tools.drawLine(pointsLine1)}

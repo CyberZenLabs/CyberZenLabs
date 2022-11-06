@@ -25,10 +25,14 @@ export const DivMainRowsSC = styled.div`
   }
 `;
 export const DivLineAboutTeamSC=styled.div`
+
  display: grid;
   height: 100%;
   //top: 80px;
   //bottom: 0;
+  @media (max-width:660px) {
+    min-height: 923px;
+  }
   min-height: 923px;
   justify-items: center;
   align-items: center;
@@ -73,6 +77,9 @@ text-shadow: 0px 4px 20px #D516FF;
   @media (max-width: 560px) {
     font-size: 24px;
   }
+  @media (max-height: 480px) {
+    font-size: 20px;
+  }
   @media (max-width: 480px) {
     font-size: 20px;
   }
@@ -112,6 +119,10 @@ export const DivTextTeamSC = styled.div`
   @media (max-width: 480px) {
     font-size: 20px;
   }
+  @media (max-height: 480px) {
+    font-size: 20px;
+    line-height: 95px;
+  }
   @media (max-width: 360px) {
     font-size: 16px;
   }
@@ -122,7 +133,10 @@ export const DivBoxColumnsPagesSC = styled.div`
   max-width: 648px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1.4fr 1.6fr 1fr;
+  grid-template-columns: max-content max-content max-content max-content;
+  column-gap: 20px;
+  @media(max-width:480px){column-gap: 10px;}
+  @media(max-width:380px){column-gap: 7px;}
 `;
 
 export const DivPageSC = styled.div`
@@ -132,23 +146,31 @@ export const DivPageSC = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
-  line-height: 38px;
+  line-height: 65px;
   /* identical to box height */
   letter-spacing: 0.05em;
   text-shadow: ${(p) => (p.isActive ? "6px 5px 5px #a557e5" : "#FFF")};
   //border: 1px solid red;
   height: fit-content;
-  @media (max-width: 1000px) {
-    font-size: 24px;
+  @media (max-width: 1100px) {
+    font-size: 26px;
   }
-  @media (max-width: 560px) {
-    font-size: 18px;
+  @media (max-width: 965px) {
+    font-size: 20px;
   }
-  @media (max-width: 480px) {
+  
+  
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media (max-width: 620px) {
     font-size: 14px;
   }
-  @media (max-width: 360px) {
+  @media (max-width: 550px) {
     font-size: 12px;
+  }
+  @media (max-width: 480px) {
+    font-size: 10px;
   }
 `;
 

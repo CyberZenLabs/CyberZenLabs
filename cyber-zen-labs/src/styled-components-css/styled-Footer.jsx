@@ -188,6 +188,6 @@ export const DivContainerFooterCenterTeamSC = styled.div`
     grid-template-columns: 1.5fr 2fr;
   }
   @media (max-width: 480px) {
-  padding-bottom: 20px;
+  padding-bottom: 24px;
   }
 `;

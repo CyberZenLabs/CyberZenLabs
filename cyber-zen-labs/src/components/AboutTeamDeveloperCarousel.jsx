@@ -43,6 +43,7 @@ import Stas from "../images/Stas.png";
 import Sveta from "../images/Sveta.png";
 import Lisa from "../images/Lisa.png";
 import Alina from "../images/Alina.png";
+import NoPhoto from "../images/NoPhoto.png";
 
 const AboutTeamDeveloperCarousel = ({indexSelectedButton}) => {
   console.log("indexSelectedButton",indexSelectedButton);
@@ -50,7 +51,7 @@ const AboutTeamDeveloperCarousel = ({indexSelectedButton}) => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 1601 },
-      items: 7,
+      items: 6,
       slidesToSlide: 0,
       
     },
@@ -130,10 +131,7 @@ const AboutTeamDeveloperCarousel = ({indexSelectedButton}) => {
     sliderClass="carousel-sliderTeamDevLeadership"
   
   >
-  <DivItemSC>
-<DivItemPhotoSC Photo={Sam} indexSelectedButton={indexSelectedButton}/>
-<DivItemNameSC indexSelectedButton={indexSelectedButton}>Sam Singer <p>Founder and Owner</p></DivItemNameSC>
-</DivItemSC>
+  
 <DivItemSC>
 <DivItemPhotoSC Photo={Denis} indexSelectedButton={indexSelectedButton}/>
 <DivItemNameSC indexSelectedButton={indexSelectedButton}>Den Gordin <p>Project-manager</p></DivItemNameSC>
@@ -155,12 +153,7 @@ indexSelectedButton={indexSelectedButton}
     sliderClass="carousel-sliderTeamDev"
   
   >
-  <DivItemSC>
-    <DivItemPhotoSC Photo={Sam}/>
-    {/* <DivItemNameSC>Sam Singer<p>Full Stack Engineer</p><p>Blockchain Architect</p><p>System Security</p> </DivItemNameSC> */}
-    <DivItemNameSC indexSelectedButton={indexSelectedButton}>Sam Singer <p>Founder and Owner</p></DivItemNameSC>
-
-  </DivItemSC>
+  
   <DivItemSC>
     <DivItemPhotoSC Photo={Kirill}/>
     <DivItemNameSC>Kirill Drozdov<p>Full-stack Developer</p></DivItemNameSC>
@@ -216,6 +209,31 @@ indexSelectedButton={indexSelectedButton}
 <DivItemSC>
 <DivItemPhotoSC Photo={Alina} indexSelectedButton={indexSelectedButton}/>
 <DivItemNameSC indexSelectedButton={indexSelectedButton}>Alina Sagaidak<p>Motion Designer</p></DivItemNameSC>
+</DivItemSC>
+  </Carousel>
+        
+       : null}
+       {indexSelectedButton === 3 ? 
+<Carousel indexSelectedButton={indexSelectedButton}
+      
+  containerClass="carousel-containerTeamDevDesign"
+    responsive={responsive}
+    customRightArrow={<CustomRightArrow />}
+    customLeftArrow={<CustomLeftArrow />}
+    itemClass="carousel-itemTeamDevDesign"
+    sliderClass="carousel-sliderTeamDevDesign"
+
+  >
+  <DivItemSC>
+<DivItemPhotoSC Photo={NoPhoto} indexSelectedButton={indexSelectedButton}/>
+<DivItemNameSC indexSelectedButton={indexSelectedButton}>Name<p>lorem ipsum</p></DivItemNameSC>
+</DivItemSC>
+<DivItemSC>
+<DivItemPhotoSC Photo={NoPhoto} indexSelectedButton={indexSelectedButton}/>
+<DivItemNameSC indexSelectedButton={indexSelectedButton}>Name<p>lorem ipsum</p></DivItemNameSC>
+</DivItemSC>
+<DivItemSC>
+
 </DivItemSC>
   </Carousel>
         

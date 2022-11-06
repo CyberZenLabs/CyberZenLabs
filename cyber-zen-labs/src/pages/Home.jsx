@@ -94,7 +94,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    processCoords()
+    processCoords();
   }, []);
 
   useEffect(() => {
@@ -105,6 +105,128 @@ const Home = () => {
       });
     };
   }, [isPage]);
+
+  const getSizeCoords = (pointArr, innerWidth, boxId, lineNumber) => {
+    let rect;
+    let rightPointCybZen;
+
+    if (boxId) {
+      rect = document.getElementById(`${boxId}`).getBoundingClientRect();
+      rightPointCybZen = rect.right;
+    }
+
+    switch (lineNumber) {
+      case "line-1":
+        if (innerWidth >= 1024) {
+          pointArr[1][2] = pointArr[0][2] + 30;
+          pointArr[2][0] = pointArr[0][2] + 30;
+          pointArr[2][2] = rightPointCybZen - 15;
+          pointArr[3][0] = rightPointCybZen - 15;
+          pointArr[3][2] = rightPointCybZen + 27;
+          pointArr[4][0] = rightPointCybZen + 27;
+          pointArr[4][2] = rightPointCybZen + 27;
+          pointArr[5][0] = rightPointCybZen + 27;
+          pointArr[5][2] = rightPointCybZen + 60;
+        } else if (innerWidth >= 768) {
+          pointArr[1][2] = pointArr[0][2] + 30;
+          pointArr[2][0] = pointArr[0][2] + 30;
+          pointArr[2][2] = rightPointCybZen - 15;
+          pointArr[3][0] = rightPointCybZen - 15;
+          pointArr[3][2] = rightPointCybZen + 27;
+          pointArr[4][0] = rightPointCybZen + 27;
+          pointArr[4][2] = rightPointCybZen + 27;
+          pointArr[5][0] = rightPointCybZen + 27;
+          pointArr[5][2] = rightPointCybZen + 60;
+        } else {
+          pointArr[1][2] = pointArr[0][2] + 30;
+          pointArr[2][0] = pointArr[0][2] + 30;
+          pointArr[2][2] = rightPointCybZen - 15;
+          pointArr[3][0] = rightPointCybZen - 15;
+          pointArr[3][2] = rightPointCybZen + 27;
+          pointArr[4][0] = rightPointCybZen + 27;
+          pointArr[4][2] = rightPointCybZen + 27;
+          pointArr[5][0] = rightPointCybZen + 27;
+          pointArr[5][2] = rightPointCybZen + 60;
+        }
+        break;
+      case "line-2":
+        if (innerWidth >= 1024) {
+          pointArr[1][2] = pointArr[0][2] + 30;
+          pointArr[2][0] = pointArr[0][2] + 30;
+          pointArr[2][2] = rightPointCybZen - 15;
+          pointArr[3][0] = rightPointCybZen - 15;
+          pointArr[3][2] = rightPointCybZen + 15;
+          pointArr[4][0] = rightPointCybZen + 15;
+          pointArr[4][2] = rightPointCybZen + 15;
+          pointArr[5][0] = rightPointCybZen + 15;
+          pointArr[5][2] = rightPointCybZen + 48;
+        } else if (innerWidth >= 768) {
+          pointArr[1][2] = pointArr[0][2] + 30;
+          pointArr[2][0] = pointArr[0][2] + 30;
+          pointArr[2][2] = rightPointCybZen - 15;
+          pointArr[3][0] = rightPointCybZen - 15;
+          pointArr[3][2] = rightPointCybZen + 15;
+          pointArr[4][0] = rightPointCybZen + 15;
+          pointArr[4][2] = rightPointCybZen + 15;
+          pointArr[5][0] = rightPointCybZen + 15;
+          pointArr[5][2] = rightPointCybZen + 48;
+        } else {
+          pointArr[1][2] = pointArr[0][2] + 30;
+          pointArr[2][0] = pointArr[0][2] + 30;
+          pointArr[2][2] = rightPointCybZen - 15;
+          pointArr[3][0] = rightPointCybZen - 15;
+          pointArr[3][2] = rightPointCybZen + 15;
+          pointArr[4][0] = rightPointCybZen + 15;
+          pointArr[4][2] = rightPointCybZen + 15;
+          pointArr[5][0] = rightPointCybZen + 15;
+          pointArr[5][2] = rightPointCybZen + 48;
+        }
+        break;
+      case "line-3":
+        if (innerWidth >= 1024) {
+          pointArr[5][2] = rightPointCybZen + 60;
+          pointArr[5][0] = pointArr[5][2] + 35;
+          pointArr[4][2] = pointArr[5][0];
+          pointArr[4][0] = pointArr[4][2];
+          pointArr[3][2] = pointArr[4][0];
+          pointArr[3][0] = pointArr[3][2] + 35;
+          pointArr[2][2] = pointArr[3][0];
+          pointArr[2][0] = pointArr[2][2] + 110;
+          pointArr[1][2] = pointArr[2][0];
+          pointArr[1][0] = pointArr[1][2] + 35;
+          pointArr[0][2] = pointArr[1][0];
+        } else if (innerWidth >= 768) {
+          pointArr[5][2] = rightPointCybZen + 60;
+          pointArr[5][0] = pointArr[5][2] + 35;
+          pointArr[4][2] = pointArr[5][0];
+          pointArr[4][0] = pointArr[4][2];
+          pointArr[3][2] = pointArr[4][0];
+          pointArr[3][0] = pointArr[3][2] + 35;
+          pointArr[2][2] = pointArr[3][0];
+          pointArr[2][0] = pointArr[2][2] + 110;
+          pointArr[1][2] = pointArr[2][0];
+          pointArr[1][0] = pointArr[1][2] + 35;
+          pointArr[0][2] = pointArr[1][0];
+        } else {
+          pointArr[5][2] = rightPointCybZen + 60;
+          pointArr[5][0] = pointArr[5][2] + 35;
+          pointArr[4][2] = pointArr[5][0];
+          pointArr[4][0] = pointArr[4][2];
+          pointArr[3][2] = pointArr[4][0];
+          pointArr[3][0] = pointArr[3][2] + 35;
+          pointArr[2][2] = pointArr[3][0];
+          pointArr[2][0] = pointArr[2][2] + 110;
+          pointArr[1][2] = pointArr[2][0];
+          pointArr[1][0] = pointArr[1][2] + 35;
+          pointArr[0][2] = pointArr[1][0];
+        }
+        break;
+      default:
+        break;
+    }
+
+    return pointArr;
+  };
 
   const processCoords = () => {
     const coords = Tools.getResponseCoords(PointsLine1, {
@@ -120,31 +242,61 @@ const Home = () => {
       height: window.innerHeight,
     });
 
+    let _coordsTemp = Tools.copy(coords);
+    let _coordsTemp2 = Tools.copy(coordsLine2);
+    let _coordsTemp3 = Tools.copy(coordsLine3);
+
+    if (window.innerWidth <= 1470) {
+      getSizeCoords(
+        _coordsTemp,
+        window.innerWidth,
+        "cyb-zen-title-home",
+        "line-1"
+      );
+      getSizeCoords(
+        _coordsTemp2,
+        window.innerWidth,
+        "cyb-zen-desc-home",
+        "line-2"
+      );
+      getSizeCoords(
+        _coordsTemp3,
+        window.innerWidth,
+        "cyb-zen-title-home",
+        "line-3"
+      );
+    }
+
     setPointsCircle1({
-      x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
-      y: coords[coords.length - 1][coords[coords.length - 1].length - 1],
+      x: _coordsTemp[_coordsTemp.length - 1][
+        _coordsTemp[_coordsTemp.length - 1].length - 2
+      ],
+      y: _coordsTemp[_coordsTemp.length - 1][
+        _coordsTemp[_coordsTemp.length - 1].length - 1
+      ],
     });
 
     setPointsCircle2({
-      x: coordsLine2[coordsLine2.length - 1][
-        coordsLine2[coordsLine2.length - 1].length - 2
+      x: _coordsTemp2[_coordsTemp2.length - 1][
+        _coordsTemp2[_coordsTemp2.length - 1].length - 2
       ],
-      y: coordsLine2[coordsLine2.length - 1][
-        coordsLine2[coordsLine2.length - 1].length - 1
+      y: _coordsTemp2[_coordsTemp2.length - 1][
+        _coordsTemp2[_coordsTemp2.length - 1].length - 1
       ],
     });
 
     setPointsCircle3({
-      x: coordsLine3[coordsLine3.length - 1][
-        coordsLine3[coordsLine3.length - 1].length - 2
+      x: _coordsTemp3[_coordsTemp3.length - 1][
+        _coordsTemp3[_coordsTemp3.length - 1].length - 2
       ],
-      y: coordsLine3[coordsLine3.length - 1][
-        coordsLine3[coordsLine3.length - 1].length - 1
+      y: _coordsTemp3[_coordsTemp3.length - 1][
+        _coordsTemp3[_coordsTemp3.length - 1].length - 1
       ],
     });
-    setPointsLine1(coords);
-    setPointsLine2(coordsLine2);
-    setPointsLine3(coordsLine3);
+
+    setPointsLine1(_coordsTemp);
+    setPointsLine2(_coordsTemp2);
+    setPointsLine3(_coordsTemp3);
 
     window.addEventListener(
       "resize",
@@ -162,6 +314,7 @@ const Home = () => {
           width: event.target.innerWidth,
           height: event.target.innerHeight,
         });
+
         setPointsCircle1({
           x: coords2[coords2.length - 1][
             coords2[coords2.length - 1].length - 2
@@ -171,27 +324,63 @@ const Home = () => {
           ],
         });
 
-        setPointsCircle2({
-          x: _coordsLine2[_coordsLine2.length - 1][
-            _coordsLine2[_coordsLine2.length - 1].length - 2
+        let _coordsTemp11 = Tools.copy(coords2);
+        let _coordsTemp22 = Tools.copy(_coordsLine2);
+        let _coordsTemp33 = Tools.copy(_coordsLine3);
+
+        if (event.target.innerWidth <= 1470) {
+          getSizeCoords(
+            _coordsTemp11,
+            event.target.innerWidth,
+            "cyb-zen-title-home",
+            "line-1"
+          );
+          getSizeCoords(
+            _coordsTemp22,
+            event.target.innerWidth,
+            "cyb-zen-desc-home",
+            "line-2"
+          );
+          getSizeCoords(
+            _coordsTemp33,
+            event.target.innerWidth,
+            "cyb-zen-title-home",
+            "line-3"
+          );
+        }
+
+        setPointsCircle1({
+          x: _coordsTemp11[_coordsTemp11.length - 1][
+            _coordsTemp11[_coordsTemp11.length - 1].length - 2
           ],
-          y: _coordsLine2[_coordsLine2.length - 1][
-            _coordsLine2[_coordsLine2.length - 1].length - 1
+          y: _coordsTemp11[_coordsTemp11.length - 1][
+            _coordsTemp11[_coordsTemp11.length - 1].length - 1
+          ],
+        });
+
+        setPointsCircle2({
+          x: _coordsTemp22[_coordsTemp22.length - 1][
+            _coordsTemp22[_coordsTemp22.length - 1].length - 2
+          ],
+          y: _coordsTemp22[_coordsTemp22.length - 1][
+            _coordsTemp22[_coordsTemp22.length - 1].length - 1
           ],
         });
 
         setPointsCircle3({
-          x: _coordsLine3[_coordsLine3.length - 1][
-            _coordsLine3[_coordsLine3.length - 1].length - 2
+          x: _coordsTemp33[_coordsTemp33.length - 1][
+            _coordsTemp33[_coordsTemp33.length - 1].length - 2
           ],
-          y: _coordsLine3[_coordsLine3.length - 1][
-            _coordsLine3[_coordsLine3.length - 1].length - 1
+          y: _coordsTemp33[_coordsTemp33.length - 1][
+            _coordsTemp33[_coordsTemp33.length - 1].length - 1
           ],
         });
-
-        setPointsLine1(coords2);
-        setPointsLine2(_coordsLine2);
-        setPointsLine3(_coordsLine3);
+        if (event.target.innerHeight < 800) {
+        setPointsLine1(_coordsTemp11);
+        setPointsLine2(_coordsTemp22);
+        setPointsLine3(_coordsTemp33);
+        }
+        
         // console.log('><><><><><>', event.target.outerWidth)
         setSize({
           width: event.target.innerWidth,
@@ -209,45 +398,81 @@ const Home = () => {
           {isBlackBack === "black" ? (
             <Layer>
               {Tools.drawLineBlack(pointsLine1)}
-              <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#F61067" />
+              <Circle
+                x={pointsCircle1.x}
+                y={pointsCircle1.y}
+                radius={5}
+                fill="#F61067"
+              />
             </Layer>
           ) : (
             <Layer>
               {Tools.drawLine(pointsLine1)}
-              {isForm ? (
-                <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
-              ) : (
-                <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
-              )}
+              <Circle
+                x={pointsCircle1.x}
+                y={pointsCircle1.y}
+                radius={5}
+                fill="#ffffff"
+              />
             </Layer>
           )}
           {isBlackBack === "black" ? (
             <Layer>
-              {Tools.LineBlack(pointsLine2)}
-              <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="black" />
+              {Tools.drawLineBlack(pointsLine2)}
+              <Circle
+                x={pointsCircle2.x}
+                y={pointsCircle2.y}
+                radius={5}
+                fill="#F61067"
+              />
             </Layer>
           ) : (
             <Layer>
               {Tools.drawLine(pointsLine2)}
               {isForm ? (
-                <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
+                <Circle
+                  x={pointsCircle2.x}
+                  y={pointsCircle2.y}
+                  radius={5}
+                  fill="#ffffff"
+                />
               ) : (
-                <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
+                <Circle
+                  x={pointsCircle2.x}
+                  y={pointsCircle2.y}
+                  radius={5}
+                  fill="#ffffff"
+                />
               )}
             </Layer>
           )}
           {isBlackBack === "black" ? (
             <Layer>
               {Tools.drawLineBlack(pointsLine3)}
-              <Circle x={pointsCircle3.x} y={pointsCircle3.y} radius={5} fill="#F61067" />
+              <Circle
+                x={pointsCircle3.x}
+                y={pointsCircle3.y}
+                radius={5}
+                fill="#F61067"
+              />
             </Layer>
           ) : (
             <Layer>
               {Tools.drawLine(pointsLine3)}
               {isForm ? (
-                <Circle x={pointsCircle3.x} y={pointsCircle3.y} radius={5} fill="#ffffff" />
+                <Circle
+                  x={pointsCircle3.x}
+                  y={pointsCircle3.y}
+                  radius={5}
+                  fill="#ffffff"
+                />
               ) : (
-                <Circle x={pointsCircle3.x} y={pointsCircle3.y} radius={5} fill="#ffffff" />
+                <Circle
+                  x={pointsCircle3.x}
+                  y={pointsCircle3.y}
+                  radius={5}
+                  fill="#ffffff"
+                />
               )}
             </Layer>
           )}
@@ -255,7 +480,7 @@ const Home = () => {
       </DivHomeLineBoxSC>
       <DivWrapSC>
         <DivContainerSC>
-          <DivHomeContentRowsSC>
+          {/* <DivHomeContentRowsSC>
             <DivTextBoxtSC>
               <TitleHomeBoxSC isBlackBack={isBlackBack}>
                 CYBERZEN LABS
@@ -273,12 +498,15 @@ const Home = () => {
                 </DescHomeBoxSC>
               </DivDescBoxtSC>
             </DescHomeBoxColumnsSC>
-          </DivHomeContentRowsSC>
+          </DivHomeContentRowsSC> */}
 
           <DivHomeContentSC>
             <DivTextBoxtSC>
               <DivTitleBoxtSC>
-                <TitleHomeBoxSC isBlackBack={isBlackBack}>
+                <TitleHomeBoxSC
+                  id="cyb-zen-title-home"
+                  isBlackBack={isBlackBack}
+                >
                   CYBERZEN LABS
                   {isBlackBack === "black" ? null : (
                     <DivShadowBoxSC></DivShadowBoxSC>
@@ -287,13 +515,13 @@ const Home = () => {
                 <SloganBoxSC>The future is now</SloganBoxSC>
               </DivTitleBoxtSC>
               <DivDescBoxtSC>
-                <DescHomeBoxSC isBlackBack={isBlackBack}>
+                <DescHomeBoxSC id="cyb-zen-desc-home" isBlackBack={isBlackBack}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
                   quam eu amet massa viverra.
                 </DescHomeBoxSC>
               </DivDescBoxtSC>
             </DivTextBoxtSC>{" "}
-            {isBlackBack === "black" ? <GifBuddhaHomeSC /> : null}
+            {/* {isBlackBack === "black" ? <GifBuddhaHomeSC /> : null} */}
           </DivHomeContentSC>
         </DivContainerSC>
       </DivWrapSC>

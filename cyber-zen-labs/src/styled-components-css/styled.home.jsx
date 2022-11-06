@@ -9,7 +9,7 @@ export const DivHomeContentSC = styled.div`
   align-items: center;
   height: 100%;
   @media (max-width: 768px) {
-    display: none;
+    grid-template-columns: 100%;
   }
 `;
 
@@ -19,6 +19,9 @@ export const DivTextBoxtSC = styled.div`
   grid-template-rows: max-content max-content;
   row-gap: 80px;
   margin-bottom: 100px;
+  @media (max-width: 1024px) {
+    margin-bottom: 0px;
+  }
   @media (max-width: 768px) {
     row-gap: 0px;
     margin-bottom: 0px;
@@ -47,22 +50,22 @@ export const TitleHomeBoxSC = styled.h1`
     isBlackBack === "black" ? "0px 0px 8px #F61067" : "none"};
   position: relative;
   width: max-content;
-  @media (max-width: 1400px) {
+  @media (max-width: 1919px) {
     font-size: 70px;
   }
-  @media (max-width: 1250px) {
+  @media (max-width: 1700px) {
     font-size: 60px;
   }
-  @media (max-width: 1130px) {
+  @media (max-width: 1024px) {
     font-size: 52px;
   }
-  @media (max-width: 1000px) {
+  /* @media (max-width: 1000px) {
     font-size: 44px;
   }
   @media (max-width: 600px) {
     justify-self: center;
     font-size: 28px;
-  }
+  } */
 `;
 
 export const SloganBoxSC = styled.h1`
@@ -71,8 +74,9 @@ export const SloganBoxSC = styled.h1`
   line-height: 45px;
   letter-spacing: 0.05em;
   pointer-events: none;
-  @media (max-width: 1000px) {
-    font-size: 22px;
+  width: max-content;
+  @media (max-width: 1700px) {
+    font-size: 33px;
   }
   @media (max-width: 600px) {
     display: grid;
@@ -84,6 +88,9 @@ export const SloganBoxSC = styled.h1`
 export const DivDescBoxtSC = styled.div`
   width: 85%;
   display: grid;
+  @media (max-width: 1919px) {
+    width: 75%;
+  }
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
@@ -101,8 +108,8 @@ export const DescHomeBoxSC = styled.span`
 
   text-shadow: ${({ isBlackBack }) =>
     isBlackBack === "black" ? "none" : "0px 5px 30px"};
-  @media (max-width: 1000px) {
-    font-size: 26px;
+  @media (max-width: 1700px) {
+    font-size: 33px;
   }
   @media (max-width: 768px) {
     font-size: 20px;
