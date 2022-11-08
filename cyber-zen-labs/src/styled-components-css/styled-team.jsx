@@ -137,6 +137,8 @@ export const DivBoxColumnsPagesSC = styled.div`
   column-gap: 20px;
   @media(max-width:480px){column-gap: 10px;}
   @media(max-width:380px){column-gap: 7px;}
+ 
+
 `;
 
 export const DivPageSC = styled.div`
@@ -171,6 +173,9 @@ export const DivPageSC = styled.div`
   }
   @media (max-width: 480px) {
     font-size: 10px;
+  }
+  @media (max-width: 380px) {
+    font-size: 9px;
   }
 `;
 

@@ -131,7 +131,7 @@ const AboutTeamDeveloperCarousel = ({indexSelectedButton}) => {
     sliderClass="carousel-sliderTeamDevLeadership"
   
   >
-  
+ 
 <DivItemSC>
 <DivItemPhotoSC Photo={Denis} indexSelectedButton={indexSelectedButton}/>
 <DivItemNameSC indexSelectedButton={indexSelectedButton}>Den Gordin <p>Project-manager</p></DivItemNameSC>
@@ -215,13 +215,14 @@ indexSelectedButton={indexSelectedButton}
        : null}
        {indexSelectedButton === 3 ? 
 <Carousel indexSelectedButton={indexSelectedButton}
-      
-  containerClass="carousel-containerTeamDevDesign"
-    responsive={responsive}
-    customRightArrow={<CustomRightArrow />}
-    customLeftArrow={<CustomLeftArrow />}
-    itemClass="carousel-itemTeamDevDesign"
-    sliderClass="carousel-sliderTeamDevDesign"
+           
+  containerClass="carousel-containerTeamDevLeadership"
+  responsive={responsive}
+  customRightArrow={<CustomRightArrow />}
+  customLeftArrow={<CustomLeftArrow />}
+  itemClass="carousel-itemTeamDevLeadership"
+  sliderClass="carousel-sliderTeamDevLeadership"
+    
 
   >
   <DivItemSC>
@@ -231,9 +232,6 @@ indexSelectedButton={indexSelectedButton}
 <DivItemSC>
 <DivItemPhotoSC Photo={NoPhoto} indexSelectedButton={indexSelectedButton}/>
 <DivItemNameSC indexSelectedButton={indexSelectedButton}>Name<p>lorem ipsum</p></DivItemNameSC>
-</DivItemSC>
-<DivItemSC>
-
 </DivItemSC>
   </Carousel>
         
