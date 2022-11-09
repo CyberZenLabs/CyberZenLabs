@@ -478,6 +478,49 @@ const Home = () => {
                         height: event.target.innerHeight,
                     });
                 }
+               else {
+                    // setPointsCircle1({
+                    //     x: coords2[coords2.length - 1][
+                    //     coords2[coords2.length - 1].length - 2
+                    //         ],
+                    //     y: coords2[coords2.length - 1][
+                    //     coords2[coords2.length - 1].length - 1
+                    //         ],
+                    // });
+                    setPointsCircle1({
+                        x: _coordsTemp11[_coordsTemp11.length - 1][
+                        _coordsTemp11[_coordsTemp11.length - 1].length - 2
+                            ],
+                        y: _coordsTemp11[_coordsTemp11.length - 1][
+                        _coordsTemp11[_coordsTemp11.length - 1].length - 1
+                            ],
+                    });
+
+                    setPointsCircle2({
+                        x: _coordsTemp22[_coordsTemp22.length - 1][
+                        _coordsTemp22[_coordsTemp22.length - 1].length - 2
+                            ],
+                        y: _coordsTemp22[_coordsTemp22.length - 1][
+                        _coordsTemp22[_coordsTemp22.length - 1].length - 1
+                            ],
+                    });
+
+                    setPointsCircle3({
+                        x: _coordsTemp33[_coordsTemp33.length - 1][
+                        _coordsTemp33[_coordsTemp33.length - 1].length - 2
+                            ],
+                        y: _coordsTemp33[_coordsTemp33.length - 1][
+                        _coordsTemp33[_coordsTemp33.length - 1].length - 1
+                            ],
+                    });
+                    setPointsLine1(_coordsTemp11);
+                    setPointsLine2(_coordsTemp22);
+                    setPointsLine3(_coordsTemp33);
+                    setSize({
+                        width: event.target.innerWidth,
+                        height: event.target.innerHeight=800,
+                    });
+                }
 
                 // console.log('><><><><><>', event.target.outerWidth)
                 // setSize({
