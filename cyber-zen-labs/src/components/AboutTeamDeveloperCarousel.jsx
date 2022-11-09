@@ -206,10 +206,7 @@ indexSelectedButton={indexSelectedButton}
 <DivItemPhotoSC Photo={Lisa} indexSelectedButton={indexSelectedButton}/>
 <DivItemNameSC indexSelectedButton={indexSelectedButton}>Lisa Raklova<p>UI/UX Designer</p></DivItemNameSC>
 </DivItemSC>
-<DivItemSC>
-<DivItemPhotoSC Photo={Alina} indexSelectedButton={indexSelectedButton}/>
-<DivItemNameSC indexSelectedButton={indexSelectedButton}>Alina Sagaidak<p>Motion Designer</p></DivItemNameSC>
-</DivItemSC>
+
   </Carousel>
         
        : null}
@@ -229,6 +226,7 @@ indexSelectedButton={indexSelectedButton}
 <DivItemPhotoSC Photo={NoPhoto} indexSelectedButton={indexSelectedButton}/>
 <DivItemNameSC indexSelectedButton={indexSelectedButton}>Name<p>lorem ipsum</p></DivItemNameSC>
 </DivItemSC>
+
 <DivItemSC>
 <DivItemPhotoSC Photo={NoPhoto} indexSelectedButton={indexSelectedButton}/>
 <DivItemNameSC indexSelectedButton={indexSelectedButton}>Name<p>lorem ipsum</p></DivItemNameSC>
