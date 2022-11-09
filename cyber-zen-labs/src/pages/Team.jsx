@@ -178,7 +178,7 @@ const processCoords = () => {
       _pointsLine2[4]=    [890, 805, 1250, 805]
       _pointsLine2[5]=   [1250, 805, 1330, 735]
       _pointsLine2[6]=   [1330, 735, 1550, 735]
-      _pointsLine2[7]= [1550, 735, 1630, 830]
+      _pointsLine2[7]= [1550, 735, 1630, 805]
     
   }
   if(window.innerWidth<1100){
@@ -323,7 +323,7 @@ setSize({
       _pointsLine2[4]=    [890, 805, 1250, 805]
       _pointsLine2[5]=   [1250, 805, 1330, 735]
       _pointsLine2[6]=   [1330, 735, 1550, 735]
-      _pointsLine2[7]= [1550, 735, 1630, 830]
+      _pointsLine2[7]= [1550, 735, 1630, 805]
           
         }
         
