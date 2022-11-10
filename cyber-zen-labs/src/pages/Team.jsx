@@ -44,6 +44,7 @@ import { DivRuslanBoxSC } from "../styled-components-css/styled.kirdro";
 import Konva from "konva";
 import { Stage, Layer, Line, Circle } from "react-konva";
 import Tools from "../tools/tools";
+import { CgWindows } from "react-icons/cg";
 
 const PointsLine1 = [
   [4000, 370, 1050, 370],
@@ -63,7 +64,7 @@ const PointsLine1 = [
 // ];
 
 const PointsLine2 = [
-  [0, 650, 170, 650],
+  [0, 850, 170, 850],
   [170, 650, 280, 750],
   [280, 750, 850, 750],
   [850, 750, 930, 800],
@@ -73,12 +74,12 @@ const PointsLine2 = [
   [1550, 750, 1630, 800],
 ];
 // const PointsLine2 = [
-//   [4000, 660, 1750, 660],
-//   [1750, 660, 1550, 750],
-//   [1550, 750, 1150, 750],
-//   [1150, 750, 1030, 800],
-//   [1030, 800, 850, 800],
-//   [850, 800, 710, 760],
+//   [4000, 780, 1750, 780],
+//   [1750, 780, 1500, 820],
+//   [1500, 820, 1150, 820],
+//   [1150, 820, 1000, 840],
+//   [1000, 840, 850, 840],
+//   [850, 840, 710, 800],
 // ];
 
 
@@ -166,50 +167,35 @@ const processCoords = () => {
     
 
   }
-  if(window.innerHeight<640){
-    var _pointsLine3 = PointsLine3
-    _pointsLine3[0][1] = 500
-_pointsLine3[0][3] = 500
-    
-
-  }
+  
   if(window.innerWidth>1100){
     var _pointsLine2 = PointsLine2
    
-    _pointsLine2[0]=   [0, 650, 170, 650]
-      _pointsLine2[1]=   [170, 650, 280, 750]
-      _pointsLine2[2]=  [280, 750, 850, 750]
-      _pointsLine2[3]=   [850, 750, 930, 800]
-      _pointsLine2[4]=    [930, 800, 1250, 800]
-      _pointsLine2[5]=   [1250, 800, 1330, 750]
-      _pointsLine2[6]=   [1330, 750, 1550, 750]
-      _pointsLine2[7]= [1550, 750, 1630, 800]
+    _pointsLine2[0]=   [0, 720, 170, 720]
+      _pointsLine2[1]=   [170, 720, 240, 780]
+      _pointsLine2[2]=  [240, 780, 850, 780]
+      _pointsLine2[3]=   [850, 780, 890, 805]
+      _pointsLine2[4]=    [890, 805, 1250, 805]
+      _pointsLine2[5]=   [1250, 805, 1330, 735]
+      _pointsLine2[6]=   [1330, 735, 1550, 735]
+      _pointsLine2[7]= [1550, 735, 1630, 805]
     
   }
   if(window.innerWidth<1100){
     var _pointsLine2 = PointsLine2
    
-    _pointsLine2[0]=  [4000, 660, 1750, 660]
-      _pointsLine2[1]=  [1750, 660, 1550, 750]
-      _pointsLine2[2]= [1550, 750, 1150, 750]
-      _pointsLine2[3]=   [1030, 800, 850, 800]
-      _pointsLine2[4]=   [1150, 750, 1030, 800]
+    _pointsLine2[0]=  [4000, 780, 1750, 780]
+      _pointsLine2[1]=  [1750, 780, 1500, 820]
+      _pointsLine2[2]= [1500, 820, 1150, 820]
+      _pointsLine2[3]=   [1150, 820, 1000, 840]
+      _pointsLine2[4]=    [1000, 840, 850, 840]
       _pointsLine2[5]=   [0,0,0,0]
       _pointsLine2[6]=   [0,0,0,0]
-      _pointsLine2[7]= [850, 800, 710, 760]
+      _pointsLine2[7]= [850, 840, 710, 800]
+
+      
   }
-  if(window.innerHeight<720){
-    var _pointsLine2 = PointsLine2
-   
-    _pointsLine2[0]=  [4000, 760, 1750, 760]
-      _pointsLine2[1]=  [1750, 760, 1550, 850]
-      _pointsLine2[2]= [1550, 850, 1150, 850]
-      _pointsLine2[3]=   [1030, 900, 850, 900]
-      _pointsLine2[4]=   [1150, 850, 1030, 900]
-      _pointsLine2[5]=   [0,0,0,0]
-      _pointsLine2[6]=   [0,0,0,0]
-      _pointsLine2[7]= [850, 900, 710, 860]
-  }
+  
  
   if(window.innerWidth>1500){
     var _pointsLine1 = PointsLine1
@@ -252,20 +238,49 @@ _pointsLine3[0][3] = 500
       height:window.innerHeight
   });
 
+  if(window.innerHeight>880){
     setPointsCircle1({
-        x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
-        y: coords[coords.length - 1][coords[coords.length - 1].length - 1]
-    })
-    setPointsCircle2(
-        {
-            x: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 2],
-            y: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 1]
-        }
-    )
-    setPointsLine1(coords)
-    setPointsLine2(coordsLine2)
-    setPointsLine3(coordsLine3)
+      x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
+      y: coords[coords.length - 1][coords[coords.length - 1].length - 1]
+  })
+  setPointsCircle2(
+      {
+          x: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 2],
+          y: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 1]
+      }
+  )
+  setPointsLine1(coords)
+  setPointsLine2(coordsLine2)
+  setPointsLine3(coordsLine3)
+  
 
+setSize({
+  width:window.innerWidth,
+  height:window.innerHeight,
+      })
+  }
+  else{
+    setPointsCircle1({
+      x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
+      y: coords[coords.length - 1][coords[coords.length - 1].length - 1]
+  })
+  setPointsCircle2(
+      {
+          x: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 2],
+          y: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 1]
+      }
+  )
+  setPointsLine1(coords)
+  setPointsLine2(coordsLine2)
+  setPointsLine3(coordsLine3)
+  
+
+setSize({
+          width:window.innerWidth,
+          height:880,
+      })
+  }
+   
     window.addEventListener('resize', function(event) {
      
         // console.log('>>><><>>>>><><>', event.target.innerHeight, event.target.outerHeight)
@@ -281,16 +296,8 @@ _pointsLine3[0][3] = 500
           width:window.innerWidth,
           height:window.innerHeight
       });
-        setPointsCircle1({
-            x: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2],
-            y: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1]
-        })
-        setPointsCircle2(
-            {
-                x: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 2],
-                y: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 1]
-            }
-        )
+        
+      
         if(window.innerHeight>933){
           var _pointsLine3 = PointsLine3
           _pointsLine3[0][1] = 420
@@ -305,38 +312,34 @@ _pointsLine3[0][3] = 500
           
       
         }
-        if(window.innerHeight<640){
-          var _pointsLine3 = PointsLine3
-          _pointsLine3[0][1] = 500
-      _pointsLine3[0][3] = 500
-          
       
-        }
         if(window.innerWidth>1100){
           var _pointsLine2 = PointsLine2
          
-          _pointsLine2[0]=   [0, 650, 170, 650]
-            _pointsLine2[1]=   [170, 650, 280, 750]
-            _pointsLine2[2]=  [280, 750, 850, 750]
-            _pointsLine2[3]=   [850, 750, 930, 800]
-            _pointsLine2[4]=    [930, 800, 1250, 800]
-            _pointsLine2[5]=   [1250, 800, 1330, 750]
-            _pointsLine2[6]=   [1330, 750, 1550, 750]
-            _pointsLine2[7]= [1550, 750, 1630, 800]
+          _pointsLine2[0]=   [0, 720, 170, 720]
+      _pointsLine2[1]=   [170, 720, 240, 780]
+      _pointsLine2[2]=  [240, 780, 850, 780]
+      _pointsLine2[3]=   [850, 780, 890, 805]
+      _pointsLine2[4]=    [890, 805, 1250, 805]
+      _pointsLine2[5]=   [1250, 805, 1330, 735]
+      _pointsLine2[6]=   [1330, 735, 1550, 735]
+      _pointsLine2[7]= [1550, 735, 1630, 805]
           
         }
         
         if(window.innerWidth<1100){
           var _pointsLine2 = PointsLine2
          
-          _pointsLine2[0]=  [4000, 660, 1750, 660]
-            _pointsLine2[1]=  [1750, 660, 1550, 750]
-            _pointsLine2[2]= [1550, 750, 1150, 750]
-            _pointsLine2[3]=   [1030, 800, 850, 800]
-            _pointsLine2[4]=   [1150, 750, 1030, 800]
+          _pointsLine2[0]=  [4000, 780, 1750, 780]
+            _pointsLine2[1]=  [1750, 780, 1500, 820]
+            _pointsLine2[2]= [1500, 820, 1150, 820]
+            _pointsLine2[3]=   [1150, 820, 1000, 840]
+            _pointsLine2[4]=    [1000, 840, 850, 840]
             _pointsLine2[5]=   [0,0,0,0]
             _pointsLine2[6]=   [0,0,0,0]
-            _pointsLine2[7]= [850, 800, 710, 760]
+            _pointsLine2[7]= [850, 840, 710, 800]
+      
+            
         }
         
   if(window.innerWidth>1500){
@@ -366,28 +369,52 @@ _pointsLine3[0][3] = 500
             
     
           }
-          if(window.innerHeight<720){
-            var _pointsLine2 = PointsLine2
-            _pointsLine2[0]=  [4000, 750, 1750, 750]
-            _pointsLine2[1]=  [1750, 750, 1550, 840]
-            _pointsLine2[2]= [1550, 840, 1150, 840]
-            _pointsLine2[3]=   [1030, 890, 850, 890]
-            _pointsLine2[4]=   [1150, 840, 1030, 890]
-            _pointsLine2[5]=   [0,0,0,0]
-            _pointsLine2[6]=   [0,0,0,0]
-            _pointsLine2[7]= [850, 890, 710, 850]
-      
+          
+          if(event.target.innerHeight>880) {
+            setPointsCircle1({
+              x: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2],
+              y: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1]
+          })
+          setPointsCircle2(
+              {
+                  x: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 2],
+                  y: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 1]
+              }
+          )
+          setPointsLine1(coords2)
+          setPointsLine2(_coordsLine2)
+          setPointsLine3(_coordsLine3)
+          // console.log('><><><><><>', event.target.outerWidth)
+          setSize({
+              width:event.target.innerWidth,
+              height:event.target.innerHeight
+          })
           }
+          else {
+            setPointsCircle1({
+              x: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2],
+              y: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1]
+          })
+          setPointsCircle2(
+              {
+                  x: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 2],
+                  y: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 1]
+              }
+          )
+          setPointsLine1(coords2)
+          setPointsLine2(_coordsLine2)
+          setPointsLine3(_coordsLine3)
+          // console.log('><><><><><>', event.target.outerWidth)
+          setSize({
+              width:event.target.innerWidth,
+              height:event.target.innerHeight=880,
+          })
+          }
+
          
-        setPointsLine1(coords2)
-        setPointsLine2(_coordsLine2)
-        setPointsLine3(_coordsLine3)
-        // console.log('><><><><><>', event.target.outerWidth)
-        setSize({
-            width:event.target.innerWidth,
-            height:event.target.innerHeight
-        })
+        
     }, true);
+    
 }
   const listContent = [
     {
