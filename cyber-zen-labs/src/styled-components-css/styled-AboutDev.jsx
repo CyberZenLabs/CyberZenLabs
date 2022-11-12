@@ -42,11 +42,11 @@ width: 100%;
 @media (max-width: 1420px) {
   font-size: 30px;
   }
-  @media (max-width: 1260px) {
+  @media (max-width: 1360px) {
   font-size: 24px;
   }
 
-  @media (max-width: 1260px) {
+  @media (max-width: 1360px) {
   font-size: 24px;
   line-height: 35px;
 

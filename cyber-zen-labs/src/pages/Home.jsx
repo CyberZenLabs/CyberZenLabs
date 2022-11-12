@@ -341,7 +341,8 @@ const Home = () => {
         width: window.innerWidth,
         height: window.innerHeight,
       });
-    } else {
+    }
+     else {
       coords = Tools.getResponseCoords(
         PointsLine1,
         {
@@ -495,6 +496,7 @@ const Home = () => {
             width: event.target.innerWidth,
             height: event.target.innerHeight,
           });
+
         }
 
         // console.log('><><><><><>', event.target.outerWidth)

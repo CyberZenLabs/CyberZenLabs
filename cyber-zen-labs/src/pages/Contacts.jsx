@@ -146,8 +146,18 @@ const Contacts = () => {
       900
     );
 
-    
-
+    setPointsCircle1({
+      x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
+      y: coords[coords.length - 1][coords[coords.length - 1].length - 1],
+    });
+    setPointsCircle2({
+      x: coordsLine2[coordsLine2.length - 1][
+        coordsLine2[coordsLine2.length - 1].length - 2
+      ],
+      y: coordsLine2[coordsLine2.length - 1][
+        coordsLine2[coordsLine2.length - 1].length - 1
+      ],
+    });
 
 
     // setPointsLine1(coords)
@@ -156,112 +166,85 @@ const Contacts = () => {
     let _coordsTemp = Tools.copy(coords);
     let _coordsTemp2 = Tools.copy(coordsLine2);
     let _coordsTemp3 = Tools.copy(coordsLine3);
-    
-    if(window.innerHeight>800){
+    if (window.innerWidth <= 768) {
+      _coordsTemp[0][2] = _coordsTemp[0][2] + 110;
+      _coordsTemp[1][0] = _coordsTemp[1][0] + 110;
+      _coordsTemp[1][2] = _coordsTemp[1][2] + 120;
+      _coordsTemp[1][3] = _coordsTemp[1][3] - 10;
+      _coordsTemp[2][0] = _coordsTemp[2][0] + 120;
+      _coordsTemp[2][1] = _coordsTemp[2][1] - 10;
+      _coordsTemp[2][2] = _coordsTemp[2][2] + 260;
+      _coordsTemp[2][3] = _coordsTemp[2][3] - 10;
+      _coordsTemp[3][0] = _coordsTemp[3][0] + 260;
+      _coordsTemp[3][1] = _coordsTemp[3][1] - 10;
+      _coordsTemp[3][2] = _coordsTemp[3][2] + 280;
+      _coordsTemp[3][3] = _coordsTemp[3][3] - 30;
+      _coordsTemp[4][0] = _coordsTemp[4][0] + 280;
+      _coordsTemp[4][1] = _coordsTemp[4][1] - 30;
+      _coordsTemp[4][2] = _coordsTemp[4][2] + 280;
+      _coordsTemp[4][3] = _coordsTemp[4][3] - 50;
+      _coordsTemp[5][0] = _coordsTemp[5][0] + 280;
+      _coordsTemp[5][1] = _coordsTemp[5][1] - 50;
+      _coordsTemp[5][2] = _coordsTemp[5][2] + 290;
+      _coordsTemp[5][3] = _coordsTemp[5][3] - 50;
       setPointsCircle1({
-        x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
-        y: coords[coords.length - 1][coords[coords.length - 1].length - 1],
+        x:
+          coords[coords.length - 1][coords[coords.length - 1].length - 2] + 290,
+        y: coords[coords.length - 1][coords[coords.length - 1].length - 1] - 50,
       });
+      _coordsTemp2 = _coordsTemp3;
       setPointsCircle2({
-        x: coordsLine2[coordsLine2.length - 1][
-          coordsLine2[coordsLine2.length - 1].length - 2
-        ],
-        y: coordsLine2[coordsLine2.length - 1][
-          coordsLine2[coordsLine2.length - 1].length - 1
+        x:
+        coordsLine3[coordsLine3.length - 1][
+          coordsLine3[coordsLine3.length - 1].length - 2
+          ],
+        y: coordsLine3[coordsLine3.length - 1][
+          coordsLine3[coordsLine3.length - 1].length - 1
         ],
       });
-      setSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-    });
-
     }
-    else{
-      if (window.innerWidth <= 768) {
-        _coordsTemp[0][2] = _coordsTemp[0][2] + 110;
-        _coordsTemp[1][0] = _coordsTemp[1][0] + 110;
-        _coordsTemp[1][2] = _coordsTemp[1][2] + 120;
-        _coordsTemp[1][3] = _coordsTemp[1][3] - 10;
-        _coordsTemp[2][0] = _coordsTemp[2][0] + 120;
-        _coordsTemp[2][1] = _coordsTemp[2][1] - 10;
-        _coordsTemp[2][2] = _coordsTemp[2][2] + 260;
-        _coordsTemp[2][3] = _coordsTemp[2][3] - 10;
-        _coordsTemp[3][0] = _coordsTemp[3][0] + 260;
-        _coordsTemp[3][1] = _coordsTemp[3][1] - 10;
-        _coordsTemp[3][2] = _coordsTemp[3][2] + 280;
-        _coordsTemp[3][3] = _coordsTemp[3][3] - 30;
-        _coordsTemp[4][0] = _coordsTemp[4][0] + 280;
-        _coordsTemp[4][1] = _coordsTemp[4][1] - 30;
-        _coordsTemp[4][2] = _coordsTemp[4][2] + 280;
-        _coordsTemp[4][3] = _coordsTemp[4][3] - 50;
-        _coordsTemp[5][0] = _coordsTemp[5][0] + 280;
-        _coordsTemp[5][1] = _coordsTemp[5][1] - 50;
-        _coordsTemp[5][2] = _coordsTemp[5][2] + 290;
-        _coordsTemp[5][3] = _coordsTemp[5][3] - 50;
-        setPointsCircle1({
-          x:
-            coords[coords.length - 1][coords[coords.length - 1].length - 2] + 290,
-          y: coords[coords.length - 1][coords[coords.length - 1].length - 1] - 50,
-        });
-        _coordsTemp2 = _coordsTemp3;
-        setPointsCircle2({
-          x:
-          coordsLine3[coordsLine3.length - 1][
+    if (window.innerWidth <= 675) {
+      _coordsTemp[0][2] = _coordsTemp[0][2] - 30;
+      _coordsTemp[1][0] = _coordsTemp[1][0] - 30;
+      _coordsTemp[1][2] = _coordsTemp[1][2] - 30;
+      _coordsTemp[1][3] = _coordsTemp[1][3] - 10;
+      _coordsTemp[2][0] = _coordsTemp[2][0] - 30;
+      _coordsTemp[2][1] = _coordsTemp[2][1] - 10;
+      _coordsTemp[2][2] = _coordsTemp[2][2] - 60;
+      _coordsTemp[2][3] = _coordsTemp[2][3] - 10;
+      _coordsTemp[3][0] = _coordsTemp[3][0] - 60;
+      _coordsTemp[3][1] = _coordsTemp[3][1] - 10;
+      _coordsTemp[3][2] = _coordsTemp[3][2] - 70;
+      _coordsTemp[3][3] = _coordsTemp[3][3] - 30;
+      _coordsTemp[4][0] = _coordsTemp[4][0] - 70;
+      _coordsTemp[4][1] = _coordsTemp[4][1] - 30;
+      _coordsTemp[4][2] = _coordsTemp[4][2] - 70;
+      _coordsTemp[4][3] = _coordsTemp[4][3] - 50;
+      _coordsTemp[5][0] = _coordsTemp[5][0] - 70;
+      _coordsTemp[5][1] = _coordsTemp[5][1] - 50;
+      _coordsTemp[5][2] = _coordsTemp[5][2] - 70;
+      _coordsTemp[5][3] = _coordsTemp[5][3] - 60;
+      setPointsCircle1({
+        x:
+          coords[coords.length - 1][coords[coords.length - 1].length - 2] + 220,
+        y:
+          coords[coords.length - 1][coords[coords.length - 1].length - 1] - 110,
+      });
+      _coordsTemp2 = _coordsTemp3;
+      setPointsCircle2({
+        x:
+        coordsLine3[coordsLine3.length - 1][
             coordsLine3[coordsLine3.length - 1].length - 2
-            ],
-          y: coordsLine3[coordsLine3.length - 1][
-            coordsLine3[coordsLine3.length - 1].length - 1
           ],
-        });
-      }
-      if (window.innerWidth <= 675) {
-        _coordsTemp[0][2] = _coordsTemp[0][2] - 30;
-        _coordsTemp[1][0] = _coordsTemp[1][0] - 30;
-        _coordsTemp[1][2] = _coordsTemp[1][2] - 30;
-        _coordsTemp[1][3] = _coordsTemp[1][3] - 10;
-        _coordsTemp[2][0] = _coordsTemp[2][0] - 30;
-        _coordsTemp[2][1] = _coordsTemp[2][1] - 10;
-        _coordsTemp[2][2] = _coordsTemp[2][2] - 60;
-        _coordsTemp[2][3] = _coordsTemp[2][3] - 10;
-        _coordsTemp[3][0] = _coordsTemp[3][0] - 60;
-        _coordsTemp[3][1] = _coordsTemp[3][1] - 10;
-        _coordsTemp[3][2] = _coordsTemp[3][2] - 70;
-        _coordsTemp[3][3] = _coordsTemp[3][3] - 30;
-        _coordsTemp[4][0] = _coordsTemp[4][0] - 70;
-        _coordsTemp[4][1] = _coordsTemp[4][1] - 30;
-        _coordsTemp[4][2] = _coordsTemp[4][2] - 70;
-        _coordsTemp[4][3] = _coordsTemp[4][3] - 50;
-        _coordsTemp[5][0] = _coordsTemp[5][0] - 70;
-        _coordsTemp[5][1] = _coordsTemp[5][1] - 50;
-        _coordsTemp[5][2] = _coordsTemp[5][2] - 70;
-        _coordsTemp[5][3] = _coordsTemp[5][3] - 60;
-        setPointsCircle1({
-          x:
-            coords[coords.length - 1][coords[coords.length - 1].length - 2] + 220,
-          y:
-            coords[coords.length - 1][coords[coords.length - 1].length - 1] - 110,
-        });
-        _coordsTemp2 = _coordsTemp3;
-        setPointsCircle2({
-          x:
-          coordsLine3[coordsLine3.length - 1][
-              coordsLine3[coordsLine3.length - 1].length - 2
-            ],
-          y: coordsLine3[coordsLine3.length - 1][
-            coordsLine3[coordsLine3.length - 1].length - 1
-          ],
-        });
-      }
-      console.log(">>><>>><>", coords, _coordsTemp);
-      setPointsLine1(_coordsTemp);
-      setPointsLine2(_coordsTemp2);
-      setPointsLine3(_coordsTemp3);
-   
-      setSize({
-        width: window.innerWidth,
-        height: 600,
-    });
+        y: coordsLine3[coordsLine3.length - 1][
+          coordsLine3[coordsLine3.length - 1].length - 1
+        ],
+      });
     }
+    console.log(">>><>>><>", coords, _coordsTemp);
+    setPointsLine1(_coordsTemp);
+    setPointsLine2(_coordsTemp2);
+    setPointsLine3(_coordsTemp3);
 
     window.addEventListener(
       "resize",
@@ -297,240 +280,120 @@ const Contacts = () => {
           1920,
           900
         );
-        if(this.window.innerHeight>800){
+        setPointsCircle1({
+          x: coords2[coords2.length - 1][
+            coords2[coords2.length - 1].length - 2
+          ],
+          y: coords2[coords2.length - 1][
+            coords2[coords2.length - 1].length - 1
+          ],
+        });
+        setPointsCircle2({
+          x: _coordsLine2[_coordsLine2.length - 1][
+            _coordsLine2[_coordsLine2.length - 1].length - 2
+          ],
+          y: _coordsLine2[_coordsLine2.length - 1][
+            _coordsLine2[_coordsLine2.length - 1].length - 1
+          ],
+        });
+        let _coordsTemp1 = Tools.copy(coords2);
+        let _coordsTemp22 = Tools.copy(_coordsLine2);
+        let _coordsTemp33 = Tools.copy(_coordsLine3);
+        if (event.target.innerWidth <= 768) {
+          _coordsTemp1[0][2] = _coordsTemp1[0][2] + 110;
+          _coordsTemp1[1][0] = _coordsTemp1[1][0] + 110;
+          _coordsTemp1[1][2] = _coordsTemp1[1][2] + 120;
+          _coordsTemp1[1][3] = _coordsTemp1[1][3] - 10;
+          _coordsTemp1[2][0] = _coordsTemp1[2][0] + 120;
+          _coordsTemp1[2][1] = _coordsTemp1[2][1] - 10;
+          _coordsTemp1[2][2] = _coordsTemp1[2][2] + 260;
+          _coordsTemp1[2][3] = _coordsTemp1[2][3] - 10;
+          _coordsTemp1[3][0] = _coordsTemp1[3][0] + 260;
+          _coordsTemp1[3][1] = _coordsTemp1[3][1] - 10;
+          _coordsTemp1[3][2] = _coordsTemp1[3][2] + 280;
+          _coordsTemp1[3][3] = _coordsTemp1[3][3] - 30;
+          _coordsTemp1[4][0] = _coordsTemp1[4][0] + 280;
+          _coordsTemp1[4][1] = _coordsTemp1[4][1] - 30;
+          _coordsTemp1[4][2] = _coordsTemp1[4][2] + 280;
+          _coordsTemp1[4][3] = _coordsTemp1[4][3] - 50;
+          _coordsTemp1[5][0] = _coordsTemp1[5][0] + 280;
+          _coordsTemp1[5][1] = _coordsTemp1[5][1] - 50;
+          _coordsTemp1[5][2] = _coordsTemp1[5][2] + 290;
+          _coordsTemp1[5][3] = _coordsTemp1[5][3] - 50;
           setPointsCircle1({
-            x: coords2[coords2.length - 1][
-              coords2[coords2.length - 1].length - 2
-            ],
-            y: coords2[coords2.length - 1][
-              coords2[coords2.length - 1].length - 1
-            ],
-          });
-          setPointsCircle2({
-            x: _coordsLine2[_coordsLine2.length - 1][
-              _coordsLine2[_coordsLine2.length - 1].length - 2
-            ],
-            y: _coordsLine2[_coordsLine2.length - 1][
-              _coordsLine2[_coordsLine2.length - 1].length - 1
-            ],
-          });
-          let _coordsTemp1 = Tools.copy(coords2);
-          let _coordsTemp22 = Tools.copy(_coordsLine2);
-          let _coordsTemp33 = Tools.copy(_coordsLine3);
-          if (event.target.innerWidth <= 768) {
-            _coordsTemp1[0][2] = _coordsTemp1[0][2] + 110;
-            _coordsTemp1[1][0] = _coordsTemp1[1][0] + 110;
-            _coordsTemp1[1][2] = _coordsTemp1[1][2] + 120;
-            _coordsTemp1[1][3] = _coordsTemp1[1][3] - 10;
-            _coordsTemp1[2][0] = _coordsTemp1[2][0] + 120;
-            _coordsTemp1[2][1] = _coordsTemp1[2][1] - 10;
-            _coordsTemp1[2][2] = _coordsTemp1[2][2] + 260;
-            _coordsTemp1[2][3] = _coordsTemp1[2][3] - 10;
-            _coordsTemp1[3][0] = _coordsTemp1[3][0] + 260;
-            _coordsTemp1[3][1] = _coordsTemp1[3][1] - 10;
-            _coordsTemp1[3][2] = _coordsTemp1[3][2] + 280;
-            _coordsTemp1[3][3] = _coordsTemp1[3][3] - 30;
-            _coordsTemp1[4][0] = _coordsTemp1[4][0] + 280;
-            _coordsTemp1[4][1] = _coordsTemp1[4][1] - 30;
-            _coordsTemp1[4][2] = _coordsTemp1[4][2] + 280;
-            _coordsTemp1[4][3] = _coordsTemp1[4][3] - 50;
-            _coordsTemp1[5][0] = _coordsTemp1[5][0] + 280;
-            _coordsTemp1[5][1] = _coordsTemp1[5][1] - 50;
-            _coordsTemp1[5][2] = _coordsTemp1[5][2] + 290;
-            _coordsTemp1[5][3] = _coordsTemp1[5][3] - 50;
-            setPointsCircle1({
-              x:
-                coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2] +
-                290,
-              y:
-                coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1] -
-                50,
-            });
-            _coordsTemp22 = _coordsTemp33;
-            setPointsCircle2({
-              x:
-              _coordsLine3[_coordsLine3.length - 1][
-                _coordsLine3[_coordsLine3.length - 1].length - 2
-                ],
-              y: _coordsLine3[_coordsLine3.length - 1][
-                _coordsLine3[_coordsLine3.length - 1].length - 1
-              ],
-            });
-          }
-          if (event.target.innerWidth <= 675) {
-            _coordsTemp1[0][2] = _coordsTemp1[0][2] - 30;
-            _coordsTemp1[1][0] = _coordsTemp1[1][0] - 30;
-            _coordsTemp1[1][2] = _coordsTemp1[1][2] - 30;
-            _coordsTemp1[1][3] = _coordsTemp1[1][3] - 10;
-            _coordsTemp1[2][0] = _coordsTemp1[2][0] - 30;
-            _coordsTemp1[2][1] = _coordsTemp1[2][1] - 10;
-            _coordsTemp1[2][2] = _coordsTemp1[2][2] - 60;
-            _coordsTemp1[2][3] = _coordsTemp1[2][3] - 10;
-            _coordsTemp1[3][0] = _coordsTemp1[3][0] - 60;
-            _coordsTemp1[3][1] = _coordsTemp1[3][1] - 10;
-            _coordsTemp1[3][2] = _coordsTemp1[3][2] - 70;
-            _coordsTemp1[3][3] = _coordsTemp1[3][3] - 30;
-            _coordsTemp1[4][0] = _coordsTemp1[4][0] - 70;
-            _coordsTemp1[4][1] = _coordsTemp1[4][1] - 30;
-            _coordsTemp1[4][2] = _coordsTemp1[4][2] - 70;
-            _coordsTemp1[4][3] = _coordsTemp1[4][3] - 50;
-            _coordsTemp1[5][0] = _coordsTemp1[5][0] - 70;
-            _coordsTemp1[5][1] = _coordsTemp1[5][1] - 50;
-            _coordsTemp1[5][2] = _coordsTemp1[5][2] - 70;
-            _coordsTemp1[5][3] = _coordsTemp1[5][3] - 60;
-            setPointsCircle1({
-              x:
+            x:
               coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2] +
-                220,
-              y:
+              290,
+            y:
               coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1] -
-                110,
-            });
-            _coordsTemp22 = _coordsTemp33;
-            setPointsCircle2({
-              x:
-              _coordsLine3[_coordsLine3.length - 1][
-                _coordsLine3[_coordsLine3.length - 1].length - 2
-                ],
-              y: _coordsLine3[_coordsLine3.length - 1][
-                _coordsLine3[_coordsLine3.length - 1].length - 1
-              ],
-            });
-          }
-          console.log(">>><>>><>", coords, _coordsTemp);
-          setPointsLine1(_coordsTemp);
-          setPointsLine2(_coordsTemp2);
-  
-          if (event.target.innerWidth <= 650) {
-            coords2[1][1] = coords2[1][1] + 10;
-            coords2[2][0] = coords2[2][0] + 10;
-          }
-          setPointsLine1(_coordsTemp1);
-          setPointsLine2(_coordsTemp22);
-          // console.log('><><><><><>', event.target.outerWidth)
-          setSize({
-            width: event.target.innerWidth,
-            height: event.target.innerHeight,
+              50,
           });
+          _coordsTemp22 = _coordsTemp33;
+          setPointsCircle2({
+            x:
+            _coordsLine3[_coordsLine3.length - 1][
+              _coordsLine3[_coordsLine3.length - 1].length - 2
+              ],
+            y: _coordsLine3[_coordsLine3.length - 1][
+              _coordsLine3[_coordsLine3.length - 1].length - 1
+            ],
+          });
+        }
+        if (event.target.innerWidth <= 675) {
+          _coordsTemp1[0][2] = _coordsTemp1[0][2] - 30;
+          _coordsTemp1[1][0] = _coordsTemp1[1][0] - 30;
+          _coordsTemp1[1][2] = _coordsTemp1[1][2] - 30;
+          _coordsTemp1[1][3] = _coordsTemp1[1][3] - 10;
+          _coordsTemp1[2][0] = _coordsTemp1[2][0] - 30;
+          _coordsTemp1[2][1] = _coordsTemp1[2][1] - 10;
+          _coordsTemp1[2][2] = _coordsTemp1[2][2] - 60;
+          _coordsTemp1[2][3] = _coordsTemp1[2][3] - 10;
+          _coordsTemp1[3][0] = _coordsTemp1[3][0] - 60;
+          _coordsTemp1[3][1] = _coordsTemp1[3][1] - 10;
+          _coordsTemp1[3][2] = _coordsTemp1[3][2] - 70;
+          _coordsTemp1[3][3] = _coordsTemp1[3][3] - 30;
+          _coordsTemp1[4][0] = _coordsTemp1[4][0] - 70;
+          _coordsTemp1[4][1] = _coordsTemp1[4][1] - 30;
+          _coordsTemp1[4][2] = _coordsTemp1[4][2] - 70;
+          _coordsTemp1[4][3] = _coordsTemp1[4][3] - 50;
+          _coordsTemp1[5][0] = _coordsTemp1[5][0] - 70;
+          _coordsTemp1[5][1] = _coordsTemp1[5][1] - 50;
+          _coordsTemp1[5][2] = _coordsTemp1[5][2] - 70;
+          _coordsTemp1[5][3] = _coordsTemp1[5][3] - 60;
+          setPointsCircle1({
+            x:
+            coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2] +
+              220,
+            y:
+            coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1] -
+              110,
+          });
+          _coordsTemp22 = _coordsTemp33;
+          setPointsCircle2({
+            x:
+            _coordsLine3[_coordsLine3.length - 1][
+              _coordsLine3[_coordsLine3.length - 1].length - 2
+              ],
+            y: _coordsLine3[_coordsLine3.length - 1][
+              _coordsLine3[_coordsLine3.length - 1].length - 1
+            ],
+          });
+        }
+        console.log(">>><>>><>", coords, _coordsTemp);
+        setPointsLine1(_coordsTemp);
+        setPointsLine2(_coordsTemp2);
 
+        if (event.target.innerWidth <= 650) {
+          coords2[1][1] = coords2[1][1] + 10;
+          coords2[2][0] = coords2[2][0] + 10;
         }
-        else{
-          setPointsCircle1({
-            x: coords2[coords2.length - 1][
-              coords2[coords2.length - 1].length - 2
-            ],
-            y: coords2[coords2.length - 1][
-              coords2[coords2.length - 1].length - 1
-            ],
-          });
-          setPointsCircle2({
-            x: _coordsLine2[_coordsLine2.length - 1][
-              _coordsLine2[_coordsLine2.length - 1].length - 2
-            ],
-            y: _coordsLine2[_coordsLine2.length - 1][
-              _coordsLine2[_coordsLine2.length - 1].length - 1
-            ],
-          });
-          let _coordsTemp1 = Tools.copy(coords2);
-          let _coordsTemp22 = Tools.copy(_coordsLine2);
-          let _coordsTemp33 = Tools.copy(_coordsLine3);
-          if (event.target.innerWidth <= 768) {
-            _coordsTemp1[0][2] = _coordsTemp1[0][2] + 110;
-            _coordsTemp1[1][0] = _coordsTemp1[1][0] + 110;
-            _coordsTemp1[1][2] = _coordsTemp1[1][2] + 120;
-            _coordsTemp1[1][3] = _coordsTemp1[1][3] - 10;
-            _coordsTemp1[2][0] = _coordsTemp1[2][0] + 120;
-            _coordsTemp1[2][1] = _coordsTemp1[2][1] - 10;
-            _coordsTemp1[2][2] = _coordsTemp1[2][2] + 260;
-            _coordsTemp1[2][3] = _coordsTemp1[2][3] - 10;
-            _coordsTemp1[3][0] = _coordsTemp1[3][0] + 260;
-            _coordsTemp1[3][1] = _coordsTemp1[3][1] - 10;
-            _coordsTemp1[3][2] = _coordsTemp1[3][2] + 280;
-            _coordsTemp1[3][3] = _coordsTemp1[3][3] - 30;
-            _coordsTemp1[4][0] = _coordsTemp1[4][0] + 280;
-            _coordsTemp1[4][1] = _coordsTemp1[4][1] - 30;
-            _coordsTemp1[4][2] = _coordsTemp1[4][2] + 280;
-            _coordsTemp1[4][3] = _coordsTemp1[4][3] - 50;
-            _coordsTemp1[5][0] = _coordsTemp1[5][0] + 280;
-            _coordsTemp1[5][1] = _coordsTemp1[5][1] - 50;
-            _coordsTemp1[5][2] = _coordsTemp1[5][2] + 290;
-            _coordsTemp1[5][3] = _coordsTemp1[5][3] - 50;
-            setPointsCircle1({
-              x:
-                coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2] +
-                290,
-              y:
-                coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1] -
-                50,
-            });
-            _coordsTemp22 = _coordsTemp33;
-            setPointsCircle2({
-              x:
-              _coordsLine3[_coordsLine3.length - 1][
-                _coordsLine3[_coordsLine3.length - 1].length - 2
-                ],
-              y: _coordsLine3[_coordsLine3.length - 1][
-                _coordsLine3[_coordsLine3.length - 1].length - 1
-              ],
-            });
-          }
-          if (event.target.innerWidth <= 675) {
-            _coordsTemp1[0][2] = _coordsTemp1[0][2] - 30;
-            _coordsTemp1[1][0] = _coordsTemp1[1][0] - 30;
-            _coordsTemp1[1][2] = _coordsTemp1[1][2] - 30;
-            _coordsTemp1[1][3] = _coordsTemp1[1][3] - 10;
-            _coordsTemp1[2][0] = _coordsTemp1[2][0] - 30;
-            _coordsTemp1[2][1] = _coordsTemp1[2][1] - 10;
-            _coordsTemp1[2][2] = _coordsTemp1[2][2] - 60;
-            _coordsTemp1[2][3] = _coordsTemp1[2][3] - 10;
-            _coordsTemp1[3][0] = _coordsTemp1[3][0] - 60;
-            _coordsTemp1[3][1] = _coordsTemp1[3][1] - 10;
-            _coordsTemp1[3][2] = _coordsTemp1[3][2] - 70;
-            _coordsTemp1[3][3] = _coordsTemp1[3][3] - 30;
-            _coordsTemp1[4][0] = _coordsTemp1[4][0] - 70;
-            _coordsTemp1[4][1] = _coordsTemp1[4][1] - 30;
-            _coordsTemp1[4][2] = _coordsTemp1[4][2] - 70;
-            _coordsTemp1[4][3] = _coordsTemp1[4][3] - 50;
-            _coordsTemp1[5][0] = _coordsTemp1[5][0] - 70;
-            _coordsTemp1[5][1] = _coordsTemp1[5][1] - 50;
-            _coordsTemp1[5][2] = _coordsTemp1[5][2] - 70;
-            _coordsTemp1[5][3] = _coordsTemp1[5][3] - 60;
-            setPointsCircle1({
-              x:
-              coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2] +
-                220,
-              y:
-              coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1] -
-                110,
-            });
-            _coordsTemp22 = _coordsTemp33;
-            setPointsCircle2({
-              x:
-              _coordsLine3[_coordsLine3.length - 1][
-                _coordsLine3[_coordsLine3.length - 1].length - 2
-                ],
-              y: _coordsLine3[_coordsLine3.length - 1][
-                _coordsLine3[_coordsLine3.length - 1].length - 1
-              ],
-            });
-          }
-          console.log(">>><>>><>", coords, _coordsTemp);
-          setPointsLine1(_coordsTemp);
-          setPointsLine2(_coordsTemp2);
-  
-          if (event.target.innerWidth <= 650) {
-            coords2[1][1] = coords2[1][1] + 10;
-            coords2[2][0] = coords2[2][0] + 10;
-          }
-          setPointsLine1(_coordsTemp1);
-          setPointsLine2(_coordsTemp22);
-          // console.log('><><><><><>', event.target.outerWidth)
-          setSize({
-            width: event.target.innerWidth,
-            height: event.target.innerHeight=600,
-          });
-        }
-       
+        setPointsLine1(_coordsTemp1);
+        setPointsLine2(_coordsTemp22);
+        // console.log('><><><><><>', event.target.outerWidth)
+        setSize({
+          width: event.target.innerWidth,
+          height: event.target.innerHeight,
+        });
       },
       true
     );
