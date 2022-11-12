@@ -409,6 +409,7 @@ const Home = () => {
         width: window.innerWidth,
         height: 800,
       });
+      console.log('kekekekekekek');
     }
 
     window.addEventListener(
