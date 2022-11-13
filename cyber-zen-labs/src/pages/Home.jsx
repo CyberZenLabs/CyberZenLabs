@@ -139,15 +139,11 @@ const Home = () => {
                     pointArr[5][0] = rightPointCybZen + 27;
                     pointArr[5][2] = rightPointCybZen + 60;
                 } else {
-                    pointArr[1][2] = pointArr[0][2] + 30;
-                    pointArr[2][0] = pointArr[0][2] + 30;
-                    pointArr[2][2] = rightPointCybZen - 15;
-                    pointArr[3][0] = rightPointCybZen - 15;
-                    pointArr[3][2] = rightPointCybZen + 27;
-                    pointArr[4][0] = rightPointCybZen + 27;
-                    pointArr[4][2] = rightPointCybZen + 27;
-                    pointArr[5][0] = rightPointCybZen + 27;
-                    pointArr[5][2] = rightPointCybZen + 60;
+                    // pointArr[0] = [0, 150, 80, 150];
+                    // pointArr[1] = [80, 150, 110, 130];
+                    // pointArr[2] = [110, 130, 180, 130];
+                    // pointArr[3] = [180, 130, 210, 110];
+                    // pointArr[4] = [210, 110, 260, 110];
                 }
                 break;
             case "line-2":
@@ -173,9 +169,6 @@ const Home = () => {
                     pointArr[4][2] = rightPointCybZen + 15;
                     pointArr[5][0] = rightPointCybZen + 15;
                     pointArr[5][2] = rightPointCybZen + 48;
-
-                    // смещение по y
-                    // pointArr[0][1] = pointArr[0][1] + 100;
                 } else {
                     pointArr[1][2] = pointArr[0][2] + 30;
                     pointArr[2][0] = pointArr[0][2] + 30;
@@ -273,41 +266,7 @@ const Home = () => {
             );
         }
 
-        // setPointsCircle1({
-        //     x: _coordsTemp[_coordsTemp.length - 1][
-        //     _coordsTemp[_coordsTemp.length - 1].length - 2
-        //         ],
-        //     y: _coordsTemp[_coordsTemp.length - 1][
-        //     _coordsTemp[_coordsTemp.length - 1].length - 1
-        //         ],
-        // });
-        //
-        // setPointsCircle2({
-        //     x: _coordsTemp2[_coordsTemp2.length - 1][
-        //     _coordsTemp2[_coordsTemp2.length - 1].length - 2
-        //         ],
-        //     y: _coordsTemp2[_coordsTemp2.length - 1][
-        //     _coordsTemp2[_coordsTemp2.length - 1].length - 1
-        //         ],
-        // });
-        //
-        // setPointsCircle3({
-        //     x: _coordsTemp3[_coordsTemp3.length - 1][
-        //     _coordsTemp3[_coordsTemp3.length - 1].length - 2
-        //         ],
-        //     y: _coordsTemp3[_coordsTemp3.length - 1][
-        //     _coordsTemp3[_coordsTemp3.length - 1].length - 1
-        //         ],
-        // });
         if (window.innerHeight > 800) {
-            // setPointsCircle1({
-            //     x: coords2[coords2.length - 1][
-            //     coords2[coords2.length - 1].length - 2
-            //         ],
-            //     y: coords2[coords2.length - 1][
-            //     coords2[coords2.length - 1].length - 1
-            //         ],
-            // });
             setPointsCircle1({
                 x: _coordsTemp[_coordsTemp.length - 1][
                 _coordsTemp[_coordsTemp.length - 1].length - 2
@@ -407,7 +366,7 @@ const Home = () => {
             setPointsLine3(_coordsTemp3);
             setSize({
                 width: window.innerWidth,
-                height: 800,
+                height: (window.innerHeight = 880),
             });
             console.log('kekekekekekek');
         }
@@ -455,14 +414,7 @@ const Home = () => {
                 }
 
                 if (event.target.innerHeight > 800) {
-                    // setPointsCircle1({
-                    //     x: coords2[coords2.length - 1][
-                    //     coords2[coords2.length - 1].length - 2
-                    //         ],
-                    //     y: coords2[coords2.length - 1][
-                    //     coords2[coords2.length - 1].length - 1
-                    //         ],
-                    // });
+
                     setPointsCircle1({
                         x: _coordsTemp11[_coordsTemp11.length - 1][
                         _coordsTemp11[_coordsTemp11.length - 1].length - 2
@@ -494,7 +446,7 @@ const Home = () => {
                     setPointsLine3(_coordsTemp33);
                     setSize({
                         width: event.target.innerWidth,
-                        height: event.target.innerHeight,
+                        height: (event.target.innerHeight = 880),
                     });
                 }
 

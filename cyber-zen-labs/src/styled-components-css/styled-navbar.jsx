@@ -124,7 +124,7 @@ export const DivContainerNavBarHomeSC = styled.div`
   //border:1px solid green;
   display: grid;
   height: 160px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   justify-content: space-between;
   align-items: center;
   background: initial;

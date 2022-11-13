@@ -10,7 +10,7 @@ export const DivHomeContentSC = styled.div`
   height: 100%;
   @media (max-width: 768px) {
     grid-template-columns: 100%;
-    align-items: flex-start;
+    align-items: center;
   }
 `;
 

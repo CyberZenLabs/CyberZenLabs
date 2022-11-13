@@ -82,36 +82,34 @@ const PointsLine2 = [
 //   [850, 840, 710, 800],
 // ];
 
-
-const PointsLine3 = [[100,  430, 1800, 430]];
+const PointsLine3 = [[100, 430, 1800, 430]];
 
 const Team = () => {
-  
   const [indexSelectedButton, getIndexButton] = useState(0);
- 
+
   const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isBlackBack, isPage, isAboutBack } = state;
   const [size, setSize] = useState({
-      width:window.innerWidth,
-      height:window.innerHeight
-  })
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
-  const [pointsLine1, setPointsLine1] = useState(PointsLine1)
+  const [pointsLine1, setPointsLine1] = useState(PointsLine1);
   const [pointsCircle1, setPointsCircle1] = useState({
-      x:0,
-      y:0
-  })
+    x: 0,
+    y: 0,
+  });
 
-  const [pointsLine2, setPointsLine2] = useState(PointsLine2)
+  const [pointsLine2, setPointsLine2] = useState(PointsLine2);
   const [pointsCircle2, setPointsCircle2] = useState({
-      x:0,
-      y:0
-  })
-  const [pointsLine3, setPointsLine3] = useState(PointsLine3)
+    x: 0,
+    y: 0,
+  });
+  const [pointsLine3, setPointsLine3] = useState(PointsLine3);
   const [pointsCircle3, setPointsCircle3] = useState({
-      x:0,
-      y:0
-  })
+    x: 0,
+    y: 0,
+  });
   const [width, setWidth] = useState(null);
   const [height, setHeight] = useState(null);
 
@@ -137,285 +135,260 @@ const Team = () => {
     };
   }, [isAboutBack]);
   useEffect(() => {
+    processCoords();
+  }, []);
 
-
-    processCoords()
-
-}, [])
-
-useEffect(() => {
-    var offsetHeight = document.getElementById('about-line-id').offsetHeight;
-    var offsetWidth = document.getElementById('about-line-id').offsetWidth;
+  useEffect(() => {
+    var offsetHeight = document.getElementById("about-line-id").offsetHeight;
+    var offsetWidth = document.getElementById("about-line-id").offsetWidth;
 
     setWidth(offsetWidth);
     setHeight(offsetHeight);
-}, [window.innerWidth]);
+  }, [window.innerWidth]);
 
-
-const processCoords = () => {
-  if(window.innerHeight>933){
-    var _pointsLine3 = PointsLine3
-    _pointsLine3[0][1] = 420
-    _pointsLine3[0][3] = 420
-    
-
-  }
-  if(window.innerHeight<933){
-    var _pointsLine3 = PointsLine3
-    _pointsLine3[0][1] = 470
-    _pointsLine3[0][3] = 470
-    
-
-  }
-  
-  if(window.innerWidth>1100){
-    var _pointsLine2 = PointsLine2
-   
-    _pointsLine2[0]=   [0, 720, 170, 720]
-      _pointsLine2[1]=   [170, 720, 240, 780]
-      _pointsLine2[2]=  [240, 780, 850, 780]
-      _pointsLine2[3]=   [850, 780, 890, 805]
-      _pointsLine2[4]=    [890, 805, 1250, 805]
-      _pointsLine2[5]=   [1250, 805, 1330, 735]
-      _pointsLine2[6]=   [1330, 735, 1550, 735]
-      _pointsLine2[7]= [1550, 735, 1630, 805]
-    
-  }
-  if(window.innerWidth<1100){
-    var _pointsLine2 = PointsLine2
-   
-    _pointsLine2[0]=  [4000, 780, 1750, 780]
-      _pointsLine2[1]=  [1750, 780, 1500, 820]
-      _pointsLine2[2]= [1500, 820, 1150, 820]
-      _pointsLine2[3]=   [1150, 820, 1000, 840]
-      _pointsLine2[4]=    [1000, 840, 850, 840]
-      _pointsLine2[5]=   [0,0,0,0]
-      _pointsLine2[6]=   [0,0,0,0]
-      _pointsLine2[7]= [850, 840, 710, 800]
-
-      
-  }
-  
- 
-  if(window.innerWidth>1500){
-    var _pointsLine1 = PointsLine1
-    _pointsLine1[0]= [4000, 370, 1050, 370]
-    _pointsLine1[1]= [980, 320, 1050, 370]
-    _pointsLine1[2]= [550, 320, 980, 320]
-    _pointsLine1[3]= [420, 210, 550, 320]
-    _pointsLine1[4]= [420, 210, 420, 130]
-    _pointsLine1[5]= [420, 130, 370, 110]
-      
-   
-
-  }
-    if(window.innerWidth<1500){
-      var _pointsLine1 = PointsLine1
-      _pointsLine1[0]= [0, 200, 120, 200]
-      _pointsLine1[1]= [120, 200, 200, 270]
-      _pointsLine1[2]= [200, 270, 900, 270]
-      _pointsLine1[3]= [900, 270, 1150, 310]
-      _pointsLine1[4]= [1150, 310, 1400, 310]
-      _pointsLine1[5]= [1400, 310, 1600, 390]
-        
-      
-      
-
+  const processCoords = () => {
+    if (window.innerHeight > 933) {
+      var _pointsLine3 = PointsLine3;
+      _pointsLine3[0][1] = 420;
+      _pointsLine3[0][3] = 420;
     }
-    
+    if (window.innerHeight < 933) {
+      var _pointsLine3 = PointsLine3;
+      _pointsLine3[0][1] = 470;
+      _pointsLine3[0][3] = 470;
+    }
 
-    console.log('>>><><>>>>><><>', pointsLine2)
-    const coords = Tools.getResponseCoords(PointsLine1,{
-        width:window.innerWidth,
-        height:window.innerHeight
+    if (window.innerWidth > 1100) {
+      var _pointsLine2 = PointsLine2;
+
+      _pointsLine2[0] = [0, 720, 170, 720];
+      _pointsLine2[1] = [170, 720, 240, 780];
+      _pointsLine2[2] = [240, 780, 850, 780];
+      _pointsLine2[3] = [850, 780, 890, 805];
+      _pointsLine2[4] = [890, 805, 1250, 805];
+      _pointsLine2[5] = [1250, 805, 1330, 735];
+      _pointsLine2[6] = [1330, 735, 1550, 735];
+      _pointsLine2[7] = [1550, 735, 1630, 805];
+    }
+    if (window.innerWidth < 1100) {
+      var _pointsLine2 = PointsLine2;
+
+      _pointsLine2[0] = [4000, 780, 1750, 780];
+      _pointsLine2[1] = [1750, 780, 1500, 820];
+      _pointsLine2[2] = [1500, 820, 1150, 820];
+      _pointsLine2[3] = [1150, 820, 1000, 840];
+      _pointsLine2[4] = [1000, 840, 850, 840];
+      _pointsLine2[5] = [0, 0, 0, 0];
+      _pointsLine2[6] = [0, 0, 0, 0];
+      _pointsLine2[7] = [850, 840, 710, 800];
+    }
+
+    if (window.innerWidth > 1500) {
+      var _pointsLine1 = PointsLine1;
+      _pointsLine1[0] = [4000, 370, 1050, 370];
+      _pointsLine1[1] = [980, 320, 1050, 370];
+      _pointsLine1[2] = [550, 320, 980, 320];
+      _pointsLine1[3] = [420, 210, 550, 320];
+      _pointsLine1[4] = [420, 210, 420, 130];
+      _pointsLine1[5] = [420, 130, 370, 110];
+    }
+    if (window.innerWidth < 1500) {
+      var _pointsLine1 = PointsLine1;
+      _pointsLine1[0] = [0, 200, 120, 200];
+      _pointsLine1[1] = [120, 200, 200, 270];
+      _pointsLine1[2] = [200, 270, 900, 270];
+      _pointsLine1[3] = [900, 270, 1150, 310];
+      _pointsLine1[4] = [1150, 310, 1400, 310];
+      _pointsLine1[5] = [1400, 310, 1600, 390];
+    }
+
+    console.log(">>><><>>>>><><>", pointsLine2);
+    const coords = Tools.getResponseCoords(PointsLine1, {
+      width: window.innerWidth,
+      height: window.innerHeight,
     });
-    const coordsLine2 = Tools.getResponseCoords(PointsLine2,{
-        width:window.innerWidth,
-        height:window.innerHeight
+    const coordsLine2 = Tools.getResponseCoords(PointsLine2, {
+      width: window.innerWidth,
+      height: window.innerHeight,
     });
-    const coordsLine3 = Tools.getResponseCoords(PointsLine3,{
-      width:window.innerWidth,
-      height:window.innerHeight
-  });
+    const coordsLine3 = Tools.getResponseCoords(PointsLine3, {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
 
-  if(window.innerHeight>880){
-    setPointsCircle1({
-      x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
-      y: coords[coords.length - 1][coords[coords.length - 1].length - 1]
-  })
-  setPointsCircle2(
-      {
-          x: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 2],
-          y: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 1]
-      }
-  )
-  setPointsLine1(coords)
-  setPointsLine2(coordsLine2)
-  setPointsLine3(coordsLine3)
-  
+    if (window.innerHeight > 880) {
+      setPointsCircle1({
+        x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
+        y: coords[coords.length - 1][coords[coords.length - 1].length - 1],
+      });
+      setPointsCircle2({
+        x: coordsLine2[coordsLine2.length - 1][
+          coordsLine2[coordsLine2.length - 1].length - 2
+        ],
+        y: coordsLine2[coordsLine2.length - 1][
+          coordsLine2[coordsLine2.length - 1].length - 1
+        ],
+      });
+      setPointsLine1(coords);
+      setPointsLine2(coordsLine2);
+      setPointsLine3(coordsLine3);
 
-setSize({
-  width:window.innerWidth,
-  height:window.innerHeight,
-      })
-  }
-  else{
-    setPointsCircle1({
-      x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
-      y: coords[coords.length - 1][coords[coords.length - 1].length - 1]
-  })
-  setPointsCircle2(
-      {
-          x: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 2],
-          y: coordsLine2[coordsLine2.length - 1][coordsLine2[coordsLine2.length - 1].length - 1]
-      }
-  )
-  setPointsLine1(coords)
-  setPointsLine2(coordsLine2)
-  setPointsLine3(coordsLine3)
-  
+      setSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    } else {
+      setPointsCircle1({
+        x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
+        y: coords[coords.length - 1][coords[coords.length - 1].length - 1],
+      });
+      setPointsCircle2({
+        x: coordsLine2[coordsLine2.length - 1][
+          coordsLine2[coordsLine2.length - 1].length - 2
+        ],
+        y: coordsLine2[coordsLine2.length - 1][
+          coordsLine2[coordsLine2.length - 1].length - 1
+        ],
+      });
+      setPointsLine1(coords);
+      setPointsLine2(coordsLine2);
+      setPointsLine3(coordsLine3);
 
-setSize({
-          width:window.innerWidth,
-          height:880,
-      })
-  }
-   
-    window.addEventListener('resize', function(event) {
-     
+      setSize({
+        width: window.innerWidth,
+        height: 880,
+      });
+    }
+
+    window.addEventListener(
+      "resize",
+      function (event) {
         // console.log('>>><><>>>>><><>', event.target.innerHeight, event.target.outerHeight)
         const coords2 = Tools.getResponseCoords(PointsLine1, {
-            width:event.target.innerWidth,
-            height:event.target.innerHeight
+          width: event.target.innerWidth,
+          height: event.target.innerHeight,
         });
-        const _coordsLine2 = Tools.getResponseCoords(PointsLine2,{
-            width:window.innerWidth,
-            height:window.innerHeight
+        const _coordsLine2 = Tools.getResponseCoords(PointsLine2, {
+          width: window.innerWidth,
+          height: window.innerHeight,
         });
-        const _coordsLine3 = Tools.getResponseCoords(PointsLine3,{
-          width:window.innerWidth,
-          height:window.innerHeight
-      });
-        
-      
-        if(window.innerHeight>933){
-          var _pointsLine3 = PointsLine3
-          _pointsLine3[0][1] = 420
-          _pointsLine3[0][3] = 420
-          
-      
-        }
-        if(window.innerHeight<933){
-          var _pointsLine3 = PointsLine3
-          _pointsLine3[0][1] = 470
-          _pointsLine3[0][3] = 470
-          
-      
-        }
-      
-        if(window.innerWidth>1100){
-          var _pointsLine2 = PointsLine2
-         
-          _pointsLine2[0]=   [0, 720, 170, 720]
-      _pointsLine2[1]=   [170, 720, 240, 780]
-      _pointsLine2[2]=  [240, 780, 850, 780]
-      _pointsLine2[3]=   [850, 780, 890, 805]
-      _pointsLine2[4]=    [890, 805, 1250, 805]
-      _pointsLine2[5]=   [1250, 805, 1330, 735]
-      _pointsLine2[6]=   [1330, 735, 1550, 735]
-      _pointsLine2[7]= [1550, 735, 1630, 805]
-          
-        }
-        
-        if(window.innerWidth<1100){
-          var _pointsLine2 = PointsLine2
-         
-          _pointsLine2[0]=  [4000, 780, 1750, 780]
-            _pointsLine2[1]=  [1750, 780, 1500, 820]
-            _pointsLine2[2]= [1500, 820, 1150, 820]
-            _pointsLine2[3]=   [1150, 820, 1000, 840]
-            _pointsLine2[4]=    [1000, 840, 850, 840]
-            _pointsLine2[5]=   [0,0,0,0]
-            _pointsLine2[6]=   [0,0,0,0]
-            _pointsLine2[7]= [850, 840, 710, 800]
-      
-            
-        }
-        
-  if(window.innerWidth>1500){
-    var _pointsLine1 = PointsLine1
-    _pointsLine1[0]= [4000, 370, 1050, 370]
-    _pointsLine1[1]= [980, 320, 1050, 370]
-    _pointsLine1[2]= [550, 320, 980, 320]
-    _pointsLine1[3]= [420, 210, 550, 320]
-    _pointsLine1[4]= [420, 210, 420, 130]
-    _pointsLine1[5]= [420, 130, 370, 110]
-      
-   
+        const _coordsLine3 = Tools.getResponseCoords(PointsLine3, {
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
 
-  }
-       
-          if(window.innerWidth<1500){
-            var _pointsLine1 = PointsLine1
-            _pointsLine1[0]= [0, 200, 120, 200]
-      _pointsLine1[1]= [120, 200, 200, 270]
-      _pointsLine1[2]= [200, 270, 900, 270]
-      _pointsLine1[3]= [900, 270, 1150, 310]
-      _pointsLine1[4]= [1150, 310, 1400, 310]
-      _pointsLine1[5]= [1400, 310, 1600, 390]
-        
-              
-            
-            
-    
-          }
-          
-          if(event.target.innerHeight>880) {
-            setPointsCircle1({
-              x: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2],
-              y: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1]
-          })
-          setPointsCircle2(
-              {
-                  x: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 2],
-                  y: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 1]
-              }
-          )
-          setPointsLine1(coords2)
-          setPointsLine2(_coordsLine2)
-          setPointsLine3(_coordsLine3)
+        if (window.innerHeight > 933) {
+          var _pointsLine3 = PointsLine3;
+          _pointsLine3[0][1] = 420;
+          _pointsLine3[0][3] = 420;
+        }
+        if (window.innerHeight < 933) {
+          var _pointsLine3 = PointsLine3;
+          _pointsLine3[0][1] = 470;
+          _pointsLine3[0][3] = 470;
+        }
+
+        if (window.innerWidth > 1100) {
+          var _pointsLine2 = PointsLine2;
+
+          _pointsLine2[0] = [0, 720, 170, 720];
+          _pointsLine2[1] = [170, 720, 240, 780];
+          _pointsLine2[2] = [240, 780, 850, 780];
+          _pointsLine2[3] = [850, 780, 890, 805];
+          _pointsLine2[4] = [890, 805, 1250, 805];
+          _pointsLine2[5] = [1250, 805, 1330, 735];
+          _pointsLine2[6] = [1330, 735, 1550, 735];
+          _pointsLine2[7] = [1550, 735, 1630, 805];
+        }
+
+        if (window.innerWidth < 1100) {
+          var _pointsLine2 = PointsLine2;
+
+          _pointsLine2[0] = [4000, 780, 1750, 780];
+          _pointsLine2[1] = [1750, 780, 1500, 820];
+          _pointsLine2[2] = [1500, 820, 1150, 820];
+          _pointsLine2[3] = [1150, 820, 1000, 840];
+          _pointsLine2[4] = [1000, 840, 850, 840];
+          _pointsLine2[5] = [0, 0, 0, 0];
+          _pointsLine2[6] = [0, 0, 0, 0];
+          _pointsLine2[7] = [850, 840, 710, 800];
+        }
+
+        if (window.innerWidth > 1500) {
+          var _pointsLine1 = PointsLine1;
+          _pointsLine1[0] = [4000, 370, 1050, 370];
+          _pointsLine1[1] = [980, 320, 1050, 370];
+          _pointsLine1[2] = [550, 320, 980, 320];
+          _pointsLine1[3] = [420, 210, 550, 320];
+          _pointsLine1[4] = [420, 210, 420, 130];
+          _pointsLine1[5] = [420, 130, 370, 110];
+        }
+
+        if (window.innerWidth < 1500) {
+          var _pointsLine1 = PointsLine1;
+          _pointsLine1[0] = [0, 200, 120, 200];
+          _pointsLine1[1] = [120, 200, 200, 270];
+          _pointsLine1[2] = [200, 270, 900, 270];
+          _pointsLine1[3] = [900, 270, 1150, 310];
+          _pointsLine1[4] = [1150, 310, 1400, 310];
+          _pointsLine1[5] = [1400, 310, 1600, 390];
+        }
+
+        if (event.target.innerHeight > 880) {
+          setPointsCircle1({
+            x: coords2[coords2.length - 1][
+              coords2[coords2.length - 1].length - 2
+            ],
+            y: coords2[coords2.length - 1][
+              coords2[coords2.length - 1].length - 1
+            ],
+          });
+          setPointsCircle2({
+            x: _coordsLine2[_coordsLine2.length - 1][
+              _coordsLine2[_coordsLine2.length - 1].length - 2
+            ],
+            y: _coordsLine2[_coordsLine2.length - 1][
+              _coordsLine2[_coordsLine2.length - 1].length - 1
+            ],
+          });
+          setPointsLine1(coords2);
+          setPointsLine2(_coordsLine2);
+          setPointsLine3(_coordsLine3);
           // console.log('><><><><><>', event.target.outerWidth)
           setSize({
-              width:event.target.innerWidth,
-              height:event.target.innerHeight
-          })
-          }
-          else {
-            setPointsCircle1({
-              x: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 2],
-              y: coords2[coords2.length - 1][coords2[coords2.length - 1].length - 1]
-          })
-          setPointsCircle2(
-              {
-                  x: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 2],
-                  y: _coordsLine2[_coordsLine2.length - 1][_coordsLine2[_coordsLine2.length - 1].length - 1]
-              }
-          )
-          setPointsLine1(coords2)
-          setPointsLine2(_coordsLine2)
-          setPointsLine3(_coordsLine3)
+            width: event.target.innerWidth,
+            height: event.target.innerHeight,
+          });
+        } else {
+          setPointsCircle1({
+            x: coords2[coords2.length - 1][
+              coords2[coords2.length - 1].length - 2
+            ],
+            y: coords2[coords2.length - 1][
+              coords2[coords2.length - 1].length - 1
+            ],
+          });
+          setPointsCircle2({
+            x: _coordsLine2[_coordsLine2.length - 1][
+              _coordsLine2[_coordsLine2.length - 1].length - 2
+            ],
+            y: _coordsLine2[_coordsLine2.length - 1][
+              _coordsLine2[_coordsLine2.length - 1].length - 1
+            ],
+          });
+          setPointsLine1(coords2);
+          setPointsLine2(_coordsLine2);
+          setPointsLine3(_coordsLine3);
           // console.log('><><><><><>', event.target.outerWidth)
           setSize({
-              width:event.target.innerWidth,
-              height:event.target.innerHeight=880,
-          })
-          }
-
-         
-        
-    }, true);
-    
-}
+            width: event.target.innerWidth,
+            height: (event.target.innerHeight = 880),
+          });
+        }
+      },
+      true
+    );
+  };
   const listContent = [
     {
       page: (
@@ -460,15 +433,25 @@ setSize({
   return (
     <>
       <DivLineAboutTeamSC>
-        <Stage  width={size.width} height={size.height} >
+        <Stage width={size.width} height={size.height}>
           <Layer>
             {Tools.drawLine(pointsLine1)}
-            <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
+            <Circle
+              x={pointsCircle1.x}
+              y={pointsCircle1.y}
+              radius={5}
+              fill="#ffffff"
+            />
           </Layer>
           <Layer>{Tools.drawLine(pointsLine3)}</Layer>
           <Layer>
             {Tools.drawLine(pointsLine2)}
-            <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
+            <Circle
+              x={pointsCircle2.x}
+              y={pointsCircle2.y}
+              radius={5}
+              fill="#ffffff"
+            />
           </Layer>
         </Stage>
       </DivLineAboutTeamSC>
@@ -506,7 +489,6 @@ setSize({
               >
                 Cryptocurrency trading
               </DivPageSC>
-              
             </DivBoxColumnsPagesSC>
             {listContent[indexSelectedButton].page}
           </DivMainRowsSC>
