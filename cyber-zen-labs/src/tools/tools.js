@@ -173,6 +173,24 @@ const Tools = {
     copy: (state) => {
         return JSON.parse(JSON.stringify(state))
     },
+    compare: (state, compareState) => {
+        return JSON.parse(JSON.stringify(state)) === JSON.parse(JSON.stringify(compareState));
+
+
+    },
+    useHook: (name, name1, firstName, lastName) => {
+        return {
+            name: name,
+            lastName,
+            firstName,
+            isName: lastName === firstName
+        }
+    },
+    usePerson: (dataPersone) => {
+        let obj = {
+            
+        }
+    }
 
 };
 
