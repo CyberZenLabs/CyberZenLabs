@@ -8,8 +8,6 @@ import {
 } from "../styled-components-css/styled-About";
 import {SpanTextElementMenuSC} from "../styled-components-css/styled-menu";
 import GlobalDispatchContext from "../global_dispatch_context";
-import {DivRuslanBoxSC} from "../styled-components-css/styled.kirdro";
-import Konva from "konva";
 import {Stage, Layer, Line, Circle} from "react-konva";
 import Tools from "../tools/tools";
 
@@ -47,13 +45,11 @@ const BurgerMenu = () => {
         width: window.innerWidth,
         height: window.innerHeight
     })
-
     const [pointsLine1, setPointsLine1] = useState(PointsLine1)
     const [pointsCircle1, setPointsCircle1] = useState({
         x: 0,
         y: 0
     })
-
     const [pointsLine2, setPointsLine2] = useState(PointsLine2)
     const [pointsCircle2, setPointsCircle2] = useState({
         x: 0,
@@ -75,10 +71,7 @@ const BurgerMenu = () => {
         };
     }, [isPage]);
     useEffect(() => {
-
-
         processCoords()
-
     }, [])
     useEffect(() => {
         var offsetHeight = document.getElementById('about-line-id').offsetHeight;
@@ -194,12 +187,12 @@ setPointsLine1(_coordsTemp)
                 coords2[2][0] = coords2[2][0] - 50
                 coords2[2][2] = coords2[2][2] - 50
             }
-            setPointsLine1(coords2)
-            setPointsLine2(_coordsLine2)
-            setPointsLine3(_coordsLine3)
-
-
-            // console.log('><><><><><>', event.target.outerWidth)
+            if (event.target.innerHeight < 800) {
+                
+                }
+                setPointsLine1(coords2);
+                setPointsLine2(_coordsLine2);
+                setPointsLine3(_coordsLine3);
             setSize({
                 width: event.target.innerWidth,
                 height: event.target.innerHeight
