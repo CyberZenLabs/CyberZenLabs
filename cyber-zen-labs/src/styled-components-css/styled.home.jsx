@@ -42,6 +42,7 @@ export const DivTitleBoxtSC = styled.div`
   @media (max-width: 768px) {
     //align-items: center;
     justify-content: center;
+    row-gap: 10px;
   }
 `;
 
@@ -68,13 +69,15 @@ export const TitleHomeBoxSC = styled.h1`
   @media (max-width: 1024px) {
     font-size: 48px;
   }
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 44px;
   }
-  /* @media (max-width: 600px) {
-    justify-self: center;
+  @media (max-width: 600px) {
+    font-size: 37px;
+  }
+  @media (max-width: 480px) {
     font-size: 28px;
-  }  */
+  }
 `;
 
 export const SloganBoxSC = styled.h1`
@@ -92,6 +95,12 @@ export const SloganBoxSC = styled.h1`
   @media (max-width: 768px) {
     margin: 0 auto;
   }
+  @media (max-width: 600px) {
+    font-size: 22px;
+  }
+  @media (max-width: 480px) {
+    font-size: 15px;
+  }
 `;
 
 export const DivDescBoxtSC = styled.div`
@@ -103,10 +112,12 @@ export const DivDescBoxtSC = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
+    justify-items: center;
   }
 `;
 
 export const DescHomeBoxSC = styled.span`
+  width: 100%;
   font-weight: 400;
   font-size: 40px;
   line-height: 50px;
@@ -128,7 +139,13 @@ export const DescHomeBoxSC = styled.span`
     text-align: center;
     font-size: 24px;
   }
-
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+  @media (max-width: 480px) {
+    font-size: 18px;
+    max-width: 300px;
+  }
 `;
 
 export const DivShadowBoxSC = styled.div`
@@ -170,7 +187,7 @@ export const DescHomeBoxColumnsSC = styled.div`
 export const DivHomeLineBoxSC = styled.div`
   display: grid;
   height: 100%;
-  min-height: 785px;
+  /* min-height: 785px; */
   justify-items: center;
   align-items: center;
   position: absolute;
@@ -183,7 +200,7 @@ export const GifBuddhaHomeSC = styled.div`
   width: 550px;
   height: 550px;
   background-size: 100%;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-position: center -75px;
   z-index: 30;
   /* @media (max-width: 1700px) {

@@ -18,24 +18,23 @@ export const FooterLinesSC = styled.div`
   pointer-events: none;
   top: -40px;
 `;
-export const  LinkShowReel2SC=styled.div`
-font-family: 'Orbitron';
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 30px;
+export const LinkShowReel2SC = styled.div`
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
 
-/* identical to box height */
+  /* identical to box height */
 
+  background: linear-gradient(180deg, #d516ff 26.39%, #8f0036 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 
-background: linear-gradient(180deg, #D516FF 26.39%, #8F0036 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-text-fill-color: transparent;
-
-text-shadow: 0px 0px 49.392px #441B5F;
-@media (max-width: 1000px) {
+  text-shadow: 0px 0px 49.392px #441b5f;
+  @media (max-width: 1000px) {
     font-size: 18px;
     line-height: 20px;
   }
@@ -43,12 +42,16 @@ text-shadow: 0px 0px 49.392px #441B5F;
     font-size: 14px;
     line-height: 20px;
   }
+  @media (max-width: 480px) {
+    font-size: 10px;
+    line-height: 20px;
+  }
 `;
 export const DivDecLineSC = styled.div`
   max-width: 487px;
   width: 100%;
   height: 2px;
-  background: linear-gradient(180deg, #D516FF 26.39%, #8F0036 100%);
+  background: linear-gradient(180deg, #d516ff 26.39%, #8f0036 100%);
   @media (max-width: 1000px) {
     max-width: 229px;
     height: 2px;
@@ -146,7 +149,6 @@ export const DivContainerNavBarSC = styled.div`
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
     height: 60px;
-
   }
 `;
 export const DivLogoBoxSC = styled.div`
@@ -202,7 +204,7 @@ export const TextNavBarSC = styled.h1`
 `;
 
 export const LinkShowReelSC = styled(Link)`
-min-height: 30px;
+  min-height: 30px;
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
@@ -215,6 +217,9 @@ min-height: 30px;
   }
   @media (max-width: 768px) {
     font-size: 14px;
+  }
+  @media (max-width: 480px) {
+    font-size: 10px;
   }
 `;
 
@@ -239,6 +244,9 @@ export const IconBurgerSC = styled.div`
 
   width: 27px;
   height: 22.41px;
+  @media (max-width: 480px) {
+    scale: 0.7;
+  }
 `;
 
 export const BurgerMenuDisplaySC = styled.div`

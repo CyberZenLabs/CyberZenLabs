@@ -11,9 +11,9 @@ overflow: hidden;
   @media(max-width: 480px) {
     grid-template-rows: 100px max-content 160px;
   } 
-   @media(max-width: 360px) {
+   /* @media(max-width: 360px) {
     grid-template-rows: 160px max-content 160px;
-  }
+  } */
  // transition: .3s background-color;
   //transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
 

@@ -597,26 +597,6 @@ const Home = () => {
       </DivHomeLineBoxSC>
       <DivWrapSC>
         <DivContainerSC>
-          {/* <DivHomeContentRowsSC>
-            <DivTextBoxtSC>
-              <TitleHomeBoxSC isBlackBack={isBlackBack}>
-                CYBERZEN LABS
-                {isBlackBack === "black" ? null : (
-                  <DivShadowBoxSC></DivShadowBoxSC>
-                )}
-              </TitleHomeBoxSC>
-            </DivTextBoxtSC>
-            <DescHomeBoxColumnsSC>
-              <DivDescBoxtSC>
-                <SloganBoxSC>The future is now</SloganBoxSC>
-                <DescHomeBoxSC isBlackBack={isBlackBack}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
-                  quam eu amet massa viverra.
-                </DescHomeBoxSC>
-              </DivDescBoxtSC>
-            </DescHomeBoxColumnsSC>
-          </DivHomeContentRowsSC> */}
-
           <DivHomeContentSC>
             <DivTextBoxtSC>
               <DivTitleBoxtSC>
