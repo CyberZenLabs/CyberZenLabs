@@ -62,6 +62,11 @@ width: 100%;
     line-height: 20px;
 
   }
+  @media (max-width: 380px) {
+    font-size: 16px;
+    line-height: 18px;
+
+  }
 `;
 export const DivLineAboutDevSC=styled.div`
  display: grid;

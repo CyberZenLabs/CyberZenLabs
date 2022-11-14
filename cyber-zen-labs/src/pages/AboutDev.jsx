@@ -356,7 +356,7 @@ setSize({
           setPointsLine2(_coordsLine2)
           
           // console.log('><><><><><>', event.target.outerWidth)
-          
+          let height =750;
           setSize({
               width:event.target.innerWidth,
               height:event.target.innerHeight=750,

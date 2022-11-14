@@ -173,6 +173,11 @@ const Tools = {
     copy: (state) => {
         return JSON.parse(JSON.stringify(state))
     },
+    compare: (state, compareState) => {
+        return JSON.parse(JSON.stringify(state)) === JSON.parse(JSON.stringify(compareState));
+
+
+    }
 
 };
 
