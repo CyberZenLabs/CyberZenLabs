@@ -6,6 +6,7 @@ export const DivContentBoxRowsSC = styled.div`
   height: 100%;
   display: grid;
   grid-template-rows: max-content 27% auto;
+  max-height: calc(100vh - 350px);
 `;
 
 export const DivTitleTextSC = styled.div`
