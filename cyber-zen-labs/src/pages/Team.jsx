@@ -85,6 +85,7 @@ const PointsLine2 = [
 const PointsLine3 = [[100, 430, 1800, 430]];
 
 const Team = () => {
+  
 
   const [indexSelectedButton, getIndexButton] = useState(0);
 
