@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Mail from "../images/Mail.svg";
 import Sound from "../images/Music-Switch2.svg";
 export const DivContainerFooterSC = styled.div`
+max-height: 160px;
   width: 100%;
   // border:1px solid green;
   display: grid;
