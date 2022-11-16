@@ -85,6 +85,7 @@ const PointsLine2 = [
 const PointsLine3 = [[100, 430, 1800, 430]];
 
 const Team = () => {
+
   const [indexSelectedButton, getIndexButton] = useState(0);
 
   const { state, dispatch } = useContext(GlobalDispatchContext);
@@ -166,9 +167,9 @@ const Team = () => {
       _pointsLine2[2] = [240, 780, 850, 780];
       _pointsLine2[3] = [850, 780, 890, 805];
       _pointsLine2[4] = [890, 805, 1250, 805];
-      _pointsLine2[5] = [1250, 805, 1330, 735];
-      _pointsLine2[6] = [1330, 735, 1550, 735];
-      _pointsLine2[7] = [1550, 735, 1630, 805];
+      _pointsLine2[5] = [1250, 805, 1330, 740];
+      _pointsLine2[6] = [1330, 740, 1550, 740];
+      _pointsLine2[7] = [1550, 740, 1630, 805];
     }
     if (window.innerWidth < 1100) {
       var _pointsLine2 = PointsLine2;
@@ -256,7 +257,7 @@ const Team = () => {
 
       setSize({
         width: window.innerWidth,
-        height: 880,
+        height:  window.innerHeight=870,
       });
     }
 
@@ -296,9 +297,9 @@ const Team = () => {
           _pointsLine2[2] = [240, 780, 850, 780];
           _pointsLine2[3] = [850, 780, 890, 805];
           _pointsLine2[4] = [890, 805, 1250, 805];
-          _pointsLine2[5] = [1250, 805, 1330, 735];
-          _pointsLine2[6] = [1330, 735, 1550, 735];
-          _pointsLine2[7] = [1550, 735, 1630, 805];
+          _pointsLine2[5] = [1250, 805, 1330, 740];
+          _pointsLine2[6] = [1330, 740, 1550, 740];
+          _pointsLine2[7] = [1550, 740, 1630, 805];
         }
 
         if (window.innerWidth < 1100) {
@@ -380,9 +381,10 @@ const Team = () => {
           setPointsLine2(_coordsLine2);
           setPointsLine3(_coordsLine3);
           // console.log('><><><><><>', event.target.outerWidth)
+          
           setSize({
             width: event.target.innerWidth,
-            height: (event.target.innerHeight = 880),
+            height: (event.target.innerHeight = 870),
           });
         }
       },
@@ -417,15 +419,15 @@ const Team = () => {
         </>
       ),
     },
-    {
-      page: (
-        <>
-          <AboutTeamDeveloperCarousel
-            indexSelectedButton={indexSelectedButton}
-          ></AboutTeamDeveloperCarousel>
-        </>
-      ),
-    },
+    // {
+    //   page: (
+    //     <>
+    //       <AboutTeamDeveloperCarousel
+    //         indexSelectedButton={indexSelectedButton}
+    //       ></AboutTeamDeveloperCarousel>
+    //     </>
+    //   ),
+    // },
   ];
   const onClickTab = (index) => (e) => {
     getIndexButton(index);
@@ -483,12 +485,12 @@ const Team = () => {
               >
                 Design
               </DivPageSC>
-              <DivPageSC
+              {/* <DivPageSC
                 isActive={indexSelectedButton === 3}
                 onClick={onClickTab(3)}
               >
                 Cryptocurrency trading
-              </DivPageSC>
+              </DivPageSC> */}
             </DivBoxColumnsPagesSC>
             {listContent[indexSelectedButton].page}
           </DivMainRowsSC>

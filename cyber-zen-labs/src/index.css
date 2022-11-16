@@ -8,9 +8,15 @@ html {
   color: #fff;
 }
 
+<<<<<<< HEAD
 body {
-  overflow: hidden;
+ 
 }
+=======
+/* body {
+  overflow: hidden;
+} */
+>>>>>>> DMCprogs-cyberzen
 .ReactModal__Overlay {z-index: 1000000000;}
 
 .ReactModal__Overlay--after-open

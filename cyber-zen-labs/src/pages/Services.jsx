@@ -23,6 +23,7 @@ const Services = () => {
     const [position, setPosition] = useState({
         x: window.innerWidth / 4,
         y: 50
+
     })
     const [position1, setPosition1] = useState({
         x: 1361,
@@ -40,7 +41,7 @@ const Services = () => {
     const [isScroll, setIsScroll] = useState(false)
 
     let x = (window.innerWidth / 2) - 322 - 100  // center
-    let y = 1900 / 2   // center
+    let y = 1800 / 2   // center
     let r = 900   // radius
     let a = 4.7 // angle (from 0 to Math.PI * 2)
     let a1 = 0
