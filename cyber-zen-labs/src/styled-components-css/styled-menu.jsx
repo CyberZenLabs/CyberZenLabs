@@ -13,6 +13,9 @@ export const SpanTextElementMenuSC = styled(Link)`
     font-size: 40px;
   }
   @media (max-width: 480px) {
+    font-size: 32px;
+  }
+  @media (max-width: 480px) {
     font-size: 22px;
   }
 `;
