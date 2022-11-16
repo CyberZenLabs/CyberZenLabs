@@ -7,7 +7,7 @@ export const DivContainerPenalsSC = styled.div`
   max-width: 1478px;
   height: 100%;
   display: grid;
-  justify-self: center;
+  //justify-self: center;
   grid-template-columns: 50% 50%;
   grid-column-gap: 70px;
   @media (max-width: 1060px) {
@@ -34,7 +34,8 @@ export const DivBoxRowsLeftPenalSC = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 29px 33px 86px 33px 81px 33px 86px 33px 60px;
+  grid-template-rows: max-content max-content;
+  row-gap: 50px;
   @media (max-width: 810px) {
     max-width: 100%;
   }
@@ -74,6 +75,7 @@ export const DivBoxBorderSC = styled.input`
   align-content: end;
   color: #fff;
   font-family: "Orbitron";
+  font-size: 24px;
   :focus {
     outline: none;
   }
@@ -105,13 +107,27 @@ export const DivBoxBorder2SC = styled.textarea`
   }
 `;
 
+export const DivBoxPersonalDataSC = styled.div`
+  display: grid;
+  width: 100%;
+  grid-template-rows: repeat(4, 50px);
+  row-gap: 33px;
+`;
+
+export const DivBoxPriceSC = styled.div`
+  display: grid;
+  width: 100%;
+  grid-template-rows: max-content max-content;
+`;
+
 export const DivBoxBorderBigInputSC = styled.textarea`
   border-top: none;
   border-left: none;
   border-right: none;
   resize: none;
-  overflow: auto;
-  width: 98%;
+  overflow: hidden;
+  max-width: 621px;
+  width: 100%;
   max-width: 621px;
   height: 100%;
   border-bottom: 1px solid #e0f5e9;
@@ -122,6 +138,7 @@ export const DivBoxBorderBigInputSC = styled.textarea`
   align-content: end; */
   color: #fff;
   font-family: "Orbitron";
+  font-size: 24px;
   :focus {
     outline: none;
   }
@@ -147,7 +164,7 @@ export const DivBoxRowsRightPenalSC = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 64px 230px 79px 203px;
+  grid-template-rows: 295px 79px 203px;
   @media (max-width: 810px) {
     max-width: 100%;
   }
