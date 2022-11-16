@@ -12,9 +12,7 @@ export const GridContentSC = styled.div`
   @media (max-width:1000px) {
     grid-row-gap: 60px;
 }
-@media (max-height:550px) {
-  grid-row-gap: 45px;
-}
+
 @media (max-width:480px) {
   grid-row-gap: 30px;
 }
