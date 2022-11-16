@@ -5,13 +5,14 @@ const ServicesItem = (props) => {
     const {
         position,
         id,
-        title
+        title,
+        size
     } = props
 
     return (
 
-        <DivTaskItemSC id={'DivTaskItemSC' + id} position={position}>
-            <DivTaskItemContentSC className={'DivTaskItemContentSC'}>
+        <DivTaskItemSC id={'DivTaskItemSC' + id} position={position} >
+            <DivTaskItemContentSC className={'DivTaskItemContentSC'} size={size}>
                 {title}
             </DivTaskItemContentSC>
             <DivTaskItemContentTempSC className={'cybr-btn__glitch'}>
