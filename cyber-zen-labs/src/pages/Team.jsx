@@ -45,7 +45,16 @@ import Konva from "konva";
 import { Stage, Layer, Line, Circle } from "react-konva";
 import Tools from "../tools/tools";
 import { CgWindows } from "react-icons/cg";
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
 
+var gradient = ctx.createConicGradient(1, 3, 1, 2);
+gradient.addColorStop(2 / 6, '#D815FF');
+gradient.addColorStop(5 / 6, '#09BBF9');
+
+var gradient2 = ctx.createConicGradient(2, 4, 5, 2);
+gradient2.addColorStop(2 / 6, '#D815FF');
+gradient2.addColorStop(5 / 6, '#09BBF9');
 const PointsLine1 = [
   [4000, 370, 1050, 370],
   [980, 320, 1050, 370],
@@ -85,6 +94,7 @@ const PointsLine2 = [
 const PointsLine3 = [[100, 430, 1800, 430]];
 
 const Team = () => {
+  
 
   const [indexSelectedButton, getIndexButton] = useState(0);
 
@@ -150,8 +160,8 @@ const Team = () => {
   const processCoords = () => {
     if (window.innerHeight > 933) {
       var _pointsLine3 = PointsLine3;
-      _pointsLine3[0][1] = 420;
-      _pointsLine3[0][3] = 420;
+      _pointsLine3[0][1] = 437;
+      _pointsLine3[0][3] = 437;
     }
     if (window.innerHeight < 933) {
       var _pointsLine3 = PointsLine3;
@@ -162,12 +172,12 @@ const Team = () => {
     if (window.innerWidth > 1100) {
       var _pointsLine2 = PointsLine2;
 
-      _pointsLine2[0] = [0, 720, 170, 720];
-      _pointsLine2[1] = [170, 720, 240, 780];
-      _pointsLine2[2] = [240, 780, 850, 780];
-      _pointsLine2[3] = [850, 780, 890, 805];
-      _pointsLine2[4] = [890, 805, 1250, 805];
-      _pointsLine2[5] = [1250, 805, 1330, 740];
+      _pointsLine2[0] = [0, 730, 170, 730];
+      _pointsLine2[1] = [170, 730, 240, 770];
+      _pointsLine2[2] = [240, 770, 850, 770];
+      _pointsLine2[3] = [850, 770, 890, 795];
+      _pointsLine2[4] = [890, 795, 1250, 795];
+      _pointsLine2[5] = [1250, 795, 1330, 740];
       _pointsLine2[6] = [1330, 740, 1550, 740];
       _pointsLine2[7] = [1550, 740, 1630, 805];
     }
@@ -186,12 +196,12 @@ const Team = () => {
 
     if (window.innerWidth > 1500) {
       var _pointsLine1 = PointsLine1;
-      _pointsLine1[0] = [4000, 370, 1050, 370];
-      _pointsLine1[1] = [980, 320, 1050, 370];
-      _pointsLine1[2] = [550, 320, 980, 320];
-      _pointsLine1[3] = [420, 210, 550, 320];
-      _pointsLine1[4] = [420, 210, 420, 130];
-      _pointsLine1[5] = [420, 130, 370, 110];
+      _pointsLine1[0] = [4000, 390, 1050, 390];
+      _pointsLine1[1] = [980, 340, 1050, 390];
+      _pointsLine1[2] = [550, 340, 980, 340];
+      _pointsLine1[3] = [420, 230, 550, 340];
+      _pointsLine1[4] = [420, 230, 420, 150];
+      _pointsLine1[5] = [420, 150, 400, 120];
     }
     if (window.innerWidth < 1500) {
       var _pointsLine1 = PointsLine1;
@@ -280,8 +290,8 @@ const Team = () => {
 
         if (window.innerHeight > 933) {
           var _pointsLine3 = PointsLine3;
-          _pointsLine3[0][1] = 420;
-          _pointsLine3[0][3] = 420;
+          _pointsLine3[0][1] = 437;
+          _pointsLine3[0][3] = 437;
         }
         if (window.innerHeight < 933) {
           var _pointsLine3 = PointsLine3;
@@ -291,17 +301,16 @@ const Team = () => {
 
         if (window.innerWidth > 1100) {
           var _pointsLine2 = PointsLine2;
-
-          _pointsLine2[0] = [0, 720, 170, 720];
-          _pointsLine2[1] = [170, 720, 240, 780];
-          _pointsLine2[2] = [240, 780, 850, 780];
-          _pointsLine2[3] = [850, 780, 890, 805];
-          _pointsLine2[4] = [890, 805, 1250, 805];
-          _pointsLine2[5] = [1250, 805, 1330, 740];
+    
+          _pointsLine2[0] = [0, 730, 170, 730];
+          _pointsLine2[1] = [170, 730, 240, 770];
+          _pointsLine2[2] = [240, 770, 850, 770];
+          _pointsLine2[3] = [850, 770, 890, 795];
+          _pointsLine2[4] = [890, 795, 1250, 795];
+          _pointsLine2[5] = [1250, 795, 1330, 740];
           _pointsLine2[6] = [1330, 740, 1550, 740];
           _pointsLine2[7] = [1550, 740, 1630, 805];
         }
-
         if (window.innerWidth < 1100) {
           var _pointsLine2 = PointsLine2;
 
@@ -317,12 +326,12 @@ const Team = () => {
 
         if (window.innerWidth > 1500) {
           var _pointsLine1 = PointsLine1;
-          _pointsLine1[0] = [4000, 370, 1050, 370];
-          _pointsLine1[1] = [980, 320, 1050, 370];
-          _pointsLine1[2] = [550, 320, 980, 320];
-          _pointsLine1[3] = [420, 210, 550, 320];
-          _pointsLine1[4] = [420, 210, 420, 130];
-          _pointsLine1[5] = [420, 130, 370, 110];
+          _pointsLine1[0] = [4000, 390, 1050, 390];
+          _pointsLine1[1] = [980, 340, 1050, 390];
+          _pointsLine1[2] = [550, 340, 980, 340];
+          _pointsLine1[3] = [420, 230, 550, 340];
+          _pointsLine1[4] = [420, 230, 420, 150];
+          _pointsLine1[5] = [420, 150, 400, 120];
         }
 
         if (window.innerWidth < 1500) {
@@ -442,7 +451,7 @@ const Team = () => {
               x={pointsCircle1.x}
               y={pointsCircle1.y}
               radius={5}
-              fill="#ffffff"
+              fill={gradient2}
             />
           </Layer>
           <Layer>{Tools.drawLine(pointsLine3)}</Layer>
@@ -452,7 +461,7 @@ const Team = () => {
               x={pointsCircle2.x}
               y={pointsCircle2.y}
               radius={5}
-              fill="#ffffff"
+              fill={gradient}
             />
           </Layer>
         </Stage>

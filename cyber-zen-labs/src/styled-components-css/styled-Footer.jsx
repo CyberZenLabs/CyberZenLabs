@@ -32,7 +32,7 @@ export const DivContainerFooterLeftSC = styled.div`
 `;
 export const DivContainerFooterCenterSC = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, max-content);
   gap: 95px;
   // border:1px solid red;
   justify-self: center;
