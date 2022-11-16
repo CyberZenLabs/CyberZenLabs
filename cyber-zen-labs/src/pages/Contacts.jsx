@@ -28,6 +28,17 @@ import {
   DivLineContactsSC,
 } from "../styled-components-css/styled-contacts";
 import GlobalDispatchContext from "../global_dispatch_context";
+
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
+var gradient = ctx.createConicGradient(2, 4, 3, 6);
+gradient.addColorStop(2 / 6, '#D815FF');
+gradient.addColorStop(4 / 6, '#09BBF9');
+
+var gradient2 = ctx.createConicGradient(2, 4, 5, 2);
+gradient2.addColorStop(2 / 6, '#D815FF');
+gradient2.addColorStop(5 / 6, '#09BBF9');
+
 const PointsLine1 = [
   [0, 150, 610, 150],
   [610, 150, 640, 180],
@@ -709,7 +720,7 @@ const Contacts = () => {
                 x={pointsCircle1.x}
                 y={pointsCircle1.y}
                 radius={5}
-                fill="#ffffff"
+                fill={gradient}
               />
             </Layer>
 
@@ -719,7 +730,7 @@ const Contacts = () => {
                 x={pointsCircle2.x}
                 y={pointsCircle2.y}
                 radius={5}
-                fill="#ffffff"
+                fill={gradient2}
               />
             </Layer>
           </Stage>

@@ -45,7 +45,16 @@ import Konva from "konva";
 import { Stage, Layer, Line, Circle } from "react-konva";
 import Tools from "../tools/tools";
 import { CgWindows } from "react-icons/cg";
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
 
+var gradient = ctx.createConicGradient(1, 3, 1, 2);
+gradient.addColorStop(2 / 6, '#D815FF');
+gradient.addColorStop(5 / 6, '#09BBF9');
+
+var gradient2 = ctx.createConicGradient(2, 4, 5, 2);
+gradient2.addColorStop(2 / 6, '#D815FF');
+gradient2.addColorStop(5 / 6, '#09BBF9');
 const PointsLine1 = [
   [4000, 370, 1050, 370],
   [980, 320, 1050, 370],
@@ -442,7 +451,7 @@ const Team = () => {
               x={pointsCircle1.x}
               y={pointsCircle1.y}
               radius={5}
-              fill="#ffffff"
+              fill={gradient2}
             />
           </Layer>
           <Layer>{Tools.drawLine(pointsLine3)}</Layer>
@@ -452,7 +461,7 @@ const Team = () => {
               x={pointsCircle2.x}
               y={pointsCircle2.y}
               radius={5}
-              fill="#ffffff"
+              fill={gradient}
             />
           </Layer>
         </Stage>
