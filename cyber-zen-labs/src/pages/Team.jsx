@@ -256,7 +256,7 @@ const Team = () => {
 
       setSize({
         width: window.innerWidth,
-        height: 880,
+        height:  window.innerHeight=880,
       });
     }
 

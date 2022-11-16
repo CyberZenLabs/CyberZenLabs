@@ -92,7 +92,7 @@ export const DivLineBurgerMenuSC=styled.div`
   height: 100%;
   //top: 80px;
   //bottom: 0;
-  min-height: 700px;
+  
   justify-items: center;
   align-items: center;
   position: absolute;
