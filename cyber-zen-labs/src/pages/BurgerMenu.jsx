@@ -11,6 +11,19 @@ import GlobalDispatchContext from "../global_dispatch_context";
 import {Stage, Layer, Line, Circle} from "react-konva";
 import Tools from "../tools/tools";
 
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
+var gradient = ctx.createConicGradient(2, 4, 3, 6);
+gradient.addColorStop(2 / 6, '#D815FF');
+gradient.addColorStop(4 / 6, '#09BBF9');
+
+var gradient2 = ctx.createConicGradient(2, 4, 5, 2);
+gradient2.addColorStop(2 / 6, '#D815FF');
+gradient2.addColorStop(5 / 6, '#09BBF9');
+
+var gradient3 = ctx.createConicGradient(2, 1, 0, 2);
+gradient3.addColorStop(1 / 6, '#D815FF');
+gradient3.addColorStop(5 / 6, '#09BBF9');
 const PointsLine1 = [
     [0, 580, 360, 580],
     [361, 580, 391, 550],
@@ -484,16 +497,16 @@ setPointsLine1(_coordsTemp)
                 <Stage width={size.width} height={size.height}>
                     <Layer>
                         {Tools.drawLine(pointsLine1)}
-                        <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff"/>
+                        <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill={gradient}/>
                     </Layer>
 
                     <Layer>
                         {Tools.drawLine(pointsLine2)}
-                        <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff"/>
+                        <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill={gradient2}/>
                     </Layer>
                     <Layer>
                         {Tools.drawLine(pointsLine3)}
-                        <Circle x={pointsCircle3.x} y={pointsCircle3.y} radius={5} fill="#ffffff"/>
+                        <Circle x={pointsCircle3.x} y={pointsCircle3.y} radius={5} fill={gradient3}/>
                     </Layer>
                 </Stage>
             </DivLineBurgerMenuSC>
