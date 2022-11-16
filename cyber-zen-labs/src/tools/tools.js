@@ -1,15 +1,23 @@
 import { Line } from "react-konva";
 import React from "react";
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
 
+var gradient = ctx.createLinearGradient(0, 0, 1920, 1000);
+gradient.addColorStop(1 / 6, '#D815FF');
+gradient.addColorStop(2 / 6, '#09BBF9');
+gradient.addColorStop(3 / 6, '#D815FF');
+gradient.addColorStop(4 / 6, '#09BBF9');
 const Tools = {
     drawLine: (pointsLine) => {
         const componentNode = pointsLine.map((item, i) => {
+            
             return (
                 <Line
                     stoke="linear-gradient(270deg, #D815FF 0%, #09BBF9 102.1%)"
                     key={`wqadfs${i}`}
                     points={item}
-                    stroke="#ffffff"
+                    stroke={gradient}
                     strokeWidth={1}
                     tension={0.5}
                     lineCap="square"
