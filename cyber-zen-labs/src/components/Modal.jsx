@@ -181,16 +181,18 @@ const CyberModal = ({
                     <DivBoxBorderSC
                       label="firstName"
                       type="text"
-                      name="firstName"
+                      name="firstName"   
+                      required
                     />
                     <DivBoxTextSC>Company name</DivBoxTextSC>
                     <DivBoxBorderSC
                       label="companyName"
                       type="text"
                       name="companyName"
+                    
                     />
                     <DivBoxTextSC>Email</DivBoxTextSC>
-                    <DivBoxBorderSC label="email" type="email" name="email" />
+                    <DivBoxBorderSC label="email" type="email" name="email" required/>
                     <DivBoxTextSC>Phone</DivBoxTextSC>
                     <DivBoxBorderSC label="phone" type="text" name="phone" />
                     <DivBoxTextSC>Budget</DivBoxTextSC>
