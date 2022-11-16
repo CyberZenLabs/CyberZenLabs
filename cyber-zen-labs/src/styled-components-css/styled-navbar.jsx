@@ -32,7 +32,6 @@ export const LinkShowReel2SC = styled.div`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 
   text-shadow: 0px 0px 49.392px #441b5f;
   @media (max-width: 1000px) {
@@ -132,7 +131,7 @@ export const DivContainerNavBarHomeSC = styled.div`
   @media (max-width: 1000px) {
     grid-template-columns: 1fr 1.4fr 1fr;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
     height: 60px;
   }
@@ -147,7 +146,7 @@ export const DivContainerNavBarSC = styled.div`
   justify-content: space-between;
   align-items: center;
   background: initial;
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     height: 60px;
   }
@@ -162,7 +161,7 @@ export const DivShowReelSC = styled.div`
   width: 100%;
   display: grid;
   justify-content: end;
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     justify-content: start;
   }
 `;
@@ -170,7 +169,7 @@ export const DivShowReelCenterSC = styled.div`
   width: 100%;
   display: grid;
   justify-content: center;
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -229,7 +228,7 @@ export const LinkToHomeSC = styled(Link)`
   width: max-content;
   height: max-content;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;

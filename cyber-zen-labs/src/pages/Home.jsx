@@ -109,10 +109,15 @@ const Home = () => {
     const getSizeCoords = (pointArr, innerWidth, boxId, lineNumber) => {
         let rect;
         let rightPointCybZen;
+        let topPointCybZen;
+        let leftPointCybZen;
+        let lastPointX;
 
         if (boxId) {
             rect = document.getElementById(`${boxId}`).getBoundingClientRect();
             rightPointCybZen = rect.right;
+            topPointCybZen = rect.top;
+            leftPointCybZen = rect.left;
             console.log('rect',rect);
         }
 
@@ -138,12 +143,20 @@ const Home = () => {
                     pointArr[4][2] = rightPointCybZen + 27;
                     pointArr[5][0] = rightPointCybZen + 27;
                     pointArr[5][2] = rightPointCybZen + 60;
+                } else if (innerWidth >= 480) {
+                    pointArr[0] = [0, topPointCybZen - 60, leftPointCybZen - 25, topPointCybZen - 60];
+                    pointArr[1] = [pointArr[0][2], pointArr[0][3], pointArr[0][2] + 35, pointArr[0][3] - 40];
+                    pointArr[2] = [pointArr[1][2], pointArr[1][3], pointArr[1][2] + 70, pointArr[1][3]];
+                    pointArr[3] = [pointArr[2][2], pointArr[2][3], pointArr[2][2] + 30, pointArr[2][3] - 40];
+                    pointArr[4] = [pointArr[3][2], pointArr[3][3], 400, pointArr[3][3]];
+                    pointArr.pop();
                 } else {
-                    // pointArr[0] = [0, 150, 80, 150];
-                    // pointArr[1] = [80, 150, 110, 130];
-                    // pointArr[2] = [110, 130, 180, 130];
-                    // pointArr[3] = [180, 130, 210, 110];
-                    // pointArr[4] = [210, 110, 260, 110];
+                    pointArr[0] = [0, topPointCybZen - 60, leftPointCybZen , topPointCybZen - 60];
+                    pointArr[1] = [pointArr[0][2], pointArr[0][3], pointArr[0][2] + 35, pointArr[0][3] - 40];
+                    pointArr[2] = [pointArr[1][2], pointArr[1][3], pointArr[1][2] + 70, pointArr[1][3]];
+                    pointArr[3] = [pointArr[2][2], pointArr[2][3], pointArr[2][2] + 30, pointArr[2][3] - 40];
+                    pointArr[4] = [pointArr[3][2], pointArr[3][3], rightPointCybZen - 40, pointArr[3][3]];
+                    pointArr.pop();
                 }
                 break;
             case "line-2":

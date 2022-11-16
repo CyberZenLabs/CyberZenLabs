@@ -20,6 +20,7 @@ export const DivContainerSC = styled.div`
   display: grid;
   justify-items: center;
   width: 90vw;
+ // border: 1px solid red;
 `;
 
 

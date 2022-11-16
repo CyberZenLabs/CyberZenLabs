@@ -81,13 +81,13 @@ export const DivBoxBorderSC = styled.input`
     max-width: 100%;
   }
 `;
-export const DivBoxBorder2SC = styled.input`
-  border-top: none;
+export const DivBoxBorder2SC = styled.textarea`
+  /* border-top: none;
   border-left: none;
-  border-right: none;
+  border-right: none; */
   max-width: 621px;
   width: 100%;
-  height: 30px;
+  height: 200px;
   border-bottom: 1px solid #e0f5e9;
   //box-shadow: 0px 5px 8px #868791;
   background: initial;
@@ -105,19 +105,21 @@ export const DivBoxBorder2SC = styled.input`
   }
 `;
 
-export const DivBoxBorderBigInputSC = styled.input`
+export const DivBoxBorderBigInputSC = styled.textarea`
   border-top: none;
   border-left: none;
   border-right: none;
+  resize: none;
+  overflow: auto;
   width: 100%;
   max-width: 621px;
-  height: 30px;
+  height: 100%;
   border-bottom: 1px solid #e0f5e9;
   background: initial;
-  display: grid;
-  align-self: end;
+  /* display: grid; */
+  /* align-self: end;
   align-items: end;
-  align-content: end;
+  align-content: end; */
   color: #fff;
   font-family: "Orbitron";
   :focus {
@@ -145,7 +147,7 @@ export const DivBoxRowsRightPenalSC = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 64px 231px 79px 40px 203px;
+  grid-template-rows: 64px 231px 79px 203px;
   @media (max-width: 810px) {
     max-width: 100%;
   }
@@ -206,10 +208,12 @@ export const DivTextAddAttachmentSC = styled.div`
   }
 `;
 
-export const ButtonGradientSC = styled(Link)`
+export const ButtonGradientSC = styled.button`
+text-decoration: none;
   width: 100%;
   height: 100%;
-
+  border: none;
+  font-family: 'Orbitron';
   max-width: 427px;
   max-height: 100px;
   display: grid;

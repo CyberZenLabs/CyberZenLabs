@@ -13,6 +13,10 @@ body {
  
 }
 
+/* body {
+  overflow: hidden;
+} */
+
 .ReactModal__Overlay {z-index: 1000000000;}
 
 .ReactModal__Overlay--after-open
