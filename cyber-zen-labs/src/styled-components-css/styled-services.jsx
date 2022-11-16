@@ -157,7 +157,7 @@ export const DivTaskItemContentSC = styled.div`
   letter-spacing: 0.05em;
 
   color: #FFFFFF;
-  font-size: clamp(10px, 8vw, 64px);
+  font-size:  ${({size}) => (size && `clamp(10px, 8vw, ${size})` )};
 `;
 
 export const DivTaskItemContentTempSC = styled.div`

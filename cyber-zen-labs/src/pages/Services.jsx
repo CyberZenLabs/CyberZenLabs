@@ -21,8 +21,8 @@ const Services = () => {
     const {state, dispatch} = useContext(GlobalDispatchContext);
     const {isPage, isBlackBack, isServ} = state;
     const [position, setPosition] = useState({
-        x: window.innerWidth / 4,
-        y: 50
+        x: window.innerWidth / 3.5,
+        y: 0
 
     })
     const [position1, setPosition1] = useState({
@@ -122,6 +122,7 @@ const Services = () => {
                 a2 = (a2 + Math.PI / 360) % (Math.PI * 2);
                 a3 = (a3 + Math.PI / 360) % (Math.PI * 2);
                 tempSCroll = true
+                console.log( x + r * Math.cos(a))
                 if (isSecond) {
                     if (x + r * Math.cos(a) < -481
                         || x + r * Math.cos(a1) < -481
@@ -180,21 +181,25 @@ const Services = () => {
                             position={position}
                             id={0}
                             title={'Web/Mobile development'}
+                            size="64px"
                         />
                         <ServicesItem
                             position={position1}
                             id={1}
-                            title={'Web/Mobile development1'}
+                            title={'Web3 & Blockchain software development'}
+                            size="60px"
                         />
                         <ServicesItem
                             position={position2}
                             id={2}
-                            title={'Web/Mobile development2'}
+                            title={'UX/UI Design'}
+                            size="64px"
                         />
                         <ServicesItem
                             position={position3}
                             id={3}
-                            title={'Web/Mobile development3'}
+                            title={'Cryptocurrency trading'}
+                            size="60px"
                         />
 
                     </DivBoxCarouselSC>
