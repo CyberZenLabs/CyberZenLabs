@@ -4,17 +4,18 @@ import {DivTaskItemContentSC, DivTaskItemContentTempSC, DivTaskItemSC} from "../
 const ServicesItem = (props) => {
     const {
         position,
-        id
+        id,
+        title
     } = props
 
     return (
 
         <DivTaskItemSC id={'DivTaskItemSC' + id} position={position}>
             <DivTaskItemContentSC className={'DivTaskItemContentSC'}>
-               Web/Mobile development
+                {title}
             </DivTaskItemContentSC>
             <DivTaskItemContentTempSC className={'cybr-btn__glitch'}>
-                Web/Mobile development
+                {title}
             </DivTaskItemContentTempSC>
 
         </DivTaskItemSC>

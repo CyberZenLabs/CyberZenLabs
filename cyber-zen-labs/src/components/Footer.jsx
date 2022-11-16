@@ -228,9 +228,9 @@ const Footer = () => {
                                 <H1FooterTextSC to="/services" isForm={isServ}>
                                     SERVICES
                                 </H1FooterTextSC>
-                                <H1FooterTextSC to="/projects" isForm={isProj}>
+                                {/* <H1FooterTextSC to="/projects" isForm={isProj}>
                                     PROJECTS
-                                </H1FooterTextSC>
+                                </H1FooterTextSC> */}
                                 <H1FooterTextSC to="/contacts" isForm={isForm}>
                                     CONTACTS
                                 </H1FooterTextSC>
@@ -285,9 +285,9 @@ const Footer = () => {
                                 <H1FooterTextSC to="/services" isForm={isServ}>
                                     SERVICES
                                 </H1FooterTextSC>
-                                <H1FooterTextSC to="/projects" isForm={isProj}>
+                                {/* <H1FooterTextSC to="/projects" isForm={isProj}>
                                     PROJECTS
-                                </H1FooterTextSC>
+                                </H1FooterTextSC> */}
                                 <H1FooterTextSC to="/contacts" isForm={isForm}>
                                     CONTACTS
                                 </H1FooterTextSC>

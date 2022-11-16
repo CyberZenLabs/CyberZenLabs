@@ -379,7 +379,7 @@ const Home = () => {
             setPointsLine3(_coordsTemp3);
             setSize({
                 width: window.innerWidth,
-                height: (window.innerHeight = 880),
+                height: window.innerHeight,
             });
             console.log('kekekekekekek');
         }

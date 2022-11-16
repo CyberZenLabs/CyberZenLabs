@@ -4,6 +4,7 @@ import Logo from "../images/Logo.svg";
 import Burger from "../images/BurgerIcon.svg";
 
 export const DivMaxWidthSC = styled.div`
+
   position: relative;
   max-width: var(--max-width);
   margin: 0 auto;
