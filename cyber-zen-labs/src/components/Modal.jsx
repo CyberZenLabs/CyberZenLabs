@@ -62,14 +62,16 @@ const CyberModal = ({
   const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isOpen, modalData } = state;
 
-  const [name, setName] = useState('');
+  const fileInput = useRef();
 
   const [music, setMusic] = useState(true);
   const MusicBeh = () => {
     setMusic(!music);
   };
 
-
+  const getFile = () => {
+    fileInput.current.click();
+  }
 
   return (
     <>
@@ -248,12 +250,23 @@ const CyberModal = ({
                       Tell us about your project or give a link to the
                       description
                     </DivTextDescriptionSC>
-                    <DivBoxBorderBigInputSC type="textarea" wrap="on" rows="5" name="desccription"/>
+                    <DivBoxBorderBigInputSC
+                      type="textarea"
+                      wrap="on"
+                      rows="5"
+                      name="desccription"
+                    />
                     <DivBoxColumnIconTextSC>
-                      <DivBoxIconClipSC />
+                      <DivBoxIconClipSC onClick={getFile}/>
                       <DivTextAddAttachmentSC>
                         Add attachment
                       </DivTextAddAttachmentSC>
+                      <input
+                        type="file"
+                        name="attachment"
+                        hidden="true"
+                        ref={fileInput}
+                      ></input>
                     </DivBoxColumnIconTextSC>
                     {/* <DivBoxBorderSC type="text" /> */}
                     <ButtonGradientSC type="submit">send</ButtonGradientSC>
