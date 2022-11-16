@@ -173,6 +173,9 @@ export const DivPageSC = styled.div`
   @media (max-width: 380px) {
     font-size: 9px;
   }
+  &:hover {
+    text-shadow: 4px 4px 4px #8504ee;
+  }
 `;
 
 export const DivBoxColumnsFotosSC = styled.div`

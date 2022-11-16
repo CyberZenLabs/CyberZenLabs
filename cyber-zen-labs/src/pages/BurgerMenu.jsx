@@ -10,7 +10,8 @@ import {SpanTextElementMenuSC} from "../styled-components-css/styled-menu";
 import GlobalDispatchContext from "../global_dispatch_context";
 import {Stage, Layer, Line, Circle} from "react-konva";
 import Tools from "../tools/tools";
-
+import useSound from 'use-sound';
+import Sfx from '../audio/footerEfx.wav';
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 var gradient = ctx.createConicGradient(2, 4, 3, 6);
@@ -490,7 +491,7 @@ setPointsLine1(_coordsTemp)
         }, true);
     }
 
-
+    const [play] = useSound(Sfx);
     return (
         <>
             <DivLineBurgerMenuSC>
@@ -513,11 +514,11 @@ setPointsLine1(_coordsTemp)
             <DivWrapMenuSC>
                 <DivContainerAboutSC>
                     <GridContentSC>
-                        <SpanTextElementMenuSC to="/">HOME</SpanTextElementMenuSC>
-                        <SpanTextElementMenuSC to="/services">SERVICES</SpanTextElementMenuSC>
-                        <SpanTextElementMenuSC to="/about">ABOUT</SpanTextElementMenuSC>
-                        <SpanTextElementMenuSC to="/contacts">CONTACTS</SpanTextElementMenuSC>
-                        {/* <SpanTextElementMenuSC to="/projects">PROJECTS</SpanTextElementMenuSC> */}
+                        <SpanTextElementMenuSC to="/" onMouseEnter={play}>HOME</SpanTextElementMenuSC>
+                        <SpanTextElementMenuSC to="/services" onMouseEnter={play}>SERVICES</SpanTextElementMenuSC>
+                        <SpanTextElementMenuSC to="/about" onMouseEnter={play}>ABOUT</SpanTextElementMenuSC>
+                        <SpanTextElementMenuSC to="/contacts" onMouseEnter={play}>CONTACTS</SpanTextElementMenuSC>
+                        {/* <SpanTextElementMenuSC to="/projects" onMouseEnter={play}>PROJECTS</SpanTextElementMenuSC> */}
                     </GridContentSC>
                 </DivContainerAboutSC>
             </DivWrapMenuSC>

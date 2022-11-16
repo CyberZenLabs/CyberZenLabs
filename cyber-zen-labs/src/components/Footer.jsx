@@ -25,7 +25,9 @@ import GlobalDispatchContext from "../global_dispatch_context";
 import Audio from "../audio/Homepage.mp3";
 import CyberModal from "./Modal";
 import GetInTouchButton from "./GetInTouchButton";
-
+import useSound from 'use-sound';
+import boopSfx from '../audio/footerEfx.wav';
+import Sfx from '../audio/efx.wav';
 const PointsLine2 = [[0, 0, 415, 0]];
 
 const PointsLine1 = [
@@ -48,7 +50,8 @@ const Footer = () => {
     });
 
     // console.log('lol', size);
-
+    const [play] = useSound(boopSfx);
+    const [plays] = useSound(Sfx);
     const [music, setMusic] = useState(true);
     const MusicBeh = () => {
         setMusic(!music);
@@ -125,7 +128,7 @@ const Footer = () => {
             {isPage === "about" ? (
                 <DivMaxWidthSC>
                     <DivContainerFooterSC>
-                        <DivContainerFooterLeftSC onClick={MusicBeh}>
+                        <DivContainerFooterLeftSC onClick={MusicBeh} onMouseEnter={plays}>
                             {music ? (
                                 <div className="MusicContainer">
                                     <div className="Bars" />
@@ -147,11 +150,11 @@ const Footer = () => {
                             </H1FooterTextSoundOnSC>
                         </DivContainerFooterLeftSC>
                         <DivContainerFooterCenterTeamSC>
-                            <FooterTextTeamSC to="/team">Team</FooterTextTeamSC>
-                            <FooterTextTeamSC to="/aboutdev">Development</FooterTextTeamSC>
+                            <FooterTextTeamSC to="/team" onMouseEnter={play}>Team</FooterTextTeamSC>
+                            <FooterTextTeamSC to="/aboutdev" onMouseEnter={play}>Development</FooterTextTeamSC>
                         </DivContainerFooterCenterTeamSC>
                         <DivContainerFooterRightSC>
-                            <DivGitButtonBoxSC
+                            <DivGitButtonBoxSC onMouseEnter={plays}
                                 onClick={() =>
                                     dispatch({
                                         type: "SET_IS_OPEN",
@@ -199,7 +202,7 @@ const Footer = () => {
                     </FooterLinesSC>
                     <DivMaxWidthSC>
                         <DivContainerFooterSC>
-                            <DivContainerFooterLeftSC onClick={MusicBeh}>
+                            <DivContainerFooterLeftSC onClick={MusicBeh} onMouseEnter={plays}>
                                 {music ? (
                                     <div className="MusicContainer">
                                         <div className="Bars" />
@@ -221,22 +224,22 @@ const Footer = () => {
                                 </H1FooterTextSoundOnSC>
                             </DivContainerFooterLeftSC>
                             <DivContainerFooterCenterSC id="footer-page-box">
-                                <H1FooterTextSC to="/" isForm={isHome}>
+                                <H1FooterTextSC to="/" isForm={isHome} onMouseEnter={play}>
                                     HOME
                                 </H1FooterTextSC>
-                                <H1FooterTextSC to="/about">ABOUT</H1FooterTextSC>
-                                <H1FooterTextSC to="/services" isForm={isServ}>
+                                <H1FooterTextSC to="/about" onMouseEnter={play}>ABOUT</H1FooterTextSC>
+                                <H1FooterTextSC to="/services" isForm={isServ} onMouseEnter={play}>
                                     SERVICES
                                 </H1FooterTextSC>
                                 {/* <H1FooterTextSC to="/projects" isForm={isProj}>
                                     PROJECTS
                                 </H1FooterTextSC> */}
-                                <H1FooterTextSC to="/contacts" isForm={isForm}>
+                                <H1FooterTextSC to="/contacts" isForm={isForm} onMouseEnter={play}>
                                     CONTACTS
                                 </H1FooterTextSC>
                             </DivContainerFooterCenterSC>
                             <DivContainerFooterRightSC>
-                                <DivGitButtonBoxSC
+                                <DivGitButtonBoxSC onMouseEnter={plays}
                                     onClick={() =>
                                         dispatch({
                                             type: "SET_IS_OPEN",
@@ -256,7 +259,7 @@ const Footer = () => {
                     {" "}
                     <DivMaxWidthSC>
                         <DivContainerFooterSC>
-                            <DivContainerFooterLeftSC onClick={MusicBeh}>
+                            <DivContainerFooterLeftSC onClick={MusicBeh} onMouseEnter={plays}>
                                 {music ? (
                                     <div className="MusicContainer">
                                         <div className="Bars" />
@@ -278,22 +281,22 @@ const Footer = () => {
                                 </H1FooterTextSoundOnSC>
                             </DivContainerFooterLeftSC>
                             <DivContainerFooterCenterSC id="footer-page-box">
-                                <H1FooterTextSC to="/" isForm={isHome}>
+                                <H1FooterTextSC to="/" isForm={isHome} onMouseEnter={play}>
                                     HOME
                                 </H1FooterTextSC>
-                                <H1FooterTextSC to="/about">ABOUT</H1FooterTextSC>
-                                <H1FooterTextSC to="/services" isForm={isServ}>
+                                <H1FooterTextSC to="/about" onMouseEnter={play}>ABOUT</H1FooterTextSC>
+                                <H1FooterTextSC to="/services" isForm={isServ} onMouseEnter={play}>
                                     SERVICES
                                 </H1FooterTextSC>
                                 {/* <H1FooterTextSC to="/projects" isForm={isProj}>
                                     PROJECTS
                                 </H1FooterTextSC> */}
-                                <H1FooterTextSC to="/contacts" isForm={isForm}>
+                                <H1FooterTextSC to="/contacts" isForm={isForm} onMouseEnter={play}>
                                     CONTACTS
                                 </H1FooterTextSC>
                             </DivContainerFooterCenterSC>
                             <DivContainerFooterRightSC>
-                                <DivGitButtonBoxSC
+                                <DivGitButtonBoxSC onMouseEnter={plays}
                                     onClick={() =>
                                         dispatch({
                                             type: "SET_IS_OPEN",
@@ -311,7 +314,7 @@ const Footer = () => {
             {isPage === "sound" ? (
                 <DivMaxWidthSC>
                     <DivContainerFooterSC>
-                        <DivContainerFooterLeftSC onClick={MusicBeh}>
+                        <DivContainerFooterLeftSC onClick={MusicBeh} onMouseEnter={plays}>
                             {music ? (
                                 <div className="MusicContainer">
                                     <div className="Bars" />

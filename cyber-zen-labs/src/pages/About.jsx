@@ -11,7 +11,8 @@ import { DivRuslanBoxSC } from "../styled-components-css/styled.kirdro";
 import Konva from "konva";
 import { Stage, Layer, Line, Circle } from "react-konva";
 import Tools from "../tools/tools";
-
+import useSound from 'use-sound';
+import Sfx from '../audio/footerEfx.wav';
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -254,7 +255,7 @@ const About = () => {
         }, true);
     }
 
-
+    const [play] = useSound(Sfx);
     return (
         <>
             <DivLineAboutSC  top={window.innerHeight < 600 ? 40 : null} >
@@ -274,9 +275,9 @@ const About = () => {
             <DivWrapMenuSC  >
                 <DivContainerAboutSC id="about-line">
                     <GridContentSC>
-                        <SpanTextElementSC to="/">Home</SpanTextElementSC>
-                        <SpanTextElementSC to="/team">Team</SpanTextElementSC>
-                        <SpanTextElementSC to="/AboutDev">Development</SpanTextElementSC>
+                        <SpanTextElementSC to="/" onMouseEnter={play}>Home</SpanTextElementSC>
+                        <SpanTextElementSC to="/team" onMouseEnter={play}>Team</SpanTextElementSC>
+                        <SpanTextElementSC to="/AboutDev" onMouseEnter={play}>Development</SpanTextElementSC>
                     </GridContentSC>
                 </DivContainerAboutSC>
             </DivWrapMenuSC>

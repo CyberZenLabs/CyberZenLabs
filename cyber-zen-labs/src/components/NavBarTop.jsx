@@ -18,10 +18,12 @@ import {
   BurgerMenuDisplaySC,
   DivDecLineSC,
 } from "../styled-components-css/styled-navbar";
-
+import useSound from 'use-sound';
+import Sfx from '../audio/efx.wav';
 const NavBarTop = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isBlackBack, isHome, isForm } = state;
+  const [plays] = useSound(Sfx);
   return (
     <>
       {isHome === true ? (
@@ -39,7 +41,7 @@ const NavBarTop = () => {
               </LinkShowReelSC>
             </DivShowReelSC>
             <BurgerMenuDisplaySC>
-              <LinkToBurgerSC to="/menu">
+              <LinkToBurgerSC to="/menu" onMouseEnter={plays}>
                 <IconBurgerSC></IconBurgerSC>
               </LinkToBurgerSC>
             </BurgerMenuDisplaySC>
@@ -66,7 +68,7 @@ const NavBarTop = () => {
                 </LinkShowReelSC>
               )}
             </DivShowReelCenterSC>
-            <LinkToBurgerSC to="/menu">
+            <LinkToBurgerSC to="/menu" onMouseEnter={plays}>
               <IconBurgerSC></IconBurgerSC>
             </LinkToBurgerSC>
           </DivContainerNavBarSC>

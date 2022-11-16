@@ -45,6 +45,8 @@ import Konva from "konva";
 import { Stage, Layer, Line, Circle } from "react-konva";
 import Tools from "../tools/tools";
 import { CgWindows } from "react-icons/cg";
+import useSound from 'use-sound';
+import Sfx from '../audio/footerEfx.wav';
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -95,7 +97,7 @@ const PointsLine3 = [[100, 430, 1800, 430]];
 
 const Team = () => {
   
-
+  const [play] = useSound(Sfx);
   const [indexSelectedButton, getIndexButton] = useState(0);
 
   const { state, dispatch } = useContext(GlobalDispatchContext);
@@ -478,25 +480,25 @@ const Team = () => {
             <DivBoxColumnsPagesSC>
               <DivPageSC
                 isActive={indexSelectedButton === 0}
-                onClick={onClickTab(0)}
+                onClick={onClickTab(0)} onMouseEnter={play}
               >
                 Leadership
               </DivPageSC>
               <DivPageSC
                 isActive={indexSelectedButton === 1}
-                onClick={onClickTab(1)}
+                onClick={onClickTab(1)} onMouseEnter={play}
               >
                 Development
               </DivPageSC>
               <DivPageSC
                 isActive={indexSelectedButton === 2}
-                onClick={onClickTab(2)}
+                onClick={onClickTab(2)} onMouseEnter={play}
               >
                 Design
               </DivPageSC>
               {/* <DivPageSC
                 isActive={indexSelectedButton === 3}
-                onClick={onClickTab(3)}
+                onClick={onClickTab(3)} onMouseEnter={play}
               >
                 Cryptocurrency trading
               </DivPageSC> */}

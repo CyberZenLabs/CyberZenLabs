@@ -42,6 +42,8 @@ import {
 } from "../styled-components-css/styled-Footer";
 import { Form, Formik } from "formik";
 import { registerSchema } from "../validations/validation.signup";
+import useSound from 'use-sound';
+import Sfx from '../audio/send.wav';
 const startingValues = {
   firstName: "",
   companyName: "",
@@ -63,7 +65,7 @@ const CyberModal = ({
   const { isOpen, modalData } = state;
 
   const [name, setName] = useState('');
-
+  const [play] = useSound(Sfx);
   const [music, setMusic] = useState(true);
   const MusicBeh = () => {
     setMusic(!music);
@@ -170,7 +172,7 @@ const CyberModal = ({
                       </SpanBudgetSC>
                     </label>
                   </DivBoxColumnsMoneySC>
-                  <ButtonGradientSC type="submit">send</ButtonGradientSC>
+                  <ButtonGradientSC type="submit" onMouseEnter={play}>send</ButtonGradientSC>
                 </DivContainerPenals2SC>
 
                 <DivContainerPenalsSC>
@@ -258,7 +260,7 @@ const CyberModal = ({
                       </DivTextAddAttachmentSC>
                     </DivBoxColumnIconTextSC>
                     {/* <DivBoxBorderSC type="text" /> */}
-                    <ButtonGradientSC type="submit">send</ButtonGradientSC>
+                    <ButtonGradientSC type="submit" onMouseEnter={play}>send</ButtonGradientSC>
                   </DivBoxRowsRightPenalSC>
                 </DivContainerPenalsSC>
               </form>
