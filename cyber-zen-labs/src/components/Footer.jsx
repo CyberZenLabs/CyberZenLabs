@@ -128,7 +128,7 @@ const Footer = () => {
             {isPage === "about" ? (
                 <DivMaxWidthSC>
                     <DivContainerFooterSC>
-                        <DivContainerFooterLeftSC onClick={MusicBeh} onMouseEnter={plays}>
+                        <DivContainerFooterLeftSC onClick={MusicBeh} onMouseDown={plays}>
                             {music ? (
                                 <div className="MusicContainer">
                                     <div className="Bars" />
@@ -202,7 +202,7 @@ const Footer = () => {
                     </FooterLinesSC>
                     <DivMaxWidthSC>
                         <DivContainerFooterSC>
-                            <DivContainerFooterLeftSC onClick={MusicBeh} onMouseEnter={plays}>
+                            <DivContainerFooterLeftSC onClick={MusicBeh} onMouseDown={plays}>
                                 {music ? (
                                     <div className="MusicContainer">
                                         <div className="Bars" />
@@ -259,7 +259,7 @@ const Footer = () => {
                     {" "}
                     <DivMaxWidthSC>
                         <DivContainerFooterSC>
-                            <DivContainerFooterLeftSC onClick={MusicBeh} onMouseEnter={plays}>
+                            <DivContainerFooterLeftSC onClick={MusicBeh} onMouseDown={plays}>
                                 {music ? (
                                     <div className="MusicContainer">
                                         <div className="Bars" />
@@ -314,7 +314,7 @@ const Footer = () => {
             {isPage === "sound" ? (
                 <DivMaxWidthSC>
                     <DivContainerFooterSC>
-                        <DivContainerFooterLeftSC onClick={MusicBeh} onMouseEnter={plays}>
+                        <DivContainerFooterLeftSC onClick={MusicBeh} onMouseDown={plays}>
                             {music ? (
                                 <div className="MusicContainer">
                                     <div className="Bars" />

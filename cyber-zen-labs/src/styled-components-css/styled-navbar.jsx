@@ -234,8 +234,9 @@ export const LinkToHomeSC = styled(Link)`
 `;
 
 export const LinkToBurgerSC = styled(Link)`
-  width: 100%;
+  width: max-content;
   display: grid;
+  justify-self: end;
   justify-content: end;
 `;
 
