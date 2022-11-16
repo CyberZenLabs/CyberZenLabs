@@ -111,7 +111,7 @@ export const DivBoxBorderBigInputSC = styled.textarea`
   border-right: none;
   resize: none;
   overflow: auto;
-  width: 100%;
+  width: 98%;
   max-width: 621px;
   height: 100%;
   border-bottom: 1px solid #e0f5e9;
@@ -147,7 +147,7 @@ export const DivBoxRowsRightPenalSC = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 64px 231px 79px 203px;
+  grid-template-rows: 64px 230px 79px 203px;
   @media (max-width: 810px) {
     max-width: 100%;
   }
@@ -233,6 +233,12 @@ text-decoration: none;
   align-items: center;
   color: #fff;
   cursor: pointer;
+  :hover {
+    opacity: 0.9;
+  }
+  :active {
+    opacity: 0.7;
+  }
   @media (max-width: 1060px) {
     max-width: 350px;
     max-height: 85px;
