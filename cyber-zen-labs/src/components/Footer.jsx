@@ -50,8 +50,8 @@ const Footer = () => {
     });
 
     // console.log('lol', size);
-    const [play] = useSound(boopSfx);
-    const [plays] = useSound(Sfx);
+    const [play] = useSound(boopSfx, {volume:0.1});
+    const [plays] = useSound(Sfx, {volume:0.1});
     const [music, setMusic] = useState(true);
     const MusicBeh = () => {
         setMusic(!music);

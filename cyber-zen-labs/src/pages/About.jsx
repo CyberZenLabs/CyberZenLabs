@@ -255,7 +255,7 @@ const About = () => {
         }, true);
     }
 
-    const [play] = useSound(Sfx);
+    const [play] = useSound(Sfx, {volume:0.1});
     return (
         <>
             <DivLineAboutSC  top={window.innerHeight < 600 ? 40 : null} >

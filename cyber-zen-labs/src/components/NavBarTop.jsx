@@ -23,7 +23,7 @@ import Sfx from '../audio/efx.wav';
 const NavBarTop = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isBlackBack, isHome, isForm } = state;
-  const [plays] = useSound(Sfx);
+  const [plays] = useSound(Sfx, {volume:0.1});
   return (
     <>
       {isHome === true ? (

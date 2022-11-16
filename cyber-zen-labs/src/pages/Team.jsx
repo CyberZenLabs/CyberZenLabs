@@ -97,7 +97,7 @@ const PointsLine3 = [[100, 430, 1800, 430]];
 
 const Team = () => {
   
-  const [play] = useSound(Sfx);
+  const [play] = useSound(Sfx, {volume:0.1});
   const [indexSelectedButton, getIndexButton] = useState(0);
 
   const { state, dispatch } = useContext(GlobalDispatchContext);

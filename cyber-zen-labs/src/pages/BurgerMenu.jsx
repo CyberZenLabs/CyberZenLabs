@@ -491,7 +491,7 @@ setPointsLine1(_coordsTemp)
         }, true);
     }
 
-    const [play] = useSound(Sfx);
+    const [play] = useSound(Sfx, {volume:0.1});
     return (
         <>
             <DivLineBurgerMenuSC>

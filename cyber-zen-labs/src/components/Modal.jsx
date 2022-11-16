@@ -45,7 +45,7 @@ import {
 import { Form, Formik } from "formik";
 import { registerSchema } from "../validations/validation.signup";
 import useSound from 'use-sound';
-import Sfx from '../audio/send.wav';
+import Sfx from '../audio/footerEfx.wav';
 const startingValues = {
   firstName: "",
   companyName: "",
@@ -67,7 +67,7 @@ const CyberModal = ({
   const { isOpen, modalData } = state;
 
   const [name, setName] = useState('');
-  const [play] = useSound(Sfx);
+  const [play] = useSound(Sfx, {volume:0.1});
   const [music, setMusic] = useState(true);
   const fileInput = useRef();
   const MusicBeh = () => {
