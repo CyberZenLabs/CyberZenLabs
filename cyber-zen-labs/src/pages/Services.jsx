@@ -19,7 +19,7 @@ const Services = () => {
     const {isPage, isBlackBack, isServ} = state;
     const [position, setPosition] = useState({
         x: 542,
-        y: 89
+        y: 0
     })
     const [position1, setPosition1] = useState({
         x: 1361,
@@ -35,7 +35,7 @@ const Services = () => {
     })
 
     let x = (window.innerWidth / 2) - 322 - 100  // center
-    let y = 1900 / 2   // center
+    let y = 1800 / 2   // center
     let r = 900   // radius
     let a = 4.7 // angle (from 0 to Math.PI * 2)
     let a1 = 0

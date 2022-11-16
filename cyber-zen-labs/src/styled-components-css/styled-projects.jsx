@@ -171,9 +171,11 @@ export const DivBoxCarouselBackgroundEllipseSC = styled.div`
 export const DivTaskItemSC = styled.div`
     position: absolute;
     top: 0; //!!
-  bottom: 40px;
-  //left: calc((100% / 2) - 304px);
-  box-shadow: 0px 0px 30px 9px #7167fb45;
+  //bottom: 40px;
+  //left: calc((100% / 2) - 304px);  
+  top: ${({position}) => (position.y)}px;
+  left: ${({position}) => (position.x)}px;
+  box-shadow: 0px 0px 50px 9px #7167fb45;
   border-radius: 26px;
   width: 60vw;
   max-width: 608px;
@@ -182,12 +184,12 @@ export const DivTaskItemSC = styled.div`
   padding: 2px;
   box-sizing: border-box;
   background: var(--blue-pink);
-  gap: 10px;
+  //gap: 10px;
   //max-height: 45vh;//!!
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
+
+ 
+  //margin-left: auto; 
+ // margin-right: auto; 
  //border:1px solid red;
 
 `;
@@ -206,7 +208,7 @@ export const DivTaskItemContentSC = styled.div`
   font-family: var(--font-family-kanit);
   font-style: normal;
   font-weight: 400;
-  font-size: 64px;
+ // font-size: 64px;
   line-height: 105%;
   /* or 67px */
   text-align: center;
