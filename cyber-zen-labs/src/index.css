@@ -272,6 +272,11 @@ table {
   border-spacing: 0;
 }
 
+/* input::-moz-placeholder { color: #fff; opacity: 1;}
+textarea::-moz-placeholder { color: #fff; opacity: 1;}
+input::-webkit-input-placeholder { color: #fff; opacity: 1; }
+textarea::-webkit-textarea-placeholder { color: #fff; opacity: 1; } */
+
 .label {
   width: 100%;
   max-width: 265px;
