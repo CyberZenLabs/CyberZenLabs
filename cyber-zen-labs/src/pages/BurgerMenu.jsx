@@ -504,7 +504,7 @@ setPointsLine1(_coordsTemp)
                         <SpanTextElementMenuSC to="/services">SERVICES</SpanTextElementMenuSC>
                         <SpanTextElementMenuSC to="/about">ABOUT</SpanTextElementMenuSC>
                         <SpanTextElementMenuSC to="/contacts">CONTACTS</SpanTextElementMenuSC>
-                        <SpanTextElementMenuSC to="/projects">PROJECTS</SpanTextElementMenuSC>
+                        {/* <SpanTextElementMenuSC to="/projects">PROJECTS</SpanTextElementMenuSC> */}
                     </GridContentSC>
                 </DivContainerAboutSC>
             </DivWrapMenuSC>
