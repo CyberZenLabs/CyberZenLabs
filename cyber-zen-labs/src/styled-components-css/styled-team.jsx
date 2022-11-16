@@ -30,17 +30,13 @@ export const DivLineAboutTeamSC=styled.div`
   height: 100%;
   //top: 80px;
   //bottom: 0;
-  @media (max-width:660px) {
-    min-height: 923px;
-  }
-  min-height: 923px;
+  
+  
   justify-items: center;
   align-items: center;
   position: absolute;
   pointer-events: none;
-  @media (max-height:873px) {
-    min-height: 873px;
-  }
+  
 `;
 export const DivBoxTextTitleSC = styled.div`
   width: 100%;
@@ -137,6 +133,8 @@ export const DivBoxColumnsPagesSC = styled.div`
   column-gap: 20px;
   @media(max-width:480px){column-gap: 10px;}
   @media(max-width:380px){column-gap: 7px;}
+ 
+
 `;
 
 export const DivPageSC = styled.div`
@@ -171,6 +169,9 @@ export const DivPageSC = styled.div`
   }
   @media (max-width: 480px) {
     font-size: 10px;
+  }
+  @media (max-width: 380px) {
+    font-size: 9px;
   }
 `;
 

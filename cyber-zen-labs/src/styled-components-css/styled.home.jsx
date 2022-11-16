@@ -10,6 +10,7 @@ export const DivHomeContentSC = styled.div`
   height: 100%;
   @media (max-width: 768px) {
     grid-template-columns: 100%;
+    align-items: center;
   }
 `;
 
@@ -18,12 +19,12 @@ export const DivTextBoxtSC = styled.div`
   display: grid;
   grid-template-rows: max-content max-content;
   row-gap: 80px;
-  margin-bottom: 100px;
+  margin-bottom: 130px;
   @media (max-width: 1024px) {
-    margin-bottom: 0px;
+    margin-bottom: 50px;
   }
   @media (max-width: 768px) {
-    row-gap: 0px;
+    row-gap: 40px;
     margin-bottom: 0px;
     grid-template-rows: fit-content;
   }
@@ -33,13 +34,22 @@ export const DivTitleBoxtSC = styled.div`
   width: 100%;
   display: grid;
   grid-template-rows: max-content max-content;
+  row-gap: 20px;
+  margin-top: 30px;
+  @media (max-width: 1024px) {
+    margin-top: 0px;
+  }
+  @media (max-width: 768px) {
+    //align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
 `;
 
 export const TitleHomeBoxSC = styled.h1`
   pointer-events: none;
   font-weight: 900;
   font-size: 80px;
-  line-height: 100px;
   letter-spacing: 0.08em;
   background: ${({ isBlackBack }) =>
     isBlackBack === "black" ? "var(--color-red-pink)" : "var(--blue-pink)"};
@@ -57,36 +67,44 @@ export const TitleHomeBoxSC = styled.h1`
     font-size: 60px;
   }
   @media (max-width: 1024px) {
-    font-size: 52px;
+    font-size: 48px;
   }
-  /* @media (max-width: 1000px) {
+  @media (max-width: 768px) {
     font-size: 44px;
   }
   @media (max-width: 600px) {
-    justify-self: center;
+    font-size: 37px;
+  }
+  @media (max-width: 480px) {
     font-size: 28px;
-  } */
+  }
 `;
 
 export const SloganBoxSC = styled.h1`
   font-weight: 400;
   font-size: 36px;
-  line-height: 45px;
   letter-spacing: 0.05em;
   pointer-events: none;
   width: max-content;
   @media (max-width: 1700px) {
     font-size: 33px;
   }
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
   @media (max-width: 600px) {
-    display: grid;
-    justify-self: center;
-    font-size: 24px;
+    font-size: 22px;
+  }
+  @media (max-width: 480px) {
+    font-size: 15px;
   }
 `;
 
 export const DivDescBoxtSC = styled.div`
-  width: 85%;
+  width: 80%;
   display: grid;
   @media (max-width: 1919px) {
     width: 75%;
@@ -94,10 +112,12 @@ export const DivDescBoxtSC = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
+    justify-items: center;
   }
 `;
 
 export const DescHomeBoxSC = styled.span`
+  width: 100%;
   font-weight: 400;
   font-size: 40px;
   line-height: 50px;
@@ -111,13 +131,20 @@ export const DescHomeBoxSC = styled.span`
   @media (max-width: 1700px) {
     font-size: 33px;
   }
-  @media (max-width: 768px) {
-    font-size: 20px;
+  @media (max-width: 1024px) {
+    font-size: 25px;
     line-height: 30px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     text-align: center;
     font-size: 24px;
+  }
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+  @media (max-width: 480px) {
+    font-size: 18px;
+    max-width: 300px;
   }
 `;
 
@@ -160,7 +187,7 @@ export const DescHomeBoxColumnsSC = styled.div`
 export const DivHomeLineBoxSC = styled.div`
   display: grid;
   height: 100%;
-  min-height: 785px;
+  /* min-height: 785px; */
   justify-items: center;
   align-items: center;
   position: absolute;
@@ -173,7 +200,7 @@ export const GifBuddhaHomeSC = styled.div`
   width: 550px;
   height: 550px;
   background-size: 100%;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-position: center -75px;
   z-index: 30;
   /* @media (max-width: 1700px) {

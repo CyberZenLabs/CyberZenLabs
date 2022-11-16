@@ -113,6 +113,7 @@ const Home = () => {
         if (boxId) {
             rect = document.getElementById(`${boxId}`).getBoundingClientRect();
             rightPointCybZen = rect.right;
+            console.log('rect',rect);
         }
 
         switch (lineNumber) {
@@ -138,15 +139,11 @@ const Home = () => {
                     pointArr[5][0] = rightPointCybZen + 27;
                     pointArr[5][2] = rightPointCybZen + 60;
                 } else {
-                    pointArr[1][2] = pointArr[0][2] + 30;
-                    pointArr[2][0] = pointArr[0][2] + 30;
-                    pointArr[2][2] = rightPointCybZen - 15;
-                    pointArr[3][0] = rightPointCybZen - 15;
-                    pointArr[3][2] = rightPointCybZen + 27;
-                    pointArr[4][0] = rightPointCybZen + 27;
-                    pointArr[4][2] = rightPointCybZen + 27;
-                    pointArr[5][0] = rightPointCybZen + 27;
-                    pointArr[5][2] = rightPointCybZen + 60;
+                    // pointArr[0] = [0, 150, 80, 150];
+                    // pointArr[1] = [80, 150, 110, 130];
+                    // pointArr[2] = [110, 130, 180, 130];
+                    // pointArr[3] = [180, 130, 210, 110];
+                    // pointArr[4] = [210, 110, 260, 110];
                 }
                 break;
             case "line-2":
@@ -161,6 +158,8 @@ const Home = () => {
                     pointArr[5][0] = rightPointCybZen + 15;
                     pointArr[5][2] = rightPointCybZen + 48;
                 } else if (innerWidth >= 768) {
+
+                    // смещение по x
                     pointArr[1][2] = pointArr[0][2] + 30;
                     pointArr[2][0] = pointArr[0][2] + 30;
                     pointArr[2][2] = rightPointCybZen - 15;
@@ -267,41 +266,7 @@ const Home = () => {
             );
         }
 
-        // setPointsCircle1({
-        //     x: _coordsTemp[_coordsTemp.length - 1][
-        //     _coordsTemp[_coordsTemp.length - 1].length - 2
-        //         ],
-        //     y: _coordsTemp[_coordsTemp.length - 1][
-        //     _coordsTemp[_coordsTemp.length - 1].length - 1
-        //         ],
-        // });
-        //
-        // setPointsCircle2({
-        //     x: _coordsTemp2[_coordsTemp2.length - 1][
-        //     _coordsTemp2[_coordsTemp2.length - 1].length - 2
-        //         ],
-        //     y: _coordsTemp2[_coordsTemp2.length - 1][
-        //     _coordsTemp2[_coordsTemp2.length - 1].length - 1
-        //         ],
-        // });
-        //
-        // setPointsCircle3({
-        //     x: _coordsTemp3[_coordsTemp3.length - 1][
-        //     _coordsTemp3[_coordsTemp3.length - 1].length - 2
-        //         ],
-        //     y: _coordsTemp3[_coordsTemp3.length - 1][
-        //     _coordsTemp3[_coordsTemp3.length - 1].length - 1
-        //         ],
-        // });
         if (window.innerHeight > 800) {
-            // setPointsCircle1({
-            //     x: coords2[coords2.length - 1][
-            //     coords2[coords2.length - 1].length - 2
-            //         ],
-            //     y: coords2[coords2.length - 1][
-            //     coords2[coords2.length - 1].length - 1
-            //         ],
-            // });
             setPointsCircle1({
                 x: _coordsTemp[_coordsTemp.length - 1][
                 _coordsTemp[_coordsTemp.length - 1].length - 2
@@ -335,24 +300,41 @@ const Home = () => {
                 width: window.innerWidth,
                 height: window.innerHeight,
             });
-        }
-        else {
-             coords = Tools.getResponseCoords(PointsLine1, {
-                width: window.innerWidth,
-                height: window.innerHeight,
-            }, true, 1920, 800);
-             coordsLine2 = Tools.getResponseCoords(PointsLine2, {
-                width: window.innerWidth,
-                height: window.innerHeight,
-            }, true, 1920, 800);
-             coordsLine3 = Tools.getResponseCoords(PointsLine3, {
-                width: window.innerWidth,
-                height: window.innerHeight,
-            }, true, 1920, 800);
+        } else {
+            coords = Tools.getResponseCoords(
+                PointsLine1,
+                {
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                },
+                true,
+                1920,
+                800
+            );
+            coordsLine2 = Tools.getResponseCoords(
+                PointsLine2,
+                {
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                },
+                true,
+                1920,
+                800
+            );
+            coordsLine3 = Tools.getResponseCoords(
+                PointsLine3,
+                {
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                },
+                true,
+                1920,
+                800
+            );
 
-             _coordsTemp = Tools.copy(coords);
-             _coordsTemp2 = Tools.copy(coordsLine2);
-             _coordsTemp3 = Tools.copy(coordsLine3);
+            _coordsTemp = Tools.copy(coords);
+            _coordsTemp2 = Tools.copy(coordsLine2);
+            _coordsTemp3 = Tools.copy(coordsLine3);
             setPointsCircle1({
                 x: _coordsTemp[_coordsTemp.length - 1][
                 _coordsTemp[_coordsTemp.length - 1].length - 2
@@ -384,11 +366,10 @@ const Home = () => {
             setPointsLine3(_coordsTemp3);
             setSize({
                 width: window.innerWidth,
-                height: 800,
+                height: (window.innerHeight = 880),
             });
+            console.log('kekekekekekek');
         }
-
-
 
         window.addEventListener(
             "resize",
@@ -406,8 +387,6 @@ const Home = () => {
                     width: event.target.innerWidth,
                     height: event.target.innerHeight,
                 });
-
-
 
                 let _coordsTemp11 = Tools.copy(coords2);
                 let _coordsTemp22 = Tools.copy(_coordsLine2);
@@ -434,16 +413,8 @@ const Home = () => {
                     );
                 }
 
-
                 if (event.target.innerHeight > 800) {
-                    // setPointsCircle1({
-                    //     x: coords2[coords2.length - 1][
-                    //     coords2[coords2.length - 1].length - 2
-                    //         ],
-                    //     y: coords2[coords2.length - 1][
-                    //     coords2[coords2.length - 1].length - 1
-                    //         ],
-                    // });
+
                     setPointsCircle1({
                         x: _coordsTemp11[_coordsTemp11.length - 1][
                         _coordsTemp11[_coordsTemp11.length - 1].length - 2
@@ -475,7 +446,7 @@ const Home = () => {
                     setPointsLine3(_coordsTemp33);
                     setSize({
                         width: event.target.innerWidth,
-                        height: event.target.innerHeight,
+                        height: (event.target.innerHeight = 880),
                     });
                 }
 
@@ -578,26 +549,6 @@ const Home = () => {
             </DivHomeLineBoxSC>
             <DivWrapSC>
                 <DivContainerSC>
-                    {/* <DivHomeContentRowsSC>
-            <DivTextBoxtSC>
-              <TitleHomeBoxSC isBlackBack={isBlackBack}>
-                CYBERZEN LABS
-                {isBlackBack === "black" ? null : (
-                  <DivShadowBoxSC></DivShadowBoxSC>
-                )}
-              </TitleHomeBoxSC>
-            </DivTextBoxtSC>
-            <DescHomeBoxColumnsSC>
-              <DivDescBoxtSC>
-                <SloganBoxSC>The future is now</SloganBoxSC>
-                <DescHomeBoxSC isBlackBack={isBlackBack}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
-                  quam eu amet massa viverra.
-                </DescHomeBoxSC>
-              </DivDescBoxtSC>
-            </DescHomeBoxColumnsSC>
-          </DivHomeContentRowsSC> */}
-
                     <DivHomeContentSC>
                         <DivTextBoxtSC>
                             <DivTitleBoxtSC>
@@ -625,6 +576,7 @@ const Home = () => {
             </DivWrapSC>
         </>
     );
+
 };
 
 export default Home;
