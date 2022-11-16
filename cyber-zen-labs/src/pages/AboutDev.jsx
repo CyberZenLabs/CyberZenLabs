@@ -90,7 +90,7 @@ const PointsLine2 = [
 // ];
 
 const About = () => {
- 
+  
  
   const { state, dispatch } = useContext(GlobalDispatchContext);
   const { isBlackBack, isPage, isAboutBack, } = state;
@@ -152,6 +152,7 @@ useEffect(() => {
 
 
 const processCoords = () => {
+
   const coords = Tools.getResponseCoords(PointsLine1, {
     width:window.innerWidth,
     height:window.innerHeight
@@ -253,7 +254,7 @@ setSize({
 
 setSize({
           width:window.innerWidth,
-          height: window.innerHeight,
+          height: window.innerHeight=700,
       })
      
      

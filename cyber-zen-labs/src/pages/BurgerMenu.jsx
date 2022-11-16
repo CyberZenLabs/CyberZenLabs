@@ -41,6 +41,7 @@ const PointsLine3 = [
 ];
 
 const BurgerMenu = () => {
+    window.innerHeight=window.innerHeight;
     const {state, dispatch} = useContext(GlobalDispatchContext);
     const {isBlackBack, isPage} = state;
     const [size, setSize] = useState({
