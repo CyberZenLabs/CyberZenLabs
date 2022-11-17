@@ -30,7 +30,7 @@ export const DivLineAboutTeamSC=styled.div`
   height: 100%;
   //top: 80px;
   //bottom: 0;
-  
+  @media(max-height:900px){display:none};
   
   justify-items: center;
   align-items: center;
@@ -164,15 +164,9 @@ export const DivPageSC = styled.div`
   @media (max-width: 620px) {
     font-size: 14px;
   }
-  @media (max-width: 550px) {
-    font-size: 12px;
-  }
-  @media (max-width: 480px) {
-    font-size: 10px;
-  }
-  @media (max-width: 380px) {
-    font-size: 9px;
-  }
+  
+
+  
   &:hover {
     text-shadow: 4px 4px 4px #8504ee;
   }

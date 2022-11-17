@@ -398,7 +398,7 @@ const Contacts = () => {
       setPointsLine3(_coordsTemp3);
       setSize({
         width: window.innerWidth,
-        height: (window.innerHeight = 700),
+        height: window.innerHeight ,
     });
 
     }
@@ -699,7 +699,7 @@ const Contacts = () => {
           // console.log('><><><><><>', event.target.outerWidth)
           setSize({
             width: event.target.innerWidth,
-            height: event.target.innerHeight=700,
+            height: event.target.innerHeight,
           });
         }
         // console.log('>>><><>>>>><><>', event.target.innerHeight, event.target.outerHeight)
@@ -711,31 +711,33 @@ const Contacts = () => {
 
   return (
     <>
-      {window.innerWidth > 480 ? (
-        <DivLineContactsSC>
-          <Stage width={size.width} height={size.height}>
-            <Layer>
-              {Tools.drawLine(pointsLine1)}
-              <Circle
-                x={pointsCircle1.x}
-                y={pointsCircle1.y}
-                radius={5}
-                fill={gradient}
-              />
-            </Layer>
+     
+         <DivLineContactsSC>
+         <Stage width={size.width} height={size.height}>
+           <Layer>
+             {Tools.drawLine(pointsLine1)}
+             <Circle
+               x={pointsCircle1.x}
+               y={pointsCircle1.y}
+               radius={5}
+               fill={gradient}
+             />
+           </Layer>
 
-            <Layer>
-              {Tools.drawLine(pointsLine2)}
-              <Circle
-                x={pointsCircle2.x}
-                y={pointsCircle2.y}
-                radius={5}
-                fill={gradient2}
-              />
-            </Layer>
-          </Stage>
-        </DivLineContactsSC>
-      ) : null}
+           <Layer>
+             {Tools.drawLine(pointsLine2)}
+             <Circle
+               x={pointsCircle2.x}
+               y={pointsCircle2.y}
+               radius={5}
+               fill={gradient2}
+             />
+           </Layer>
+         </Stage>
+       </DivLineContactsSC>
+     
+     
+    
 
       <DivWrapSC>
         <DivContainerSC>

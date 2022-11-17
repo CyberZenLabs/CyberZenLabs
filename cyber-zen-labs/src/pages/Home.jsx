@@ -472,7 +472,7 @@ const Home = () => {
                     setPointsLine3(_coordsTemp33);
                     setSize({
                         width: event.target.innerWidth,
-                        height: (event.target.innerHeight = 880),
+                        height: event.target.innerHeight ,
                     });
                 }
 
@@ -488,91 +488,95 @@ const Home = () => {
 
     return (
         <>
-            <DivHomeLineBoxSC>
-                <Stage width={size.width} height={size.height}>
-                    {isBlackBack === "black" ? (
-                        <Layer>
-                            {Tools.drawLineBlack(pointsLine1)}
-                            <Circle
-                                x={pointsCircle1.x}
-                                y={pointsCircle1.y}
-                                radius={5}
-                                fill="#F61067"
-                            />
-                        </Layer>
-                    ) : (
-                        <Layer>
-                            {Tools.drawLine(pointsLine1)}
-                            <Circle
-                                x={pointsCircle1.x}
-                                y={pointsCircle1.y}
-                                radius={5}
-                                fill={gradient}
-                            />
-                        </Layer>
-                    )}
-                    {isBlackBack === "black" ? (
-                        <Layer>
-                            {Tools.drawLineBlack(pointsLine2)}
-                            <Circle
-                                x={pointsCircle2.x}
-                                y={pointsCircle2.y}
-                                radius={5}
-                                fill="#F61067"
-                            />
-                        </Layer>
-                    ) : (
-                        <Layer>
-                            {Tools.drawLine(pointsLine2)}
-                            {isForm ? (
-                                <Circle
-                                    x={pointsCircle2.x}
-                                    y={pointsCircle2.y}
-                                    radius={5}
-                                    fill={gradient2}
-                                />
-                            ) : (
-                                <Circle
-                                    x={pointsCircle2.x}
-                                    y={pointsCircle2.y}
-                                    radius={5}
-                                    fill={gradient2}
-                                />
-                            )}
-                        </Layer>
-                    )}
-                    {isBlackBack === "black" ? (
-                        <Layer>
-                            {Tools.drawLineBlack(pointsLine3)}
-                            <Circle
-                                x={pointsCircle3.x}
-                                y={pointsCircle3.y}
-                                radius={5}
-                                fill="#F61067"
-                            />
-                        </Layer>
-                    ) : (
-                        <Layer>
-                            {Tools.drawLine(pointsLine3)}
-                            {isForm ? (
-                                <Circle
-                                    x={pointsCircle3.x}
-                                    y={pointsCircle3.y}
-                                    radius={5}
-                                    fill={gradient3}
-                                />
-                            ) : (
-                                <Circle
-                                    x={pointsCircle3.x}
-                                    y={pointsCircle3.y}
-                                    radius={5}
-                                    fill={gradient3}
-                                />
-                            )}
-                        </Layer>
-                    )}
-                </Stage>
-            </DivHomeLineBoxSC>
+         
+     <DivHomeLineBoxSC>
+     <Stage width={size.width} height={size.height}>
+         {isBlackBack === "black" ? (
+             <Layer>
+                 {Tools.drawLineBlack(pointsLine1)}
+                 <Circle
+                     x={pointsCircle1.x}
+                     y={pointsCircle1.y}
+                     radius={5}
+                     fill="#F61067"
+                 />
+             </Layer>
+         ) : (
+             <Layer>
+                 {Tools.drawLine(pointsLine1)}
+                 <Circle
+                     x={pointsCircle1.x}
+                     y={pointsCircle1.y}
+                     radius={5}
+                     fill={gradient}
+                 />
+             </Layer>
+         )}
+         {isBlackBack === "black" ? (
+             <Layer>
+                 {Tools.drawLineBlack(pointsLine2)}
+                 <Circle
+                     x={pointsCircle2.x}
+                     y={pointsCircle2.y}
+                     radius={5}
+                     fill="#F61067"
+                 />
+             </Layer>
+         ) : (
+             <Layer>
+                 {Tools.drawLine(pointsLine2)}
+                 {isForm ? (
+                     <Circle
+                         x={pointsCircle2.x}
+                         y={pointsCircle2.y}
+                         radius={5}
+                         fill={gradient2}
+                     />
+                 ) : (
+                     <Circle
+                         x={pointsCircle2.x}
+                         y={pointsCircle2.y}
+                         radius={5}
+                         fill={gradient2}
+                     />
+                 )}
+             </Layer>
+         )}
+         {isBlackBack === "black" ? (
+             <Layer>
+                 {Tools.drawLineBlack(pointsLine3)}
+                 <Circle
+                     x={pointsCircle3.x}
+                     y={pointsCircle3.y}
+                     radius={5}
+                     fill="#F61067"
+                 />
+             </Layer>
+         ) : (
+             <Layer>
+                 {Tools.drawLine(pointsLine3)}
+                 {isForm ? (
+                     <Circle
+                         x={pointsCircle3.x}
+                         y={pointsCircle3.y}
+                         radius={5}
+                         fill={gradient3}
+                     />
+                 ) : (
+                     <Circle
+                         x={pointsCircle3.x}
+                         y={pointsCircle3.y}
+                         radius={5}
+                         fill={gradient3}
+                     />
+                 )}
+             </Layer>
+         )}
+     </Stage>
+ </DivHomeLineBoxSC>
+     
+      
+           
             <DivWrapSC>
                 <DivContainerSC>
                     <DivHomeContentSC>

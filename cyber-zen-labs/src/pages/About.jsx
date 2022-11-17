@@ -258,20 +258,24 @@ const About = () => {
     const [play] = useSound(Sfx, {volume:0.1});
     return (
         <>
-            <DivLineAboutSC  top={window.innerHeight < 600 ? 40 : null} >
-                <Stage width={size.width} height={size.height}>
-                    <Layer>
-                        {Tools.drawLine(pointsLine1)}
-                        <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill={gradient} />
-                    </Layer>
+        
+          <DivLineAboutSC   >
+          <Stage width={size.width} height={size.height}>
+              <Layer>
+                  {Tools.drawLine(pointsLine1)}
+                  <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill={gradient} />
+              </Layer>
 
-                    <Layer>
-                        {Tools.drawLine(pointsLine2)}
-                        <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill={gradient2} />
-                    </Layer>
+              <Layer>
+                  {Tools.drawLine(pointsLine2)}
+                  <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill={gradient2} />
+              </Layer>
 
-                </Stage>
-            </DivLineAboutSC>
+          </Stage>
+      </DivLineAboutSC>
+     
+     
+           
             <DivWrapMenuSC  >
                 <DivContainerAboutSC id="about-line">
                     <GridContentSC>

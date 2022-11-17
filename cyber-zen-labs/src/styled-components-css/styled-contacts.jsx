@@ -14,6 +14,7 @@ export const DivColumnsContentContacts = styled.div`
   }
 `;
 export const DivLineContactsSC=styled.div`
+@media(max-height:1000px){display:none};
  display: grid;
   height: 100%;
   //top: 80px;

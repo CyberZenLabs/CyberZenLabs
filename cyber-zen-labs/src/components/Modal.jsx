@@ -122,9 +122,15 @@ const CyberModal = ({
                     <DivBoxTextSC>Add attachment</DivBoxTextSC>
                   </DivBoxColumnIconTextSC>
                   {/* <DivBoxBorder2SC type="textarea" name="description"/> */}
-                  <DivTextDescriptionSC>
-                    Tell us about your project or give a link to the description
-                  </DivTextDescriptionSC>
+                  <DivBoxBorderBigInputSC
+                      type="textarea"
+                      wrap="on"
+                      // rows="10"
+                      cols={50}
+                      name="desccription"
+                      placeholder="Tell us about your project or give a link to the
+                      description"
+                    />
                   {/* <DivBoxBorderSC type="text" /> */}
                   <DivBoxTextSC>Budget</DivBoxTextSC>
                   <DivBoxColumnsMoneySC>

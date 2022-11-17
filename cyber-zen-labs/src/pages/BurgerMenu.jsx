@@ -486,7 +486,7 @@ setPointsLine1(_coordsTemp)
             setPointsLine3(_coordsLine3);
             setSize({
                 width: event.target.innerWidth,
-                height: event.target.innerHeight = 800
+                height: event.target.innerHeight 
             })
         }, true);
     }
@@ -494,23 +494,27 @@ setPointsLine1(_coordsTemp)
     const [play] = useSound(Sfx, {volume:0.1});
     return (
         <>
-            <DivLineBurgerMenuSC>
-                <Stage width={size.width} height={size.height}>
-                    <Layer>
-                        {Tools.drawLine(pointsLine1)}
-                        <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill={gradient}/>
-                    </Layer>
+       
+          <DivLineBurgerMenuSC>
+          <Stage width={size.width} height={size.height}>
+              <Layer>
+                  {Tools.drawLine(pointsLine1)}
+                  <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill={gradient}/>
+              </Layer>
 
-                    <Layer>
-                        {Tools.drawLine(pointsLine2)}
-                        <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill={gradient2}/>
-                    </Layer>
-                    <Layer>
-                        {Tools.drawLine(pointsLine3)}
-                        <Circle x={pointsCircle3.x} y={pointsCircle3.y} radius={5} fill={gradient3}/>
-                    </Layer>
-                </Stage>
-            </DivLineBurgerMenuSC>
+              <Layer>
+                  {Tools.drawLine(pointsLine2)}
+                  <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill={gradient2}/>
+              </Layer>
+              <Layer>
+                  {Tools.drawLine(pointsLine3)}
+                  <Circle x={pointsCircle3.x} y={pointsCircle3.y} radius={5} fill={gradient3}/>
+              </Layer>
+          </Stage>
+      </DivLineBurgerMenuSC>
+     
+   
+           
             <DivWrapMenuSC>
                 <DivContainerAboutSC>
                     <GridContentSC>

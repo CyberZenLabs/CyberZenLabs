@@ -269,7 +269,7 @@ const Team = () => {
 
       setSize({
         width: window.innerWidth,
-        height:  window.innerHeight=870,
+        height:  window.innerHeight,
       });
     }
 
@@ -395,7 +395,7 @@ const Team = () => {
           
           setSize({
             width: event.target.innerWidth,
-            height: (event.target.innerHeight = 870),
+            height: (event.target.innerHeight),
           });
         }
       },
@@ -445,7 +445,8 @@ const Team = () => {
   };
   return (
     <>
-      <DivLineAboutTeamSC>
+    
+        <DivLineAboutTeamSC>
         <Stage width={size.width} height={size.height}>
           <Layer>
             {Tools.drawLine(pointsLine1)}
@@ -468,6 +469,8 @@ const Team = () => {
           </Layer>
         </Stage>
       </DivLineAboutTeamSC>
+     
+     
       <DivWrapSC>
         <DivContainerSC>
           <DivMainRowsSC>

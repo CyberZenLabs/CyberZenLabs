@@ -191,8 +191,12 @@ export const DivWrapModal = styled.div`
     gap: 125px;
     @media(max-width:809px){ gap: 0px;}
     @media (max-height: 800px) {
-  
+  /* min-height: 865px; */
       gap: 0px;
+}
+@media (max-height: 862px) {
+   min-height: 862px; 
+     
 }
  
  

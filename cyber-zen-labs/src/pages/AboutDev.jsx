@@ -265,7 +265,7 @@ setSize({
 
 setSize({
           width:window.innerWidth,
-          height: window.innerHeight=700,
+          height: window.innerHeight,
       })
      
      
@@ -371,7 +371,7 @@ setSize({
         
           setSize({
               width:event.target.innerWidth,
-              height:event.target.innerHeight=750,
+              height:event.target.innerHeight,
           })
           }
          
@@ -381,21 +381,25 @@ setSize({
 }
   return (
     <>
-            <DivLineAboutDevSC>
+   
+          <DivLineAboutDevSC>
          
-                <Stage width={size.width} height={size.height}>
-                    <Layer>
-                        {Tools.drawLine(pointsLine1)}
-                        <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill={gradient} />
-                    </Layer>
+          <Stage width={size.width} height={size.height}>
+              <Layer>
+                  {Tools.drawLine(pointsLine1)}
+                  <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill={gradient} />
+              </Layer>
 
-                    <Layer>
-                        {Tools.drawLine(pointsLine2)}
-                        <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill={gradient2} />
-                    </Layer>
+              <Layer>
+                  {Tools.drawLine(pointsLine2)}
+                  <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill={gradient2} />
+              </Layer>
 
-                </Stage>
-                </DivLineAboutDevSC>
+          </Stage>
+          </DivLineAboutDevSC>
+     
+      
+            
             
       <DivWrapSC>
         <DivContainerSC>

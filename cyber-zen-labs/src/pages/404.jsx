@@ -141,22 +141,26 @@ const processCoords = () => {
 }
   return (
     <>
-            <DivLine404SC>
+    
+         <DivLine404SC>
         
-                <Stage width={size.width} height={size.height}>
-                    <Layer>
-                        {Tools.drawLine(pointsLine1)}
-                        <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
-                    </Layer>
+         <Stage width={size.width} height={size.height}>
+             <Layer>
+                 {Tools.drawLine(pointsLine1)}
+                 <Circle x={pointsCircle1.x} y={pointsCircle1.y} radius={5} fill="#ffffff" />
+             </Layer>
 
-                    <Layer>
-                        {Tools.drawLine(pointsLine2)}
-                        <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
-                    </Layer>
+             <Layer>
+                 {Tools.drawLine(pointsLine2)}
+                 <Circle x={pointsCircle2.x} y={pointsCircle2.y} radius={5} fill="#ffffff" />
+             </Layer>
 
-                </Stage>
-                </DivLine404SC>
-            
+         </Stage>
+         </DivLine404SC>
+     
+   
+ 
+           
       <DivWrapSC>
         <DivContainerSC>
           <GrifContentSC>
