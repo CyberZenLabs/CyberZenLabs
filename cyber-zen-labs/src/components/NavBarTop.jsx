@@ -35,11 +35,11 @@ const NavBarTop = () => {
                 <TextNavBarSC>Cyberzen Labs</TextNavBarSC>
               </DivLogoBoxSC>
             </LinkToHomeSC>
-            <DivShowReelSC>
+            {/* <DivShowReelSC>
               <LinkShowReelSC to="#" isBlackBack={isBlackBack}>
                 SHOWREEL
               </LinkShowReelSC>
-            </DivShowReelSC>
+            </DivShowReelSC> */}
             <BurgerMenuDisplaySC>
               <LinkToBurgerSC to="/menu" onMouseEnter={plays}>
                 <IconBurgerSC></IconBurgerSC>
@@ -56,7 +56,7 @@ const NavBarTop = () => {
                 <TextNavBarSC>Cyberzen Labs</TextNavBarSC>
               </DivLogoBoxSC>
             </LinkToHomeSC>
-            <DivShowReelCenterSC>
+            {/* <DivShowReelCenterSC>
               {isForm === true ? (
                 <LinkShowReel2SC to="#" isBlackBack={isBlackBack}>
                   SHOWREEL
@@ -67,7 +67,7 @@ const NavBarTop = () => {
                   SHOWREEL
                 </LinkShowReelSC>
               )}
-            </DivShowReelCenterSC>
+            </DivShowReelCenterSC> */}
             <LinkToBurgerSC to="/menu" onMouseEnter={plays}>
               <IconBurgerSC></IconBurgerSC>
             </LinkToBurgerSC>
