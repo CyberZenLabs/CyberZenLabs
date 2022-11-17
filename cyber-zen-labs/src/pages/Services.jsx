@@ -27,15 +27,15 @@ const Services = () => {
     })
     const [position1, setPosition1] = useState({
         x: 1361,
-        y: 569
+        y: 599
     })
     const [position2, setPosition2] = useState({
         x: 590,
-        y: 1800
+        y: 1830
     })
     const [position3, setPosition3] = useState({
         x: -270,
-        y: 1020
+        y: 1050
     })
 
     const [isScroll, setIsScroll] = useState(false)
@@ -103,7 +103,21 @@ const Services = () => {
         };
     }, [isPage]);
 
+    let vh = window.outerHeight;
+let minheight;
+    switch(true) {
+      case vh <= 1080:
+       minheight=-361.99 ;
 
+        break;
+      case vh<=1440 :
+        minheight=-297.99 ;
+        console.log('2k');
+        break;
+      default:
+        minheight=-481 ;
+        break;
+    }
 
     const onScroll = (e) => {
         let timer
@@ -124,10 +138,10 @@ const Services = () => {
                 tempSCroll = true
                 console.log( x + r * Math.cos(a))
                 if (isSecond) {
-                    if (x + r * Math.cos(a) < -481
-                        || x + r * Math.cos(a1) < -481
-                        || x + r * Math.cos(a2) < -481
-                        || x + r * Math.cos(a3) < -481
+                    if (x + r * Math.cos(a) < minheight
+                        || x + r * Math.cos(a1) < minheight
+                        || x + r * Math.cos(a2) < minheight
+                        || x + r * Math.cos(a3) < minheight
                     ) {
                         clearInterval(timer)
                         tempSCroll = false
