@@ -194,40 +194,25 @@ export const DivHomeLineBoxSC = styled.div`
   pointer-events: none;
 `;
 
-export const GifBuddhaHomeSC = styled.div`
-  //position: absolute;
-  background-image: url(${buddhablack});
+export const BuddhaHomeSC = styled.div`
   width: 550px;
   height: 550px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center -75px;
   z-index: 30;
-  /* @media (max-width: 1700px) {
-    width: 494px;
-    height: 429px;
-  }
-  @media (max-width: 1150px) {
-    width: 424px;
-    height: 359px;
-  }
-  @media (max-width: 895px) {
-    width: 330px;
-    height: 295px;
-  }
-  @media (max-width: 600px) {
-    width: 280px;
-    height: 245px;
-    top: 270px;
-  }
-  @media (max-width: 540px) {
-    width: 230px;
-    height: 195px;
-    background-size: 115%;
-    margin-right: 0px;
-    padding-bottom: 50px;
-  }
-  @media (max-width: 480px) {
-    display: none;
-  } */
+  position: relative;
 `;
+
+export const BuddhaBackHomeSC = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(253, 3, 255, 0.9) 29.3%,
+    rgba(58, 180, 250, 0.9) 78.61%
+  );
+  filter: blur(205px);
+  opacity: 0.7;
+  border-radius: 50%;
+`;
+
+
