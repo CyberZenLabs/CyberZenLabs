@@ -344,7 +344,7 @@ const Footer = () => {
                 playing={music}
                 preload={true}
                 loop={true}
-                volume={0}
+                volume={0.1}
             />
         </DivWrapFooterSC>
     );
