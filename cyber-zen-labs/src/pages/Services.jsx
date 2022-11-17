@@ -104,10 +104,15 @@ const Services = () => {
     }, [isPage]);
 
     let vh = window.outerHeight;
+    console.log('>><><>>>kirdro', vh)
 let minheight;
     switch(true) {
-      case vh <= 1080:
+      case vh <= 1080 && vh > 1060:
        minheight=-361.99 ;
+
+        break;
+    case vh <= 1050:
+        minheight=-481 ;
 
         break;
       case vh<=1440 :
