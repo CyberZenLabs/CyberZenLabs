@@ -107,7 +107,7 @@ const Services = () => {
     console.log('>><><>>>kirdro', vh)
 let minheight;
     switch(true) {
-      case vh <= 1080 && vh > 1060:
+      case vh <= 1080 && vh > 1055:
        minheight=-361.99 ;
 
         break;
