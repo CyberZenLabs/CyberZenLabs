@@ -203,10 +203,10 @@ const coordsLine2 = Tools.getResponseCoords(PointsLine2,{
       _pointsLine2[0]=  [0, 660, 170, 660]
       _pointsLine2[1]= [170, 660, 280, 760]
       _pointsLine2[2]= [280, 760, 850, 760]
-      _pointsLine2[3]= [850, 760, 930, 810]
-      _pointsLine2[4]= [930, 810, 1250, 810]
-      _pointsLine2[5]= [1250, 810, 1330, 760]
-      _pointsLine2[6]=  [1330, 760, 1550, 760]
+      _pointsLine2[3]= [850, 760, 920, 800]
+      _pointsLine2[4]= [920, 800, 1240, 800]
+      _pointsLine2[5]= [1240, 800, 1320, 760]
+      _pointsLine2[6]=  [1320, 760, 1550, 760]
       _pointsLine2[7]= [1550, 760, 1630, 810]
     
   
@@ -308,13 +308,13 @@ setSize({
         if(window.innerWidth>1100){
     
           var _pointsLine2 = PointsLine2
-          _pointsLine2[0]=  [0, 660, 170, 660]
+      _pointsLine2[0]=  [0, 660, 170, 660]
       _pointsLine2[1]= [170, 660, 280, 760]
       _pointsLine2[2]= [280, 760, 850, 760]
-      _pointsLine2[3]= [850, 760, 930, 810]
-      _pointsLine2[4]= [930, 810, 1250, 810]
-      _pointsLine2[5]= [1250, 810, 1330, 760]
-      _pointsLine2[6]=  [1330, 760, 1550, 760]
+      _pointsLine2[3]= [850, 760, 920, 800]
+      _pointsLine2[4]= [920, 800, 1240, 800]
+      _pointsLine2[5]= [1240, 800, 1320, 760]
+      _pointsLine2[6]=  [1320, 760, 1550, 760]
       _pointsLine2[7]= [1550, 760, 1630, 810]
         
       
