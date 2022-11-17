@@ -194,10 +194,7 @@ export const DivWrapModal = styled.div`
   /* min-height: 865px; */
       gap: 0px;
 }
-@media (max-height: 862px) {
-   min-height: 862px; 
-     
-}
+
  
  
   
