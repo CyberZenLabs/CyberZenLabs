@@ -641,16 +641,15 @@ const Home = () => {
               </DivTitleBoxtSC>
               <DivDescBoxtSC>
                 <DescHomeBoxSC id="cyb-zen-desc-home" isBlackBack={isBlackBack}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
-                  quam eu amet massa viverra.
+                  A team of International Superstars Here to Assist In Building
+                  the Highest Performing Enterprise Grade Blockchain and
+                  Software Solutions
                 </DescHomeBoxSC>
               </DivDescBoxtSC>
             </DivTextBoxtSC>{" "}
             <BuddhaHomeSC>
-              {isBlackBack === "black" ? null : (
-                <BuddhaBackHomeSC />
-              )}
-              
+              {isBlackBack === "black" ? null : <BuddhaBackHomeSC />}
+
               <Canvas camera={{ position: [0, 1.5, 20], zoom: 1 }}>
                 <hemisphereLight intensity={0.1} />
                 {/* <spotLight

@@ -119,7 +119,7 @@ export const DivDescBoxtSC = styled.div`
 export const DescHomeBoxSC = styled.span`
   width: 100%;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 50px;
   letter-spacing: 0.05em;
   pointer-events: none;
