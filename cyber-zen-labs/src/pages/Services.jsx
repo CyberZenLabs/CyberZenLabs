@@ -102,9 +102,9 @@ const Services = () => {
             });
         };
     }, [isPage]);
-    {window.innerWidth > 480 ? (
+    
         
-      ) : null}
+      
     let vh = window.outerHeight;
     console.log('>><><>>>kirdro', vh)
 let minheight;
