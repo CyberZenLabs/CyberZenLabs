@@ -30,7 +30,7 @@ export const DivLineAboutTeamSC=styled.div`
   height: 100%;
   //top: 80px;
   //bottom: 0;
-  @media(max-height:900px){display:none};
+  @media(max-height:930px){display:none};
   
   justify-items: center;
   align-items: center;

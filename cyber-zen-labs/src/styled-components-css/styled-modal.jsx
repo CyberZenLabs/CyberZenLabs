@@ -14,7 +14,7 @@ export const BlockModal = styled(Modal)`
   justify-content: center;
   align-content: center;
   min-width: 360px;
-  max-height: 100vh;
+  
  
  
     z-index: 10000;
@@ -193,6 +193,10 @@ export const DivWrapModal = styled.div`
     @media (max-height: 800px) {
   /* min-height: 865px; */
       gap: 0px;
+}
+@media (max-height: 865px) {
+   min-height: 895px; 
+      
 }
 
  

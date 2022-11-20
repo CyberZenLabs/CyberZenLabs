@@ -111,7 +111,7 @@ export const DivTextContentSC = styled.div`
   }
 `;
 export const DivLine404SC=styled.div`
-@media(max-height:1000px){display:none};
+@media(max-height:930px){display:none};
  display: grid;
   height: 100%;
   //top: 80px;

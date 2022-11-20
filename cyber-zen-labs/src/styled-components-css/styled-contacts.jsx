@@ -14,7 +14,7 @@ export const DivColumnsContentContacts = styled.div`
   }
 `;
 export const DivLineContactsSC=styled.div`
-@media(max-height:1000px){display:none};
+@media(max-height:930px){display:none};
  display: grid;
   height: 100%;
   //top: 80px;
@@ -54,13 +54,13 @@ export const DivLeftPenalSC = styled.div`
   display: grid;
   grid-template-rows: 20px 183px 84px 84px;
   @media (max-width: 1000px) {
-    padding-top: 100px;
+    
     width: 100%;
-    grid-template-rows: 20px 83px 44px 44px;
+    
   }
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 376px;
+    grid-template-rows: 0px 3px 4px 4px;
   }
 
   @media (max-width: 675px) {
@@ -353,7 +353,7 @@ export const DivColumnsemailSC = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 41% 59%;
+  grid-template-columns: 34% 59%;
   @media (max-width: 768px) {
     grid-template-columns: max-content max-content;
     gap: 25px;

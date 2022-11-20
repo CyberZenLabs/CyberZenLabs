@@ -74,7 +74,7 @@ export const DivWrapMenuSC = styled.div`
 export const DivLineAboutSC=styled.div`
  display: grid;
   height: 100%;
-  @media(max-height:1000px){display:none};
+  @media(max-height:930px){display:none};
     top: ${({top}) => (top)}px;
 
   
@@ -90,7 +90,7 @@ export const DivLineBurgerMenuSC=styled.div`
   height: 100%;
   //top: 80px;
   //bottom: 0;
-  @media(max-height:1000px){display:none};
+  @media(max-height:930px){display:none};
   justify-items: center;
   align-items: center;
   position: absolute;

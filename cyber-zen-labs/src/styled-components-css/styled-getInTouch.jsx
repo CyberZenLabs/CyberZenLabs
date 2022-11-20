@@ -10,7 +10,7 @@ export const DivContainerPenalsSC = styled.div`
   //justify-self: center;
   grid-template-columns: 50% 50%;
   grid-column-gap: 70px;
-  @media (max-width: 1060px) {
+  @media (max-width: 1280px) {
     grid-column-gap: 25px;
   }
   @media (max-width: 810px) {
@@ -81,6 +81,7 @@ export const DivBoxBorderSC = styled.input`
   }
   @media (max-width: 810px) {
     max-width: 100%;
+    font-size: 18px;
   }
 `;
 export const DivBoxBorder2SC = styled.textarea`
@@ -115,6 +116,7 @@ export const DivBoxPersonalDataSC = styled.div`
 `;
 
 export const DivBoxPriceSC = styled.div`
+margin-top: 40px;
   display: grid;
   width: 100%;
   grid-template-rows: max-content max-content;
@@ -126,9 +128,9 @@ export const DivBoxBorderBigInputSC = styled.textarea`
   border-right: none;
   resize: none;
   overflow: hidden;
-  max-width: 621px;
+  max-width: 100%;
   width: 100%;
-  max-width: 621px;
+ max-width: 600px;
   height: 100%;
   border-bottom: 1px solid #e0f5e9;
   background: initial;
@@ -142,9 +144,14 @@ export const DivBoxBorderBigInputSC = styled.textarea`
   :focus {
     outline: none;
   }
-  @media (max-width: 810px) {
-    max-width: 100%;
+  @media (max-width: 1400px) {
+    max-width: 550px;
   }
+   @media (max-width: 810px) {
+    /* max-width: 100%; */
+    font-size: 20px;
+    line-height: 32px;
+  } 
 `;
 
 export const DivBoxColumnsMoneySC = styled.div`
@@ -261,9 +268,14 @@ text-decoration: none;
     max-height: 85px;
   }
   @media (max-width: 410px) {
+    
     max-width: 300px;
     max-height: 80px;
     font-size: 36px;
+  }
+  @media (max-width: 810px) {
+    
+   margin-top: 30px;
   }
 `;
 

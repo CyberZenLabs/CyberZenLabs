@@ -185,7 +185,7 @@ export const DescHomeBoxColumnsSC = styled.div`
   }
 `;
 export const DivHomeLineBoxSC = styled.div`
-@media(max-height:1000px){display:none};
+@media(max-height:930px){display:none};
   display: grid;
   height: 100%;
   /* min-height: 785px; */
@@ -200,6 +200,9 @@ export const BuddhaHomeSC = styled.div`
   height: 550px;
   z-index: 30;
   position: relative;
+  @media(max-width:1279px) {
+    display: none;
+  }
 `;
 
 export const BuddhaBackHomeSC = styled.div`

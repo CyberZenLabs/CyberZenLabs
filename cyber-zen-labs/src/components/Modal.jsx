@@ -101,83 +101,111 @@ const CyberModal = ({
                 enctype="multipart/form-data"
               >
                 <DivContainerPenals2SC>
-                  <DivBoxTextSC>Your name</DivBoxTextSC>
+                  <DivBoxTextSC></DivBoxTextSC>
+                   <DivBoxBorderSC
+                        label="firstName"
+                        type="text"
+                        name="firstName"
+                        required
+                        placeholder="Your Name"
+                      />
+<DivBoxTextSC></DivBoxTextSC>
+                      <DivBoxBorderSC
+                        label="companyName"
+                        type="text"
+                        name="companyName"
+                        placeholder="Company name"
+                      />
+
+                  <DivBoxTextSC></DivBoxTextSC>
                   <DivBoxBorderSC
-                    label="firstName"
-                    type="text"
-                    name="firstName"
-                  />
-                  <DivBoxTextSC>Company name</DivBoxTextSC>
+                        label="email"
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        required
+                      />
+
+                  
+                  <DivBoxTextSC></DivBoxTextSC>
                   <DivBoxBorderSC
-                    label="companyName"
-                    type="text"
-                    name="companyName"
-                  />
-                  <DivBoxTextSC>Email</DivBoxTextSC>
-                  <DivBoxBorderSC label="email" type="email" name="email" />
-                  <DivBoxTextSC>Phone</DivBoxTextSC>
-                  <DivBoxBorderSC label="phone" type="text" name="phone" />
+                        label="phone"
+                        type="text"
+                        name="phone"
+                        placeholder="Phone"
+                      />
                   <DivBoxColumnIconTextSC>
-                    <DivBoxIconClipSC />
-                    <DivBoxTextSC>Add attachment</DivBoxTextSC>
+                    
+                    <DivBoxTextSC></DivBoxTextSC>
                   </DivBoxColumnIconTextSC>
                   {/* <DivBoxBorder2SC type="textarea" name="description"/> */}
-                  <DivTextDescriptionSC>
-                    Tell us about your project or give a link to the description
-                  </DivTextDescriptionSC>
+                  <DivBoxBorderBigInputSC
+                      type="textarea"
+                      wrap="on"
+                      // rows="10"
+                      cols={50}
+                      name="desccription"
+                      placeholder="Tell us about your project or give a link to the
+                      description"
+                    />
                   {/* <DivBoxBorderSC type="text" /> */}
-                  <DivBoxTextSC>Budget</DivBoxTextSC>
-                  <DivBoxColumnsMoneySC>
-                    <label className="label">
-                      <input
-                        type="radio"
-                        className="radio"
-                        name="price-10-25"
-                        value={"price-10-25k"}
-                      />
-                      <span className="fake"></span>
-                      <SpanBudgetSC className="text1">
-                        $ 10K - $ 25K
-                      </SpanBudgetSC>
-                    </label>
-                    <label className="label">
-                      <input
-                        type="radio"
-                        className="radio"
-                        name="price-50-100"
-                        value={"price-50-100k"}
-                      />
-                      <span className="fake"></span>
-                      <SpanBudgetSC className="text">
-                        $ 50K - $ 100K
-                      </SpanBudgetSC>
-                    </label>
-                    <label className="label">
-                      <input
-                        type="radio"
-                        className="radio"
-                        name="price-25-50"
-                        value={"price-25-50k"}
-                      />
-                      <span className="fake"></span>
-                      <SpanBudgetSC className="text1">
-                        $ 25K - $ 50K
-                      </SpanBudgetSC>
-                    </label>
-                    <label className="label">
-                      <input
-                        type="radio"
-                        className="radio"
-                        name="price-100-or-more"
-                        value={"price-100k-or-more"}
-                      />
-                      <span className="fake"></span>
-                      <SpanBudgetSC className="text">
-                        $ 100K or more
-                      </SpanBudgetSC>
-                    </label>
-                  </DivBoxColumnsMoneySC>
-                  <ButtonGradientSC type="submit" onMouseEnter={play}>send</ButtonGradientSC>
+                  
+                  <DivBoxPriceSC>
+                      <DivBoxTextSC>Budget</DivBoxTextSC>
+                      <DivBoxColumnsMoneySC>
+                        <label className="label">
+                          <input
+                            type="radio"
+                            className="radio"
+                            name="radio-click"
+                            value={"price-10-25k"}
+                          />
+                          <span className="fake"></span>
+                          <SpanBudgetSC className="text1">
+                            $ 10K - $ 25K
+                          </SpanBudgetSC>
+                        </label>
+                        <label className="label">
+                          <input
+                            type="radio"
+                            className="radio"
+                            name="radio-click"
+                            value={"price-50-100k"}
+                          />
+                          <span className="fake"></span>
+                          <SpanBudgetSC className="text">
+                            $ 50K - $ 100K
+                          </SpanBudgetSC>
+                        </label>
+                        <label className="label">
+                          <input
+                            type="radio"
+                            className="radio"
+                            name="radio-click"
+                            value={"price-25-50k"}
+                          />
+                          <span className="fake"></span>
+                          <SpanBudgetSC className="text1">
+                            $ 25K - $ 50K
+                          </SpanBudgetSC>
+                        </label>
+                        <label className="label">
+                          <input
+                            type="radio"
+                            className="radio"
+                            name="radio-click"
+                            value={"price-100k-or-more"}
+                          />
+                          <span className="fake"></span>
+                          <SpanBudgetSC className="text">
+                            $ 100K or more
+                          </SpanBudgetSC>
+                        </label>
+                      </DivBoxColumnsMoneySC>
+                      <ButtonGradientSC type="submit" onMouseEnter={play}>send</ButtonGradientSC>
+                    </DivBoxPriceSC>
+                    
+               
                 </DivContainerPenals2SC>
 
                 <DivContainerPenalsSC>

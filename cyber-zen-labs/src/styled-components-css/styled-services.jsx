@@ -134,6 +134,9 @@ export const DivTaskItemSC = styled.div`
   padding: 2px;
   box-sizing: border-box;
   background: var(--blue-pink);
+  @media( max-width:460px){
+    height: 30vh;
+  }
  
 `;
 
