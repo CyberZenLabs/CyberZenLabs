@@ -1,15 +1,22 @@
 import React from 'react';
 import {DivTaskItemContentSC, DivTaskItemContentTempSC, DivTaskItemSC} from "../styled-components-css/styled-services";
 
-const ServicesItem = () => {
+const ServicesItem = (props) => {
+    const {
+        position,
+        id,
+        title,
+        size
+    } = props
+
     return (
 
-        <DivTaskItemSC>
-            <DivTaskItemContentSC className={'DivTaskItemContentSC'}>
-               Web/Mobile development
+        <DivTaskItemSC id={'DivTaskItemSC' + id} position={position} >
+            <DivTaskItemContentSC className={'DivTaskItemContentSC'} size={size}>
+                {title}
             </DivTaskItemContentSC>
             <DivTaskItemContentTempSC className={'cybr-btn__glitch'}>
-                Web/Mobile development
+                {title}
             </DivTaskItemContentTempSC>
 
         </DivTaskItemSC>

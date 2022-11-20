@@ -7,21 +7,37 @@ export const DivColumnsContentContacts = styled.div`
   height: fit-content;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-self: center;
+// border: 1px solid red;
   @media (max-width: 768px) {
     display: none;
   }
 `;
-
+export const DivLineContactsSC=styled.div`
+ display: grid;
+  height: 100%;
+  //top: 80px;
+  //bottom: 0;
+  
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  pointer-events: none;
+  
+`;
 export const DivRowsContentContacts = styled.div`
   display: none;
+ // border: 1px solid red;
   @media (max-width: 768px) {
     display: grid;
     width: 100%;
-    height: fit-content;
+   // height: fit-content;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
+    max-height:850px;
   }
   @media (max-width: 480px) {
+     max-height:400px;
     grid-template-rows: 1fr 2fr;
   }
   @media (max-width: 360px) {
@@ -33,11 +49,13 @@ export const DivLeftPenalSC = styled.div`
   width: 90%;
   height: 100%;
   max-width: 709px;
+   // border: 1px solid red;
   display: grid;
-  grid-template-rows: 120px 183px 84px 84px;
+  grid-template-rows: 20px 183px 84px 84px;
   @media (max-width: 1000px) {
+    padding-top: 100px;
     width: 100%;
-    grid-template-rows: 120px 83px 44px 44px;
+    grid-template-rows: 20px 83px 44px 44px;
   }
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -61,12 +79,12 @@ export const DivRightPenalSC = styled.div`
   height: 100%;
   display: grid;
   justify-items: end;
-  
+  //border: 1px solid red;
   @media (max-width: 768px) {
-    grid-template-rows: 1fr 1fr 1fr;
+    //grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
     height: 70%;
-    align-self: center;
+    //align-self: center;
   }
 `;
 
@@ -148,14 +166,13 @@ export const ImgBuddhaSC = styled.div`
 `;
 
 export const DivTopPenalSC = styled.div`
+
   width: 100%;
   height: 100%;
   display: grid;
   justify-items: end;
   z-index: 3;
-  @media (max-width: 768px) {
-    align-items: end;
-  }
+ 
   @media (max-width: 600px) {
     align-items: end;
   }
@@ -166,11 +183,12 @@ export const DivBoxTextWriteToUsSC = styled.div`
   height: 100%;
   display: grid;
   align-items: start;
-  padding-top: 100px;
+ //padding-top: 100px;
   min-width: 500px;
   @media (max-width: 1000px) {
     width: 100%;
     min-width: 0px;
+ 
   }
   @media (max-width: 705px) {
     min-width: 305px;
@@ -180,6 +198,7 @@ export const DivBoxTextWriteToUsSC = styled.div`
   }
   @media (max-width: 480px) {
     justify-content: center;
+    padding-top: 0px;
   }
 `;
 export const DivTextWriteToUsSC = styled.div`
@@ -202,7 +221,7 @@ export const DivTextWriteToUsSC = styled.div`
 
   text-shadow: 1px 1px 20px #8b22c3;
   @media (max-width: 1000px) {
-    font-size: 30px;
+    font-size: 35px;
     line-height: 38px;
     height: 38px;
   }
@@ -242,7 +261,7 @@ export const DivTextTelephoneSC = styled.div`
   align-content: end;
   //border: 1px solid red;
   @media (max-width: 1000px) {
-    font-size: 16px;
+    font-size: 20px;
   }
   @media (max-width: 768px) {
     font-size: 24px;
@@ -263,7 +282,7 @@ export const DivNumTelephoneSC = styled.div`
   display: grid;
   align-content: end;
   @media (max-width: 1000px) {
-    font-size: 16px;
+    font-size: 20px;
   }
   @media (max-width: 768px) {
     font-size: 24px;
@@ -296,7 +315,7 @@ export const DivNumTelegramSC = styled.div`
   display: grid;
   align-content: end;
   @media (max-width: 1000px) {
-    font-size: 16px;
+    font-size: 20px;
   }
   @media (max-width: 768px) {
     font-size: 24px;
@@ -318,7 +337,7 @@ export const DivTextTelegramSC = styled.div`
   align-content: end;
   //border: 1px solid red;
   @media (max-width: 1000px) {
-    font-size: 16px;
+    font-size:20px;
   }
   @media (max-width: 768px) {
     font-size: 24px;
@@ -341,12 +360,12 @@ export const DivColumnsemailSC = styled.div`
 `;
 
 export const DivDecLineSC = styled.div`
-  max-width: 487px;
+  max-width: 497px;
   width: 100%;
   height: 4px;
   background: var(--blue-pink);
   @media (max-width: 1000px) {
-    max-width: 229px;
+    max-width: 269px;
     height: 2px;
   }
   @media (max-width: 768px) {

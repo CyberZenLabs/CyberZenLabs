@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Mail from "../images/Mail.svg";
 import Sound from "../images/Music-Switch2.svg";
 export const DivContainerFooterSC = styled.div`
+max-height: 160px;
   width: 100%;
   // border:1px solid green;
   display: grid;
@@ -11,6 +12,9 @@ export const DivContainerFooterSC = styled.div`
   align-items: center;
   @media (max-width: 768px) {
     grid-template-columns: 0.5fr auto 0px;
+  }
+  @media (max-width: 480px) {
+    align-items: end;
   }
 `;
 export const DivContainerFooterLeftSC = styled.div`
@@ -28,7 +32,7 @@ export const DivContainerFooterLeftSC = styled.div`
 `;
 export const DivContainerFooterCenterSC = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, max-content);
   gap: 95px;
   // border:1px solid red;
   justify-self: center;
@@ -183,5 +187,8 @@ export const DivContainerFooterCenterTeamSC = styled.div`
   @media (max-width: 768px) {
     justify-self: start;
     grid-template-columns: 1.5fr 2fr;
+  }
+  @media (max-width: 480px) {
+  padding-bottom: 24px;
   }
 `;

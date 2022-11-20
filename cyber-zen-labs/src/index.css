@@ -7,6 +7,16 @@ html {
   min-width: 350px;
   color: #fff;
 }
+
+
+body {
+ 
+}
+
+/* body {
+  overflow: hidden;
+} */
+
 .ReactModal__Overlay {z-index: 1000000000;}
 
 .ReactModal__Overlay--after-open
@@ -261,6 +271,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* input::-moz-placeholder { color: #fff; opacity: 1;}
+textarea::-moz-placeholder { color: #fff; opacity: 1;}
+input::-webkit-input-placeholder { color: #fff; opacity: 1; }
+textarea::-webkit-textarea-placeholder { color: #fff; opacity: 1; } */
 
 .label {
   width: 100%;
@@ -640,5 +655,18 @@ table {
   61%,
   100% {
     clip-path: var(--clip-four);
+  }
+}
+@keyframes fadeInFromNone {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
   }
 }

@@ -25,7 +25,9 @@ import GlobalDispatchContext from "../global_dispatch_context";
 import Audio from "../audio/Homepage.mp3";
 import CyberModal from "./Modal";
 import GetInTouchButton from "./GetInTouchButton";
-
+import useSound from 'use-sound';
+import boopSfx from '../audio/footerEfx.wav';
+import Sfx from '../audio/efx.wav';
 const PointsLine2 = [[0, 0, 415, 0]];
 
 const PointsLine1 = [
@@ -48,7 +50,8 @@ const Footer = () => {
     });
 
     // console.log('lol', size);
-
+    const [play] = useSound(boopSfx, {volume:0.1});
+    const [plays] = useSound(Sfx, {volume:0.1});
     const [music, setMusic] = useState(true);
     const MusicBeh = () => {
         setMusic(!music);
@@ -72,6 +75,8 @@ const Footer = () => {
         var rightPointLine1 = rect.right;
         var leftPointLine1 = rect.left;
 
+        // console.log('lolol',leftPointLine1);
+
         var _pointsLine1 = pointsLine1
         _pointsLine1[0][0] = leftPointLine1 - 70
         _pointsLine1[0][2] = leftPointLine1
@@ -93,64 +98,10 @@ const Footer = () => {
     };
 
     const processCoords = () => {
-        // const coordsLine1 = Tools.getResponseCoords(
-        //     PointsLine1,
-        //     {
-        //         width: window.innerWidth,
-        //         height: window.innerHeight,
-        //     },
-        //     window.innerWidth >= 1921 ? false : true
-        // );
-
-        
-
-        // const coordsLine2 = Tools.getResponseCoords(
-        //     PointsLine2,
-        //     {
-        //         width: window.innerWidth,
-        //         height: window.innerHeight,
-        //     }
-        // );
-
-        // setPointsCircle1({
-        //   x: coords[coords.length - 1][coords[coords.length - 1].length - 2],
-        //   y: coords[coords.length - 1][coords[coords.length - 1].length - 1],
-        // });
-
-        // setPointsLine1(coordsLine1);
-        // setPointsLine2(coordsLine2);
         getSize();
         window.addEventListener(
             "resize",
             function (event) {
-                // const _coordsLine1 = Tools.getResponseCoords(
-                //     PointsLine1,
-                //     {
-                //         width: event.target.innerWidth,
-                //         height: event.target.innerHeight,
-                //     },
-                //     event.target.innerWidth >= 1921 ? false : true
-                // );
-
-                // const _coordsLine2 = Tools.getResponseCoords(
-                //     PointsLine2,
-                //     {
-                //         width: event.target.innerWidth,
-                //         height: event.target.innerHeight,
-                //     }
-                // );
-
-                // setPointsCircle1({
-                //   x: coords2[coords2.length - 1][
-                //     coords2[coords2.length - 1].length - 2
-                //   ],
-                //   y: coords2[coords2.length - 1][
-                //     coords2[coords2.length - 1].length - 1
-                //   ],
-                // });
-
-                // setPointsLine1(_coordsLine1);
-                // setPointsLine2(_coordsLine2);
                 getSize();
             },
             true
@@ -177,7 +128,7 @@ const Footer = () => {
             {isPage === "about" ? (
                 <DivMaxWidthSC>
                     <DivContainerFooterSC>
-                        <DivContainerFooterLeftSC onClick={MusicBeh}>
+                        <DivContainerFooterLeftSC onClick={MusicBeh} onMouseDown={plays}>
                             {music ? (
                                 <div className="MusicContainer">
                                     <div className="Bars" />
@@ -199,11 +150,11 @@ const Footer = () => {
                             </H1FooterTextSoundOnSC>
                         </DivContainerFooterLeftSC>
                         <DivContainerFooterCenterTeamSC>
-                            <FooterTextTeamSC to="/team">Team</FooterTextTeamSC>
-                            <FooterTextTeamSC to="/aboutdev">Development</FooterTextTeamSC>
+                            <FooterTextTeamSC to="/team" onMouseEnter={play}>Team</FooterTextTeamSC>
+                            <FooterTextTeamSC to="/aboutdev" onMouseEnter={play}>Development</FooterTextTeamSC>
                         </DivContainerFooterCenterTeamSC>
                         <DivContainerFooterRightSC>
-                            <DivGitButtonBoxSC
+                            <DivGitButtonBoxSC onMouseEnter={plays}
                                 onClick={() =>
                                     dispatch({
                                         type: "SET_IS_OPEN",
@@ -251,7 +202,7 @@ const Footer = () => {
                     </FooterLinesSC>
                     <DivMaxWidthSC>
                         <DivContainerFooterSC>
-                            <DivContainerFooterLeftSC onClick={MusicBeh}>
+                            <DivContainerFooterLeftSC onClick={MusicBeh} onMouseDown={plays}>
                                 {music ? (
                                     <div className="MusicContainer">
                                         <div className="Bars" />
@@ -273,22 +224,22 @@ const Footer = () => {
                                 </H1FooterTextSoundOnSC>
                             </DivContainerFooterLeftSC>
                             <DivContainerFooterCenterSC id="footer-page-box">
-                                <H1FooterTextSC to="/" isForm={isHome}>
+                                <H1FooterTextSC to="/" isForm={isHome} onMouseEnter={play}>
                                     HOME
                                 </H1FooterTextSC>
-                                <H1FooterTextSC to="/about">ABOUT</H1FooterTextSC>
-                                <H1FooterTextSC to="/services" isForm={isServ}>
+                                <H1FooterTextSC to="/about" onMouseEnter={play}>ABOUT</H1FooterTextSC>
+                                <H1FooterTextSC to="/services" isForm={isServ} onMouseEnter={play}>
                                     SERVICES
                                 </H1FooterTextSC>
-                                <H1FooterTextSC to="/projects" isForm={isProj}>
+                                {/* <H1FooterTextSC to="/projects" isForm={isProj}>
                                     PROJECTS
-                                </H1FooterTextSC>
-                                <H1FooterTextSC to="/contacts" isForm={isForm}>
+                                </H1FooterTextSC> */}
+                                <H1FooterTextSC to="/contacts" isForm={isForm} onMouseEnter={play}>
                                     CONTACTS
                                 </H1FooterTextSC>
                             </DivContainerFooterCenterSC>
                             <DivContainerFooterRightSC>
-                                <DivGitButtonBoxSC
+                                <DivGitButtonBoxSC onMouseEnter={plays}
                                     onClick={() =>
                                         dispatch({
                                             type: "SET_IS_OPEN",
@@ -308,7 +259,7 @@ const Footer = () => {
                     {" "}
                     <DivMaxWidthSC>
                         <DivContainerFooterSC>
-                            <DivContainerFooterLeftSC onClick={MusicBeh}>
+                            <DivContainerFooterLeftSC onClick={MusicBeh} onMouseDown={plays}>
                                 {music ? (
                                     <div className="MusicContainer">
                                         <div className="Bars" />
@@ -330,22 +281,22 @@ const Footer = () => {
                                 </H1FooterTextSoundOnSC>
                             </DivContainerFooterLeftSC>
                             <DivContainerFooterCenterSC id="footer-page-box">
-                                <H1FooterTextSC to="/" isForm={isHome}>
+                                <H1FooterTextSC to="/" isForm={isHome} onMouseEnter={play}>
                                     HOME
                                 </H1FooterTextSC>
-                                <H1FooterTextSC to="/about">ABOUT</H1FooterTextSC>
-                                <H1FooterTextSC to="/services" isForm={isServ}>
+                                <H1FooterTextSC to="/about" onMouseEnter={play}>ABOUT</H1FooterTextSC>
+                                <H1FooterTextSC to="/services" isForm={isServ} onMouseEnter={play}>
                                     SERVICES
                                 </H1FooterTextSC>
-                                <H1FooterTextSC to="/projects" isForm={isProj}>
+                                {/* <H1FooterTextSC to="/projects" isForm={isProj}>
                                     PROJECTS
-                                </H1FooterTextSC>
-                                <H1FooterTextSC to="/contacts" isForm={isForm}>
+                                </H1FooterTextSC> */}
+                                <H1FooterTextSC to="/contacts" isForm={isForm} onMouseEnter={play}>
                                     CONTACTS
                                 </H1FooterTextSC>
                             </DivContainerFooterCenterSC>
                             <DivContainerFooterRightSC>
-                                <DivGitButtonBoxSC
+                                <DivGitButtonBoxSC onMouseEnter={plays}
                                     onClick={() =>
                                         dispatch({
                                             type: "SET_IS_OPEN",
@@ -363,7 +314,7 @@ const Footer = () => {
             {isPage === "sound" ? (
                 <DivMaxWidthSC>
                     <DivContainerFooterSC>
-                        <DivContainerFooterLeftSC onClick={MusicBeh}>
+                        <DivContainerFooterLeftSC onClick={MusicBeh} onMouseDown={plays}>
                             {music ? (
                                 <div className="MusicContainer">
                                     <div className="Bars" />
@@ -393,7 +344,7 @@ const Footer = () => {
                 playing={music}
                 preload={true}
                 loop={true}
-                volume={0}
+                volume={0.01}
             />
         </DivWrapFooterSC>
     );

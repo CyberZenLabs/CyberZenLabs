@@ -17,12 +17,13 @@ import {
   IconBurgerSC,
   BurgerMenuDisplaySC,
   DivDecLineSC,
-
 } from "../styled-components-css/styled-navbar";
-
+import useSound from 'use-sound';
+import Sfx from '../audio/efx.wav';
 const NavBarTop = () => {
   const { state, dispatch } = useContext(GlobalDispatchContext);
-  const { isBlackBack, isHome,isForm } = state;
+  const { isBlackBack, isHome, isForm } = state;
+  const [plays] = useSound(Sfx, {volume:0.1});
   return (
     <>
       {isHome === true ? (
@@ -34,13 +35,13 @@ const NavBarTop = () => {
                 <TextNavBarSC>Cyberzen Labs</TextNavBarSC>
               </DivLogoBoxSC>
             </LinkToHomeSC>
-            <DivShowReelSC>
+            {/* <DivShowReelSC>
               <LinkShowReelSC to="#" isBlackBack={isBlackBack}>
                 SHOWREEL
               </LinkShowReelSC>
-            </DivShowReelSC>
+            </DivShowReelSC> */}
             <BurgerMenuDisplaySC>
-              <LinkToBurgerSC to="/menu">
+              <LinkToBurgerSC to="/menu" onMouseEnter={plays}>
                 <IconBurgerSC></IconBurgerSC>
               </LinkToBurgerSC>
             </BurgerMenuDisplaySC>
@@ -55,24 +56,24 @@ const NavBarTop = () => {
                 <TextNavBarSC>Cyberzen Labs</TextNavBarSC>
               </DivLogoBoxSC>
             </LinkToHomeSC>
-            <DivShowReelCenterSC>
-              {isForm===true?( <LinkShowReel2SC to="#" isBlackBack={isBlackBack}>
-              SHOWREEL
-              <DivDecLineSC />
-              </LinkShowReel2SC>
-              
-              ):(<LinkShowReelSC to="#" isBlackBack={isBlackBack}>
-                SHOWREEL
-              </LinkShowReelSC>)}
-             
-            </DivShowReelCenterSC>
-            <LinkToBurgerSC to="/menu">
+            {/* <DivShowReelCenterSC>
+              {isForm === true ? (
+                <LinkShowReel2SC to="#" isBlackBack={isBlackBack}>
+                  SHOWREEL
+                  <DivDecLineSC />
+                </LinkShowReel2SC>
+              ) : (
+                <LinkShowReelSC to="#" isBlackBack={isBlackBack}>
+                  SHOWREEL
+                </LinkShowReelSC>
+              )}
+            </DivShowReelCenterSC> */}
+            <LinkToBurgerSC to="/menu" onMouseEnter={plays}>
               <IconBurgerSC></IconBurgerSC>
             </LinkToBurgerSC>
           </DivContainerNavBarSC>
         </DivMaxWidthSC>
       )}
-     
     </>
   );
 };

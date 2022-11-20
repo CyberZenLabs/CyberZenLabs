@@ -42,11 +42,11 @@ width: 100%;
 @media (max-width: 1420px) {
   font-size: 30px;
   }
-  @media (max-width: 1260px) {
+  @media (max-width: 1360px) {
   font-size: 24px;
   }
 
-  @media (max-width: 1260px) {
+  @media (max-width: 1360px) {
   font-size: 24px;
   line-height: 35px;
 
@@ -62,8 +62,23 @@ width: 100%;
     line-height: 20px;
 
   }
-`;
+  @media (max-width: 380px) {
+    font-size: 16px;
+    line-height: 18px;
 
+  }
+`;
+export const DivLineAboutDevSC=styled.div`
+ display: grid;
+  height: 100%;
+  //top: 80px;
+  //bottom: 0;
+ 
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  pointer-events: none;
+`;
 export const DivCustomTextSC = styled.div`
 pointer-events: none;
 text-align: left;

@@ -12,8 +12,18 @@ export const GridContentSC = styled.div`
   @media (max-width:1000px) {
     grid-row-gap: 60px;
 }
+
 @media (max-width:480px) {
-  grid-row-gap: 40px;
+  grid-row-gap: 30px;
+}
+@media (max-width:380px) {
+  grid-row-gap: 30px;
+}
+@media (max-height:480px) {
+  grid-row-gap: 30px;
+}
+@media (max-height:380px) {
+  grid-row-gap: 30px;
 }
   `;
 
@@ -28,6 +38,10 @@ export const SpanTextElementSC = styled(Link)`
 @media (max-width:1000px) {
   font-size: 40px;
 line-height: 50px;
+}
+@media (max-height:550px) {
+  font-size: 30px;
+line-height: 40px;
 }
 @media (max-width:480px) {
   font-size: 22px;
@@ -44,6 +58,7 @@ export const DivContainerAboutSC = styled.div`
 display: grid;
   align-content: center;
   justify-content: center;
+  position: relative;
 `;
 export const DivWrapMenuSC = styled.div`
  // width: 100vw;
@@ -55,4 +70,29 @@ export const DivWrapMenuSC = styled.div`
   justify-content: center;
   align-content: center;
   //border:1px solid red;
+`;
+export const DivLineAboutSC=styled.div`
+ display: grid;
+  height: 100%;
+ 
+    top: ${({top}) => (top)}px;
+
+  
+  //bottom: 0;
+  //min-height: 530px;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  pointer-events: none;
+`;
+export const DivLineBurgerMenuSC=styled.div`
+ display: grid;
+  height: 100%;
+  //top: 80px;
+  //bottom: 0;
+  
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  pointer-events: none;
 `;
